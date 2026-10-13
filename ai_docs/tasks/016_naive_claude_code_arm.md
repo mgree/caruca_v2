@@ -166,4 +166,5 @@ wall-clock, tokens, cost, the two files, and the observations below.
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-13 | Package created: prompt, two format documents, four sample pairs, operator notes. | Tiran's direction above. |
+| 2026-10-13 | Claude Code 2.1.296 installed inside the Lima VM `caruca` (native installer, guest home); package staged at `~/naive-arm` by the new `sync_to_vm.sh`; README gained an environment section. Tiran signed in the same day with the claude.ai account (Max subscription). | Tiran: run the prompts "from within the environment and not have to escape out of it or control it from above", so the session is as naive as the VM is. |
 | 2026-10-13 | Prompt renamed `PROMPT_v1.md`; `PROMPT_v2.md` added with the three-point guidance section (execution not memory; repeatability and reproducibility; OS and command version). | Tiran: "create several variations of the prompt … a version 2 which includes some behavior guidance". |

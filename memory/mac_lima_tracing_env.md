@@ -34,3 +34,5 @@ working from the Mac (the WSL PC still cannot trace — see [[dev-machine-paths]
   commit postdating the committed file.
 - Full operating instructions (macOS/Lima, WSL2, and native-Linux paths):
   `ai_docs/docs/caruca_v1 pipeline instructions.md` in this repo.
+- 2026-10-13: Claude Code CLI 2.1.296 is installed in this VM (guest home, native installer) for the
+  naive Claude Code arm; see [[project_naive_claude_code_arm]].

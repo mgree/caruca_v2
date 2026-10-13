@@ -34,5 +34,12 @@ reproducibility); establish and report the OS and command version because core u
 across Unix flavours and versions. Later versions get the next number and a line in task 016's
 revision log; each run records which version it used.
 
+**Claude Code in the VM (2026-10-13).** Installed in Lima `caruca` with the native installer
+(`curl -fsSL https://claude.ai/install.sh | bash`), version 2.1.296, at `~/.local/bin/claude` in the
+guest home (on PATH via `.profile`, so use `bash -lc`). Tiran signed in on 2026-10-13 with the claude.ai account (Max
+subscription; `claude auth status` confirms), so runs bill the subscription, not an API key. Package copy lives at `~/naive-arm` (guest home), written by
+`Caruca via Claude Code CLI/sync_to_vm.sh`, README excluded. No CLAUDE.md exists above it. Residual
+hazard: the Mac home (both checkouts) is mounted at `/Users/tirandagan` inside the VM.
+
 **Status.** Package built 2026-10-13; no run yet. Related: [[caruca_v2_baseline_scope]] (the naive
 single-prompt control, task 001) and task 007 (agentic SDK arm) are the other two LLM arms.
