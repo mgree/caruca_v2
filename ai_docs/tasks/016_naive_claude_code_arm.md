@@ -71,14 +71,19 @@ Caruca via Claude Code CLI/
 ├── formats/
 │   ├── syntax_description.md    what <command>.py must look like
 │   └── pash_annotation.md       what <command>.json must look like
-├── samples/{tee,bc,grep,rm}/    v1's own two files for each, byte-for-byte
-└── output/                      where the session writes its two files
+├── samples/{tee,uniq,grep,rm}/  <cmd>.py from v1, and pash/ with PaSh's own three annotation files, byte-for-byte
+├── samples/PASH_ANNOTATIONS_LICENSE   MIT licence of the copied PaSh files
+├── sync_to_vm.sh                copies the package into the VM without the README
+└── output/                      where the session writes output/<cmd>.py and output/pash/*
 ```
 
-**The prompt (version 1)** says: describe the command so that other programs, such as PaSh, can understand
-what command lines it accepts and how an invocation behaves with respect to its inputs and outputs
-without running it; write `output/<command>.py` and `output/<command>.json` in the two formats;
-here are four examples of finished output; how you get there is up to you.
+**The prompt (version 1)** says: describe the command's argument syntax (options, option argument
+types, operand types) and how an invocation behaves with respect to its inputs and outputs, so that
+programs such as PaSh can understand it without running it; here is the binary's path and the manual
+page's path; write `output/<command>.py` (v1's syntax DSL) and, under `output/pash/`, the three files
+PaSh consumes (parser table, input/output generator class, parallelizability generator class); here
+are four examples; generate a correct specification without intervention and test the binary against
+it.
 
 **The format documents** describe structure and vocabulary only. The syntax-description document
 lists the constructors (`Flag`, `Path`, `Integer`, `Selection` and the rest), their keyword
@@ -87,10 +92,10 @@ arguments, the arity names, and the full value-type vocabulary, all taken from v
 behaviour classes with what each means **to the consumer**, and every form an input or output
 entry takes. Neither document says how to choose a value.
 
-**The samples** are v1's committed output for `tee`, `bc`, `grep` and `rm`, unchanged. That
-includes the `pipe:[N]` entries in the annotations (pipe identifiers left over from v1's recorded
-runs); the format document explains what they are and that they mean nothing outside the run that
-produced them.
+**The samples** are, for `tee`, `uniq`, `grep` and `rm`: v1's committed syntax file, and PaSh's own
+annotation files for the command copied unchanged from `pash_annotations` 0.2.4 in the pash VM (MIT;
+licence file beside them). `tee` and `rm` have no parallelizability class upstream, which is itself
+part of the format: absent means not parallelisable.
 
 ## 2a. Prompt versions
 
@@ -109,8 +114,10 @@ nothing about documentation, isolation, tracing or how to decide a behaviour cla
 
 | Decision | Reason |
 |---|---|
-| Samples are tee, bc, grep, rm (Tiran's choice) | Two clean annotations (tee: side-effectful, bc: a stateless filter) and two the project already studies closely. **Consequence: none of the four can be a test command for this arm.** |
-| Samples verbatim, pipe noise included and explained | Faithful to "a sample of output files". Explaining the entry keeps it from being mistaken for something the session must reproduce; it is format, not method. |
+| Samples are tee, uniq, grep, rm | Tiran chose tee, bc, grep, rm on 2026-10-13; the review the same day asked for the annotation samples to match PaSh's current format, which has no `bc`, so `uniq` (which has all three PaSh files) took its place. **Consequence: none of the four can be a test command for this arm.** |
+| Behaviour annotation in PaSh's current Python form, not v1's JSON | Review feedback 2026-10-13: "the behavior annotation should be python code… it will need to inspect and reflect on the parsed arguments", with PaSh's own grep generator as the example. Modern PaSh has no JSON reader (`memory/caruca_v1_pash_json_compat.md`), so this is also the only form a downstream run can consume. |
+| The prompt names the binary's path and the manual page's path | Review feedback: "Needs to also specify {{PATH}} and {{PATH TO MANPAGE}}". The launch procedure fills them with `command -v` and `man -w`. |
+| v1 of the prompt now asks the session to test the binary against its specification | Review feedback replaced "how you arrive at the two files is entirely up to you" with "Please generate a correct spec without my intervention. Please be certain to test the binary against the spec you generate." This is the one method instruction v1 carries; recorded as such in the README. |
 | Folder at the repo root, not under `ai_docs/` | It is a runnable package, not a document, and it must be copyable as one unit. |
 | The session runs from a **copy outside any checkout** | Claude Code loads `CLAUDE.md` from the working directory and every parent, plus `~/.claude/CLAUDE.md`. This repo's `CLAUDE.md` describes v1's whole pipeline. A session started inside the repo would be primed with exactly what the experiment withholds. |
 | Operator notes in a separate `README.md`, deleted from the copy before a run | The run instructions name tracing, sandboxes and documentation; the session must not read them. |
@@ -119,11 +126,13 @@ nothing about documentation, isolation, tracing or how to decide a behaviour cla
 
 ## 4. What the prompt deliberately withholds
 
-These words and ideas do not appear in `PROMPT_v1.md`, and the package has a check for them: man
-page, documentation, strace, sandbox, isolation, trace/tracing, environment, test input, Caruca,
-v1, "run it", "execute". Each one is a method hint. `PROMPT_v2.md` deliberately introduces one of
-them ("executing the command") and nothing else from the list. If a future version adds more,
-record it in section 8 as a further step away from "naive".
+These words and ideas do not appear in `PROMPT_v1.md`, and the package has a check for them:
+documentation, strace, sandbox, isolation, trace/tracing, environment, test input, Caruca, v1,
+"run it", "execute". Each one is a method hint. Since the 2026-10-13 review v1 does carry two things
+from the original list: the manual page's path (as an input, with no instruction to read it) and the
+closing request to test the binary against the specification. `PROMPT_v2.md` adds "executing the
+command" as the standard of evidence and nothing else. If a future version adds more, record it in
+section 8 as a further step away from "naive".
 
 The two format documents do contain the module name `caruca.ir.syntax`, because the sample
 `.py` files import it and the format cannot be stated without it. That is the only place the
@@ -148,10 +157,10 @@ wall-clock, tokens, cost, the two files, and the observations below.
       asked directly.)
 - [ ] Did it try to observe reads and writes, or reason them out?
 - [ ] How did it decide the behaviour class?
-- [ ] What did it do with the `pipe:[N]` pattern in the samples: copy, omit, or invent?
+- [ ] Did it try PaSh's parser or generator interfaces against its own classes, or install `pash_annotations`?
 - [ ] Did it stall on a question? Which one?
-- [ ] Do the two files parse, and how do they score against v1 and the ground truth with the
-      existing harness (`caruca-v2 score`)?
+- [ ] Does the syntax file parse and score against v1 and the ground truth with the existing harness
+      (`caruca-v2 score`)? Do the PaSh classes import and run under `pash_annotations` in the pash VM?
 
 ## 7. What this task will not do
 
@@ -167,4 +176,5 @@ wall-clock, tokens, cost, the two files, and the observations below.
 |---|---|---|
 | 2026-10-13 | Package created: prompt, two format documents, four sample pairs, operator notes. | Tiran's direction above. |
 | 2026-10-13 | Claude Code 2.1.296 installed inside the Lima VM `caruca` (native installer, guest home); package staged at `~/naive-arm` by the new `sync_to_vm.sh`; README gained an environment section. Tiran signed in the same day with the claude.ai account (Max subscription). | Tiran: run the prompts "from within the environment and not have to escape out of it or control it from above", so the session is as naive as the VM is. |
+| 2026-10-13 | Review feedback applied to both prompts: technical terms for syntax ("options, option argument types, operand types"); `{{PATH}}` and `{{MANPAGE_PATH}}` placeholders; behaviour annotation changed from v1's JSON to PaSh's three Python-side files; "must follow their format exactly" sentence dropped; closing line replaced by "generate a correct spec without my intervention… test the binary against the spec". Samples: `bc` out, `uniq` in; v1 JSON annotations replaced by PaSh's files from `pash_annotations` 0.2.4. `formats/pash_annotation.md` rewritten. Pre-review v1 closing line, for the record: "How you arrive at the two files is entirely up to you." | Feedback on the prompt relayed by Tiran 2026-10-13. |
 | 2026-10-13 | Prompt renamed `PROMPT_v1.md`; `PROMPT_v2.md` added with the three-point guidance section (execution not memory; repeatability and reproducibility; OS and command version). | Tiran: "create several variations of the prompt … a version 2 which includes some behavior guidance". |

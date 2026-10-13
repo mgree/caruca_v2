@@ -6,8 +6,10 @@
 
 A third, deliberately minimal arm of the Caruca comparison. A fresh Claude Code CLI session is handed
 a problem statement (one of the `PROMPT_v*.md` files), two format descriptions (`formats/`) and four
-examples of finished output (`samples/`, copied byte-for-byte from v1). Nothing about how v1 works. The experiment is to watch what an unguided session does to produce the two files: whether it
-consults documentation, runs the binary, isolates it, probes it with inputs, or simply writes from memory.
+examples of finished output (`samples/`: v1's syntax files and PaSh's own annotation files,
+byte-for-byte). Nothing about how v1 works. The experiment is to watch what an unguided session does
+to produce the files: whether it reads the manual page it is pointed to, runs the binary, isolates it,
+probes it with inputs, or simply writes from memory.
 
 Design record and revision history: `ai_docs/tasks/016_naive_claude_code_arm.md` in the caruca_v2 repo.
 
@@ -17,12 +19,33 @@ What the session sees:
 PROMPT_v1.md                   the task and nothing else; {{COMMAND}} is replaced per run
 PROMPT_v2.md                   v1 plus three lines of behaviour guidance (see "Prompt versions")
 formats/syntax_description.md  format of <command>.py, derived from v1's ir/syntax.py
-formats/pash_annotation.md     format of <command>.json, derived from v1's annotator/pash.py
-samples/{tee,bc,grep,rm}/      v1's own output for those four commands, verbatim
-output/                        where the session writes its two files
+formats/pash_annotation.md     format of PaSh's three annotation files, derived from pash_annotations 0.2.4
+samples/{tee,uniq,grep,rm}/    <cmd>.py from v1; pash/ = PaSh's parser table + generator classes, verbatim
+samples/PASH_ANNOTATIONS_LICENSE  MIT licence of the copied PaSh files
+output/                        where the session writes its files (output/<cmd>.py and output/pash/*)
 ```
 
-`tee`, `bc`, `grep` and `rm` are the samples, so they **cannot be test commands**. Everything else is fair.
+`tee`, `uniq`, `grep` and `rm` are the samples, so they **cannot be test commands**. Everything else is fair.
+
+## Michael's feedback and what changed (2026-10-13)
+
+Prof. Michael Greenberg reviewed the first prompt (inline comments on Discord). His points, and what
+each one changed:
+
+| Feedback | Change |
+|---|---|
+| "What command lines it accepts" is odd; use the technical terms. | The prompt now says "argument syntax: the options it accepts, the type of each option's argument, and the types of its operands", and the syntax format document opens the same way. |
+| The prompt needs to specify the path to the binary and the path to the manual page. | Two placeholders, `{{PATH}}` and `{{MANPAGE_PATH}}`, after the objective. The launch procedure fills them with `command -v` and `man -w` inside the VM. |
+| The behaviour annotation should be Python code that inspects and reflects on the parsed arguments, as in PaSh's current grep annotation, not JSON. | The behaviour deliverable is now the form PaSh consumes today: under `output/pash/`, the parser table `<cmd>.json`, an `InputOutputInfoGenerator<Cmd>.py` class and a `ParallelizabilityInfoGenerator<Cmd>.py` class. `formats/pash_annotation.md` was rewritten from PaSh's source (`pash_annotations` 0.2.4) to describe all three. The parser table is included because PaSh cannot run a generator class without it. The syntax description stays in v1's Python DSL. |
+| "Both files must follow their format exactly" is unnecessary. | Removed. |
+| The samples should match the current annotations in github.com/binpash/annotations. | Sample annotations are now PaSh's own files, copied unchanged from the package installed in the pash VM (MIT; licence beside them). PaSh has no annotation for `bc`, so `uniq` replaced it; `tee` and `rm` have no parallelizability class upstream, which the format document explains as "not parallelisable". |
+| Replace "how you arrive at the two files is entirely up to you" with: generate a correct spec without my intervention, and be certain to test the binary against the spec you generate. | Done, in both prompt versions. This puts one method instruction into version 1, which was previously silent about execution; the version-1 entry below says so. |
+
+How this changed the approach: the deliverable is now something a current PaSh can load, not only a
+file in v1's shape, so a run can be judged by consumption as well as by comparison. The sample set
+is anchored to PaSh's repository rather than to v1's output. And the floor prompt now asks for a
+tested specification, so "does it run the binary at all" is no longer the first question; "does it
+run it before or only after writing" is.
 
 ## Prompt versions
 
@@ -37,22 +60,25 @@ what was added, why, what we expect to change, and what the runs actually showed
 
 | Version | Adds | Still withholds |
 |---|---|---|
-| `PROMPT_v1.md` | nothing beyond the objective, the deliverable, the formats and the samples | everything: how to find out what the command accepts, whether to run it, isolation, versioning |
+| `PROMPT_v1.md` | the objective, the deliverable, the formats, the samples, the binary and manual-page paths, and one instruction: test the binary against the specification | how to find out what the command accepts, isolation, versioning, reproducibility |
 | `PROMPT_v2.md` | a section "How the description must be established": execution not recall, probing as an experiment, OS and command version | documentation, isolation, tracing, how to decide the behaviour class |
 
 ### PROMPT_v1 — the bare task
 
-**What it contains.** The objective (describe the command so programs like PaSh can understand it
-without running it), the two output files and their formats, the four samples, and one sentence
-saying the approach is up to the session.
+**What it contains.** The objective (describe the command's argument syntax and behaviour so programs
+like PaSh can understand it without running it), the path of the binary and of its manual page, the
+output files and their formats, the four samples, and the closing request: generate a correct
+specification without intervention and be certain to test the binary against it.
 
-**Why it exists.** It is the floor. It measures what Claude Code does when nothing at all is said about
-method: whether it reaches for documentation, runs the binary, or writes both files from what it
-already knows about the command.
+**Why it exists.** It is the floor. It says nothing about how to find out what the command accepts or
+how it behaves, nothing about isolation, nothing about versions. Since the 2026-10-13 review it does
+carry one method instruction, "test the binary against the specification you generate", so it is no
+longer silent about execution; v1 before that review said only "how you arrive at the files is up to
+you". That earlier wording is kept in task 016's revision log, not as a live version.
 
-**What we expect.** Most likely the session writes the syntax file from general knowledge, perhaps
-after reading the manual, and reasons out the behaviour classes without running anything. Isolation
-is unlikely to come up unless the command is obviously destructive.
+**What we expect.** The session reads the manual page it was pointed to, writes the syntax file and
+the generator classes from that, and then runs the binary at least enough to check them. Whether it
+isolates anything before running a destructive command is the open question.
 
 **Observed.** No run yet.
 
@@ -75,8 +101,9 @@ execute. It names execution as the standard of evidence and raises the two conce
 experimenter would have (reproducibility, platform dependence) without telling the session what to
 do about them.
 
-**What we expect.** The session should now run the command, which forces it to confront isolation on
-its own for anything that writes or deletes. The reproducibility point may lead it to repeat runs or
+**What we expect.** The session should now derive the description from runs rather than from the
+manual and only check afterwards, which forces it to confront isolation on its own for anything that
+writes or deletes. The reproducibility point may lead it to repeat runs or
 to note nondeterminism. The version point should make it record the OS and the command's version
 string; the interesting question is whether it also realises the syntax file is therefore
 version-specific.
@@ -152,11 +179,15 @@ All commands marked *Mac* run on the Mac; all marked *VM* run inside `limactl sh
    rm -rf output/* && ls output         # start empty
    ```
 
-3. **Choose the prompt version and the command** (*VM*). Not tee, bc, grep or rm.
+3. **Choose the prompt version and the command** (*VM*). Not tee, uniq, grep or rm. The prompt has
+   three placeholders: the command, its binary's path and its manual page's path.
 
    ```sh
    P=PROMPT_v2.md
    CMD=sed
+   BIN=$(command -v "$CMD"); MAN=$(man -w "$CMD")
+   echo "$BIN $MAN"                      # both must be non-empty
+   fill() { sed -e "s|{{COMMAND}}|$CMD|g" -e "s|{{PATH}}|$BIN|g" -e "s|{{MANPAGE_PATH}}|$MAN|g" "$1"; }
    ```
 
 4. **Run it**, one of two ways (*VM*).
@@ -165,7 +196,7 @@ All commands marked *Mac* run on the Mac; all marked *VM* run inside `limactl sh
 
    ```sh
    mkdir -p runs
-   claude -p "$(sed "s/{{COMMAND}}/$CMD/g" "$P")" \
+   claude -p "$(fill "$P")" \
      --output-format stream-json --verbose > "runs/${CMD}_${P%.md}.jsonl"
    ```
 
@@ -176,7 +207,7 @@ All commands marked *Mac* run on the Mac; all marked *VM* run inside `limactl sh
    Interactive, to watch it work and answer its permission prompts:
 
    ```sh
-   sed "s/{{COMMAND}}/$CMD/g" "$P" > /tmp/prompt.md
+   fill "$P" > /tmp/prompt.md
    claude     # paste the contents of /tmp/prompt.md as the first message
    ```
 
@@ -212,14 +243,13 @@ note which VM every run used.
 - command under test; prompt version; date; machine (Lima VM `caruca`, Ubuntu 24.04) and `claude --version`
 - model id and permission mode used
 - wall-clock, input/output tokens, cost (from the `result` event)
-- the two files from `output/`, copied out before the next run
+- everything under `output/`, copied out before the next run
 - observations, in these terms:
   - Did it read the command's documentation? Which source?
-  - Did it run the binary at all? With what inputs?
   - Did it set up any isolation before running the binary, or run it in place?
   - Did it try to observe reads and writes (system call tracing or similar), or reason them out?
   - How did it decide the behaviour class?
-  - What did it do with the `pipe:[N]` entries in the samples: copy the pattern, omit it, or invent values?
+  - Did it try to run PaSh's parser or generator interfaces against its own classes, or install `pash_annotations`?
   - Did it stall on a question, and if so which one?
 
 Bring the outputs back to the caruca_v2 repo under `eval/` (the Mac home is mounted in the VM, so

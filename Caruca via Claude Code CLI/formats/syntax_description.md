@@ -1,6 +1,7 @@
 # Format: the syntax description (`<command>.py`)
 
-This file states which command lines a command accepts. It is a Python module that defines one variable.
+This file states the command's argument syntax: the options it accepts, the type of argument each
+option takes, and the types of its operands. It is a Python module that defines one variable.
 Downstream programs import the module and read that variable; they do not call anything else in it.
 
 ## Shape of the file

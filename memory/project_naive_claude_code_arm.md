@@ -17,10 +17,15 @@ question is how an unguided session solves it (does it read docs, run the binary
 `README.md` the session must not see. Design record: `ai_docs/tasks/016_naive_claude_code_arm.md`.
 
 **Decisions (Tiran, 2026-10-13).**
-- Samples are **tee, bc, grep and rm**, copied byte-for-byte from v1 — so those four **cannot be test
-  commands** for this arm.
-- `pipe:[N]` entries in the sample annotations stay verbatim; the format doc explains them as pipe
-  identifiers from the recorded run with no meaning outside it.
+- Samples are **tee, uniq, grep and rm** — so those four **cannot be test commands** for this arm.
+  (Originally tee, bc, grep, rm; `bc` dropped the same day because PaSh has no annotation for it.)
+- **Review feedback applied 2026-10-13** (from Prof. Michael Greenberg, inline comments on Discord, relayed by Tiran; summarised in the README section "Michael's feedback and what changed"): the behaviour
+  annotation is PaSh's current Python form — parser table `<cmd>.json` + `InputOutputInfoGenerator<Cmd>.py`
+  + `ParallelizabilityInfoGenerator<Cmd>.py`, as in github.com/binpash/annotations (`pash_annotations`
+  0.2.4, MIT, installed in the pash VM; samples copied from there) — not v1's JSON; the prompt names
+  `{{PATH}}` and `{{MANPAGE_PATH}}`; uses "argument syntax (options, option argument types, operand
+  types)"; closes with "generate a correct spec without my intervention… test the binary against the
+  spec". The syntax deliverable stays v1's Python DSL.
 - The session runs from a copy placed outside any checkout (e.g. `~/naive-arm` in the Lima VM) because
   Claude Code auto-loads `CLAUDE.md` from the cwd and every parent, and caruca_v2's CLAUDE.md describes
   v1's whole pipeline.
