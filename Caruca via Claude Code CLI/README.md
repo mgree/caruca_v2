@@ -26,7 +26,8 @@ output/                        where the session writes its files (output/<cmd>.
 runs/<date>_<time>_<vm>_<cmd>_<version>/   one folder per invocation of naive-run, collected: prompt.md (exactly as sent),
                                output/ (the deliverables), stream.jsonl (raw events), stream.actions.log (as shown on
                                screen), transcript_<session>.jsonl (Claude Code's own record), run.env, environment.txt
-runs/<date>_<time>_<vm>_claude-sessions/   the clone's whole session store, saved once per collection
+runs/<date>_<time>_<vm>_other-sessions/    sessions the clone had that no run folder captured (the sign-in session,
+                               a bare `claude` started from the home folder); only written when there are any
 
 Operator tooling (never copied into a VM; sync_to_vm.sh stages only the prompts, formats/ and samples/):
 new_run_vm.sh <name>           clone naive-golden -> <name>, start it, copy the package in fresh, install helper + welcome
@@ -109,6 +110,21 @@ wrote and executed test scripts in its scratch directory and at the end deleted 
 it had created under `output/`. Whether it ran `sed` on inputs before or only after writing the
 files, and whether it isolated anything, was not read before the records were deleted. The operator
 typed "status?" once, believing the session stalled; see "Interactive mode" below.
+
+**Observed, run 2.** *2026-10-13 19:05, `grep`, watch mode, clone `naive-run-grep`, run 1 in that
+clone, new layout. Collected to `runs/2026-10-13_190539_naive-run-grep_grep_PROMPT_v1/`. Not scored.
+grep is one of the four samples, so the session had a finished answer in front of it.* 327 seconds,
+34 turns, 33 tool calls (26 Bash, 5 Write, 2 Edit); the result event reports $0.32 at list price
+(billed to the subscription). Its first three commands listed the folder, read both format documents,
+and read grep's sample files. It then rendered the manual page it was pointed to, and spent calls 6
+to 10 trying to install the `pash_annotations` package from PyPI (the stock image has no `pip`; it
+found the package index reachable and listed versions 0.2.1 to 0.2.4). It invoked the grep binary
+with patterns in 12 of its Bash calls. Its closing report claims 171 option cases checked against
+grep 3.11 and 22 generator decisions confirmed, and says the syntax file could be checked only
+against a stand-in for the `caruca` module. Output: syntax file 97 lines, parser table 54,
+input/output class 43, parallelizability class 82. Whether it installed PaSh in the end, what the
+"stand-in" was, and whether any run happened before the files were first written, is to be read off
+the action log.
 
 ### PROMPT_v2 — execution is the standard
 
@@ -294,7 +310,7 @@ There is no Claude Code flag that writes a tool log for an interactive session, 
 | Mode | Where every tool call and command is recorded | How |
 |---|---|---|
 | watch mode (`naive-run <cmd>`) | the run folder's `stream.jsonl` (raw) and `stream.actions.log` (as shown on screen) | `--output-format stream-json --verbose`: one JSON event per message; each `tool_use` block carries the tool name and its full input (for `Bash`, the exact command line), each `tool_result` the output; the final `result` event has tokens, cost and duration. `naive-watch.py` renders it live and keeps both files |
-| both modes | the run folder's `transcript_<session-id>.jsonl` | Claude Code writes a transcript of every session to `~/.claude/projects/<cwd-slug>/<session-id>.jsonl` on its own, with the same `tool_use` / `tool_result` blocks plus timestamps; `naive-run` copies every session file written during the run into the run folder, and `collect_run.sh` also saves the clone's whole session store once as `runs/<date>_<time>_<vm>_claude-sessions/` |
+| both modes | the run folder's `transcript_<session-id>.jsonl` | Claude Code writes a transcript of every session to `~/.claude/projects/<cwd-slug>/<session-id>.jsonl` on its own, with the same `tool_use` / `tool_result` blocks plus timestamps; `naive-run` copies every session file written during the run into the run folder, and `collect_run.sh` saves any session the clone had that no run folder captured as `runs/<date>_<time>_<vm>_other-sessions/` |
 
 To read either file as a plain list of calls (number, time, tool, command or path), on the Mac:
 

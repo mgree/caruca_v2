@@ -39,4 +39,4 @@ metadata:
 - Tasks 009 and 011 are superseded for execution by 014; their diagnosis stands.
 - Task numbering: 014 and 015 taken 2026-10-13; the pash-downstream-study session's planned
   VM-provisioning/benchmark task was to take 016, but 016 went to the naive Claude Code arm on
-  2026-10-13 (`project_naive_claude_code_arm.md`); that VM task should take 017.
+  2026-10-13 (`project_naive_claude_code_arm.md`); that VM task should take 018 (017 went to the naive arm's build documentation, 2026-10-13).

@@ -94,8 +94,15 @@ only prompts, formats/, samples/.
 `~/runs/<date>_<time>_<vm>_<cmd>_<version>/` with prompt.md, output/, stream.jsonl, stream.actions.log,
 transcript_<session>.jsonl, run.env (incl. `run_number_in_this_clone`); output/ is emptied after each
 run; `collect_run.sh <vm> [--keep]` copies each run folder into the package's `runs/` unchanged and
-saves the clone's session store once. Tested 2026-10-13 with a stand-in `claude` (two runs in one
+saves only sessions no run folder captured (`_other-sessions/`; refined 2026-10-13 after Tiran asked why a second folder appeared). Tested 2026-10-13 with a stand-in `claude` (two runs in one
 clone → two folders). Tiran also wants no accumulation of several runs in one folder.
 
-**Status.** Package built 2026-10-13; run 1 done the same day (see above). Related: [[caruca_v2_baseline_scope]] (the naive
+**Run 2 (2026-10-13 19:05).** grep, v1, watch mode, clean layout, clone `naive-run-grep`: 327 s, 33
+tool calls, tried `pip install pash-annotations` (no pip in the stock image; PyPI reachable), ran grep
+with patterns in 12 calls, all four files produced; collected to the package's `runs/`; not scored.
+grep is a sample command, so this run is a copying test as much as a solving test.
+
+**Status.** Package built 2026-10-13; run 1 done the same day (see above). **Task 017** (created
+2026-10-13) is the comprehensive write-up of how the arm was built, for the advisors; deliverable
+`ai_docs/docs/naive_claude_code_arm_how_it_was_built.md`, not started. Related: [[caruca_v2_baseline_scope]] (the naive
 single-prompt control, task 001) and task 007 (agentic SDK arm) are the other two LLM arms.

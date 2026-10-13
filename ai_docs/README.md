@@ -20,7 +20,7 @@ system, explaining it, and handing it to someone.
 | Follow one command through both pipelines | [`docs/v2_chain_vs_v1.md`](docs/v2_chain_vs_v1.md) | Every file each stage reads and writes, with real contents |
 | Actually run something | [`docs/caruca_v2_pipeline_usage_guide.md`](docs/caruca_v2_pipeline_usage_guide.md) | The v2 commands. For v1, [`docs/caruca_v1 pipeline instructions.md`](docs/caruca_v1%20pipeline%20instructions.md) covers Mac/Lima, WSL and native Linux |
 | Hand a fresh Claude Code session the task with no method hints | [`../Caruca via Claude Code CLI/README.md`](../Caruca%20via%20Claude%20Code%20CLI/README.md) | The naive Claude Code arm: a problem statement, two format descriptions and four v1 samples, and nothing else. Design record in [`tasks/016_naive_claude_code_arm.md`](tasks/016_naive_claude_code_arm.md) |
-| Pick up or start a piece of work | [`tasks/`](tasks/) | Numbered work orders, 001–016. Each carries its own status |
+| Pick up or start a piece of work | [`tasks/`](tasks/) | Numbered work orders, 001–017. Each carries its own status |
 | Hand something to Prof. Greenberg or Prof. Eiers | [`docs/presentations/ASSEMBLY.md`](docs/presentations/ASSEMBLY.md) | What goes in the package, in reading order, and which PDF is current |
 | Check the original paper | [`refs/caruca_white_paper.md`](refs/caruca_white_paper.md) | Full transcription with figures. Prefer it over re-extracting the PDF |
 
