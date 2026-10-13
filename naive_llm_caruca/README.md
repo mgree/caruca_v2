@@ -29,8 +29,8 @@ output/                        where the session writes its files (output/<cmd>.
 runs/<date>_<time>_<vm>_<cmd>_<version>/   one folder per invocation of naive-run, collected: prompt.md (exactly as sent),
                                output/ (the deliverables), stream.jsonl (raw events), stream.actions.log (as shown on
                                screen), transcript_<session>.jsonl (Claude Code's own record), run.env, environment.txt
-runs/<date>_<time>_<vm>_other-sessions/    sessions the clone had that no run folder captured (the sign-in session,
-                               a bare `claude` started from the home folder); only written when there are any
+runs/<date>_<time>_<vm>_other-sessions/    sessions started in the clone outside naive-run (a bare `claude`); only written
+                               when there are any; clones start with an empty session history
 
 Operator tooling (never copied into a VM; sync_to_vm.sh stages only the prompts, formats/ and samples/):
 new_run_vm.sh <name>           clone naive-golden -> <name>, start it, copy the package in fresh, install helper + welcome
@@ -186,7 +186,7 @@ Built 2026-10-13 with the steps below.
 | VM | `naive-golden`, Lima template `ubuntu-24.04` (Ubuntu 24.04.4, arm64), vz backend, 4 vCPU / 4 GiB / 20 GiB, **no mounts** (`--mount-none`; there is no `/Users` inside) |
 | Claude Code | 2.1.296, native installer, `~/.local/bin/claude` in the guest home `/home/tirandagan.guest`; on `PATH` in login shells |
 | Package | `~/naive-arm`: `formats/`, `samples/`, empty `output/`, nothing else; the prompts in `~/prompts` and logs in `~/runs`, outside the session's folder (since run 1 showed the session reads everything in its folder); no README, no scripts |
-| Sign-in | done 2026-10-13 (claude.ai account, Max subscription; `claude auth status` in the image confirms); every clone inherits it |
+| Sign-in | done 2026-10-13 (claude.ai account, Max subscription; `claude auth status` in the image confirms); every clone inherits it. The image's own session history (`~/.claude/projects`) was emptied on 2026-10-13 and each clone starts with it empty |
 | Stock tools present | `strace`, `unshare`, `man`, `python3` (all in the stock cloud image); no `docker` |
 | Stock restriction left in place | `kernel.apparmor_restrict_unprivileged_userns = 1`, so unprivileged user namespaces are blocked as on any stock Ubuntu 24.04; a session that wants a sandbox has to deal with that itself |
 | Nothing from this project | no `CLAUDE.md` anywhere above `~/naive-arm`, no v1, no repo |
@@ -313,7 +313,7 @@ There is no Claude Code flag that writes a tool log for an interactive session, 
 | Mode | Where every tool call and command is recorded | How |
 |---|---|---|
 | watch mode (`naive-run <cmd>`) | the run folder's `stream.jsonl` (raw) and `stream.actions.log` (as shown on screen) | `--output-format stream-json --verbose`: one JSON event per message; each `tool_use` block carries the tool name and its full input (for `Bash`, the exact command line), each `tool_result` the output; the final `result` event has tokens, cost and duration. `naive-watch.py` renders it live and keeps both files |
-| both modes | the run folder's `transcript_<session-id>.jsonl` | Claude Code writes a transcript of every session to `~/.claude/projects/<cwd-slug>/<session-id>.jsonl` on its own, with the same `tool_use` / `tool_result` blocks plus timestamps; `naive-run` copies every session file written during the run into the run folder, and `collect_run.sh` saves any session the clone had that no run folder captured as `runs/<date>_<time>_<vm>_other-sessions/` |
+| both modes | the run folder's `transcript_<session-id>.jsonl` | Claude Code writes a transcript of every session to `~/.claude/projects/<cwd-slug>/<session-id>.jsonl` on its own, with the same `tool_use` / `tool_result` blocks plus timestamps; `naive-run` copies every session file written during the run into the run folder, and `collect_run.sh` saves any session started in the clone outside `naive-run` as `runs/<date>_<time>_<vm>_other-sessions/`; `new_run_vm.sh` empties the clone's session history at creation so inherited sessions never appear there |
 
 To read either file as a plain list of calls (number, time, tool, command or path), on the Mac:
 
@@ -327,6 +327,108 @@ Two more options exist and are not used: `claude --debug-file <path>` writes Cla
 debug log (noisy, not a tool log), and a `PreToolUse` hook in `~/.claude/settings.json` could append
 every call to a file of our own, but that would put a hook into the environment the session runs in,
 which the experiment keeps stock.
+
+## Analysing a collected run: a prompt to start from
+
+The idea: open a Claude Code session **on the Mac, in the caruca_v2 repo** (never in a VM), point it
+at one collected run folder, and have it produce a written analysis plus workflow diagrams. The
+diagrams use the Excalidraw skill from https://github.com/coleam00/excalidraw-diagram-skill, which
+turns a description into an `.excalidraw` file and renders it to PNG for checking. The prompt below
+installs the skill if it is missing, then runs the analysis. Replace the run folder path on the
+first line. Treat the prompt as a starting point and refine it in place as analyses teach us what
+to ask for.
+
+One thing to know about the skill: its repository declares no licence (checked 2026-10-13). Tiran's
+call, the same day, is to keep it in this repo anyway, under `.claude/skills/excalidraw-diagram/`,
+alongside the other third-party skill (`impeccable`); it is listed with those exclusions in
+`LICENSE-TEMPLATES.md` so nobody reads our licence as covering it. `uv`, which it needs, is on the Mac.
+
+````markdown
+Analyse one collected run of the naive Claude Code arm and produce a written analysis with workflow
+diagrams. The run folder is: naive_llm_caruca/runs/2026-10-13_190539_naive-run-grep_grep_PROMPT_v1
+
+**0. Set up the diagram skill (skip any step already done)**
+
+The diagrams are made with the Excalidraw diagram skill. Check for `.claude/skills/excalidraw-diagram/SKILL.md`
+in this repo. If it is absent, install it:
+
+```sh
+git clone --depth 1 https://github.com/coleam00/excalidraw-diagram-skill /tmp/excalidraw-diagram-skill
+cp -r /tmp/excalidraw-diagram-skill .claude/skills/excalidraw-diagram
+command -v uv >/dev/null || brew install uv
+cd .claude/skills/excalidraw-diagram/references && uv sync && uv run playwright install chromium
+```
+
+Read the skill's SKILL.md before drawing anything, and follow its render-and-validate loop: every
+diagram is rendered to PNG with `uv run python render_excalidraw.py <file>` from the skill's
+`references/` folder, inspected, and fixed until it passes. Note the skill's licence in the analysis.
+
+**1. What is in the run folder**
+
+- `run.env`: command, prompt version, binary and man-page paths, mode, permission mode, timestamps,
+  Claude Code version, OS, run number within the clone.
+- `environment.txt`: Claude Code version, OS, architecture, account type.
+- `prompt.md`: the prompt exactly as the session received it.
+- `stream.jsonl`: every event of the session in order; each `tool_use` block has the tool name and
+  full input, each `tool_result` the output, the final `result` event the turns, duration, cost and
+  token counts. `stream.actions.log` is the same rendered as text.
+- `transcript_<id>.jsonl`: Claude Code's own record of the session, with timestamps per record.
+- `output/`: the deliverables: `<cmd>.py` (syntax description in v1's DSL) and `pash/` with the
+  parser table `<cmd>.json`, `InputOutputInfoGenerator<Cmd>.py`, `ParallelizabilityInfoGenerator<Cmd>.py`.
+
+`naive_llm_caruca/tool_log.py -r <file>` lists every tool call with its result. The README in
+`naive_llm_caruca/` explains the arm; `ai_docs/tasks/016_naive_claude_code_arm.md` section 6 lists
+the questions a run is meant to answer. Read both first.
+
+**2. What to establish, each with evidence from the log (call numbers and timestamps)**
+
+1. **Timeline and phases.** Segment the session into phases by what the calls do: orientation
+   (listing and reading the folder), documentation (manual page or other sources), tooling attempts
+   (installing packages, building test harnesses), probing the binary (running the command on
+   inputs), writing the deliverables, testing them, reporting. For each phase: start and end time,
+   number of calls, what it read or ran. Say in which phase the files were *first* written, and
+   whether the binary was run before that point or only after.
+2. **Sources it used.** The manual page it was pointed to, the samples, the format documents,
+   anything from outside the folder (filesystem searches, network requests: name the URLs). If the
+   command is one of the four samples, diff `output/<cmd>.py` and `output/pash/*` against
+   `naive_llm_caruca/samples/<cmd>/` and say how much was copied versus derived.
+3. **Isolation and safety.** Did it set up any isolation before running the binary (namespaces,
+   containers, scratch directories, dry runs)? Did it run anything destructive? Where did it work?
+4. **Testing.** What did it test, with what inputs, and what did it conclude? Check every claim in
+   its closing report against the log (for example a count of cases checked) and say whether the
+   log supports it.
+5. **Reproducibility and versions.** Did it record the OS and the command's version, and does the
+   output say which version it describes?
+6. **Deliverable quality, mechanically.** Does `<cmd>.py` parse (`python3 -c "import ast; ast.parse(open(f).read())"`)?
+   Do the PaSh classes parse? Does the parser table match the manual's options (list omissions and
+   inventions)? Do not run the PaSh classes here; that needs the pash VM and is a separate step.
+7. **Cost and effort.** Turns, tool calls by tool, duration, tokens, reported cost, from the
+   `result` event.
+8. **Behaviour worth recording** that the questions above do not cover: questions it wanted to ask,
+   dead ends, retries, anything it did that the prompt did not ask for.
+
+**3. Diagrams (with the skill)**
+
+1. **Session workflow:** the phases from 2.1 as a left-to-right flow, each with its call count and
+   duration, with loops where it iterated (write → test → fix), and the moment of first write marked.
+2. **Information flow:** what went in (man page, binary runs, samples, format documents, outside
+   sources) and which deliverable each fed, as a flow from sources to the four files.
+Save both as `.excalidraw` and `.png` in `<run folder>/analysis/`.
+
+**4. Write-up**
+
+Write `<run folder>/analysis/analysis.md`: a one-paragraph summary, then sections 2.1 to 2.8 with
+evidence, the two diagrams embedded, and a short list of what this run suggests we ask next. Plain
+language: no shorthand a newcomer would not follow, every rate with its denominator. Then add a
+one-paragraph summary with a link to the analysis under the matching prompt version's "Observed"
+entry in `naive_llm_caruca/README.md`.
+
+**5. Do not**
+
+Do not change anything in `naive_llm_caruca/` other than `runs/<this run>/analysis/` and the README
+entry. Do not touch the prompts, formats or samples: changing them is a change to the experiment and
+goes through task 016's revision log. Do not copy anything into a VM.
+````
 
 ## What to record per run
 

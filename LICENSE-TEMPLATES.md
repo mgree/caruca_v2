@@ -31,6 +31,9 @@ Two things in the tree are **not** covered, because they are not this project's 
   license over it is granted here.
 - The `.claude/skills/impeccable/` skill is third-party software distributed under its own
   terms.
+- The `.claude/skills/excalidraw-diagram/` skill is third-party software, copied from
+  https://github.com/coleam00/excalidraw-diagram-skill (which declares no licence); no license
+  over it is granted here and it is included only for this project's own use.
 
 **Caruca v1 is a separate repository and nothing here licenses it.** It is private and
 unlicensed; caruca_v2 reads it at runtime and contains none of its text.

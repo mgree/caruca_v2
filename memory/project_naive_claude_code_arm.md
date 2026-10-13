@@ -94,7 +94,11 @@ only prompts, formats/, samples/.
 `~/runs/<date>_<time>_<vm>_<cmd>_<version>/` with prompt.md, output/, stream.jsonl, stream.actions.log,
 transcript_<session>.jsonl, run.env (incl. `run_number_in_this_clone`); output/ is emptied after each
 run; `collect_run.sh <vm> [--keep]` copies each run folder into the package's `runs/` unchanged and
-saves only sessions no run folder captured (`_other-sessions/`; refined 2026-10-13 after Tiran asked why a second folder appeared). Tested 2026-10-13 with a stand-in `claude` (two runs in one
+saves only sessions no run folder captured (`_other-sessions/`). The golden image's own session
+history (an "update claude" session and the sign-in) was inherited by every clone and re-saved on
+every collection, so on 2026-10-13 the image's `~/.claude/projects` was emptied and `new_run_vm.sh`
+now empties it in each clone at creation; `_other-sessions` appears only for a bare `claude` run
+in the clone. Tested 2026-10-13 with a stand-in `claude` (two runs in one
 clone → two folders). Tiran also wants no accumulation of several runs in one folder.
 
 **Run 2 (2026-10-13 19:05).** grep, v1, watch mode, clean layout, clone `naive-run-grep`: 327 s, 33
