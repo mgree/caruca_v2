@@ -25,13 +25,14 @@ echo "== copying the package fresh from $HERE"
 
 echo "== installing helper and welcome"
 limactl copy "$HERE/vm/naive-run" "$NAME:/tmp/naive-run"
+limactl copy "$HERE/vm/naive-watch.py" "$NAME:/tmp/naive-watch.py"
 limactl copy "$HERE/vm/bashrc-welcome.sh" "$NAME:/tmp/bashrc-welcome.sh"
 limactl shell "$NAME" -- bash -lc '
   set -e
-  mkdir -p ~/bin && mv /tmp/naive-run ~/bin/naive-run && chmod +x ~/bin/naive-run
+  mkdir -p ~/bin && mv /tmp/naive-run ~/bin/naive-run && mv /tmp/naive-watch.py ~/bin/naive-watch.py && chmod +x ~/bin/naive-run ~/bin/naive-watch.py
   grep -q "naive-arm welcome" ~/.bashrc || cat /tmp/bashrc-welcome.sh >> ~/.bashrc
   rm -f /tmp/bashrc-welcome.sh
-  rm -rf ~/naive-arm/output/* ~/naive-arm/runs/*
+  rm -rf ~/naive-arm/output/* ~/naive-arm/runs ~/runs/*
   echo "claude: $(claude --version)"
   claude auth status 2>/dev/null | grep -q "\"loggedIn\": true" && echo "signed in: yes" || echo "signed in: NO — sign in to the golden image first (README: Sign in once), or run claude and /login in this clone"
   ls ~/.claude/CLAUDE.md 2>/dev/null && echo "WARNING: global CLAUDE.md present" || echo "global CLAUDE.md: none"

@@ -5,13 +5,15 @@ case $- in *i*)
 
   Naive Claude Code arm — this VM is a throwaway clone of naive-golden. You are in ~/naive-arm.
 
-    naive-run <command> [PROMPT_vN.md]      headless run, full log in runs/<command>_<version>.jsonl
-    naive-run -i <command> [PROMPT_vN.md]   interactive run (watch it, answer its prompts)
+    naive-run <command> [PROMPT_vN.md]      runs unattended, shows every tool call / input / result live;
+                                            everything about the run lands in its own ~/runs/<date>_<time>_…/
+    naive-run -i <command> [PROMPT_vN.md]   Claude Code's own interactive screen (press Enter to send the prompt)
 
-  Prompt versions: PROMPT_v1.md (bare)  PROMPT_v2.md (execution guidance). Default: v1.
-  Not allowed as test commands: tee uniq grep rm (they are the samples).
-  One run per clone. When done: exit, then on the Mac
-    ./collect_run.sh <this VM's name>      copies output/ and runs/ into the repo and deletes the clone
+  Prompt versions (in ~/prompts, outside the work folder): PROMPT_v1.md (bare)  PROMPT_v2.md (execution guidance). Default: v1.
+  Core nine: cat grep pwd rm tac tail tee uniq wc. Anything else asks for confirmation first.
+  tee uniq grep rm are also the samples, so for them the session can see a finished answer.
+  Each invocation gets its own run folder; a second run in this clone is marked as not fresh. When done: exit, then on the Mac
+    ./collect_run.sh <this VM's name>      copies every run folder into the package's runs/ and deletes the clone
 
 WELCOME
   ;;

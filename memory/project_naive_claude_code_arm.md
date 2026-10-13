@@ -54,10 +54,48 @@ Claude Code 2.1.296 installed (native installer); package at `~/naive-arm` (gues
 naive-golden <run>` then `limactl delete -f <run>`; `limactl snapshot` is **unimplemented on vz**
 (verified) and qemu is not installed. `sync_to_vm.sh [vm]` copies the package with `limactl copy`. Run flow (scripts in the folder,
 tested 2026-10-13): `./new_run_vm.sh <name>` → `limactl shell <name>` (welcome lands in `~/naive-arm`)
-→ `naive-run [-i] <cmd> [PROMPT_vN.md]` → `./collect_run.sh <name>` (results to
-`eval/naive_claude_code/<date>_<name>/`, clone deleted). `limactl clone` needs the source stopped;
+→ `naive-run [-i] <cmd> [PROMPT_vN.md]` → `./collect_run.sh <name>` (results to the package's
+`runs/<date>_<name>/`, clone deleted). `limactl clone` needs the source stopped;
 `new_run_vm.sh` stops the golden image itself.
 Sign-in to the golden image was pending when this was written; check `claude auth status` there.
 
-**Status.** Package built 2026-10-13; no run yet. Related: [[caruca_v2_baseline_scope]] (the naive
+**Command rules in `naive-run` (Tiran, 2026-10-13).** No hard blocks: any installed command runs. The
+**core nine** of the parity study (`cat grep pwd rm tac tail tee uniq wc`, confirmed from
+`ai_docs/analysis/v1_v2_parity_study.md` and task 012) run without a question; anything else warns
+and asks y/N; the four samples (tee uniq grep rm) print a note and run. Tiran first asked to be able
+to enter grep (a sample) after the helper refused it, then asked for the confirmation on non-core
+commands.
+
+**Tool-call logging (2026-10-13).** No CLI flag logs tool calls for an interactive session. Verified:
+Claude Code 2.1.29x writes every session to `~/.claude/projects/<cwd-slug>/<session-id>.jsonl`
+(`assistant` records with `tool_use` blocks carrying name + full input; `user` records with
+`tool_result`; timestamps). Headless `-p --output-format stream-json --verbose` has the same blocks
+plus a final `result` event. `naive-run` copies the newest transcript to `runs/<tag>.transcript.jsonl`;
+`collect_run.sh` copies `~/.claude/projects`; `tool_log.py` renders either file. `--debug-file` is an
+internal debug log, not a tool log.
+
+**Watch mode (2026-10-13).** Tiran wants to see progress on screen with tool names, inputs and
+results (not thinking) and a complete action log; interactive `claude "<prompt>"` only prefills the
+input box (his sed session sat until he typed something). So `naive-run` defaults to watch mode:
+`claude -p … --output-format stream-json --verbose --permission-mode bypassPermissions | naive-watch.py`,
+rendering live and writing `<tag>.jsonl` + `<tag>.actions.log`. In `-p` mode tools needing
+permission are denied unless allowed, hence bypass in the throwaway VM (recorded in `<tag>.env`).
+
+**Layout leak found by run 1 (2026-10-13).** Run 1 (sed, v1, interactive, clone `naive-run-grep`,
+45 tool calls, ~8 min, all four files produced) read `PROMPT_v2.md` and `runs/sed_PROMPT_v1.env`
+from its cwd, searched the filesystem for caruca/pash_annotations, and queried the GitHub API for
+"caruca". Fix: prompts in `~/prompts`, logs in `~/runs`; `~/naive-arm` holds only formats/, samples/,
+output/. Run 1 was collected and then **deleted by Tiran** on 2026-10-13 evening (leaky layout, old helper);
+only the README's Observed summary survives. Tiran's call: all deliverables, scripts and collected
+runs stay in the package folder; `runs/` is never copied into a VM because `sync_to_vm.sh` stages
+only prompts, formats/, samples/.
+
+**Per-run packaging (Tiran, 2026-10-13 evening).** Every `naive-run` invocation gets its own
+`~/runs/<date>_<time>_<vm>_<cmd>_<version>/` with prompt.md, output/, stream.jsonl, stream.actions.log,
+transcript_<session>.jsonl, run.env (incl. `run_number_in_this_clone`); output/ is emptied after each
+run; `collect_run.sh <vm> [--keep]` copies each run folder into the package's `runs/` unchanged and
+saves the clone's session store once. Tested 2026-10-13 with a stand-in `claude` (two runs in one
+clone → two folders). Tiran also wants no accumulation of several runs in one folder.
+
+**Status.** Package built 2026-10-13; run 1 done the same day (see above). Related: [[caruca_v2_baseline_scope]] (the naive
 single-prompt control, task 001) and task 007 (agentic SDK arm) are the other two LLM arms.

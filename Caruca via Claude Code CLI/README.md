@@ -23,16 +23,23 @@ formats/pash_annotation.md     format of PaSh's three annotation files, derived 
 samples/{tee,uniq,grep,rm}/    <cmd>.py from v1; pash/ = PaSh's parser table + generator classes, verbatim
 samples/PASH_ANNOTATIONS_LICENSE  MIT licence of the copied PaSh files
 output/                        where the session writes its files (output/<cmd>.py and output/pash/*)
+runs/<date>_<time>_<vm>_<cmd>_<version>/   one folder per invocation of naive-run, collected: prompt.md (exactly as sent),
+                               output/ (the deliverables), stream.jsonl (raw events), stream.actions.log (as shown on
+                               screen), transcript_<session>.jsonl (Claude Code's own record), run.env, environment.txt
+runs/<date>_<time>_<vm>_claude-sessions/   the clone's whole session store, saved once per collection
 
-Operator tooling (never copied into the VM's work folder):
+Operator tooling (never copied into a VM; sync_to_vm.sh stages only the prompts, formats/ and samples/):
 new_run_vm.sh <name>           clone naive-golden -> <name>, start it, copy the package in fresh, install helper + welcome
-collect_run.sh <name> [dest]   copy output/ and runs/ out of a clone into eval/naive_claude_code/, delete the clone
+collect_run.sh <name> [--keep] copy every run folder out of a clone into runs/, delete the clone (--keep to keep it)
 sync_to_vm.sh [vm]             copy the package into a VM (used by new_run_vm.sh; run against naive-golden to update it)
 vm/naive-run                   the in-VM helper: fills the placeholders and runs one session
+vm/naive-watch.py              the live renderer for watch mode: prints each tool call, input and result; keeps raw + text logs
 vm/bashrc-welcome.sh           the welcome printed on every interactive shell in a clone; lands you in ~/naive-arm
+tool_log.py <log>              list every tool call (and -r: result) in a run's stream-json log or session transcript
 ```
 
-`tee`, `uniq`, `grep` and `rm` are the samples, so they **cannot be test commands**. Everything else is fair.
+`tee`, `uniq`, `grep` and `rm` are the samples. They can still be run, but the session then has a
+finished answer in front of it, so a run on one of them measures copying, not solving; record it as such.
 
 ## Michael's feedback and what changed (2026-10-13)
 
@@ -87,7 +94,21 @@ you". That earlier wording is kept in task 016's revision log, not as a live ver
 the generator classes from that, and then runs the binary at least enough to check them. Whether it
 isolates anything before running a destructive command is the open question.
 
-**Observed.** No run yet.
+**Observed.** *Run 1, 2026-10-13, `sed`, interactive mode, clone `naive-run-grep`, Claude Code
+2.1.296. Its records were collected and then deleted by Tiran the same evening, because the run came
+from the leaky layout and the old helper; what follows is what was read off them before deletion,
+and it is not reproducible from the repo.* About 8 minutes and 45 tool calls (37 Bash, 4 Write, 2 Edit,
+2 Read). It produced all four files (syntax file 34 lines; parser table 71; input/output class 50;
+parallelizability class 43). Its first Bash call listed the whole folder, and its second read
+`PROMPT_v2.md` and the run's own `runs/sed_PROMPT_v1.env`, so a version-1 run saw version 2's
+guidance and our metadata: a leak in the package layout, fixed the same day by moving prompts to
+`~/prompts` and logs to `~/runs`. It then ran `sed --version`, read the manual page it was pointed
+to, checked whether `caruca` or `pash_annotations` were importable, searched the filesystem for
+them, and queried the GitHub API for repositories named "caruca" (the VM has network access). It
+wrote and executed test scripts in its scratch directory and at the end deleted the compile caches
+it had created under `output/`. Whether it ran `sed` on inputs before or only after writing the
+files, and whether it isolated anything, was not read before the records were deleted. The operator
+typed "status?" once, believing the session stalled; see "Interactive mode" below.
 
 ### PROMPT_v2 — execution is the standard
 
@@ -145,8 +166,8 @@ Built 2026-10-13 with the steps below.
 |---|---|
 | VM | `naive-golden`, Lima template `ubuntu-24.04` (Ubuntu 24.04.4, arm64), vz backend, 4 vCPU / 4 GiB / 20 GiB, **no mounts** (`--mount-none`; there is no `/Users` inside) |
 | Claude Code | 2.1.296, native installer, `~/.local/bin/claude` in the guest home `/home/tirandagan.guest`; on `PATH` in login shells |
-| Package | `~/naive-arm`: the prompts, `formats/`, `samples/`, empty `output/` and `runs/`; no README, no sync script |
-| Sign-in | see "Sign in once" below; the credentials live in the image and are inherited by every clone |
+| Package | `~/naive-arm`: `formats/`, `samples/`, empty `output/`, nothing else; the prompts in `~/prompts` and logs in `~/runs`, outside the session's folder (since run 1 showed the session reads everything in its folder); no README, no scripts |
+| Sign-in | done 2026-10-13 (claude.ai account, Max subscription; `claude auth status` in the image confirms); every clone inherits it |
 | Stock tools present | `strace`, `unshare`, `man`, `python3` (all in the stock cloud image); no `docker` |
 | Stock restriction left in place | `kernel.apparmor_restrict_unprivileged_userns = 1`, so unprivileged user namespaces are blocked as on any stock Ubuntu 24.04; a session that wants a sandbox has to deal with that itself |
 | Nothing from this project | no `CLAUDE.md` anywhere above `~/naive-arm`, no v1, no repo |
@@ -197,21 +218,38 @@ limactl shell naive-run-sed-v2          # 2. the welcome message lands you in ~/
 Inside the clone:
 
 ```sh
-naive-run sed PROMPT_v2.md              # headless; full log in runs/sed_PROMPT_v2.jsonl, metadata in runs/sed_PROMPT_v2.env
-naive-run -i sed PROMPT_v2.md           # or interactive: watch it, answer its permission prompts
+naive-run sed PROMPT_v2.md              # watch mode: runs unattended, every tool call / input / result shown live and logged
+naive-run -i sed PROMPT_v2.md           # or Claude Code's own interactive screen (press Enter to send the prompt)
 exit
 ```
+
+**Watch mode** is the default and the one to use for the record. The session runs non-interactively
+(`claude -p`) with permissions bypassed, which is safe in a throwaway VM and the only way a
+non-interactive session can use tools at all, and its event stream is rendered live: the model and
+permission mode at the start, the assistant's visible text, each tool call numbered with its name and
+input (for Bash, the exact command), each result truncated to 600 characters, and the totals at the
+end. Thinking is not shown. The run folder (see above) holds `stream.jsonl` (the raw stream, complete), `stream.actions.log`
+(what was shown on screen) and `transcript_<session>.jsonl` (Claude Code's own session transcript).
+
+**Interactive mode** (`-i`) is Claude Code's normal screen. The prompt is placed in the input box
+and is not sent until you press Enter (observed 2026-10-13: a session looked stalled until a key was
+pressed). You answer each permission prompt yourself. The screen shows less than watch mode does;
+the transcript still records everything.
 
 Back on the Mac:
 
 ```sh
-./collect_run.sh naive-run-sed-v2       # 3. copies output/ and runs/ to eval/naive_claude_code/<date>_naive-run-sed-v2/ and deletes the clone
+./collect_run.sh naive-run-sed-v2       # 3. copies every run folder into runs/ here and deletes the clone
 ```
 
 Then fill in the "Observed" part of the prompt version's entry above and add the run to task 016.
 
-`naive-run` refuses a sample command (tee, uniq, grep, rm), a command with no binary or no manual
-page in the VM, an unknown prompt file, and a clone whose `output/` is not empty (one run per clone).
+`naive-run` accepts any installed command. A command outside the project's core nine (cat, grep, pwd,
+rm, tac, tail, tee, uniq, wc, the commands every other arm was measured on) gets a warning and a
+yes/no confirmation; one of the four samples (tee, uniq, grep, rm) gets a note that the session can
+see a finished answer, and runs. It refuses a command with no binary
+or no manual page in the VM, an unknown prompt file, and a clone whose `output/` is not empty (one run
+per clone).
 It records the command, prompt version, binary path, manual-page path, mode, timestamps, Claude Code
 version and OS in `runs/<command>_<version>.env`. `new_run_vm.sh` stops the golden image if it is
 running (Lima clones only a stopped VM), and reports whether the clone is signed in and free of any
@@ -249,12 +287,34 @@ global `CLAUDE.md`.
 5. **Collect and delete** (*Mac*): `limactl copy -r "$RUN:~/naive-arm/output" <dest>/output`, the same
    for `runs`, then `limactl delete -f "$RUN"`.
 
+## Logging every tool call and command
+
+There is no Claude Code flag that writes a tool log for an interactive session, but nothing is lost:
+
+| Mode | Where every tool call and command is recorded | How |
+|---|---|---|
+| watch mode (`naive-run <cmd>`) | the run folder's `stream.jsonl` (raw) and `stream.actions.log` (as shown on screen) | `--output-format stream-json --verbose`: one JSON event per message; each `tool_use` block carries the tool name and its full input (for `Bash`, the exact command line), each `tool_result` the output; the final `result` event has tokens, cost and duration. `naive-watch.py` renders it live and keeps both files |
+| both modes | the run folder's `transcript_<session-id>.jsonl` | Claude Code writes a transcript of every session to `~/.claude/projects/<cwd-slug>/<session-id>.jsonl` on its own, with the same `tool_use` / `tool_result` blocks plus timestamps; `naive-run` copies every session file written during the run into the run folder, and `collect_run.sh` also saves the clone's whole session store once as `runs/<date>_<time>_<vm>_claude-sessions/` |
+
+To read either file as a plain list of calls (number, time, tool, command or path), on the Mac:
+
+```sh
+./tool_log.py runs/<date>_<time>_<vm>_<cmd>_<version>/transcript_<session-id>.jsonl
+./tool_log.py -r ...      # also show each tool's result, truncated
+./tool_log.py --json ...  # one JSON record per call, for scripts
+```
+
+Two more options exist and are not used: `claude --debug-file <path>` writes Claude Code's internal
+debug log (noisy, not a tool log), and a `PreToolUse` hook in `~/.claude/settings.json` could append
+every call to a file of our own, but that would put a hook into the environment the session runs in,
+which the experiment keeps stock.
+
 ## What to record per run
 
 - command under test; prompt version; date; the clone's name and that it came from `naive-golden` (Ubuntu 24.04, arm64); `claude --version`
 - model id and permission mode used
 - wall-clock, input/output tokens, cost (from the `result` event)
-- everything under `output/`, copied out before the next run
+- the run folder, collected with `collect_run.sh`
 - observations, in these terms:
   - Did it read the command's documentation? Which source?
   - Did it set up any isolation before running the binary, or run it in place?
@@ -262,6 +322,7 @@ global `CLAUDE.md`.
   - How did it decide the behaviour class?
   - Did it try to run PaSh's parser or generator interfaces against its own classes, or install `pash_annotations`?
   - Did it stall on a question, and if so which one?
+  (The command, prompt version, mode, timestamps and versions are already in the run folder's `run.env`.)
 
 Bring the outputs back to the caruca_v2 repo under `eval/` (the Mac home is mounted in the VM, so
 `cp` straight into `/Users/tirandagan/dev/stevens/caruca_v2/eval/...` works) for scoring against v1 and the ground truth;

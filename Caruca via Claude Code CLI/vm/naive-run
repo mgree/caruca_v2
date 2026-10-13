@@ -1,41 +1,87 @@
 #!/usr/bin/env bash
 # Run one experiment session in this VM. Installed at ~/bin/naive-run by new_run_vm.sh.
 #
-#   naive-run <command> [PROMPT_vN.md]        headless: full JSON log in ~/naive-arm/runs/
-#   naive-run -i <command> [PROMPT_vN.md]     interactive: watch the session, answer its prompts
+#   naive-run <command> [PROMPT_vN.md]        watch mode (default): the session runs non-interactively with
+#                                             permissions bypassed; every tool call, its input and its result
+#                                             are shown live and logged
+#   naive-run -i <command> [PROMPT_vN.md]     interactive: Claude Code's own screen; the prompt is put in the
+#                                             input box, press Enter to send it; you answer permission prompts
 #
-# Default prompt version: PROMPT_v1.md. The command must not be one of the samples (tee uniq grep rm).
+# Every invocation gets its own folder, ~/runs/<date>_<time>_<vm>_<command>_<version>/, holding
+# everything about that run: the exact prompt sent, the deliverables (moved out of ~/naive-arm/output),
+# the raw event stream, the rendered action log, Claude Code's own session transcript, and run.env with
+# the metadata. Two invocations in the same clone give two folders; the second runs in an environment
+# the first has already touched, which run.env records (run_number_in_this_clone).
+#
+# Prompts are read from ~/prompts and runs written to ~/runs: both outside ~/naive-arm, the folder the
+# session works in, so it cannot read the other prompt versions or any run's records.
+# Default prompt version: PROMPT_v1.md. Any installed command is allowed. A command outside the
+# project's core nine (cat grep pwd rm tac tail tee uniq wc) asks for confirmation first; one of the
+# four samples (tee uniq grep rm) gets a note, since the session has its finished answer in samples/.
 set -euo pipefail
 cd ~/naive-arm
-MODE=headless
+MODE=watch
 if [ "${1:-}" = "-i" ]; then MODE=interactive; shift; fi
 CMD="${1:?usage: naive-run [-i] <command> [PROMPT_vN.md]}"
-P="${2:-PROMPT_v1.md}"
-case "$CMD" in tee|uniq|grep|rm) echo "error: $CMD is a sample command and cannot be a test target" >&2; exit 2;; esac
-[ -f "$P" ] || { echo "error: no such prompt file: $P (have: $(ls PROMPT_v*.md | tr '\n' ' '))" >&2; exit 2; }
+P="$HOME/prompts/$(basename "${2:-PROMPT_v1.md}")"
+[ -f "$P" ] || { echo "error: no such prompt file: $(basename "$P") (have: $(cd ~/prompts && ls PROMPT_v*.md | tr '\n' ' '))" >&2; exit 2; }
+CORE_NINE="cat grep pwd rm tac tail tee uniq wc"
+case " $CORE_NINE " in *" $CMD "*) ;; *)
+  echo "warning: $CMD is not one of the core nine ($CORE_NINE); results will not line up with the v1/v2 parity runs." >&2
+  if [ -t 0 ]; then
+    read -r -p "Run it anyway? [y/N] " ANSWER
+    case "$ANSWER" in y|Y|yes|YES) ;; *) echo "aborted." >&2; exit 3;; esac
+  else
+    echo "error: no terminal to confirm on; re-run from an interactive shell" >&2; exit 3
+  fi
+  ;;
+esac
+case "$CMD" in tee|uniq|grep|rm) echo "note: $CMD is one of the samples, so the session can see a finished answer for it in samples/" >&2;; esac
 BIN="$(command -v "$CMD" || true)"; MAN="$(man -w "$CMD" 2>/dev/null || true)"
 [ -n "$BIN" ] || { echo "error: $CMD is not installed in this VM" >&2; exit 2; }
 [ -n "$MAN" ] || { echo "error: no manual page for $CMD in this VM" >&2; exit 2; }
+
+VM="$(hostname | sed 's/^lima-//')"
+PVER="$(basename "${P%.md}")"
+STAMP="$(date +%Y-%m-%d_%H%M%S)"
+RUN="$HOME/runs/${STAMP}_${VM}_${CMD}_${PVER}"
+mkdir -p "$RUN" "$HOME/runs"
+N=$(find "$HOME/runs" -mindepth 1 -maxdepth 1 -type d | wc -l)   # this run included
+mkdir -p output
 if [ -n "$(ls -A output 2>/dev/null)" ]; then
-  echo "error: output/ is not empty; this clone has been used. Make a fresh clone for a new run." >&2; exit 2
+  echo "warning: output/ was not empty; moving leftovers to $RUN/leftover_output_before_run/" >&2
+  mkdir -p "$RUN/leftover_output_before_run" && mv output/* output/.[!.]* "$RUN/leftover_output_before_run/" 2>/dev/null || true
 fi
 PROMPT="$(sed -e "s|{{COMMAND}}|$CMD|g" -e "s|{{PATH}}|$BIN|g" -e "s|{{MANPAGE_PATH}}|$MAN|g" "$P")"
-TAG="${CMD}_${P%.md}"
-mkdir -p runs
+printf '%s\n' "$PROMPT" > "$RUN/prompt.md"
+START_MARK="$RUN/.start"; touch "$START_MARK"
 {
-  echo "command=$CMD"; echo "prompt=$P"; echo "binary=$BIN"; echo "manpage=$MAN"; echo "mode=$MODE"
+  echo "command=$CMD"; echo "prompt_version=$PVER"; echo "prompt_file=$P"; echo "binary=$BIN"; echo "manpage=$MAN"
+  echo "mode=$MODE"; echo "vm=$VM"; echo "run_number_in_this_clone=$N"
   echo "started=$(date -Is)"; echo "claude=$(claude --version)"; echo "os=$(lsb_release -ds) $(uname -m)"
-  echo "host=$(hostname)"
-} > "runs/$TAG.env"
-echo "== $TAG: $MODE run of $CMD with $P (binary $BIN, man $MAN)"
-if [ "$MODE" = headless ]; then
-  echo "== log: ~/naive-arm/runs/$TAG.jsonl   (last event, type=result, has tokens/cost/duration)"
-  claude -p "$PROMPT" --output-format stream-json --verbose > "runs/$TAG.jsonl"
-  echo "finished=$(date -Is)" >> "runs/$TAG.env"
-  echo "== done. Files written:"; find output -type f | sort
-  echo "== result event:"; tail -1 "runs/$TAG.jsonl" | python3 -c 'import json,sys; r=json.load(sys.stdin); print({k:r.get(k) for k in ("duration_ms","num_turns","total_cost_usd","usage","is_error")})' 2>/dev/null || true
+} > "$RUN/run.env"
+[ "$N" -gt 1 ] && echo "note: run #$N in this clone; the environment is not fresh (earlier runs: $(ls ~/runs | grep -v "^$(basename "$RUN")$" | tr '\n' ' '))" >&2
+
+echo "== run folder: $RUN"
+echo "== $MODE run of $CMD with $PVER (binary $BIN, man $MAN)"
+if [ "$MODE" = watch ]; then
+  echo "permission_mode=bypassPermissions" >> "$RUN/run.env"
+  echo "== permissions are bypassed (throwaway VM); every action is shown below as it happens"
+  claude -p "$PROMPT" --output-format stream-json --verbose --permission-mode bypassPermissions \
+    | python3 ~/bin/naive-watch.py "$RUN/stream.jsonl" || echo "exit_status=$?" >> "$RUN/run.env"
 else
-  echo "== interactive; the prompt is passed as the first message. When you exit, run: find ~/naive-arm/output -type f"
-  claude "$PROMPT"
-  echo "finished=$(date -Is)" >> "runs/$TAG.env"
+  echo "permission_mode=interactive" >> "$RUN/run.env"
+  echo "== interactive. The prompt is placed in the input box: press Enter to send it. Exit with /exit."
+  claude "$PROMPT" || echo "exit_status=$?" >> "$RUN/run.env"
 fi
+echo "finished=$(date -Is)" >> "$RUN/run.env"
+
+# deliverables: move out of the work folder into the run folder, leaving output/ empty for the next run
+mkdir -p "$RUN/output"
+if [ -n "$(ls -A output 2>/dev/null)" ]; then mv output/* output/.[!.]* "$RUN/output/" 2>/dev/null || true; fi
+# Claude Code's own transcript(s) of this run: every session file written since the run started
+find ~/.claude/projects -name '*.jsonl' -newer "$START_MARK" 2>/dev/null | while read -r T; do
+  cp "$T" "$RUN/transcript_$(basename "$T")"; echo "transcript=$T" >> "$RUN/run.env"
+done
+rm -f "$START_MARK"
+echo "== done. Run folder contents:"; find "$RUN" -type f | sort | sed "s|$HOME/||"
