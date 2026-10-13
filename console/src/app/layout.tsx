@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import "./styles/console.css";
+import { NavLink } from "../components/NavLink.js";
 
 export const metadata: Metadata = {
   title: "Caruca v2 · execution console",
@@ -31,22 +31,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
             </div>
             <div className="masthead__scope">127.0.0.1 · local only</div>
-            <nav className="nav">
-              <Link className="nav__item" href="/">
-                Runs
-              </Link>
-              <Link className="nav__item" href="/pipeline">
-                Pipeline
-              </Link>
-              <Link className="nav__item" href="/live">
-                Live
-              </Link>
-              <Link className="nav__item" href="/compare">
-                Compare
-              </Link>
-              <Link className="nav__item" href="/findings">
-                Findings
-              </Link>
+            {/*
+              Four sections, in the order the work happens: run a command's pipeline, look at
+              the runs it produced, compare the two sides across commands, read what was found.
+              Live and Pre-flight are reached from a step on the Pipeline page, not from here.
+            */}
+            <nav className="nav" aria-label="Sections">
+              <NavLink href="/">Pipeline</NavLink>
+              <NavLink href="/runs">Runs</NavLink>
+              <NavLink href="/compare">Compare</NavLink>
+              <NavLink href="/findings">Findings</NavLink>
             </nav>
           </header>
           {children}

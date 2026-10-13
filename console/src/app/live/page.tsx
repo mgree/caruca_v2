@@ -2,6 +2,7 @@ import Link from "next/link";
 import { estimateCost } from "../../data/preflight.js";
 import { TERMINAL_COLS, TERMINAL_ROWS } from "../../server/processes.js";
 import { STAGE_ORDER } from "../../data/pipelinePlan.js";
+import { STAGES, type Stage } from "../../data/schema.js";
 import { LiveConsole } from "../../components/LiveConsole.js";
 import { Badge } from "../../components/ui.js";
 
@@ -10,9 +11,11 @@ export const dynamic = "force-dynamic";
 /**
  * Live: run v1 and v2 and watch them (§6.3).
  *
- * The estimates are computed here, on the server, from measured runs — the client is handed
- * figures rather than trusted to work them out, so what the confirmation shows and what the
- * server checks against are the same number.
+ * Reached from a step on the home screen, in which case only that step's controls are shown
+ * (`stage` and `side`), or on its own with every control. The estimates are computed here, on
+ * the server, from measured runs — the client is handed figures rather than trusted to work
+ * them out, so what the confirmation shows and what the server checks against are the same
+ * number.
  */
 export default async function LivePage({
   searchParams,
@@ -27,6 +30,12 @@ export default async function LivePage({
 
   const command = one("command") ?? "cat";
   const model = one("model") ?? "openai/gpt-4o";
+  const stageParam = one("stage");
+  const sideParam = one("side");
+  const focus =
+    stageParam && (STAGES as readonly string[]).includes(stageParam)
+      ? { stage: stageParam as Stage, side: sideParam === "v1" ? ("v1" as const) : ("v2" as const) }
+      : null;
 
   const estimates = Object.fromEntries(
     STAGE_ORDER.map((stage) => {
@@ -39,13 +48,18 @@ export default async function LivePage({
     <main className="page page--wide">
       <div className="accent-bar" />
       <div className="page__head">
-        <h1>Live</h1>
+        <h1>Run</h1>
         <Badge mono>{command}</Badge>
         <Badge tone="muted" mono>
           {model}
         </Badge>
-        <span className="spacer">
-          <Link href={`/pipeline?command=${command}`}>Pre-flight →</Link>
+        <span className="spacer row" style={{ gap: 18 }}>
+          <Link href={`/?command=${encodeURIComponent(command)}`}>
+            ← {command}&apos;s pipeline
+          </Link>
+          <Link href={`/pipeline?command=${encodeURIComponent(command)}`}>
+            What it would run, and cost →
+          </Link>
         </span>
       </div>
       <p className="page__sub">
@@ -59,6 +73,7 @@ export default async function LivePage({
         cols={TERMINAL_COLS}
         rows={TERMINAL_ROWS}
         estimates={estimates}
+        focus={focus}
       />
     </main>
   );

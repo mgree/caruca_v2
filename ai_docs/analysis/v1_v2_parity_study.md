@@ -242,6 +242,13 @@ upstream typing error is not scored twice.
 
 27 cells, **12 produced a usable result and 15 did not**. $0.940.
 
+> **Read §8 confound 8 before citing anything in this section.** The five configurations traced
+> per command are largely repeats of one another — across the nine commands the 45 executions
+> cover only **12 distinct command lines**, and for six of the nine (`cat`, `sha256sum`, `tac`,
+> `tail`, `uniq`, `wc`) all five were the *same* no-argument invocation, so no flag was
+> exercised. The protocol finding in §4.1 is unaffected; the recovery figures in §4.2 are
+> bounded to the forms actually run.
+
 ### 4.1 The dominant failure is protocol, not accuracy
 
 Across **135 tool-loop sessions**:
@@ -513,6 +520,33 @@ A result that does not name what could undermine it is not a result.
    the overlap is stated.
 7. **Stage 3 rests on 17 core units.** Most commands have 2 distinct interactions to
    recover, so per-command rates are effectively binary.
+8. **Stage 3's five configurations per command are mostly the same configuration.**
+   *(Added 6 October 2026.)* v1's enumerator re-emits any invocation that does not spend the
+   full flag budget, once per combination of optional positions — closed form
+   `C(n − k, max_count − k)`, derived in `e0_artifact_pinning.md`. At `--max-count 1` that
+   means the no-argument invocation is emitted once per optional position: 14 times for
+   `tail`, 13 for `cat`. `v1.reference_configs()` then groups configurations under their
+   invocation string when it writes `eval/v1_configs/<cmd>.configs.json`, so every copy lands
+   together at the head of the file, and `--limit 5` takes the first five. The result:
+
+   | | configurations run | distinct command lines among them |
+   |---|---|---|
+   | `cat`, `sha256sum`, `tac`, `tail`, `uniq`, `wc` | 5 each | **1 each** |
+   | `pwd`, `rm`, `tee` | 5 each | 2 each |
+   | **all nine** | **45** | **12** |
+
+   So the stage-3 verdict rests on **12 distinct command lines, not 45** — 33 of the 45
+   executions repeat a command already in the same batch — and covers **12 of the 229**
+   distinct command lines v1 offered (5%). For six of the nine commands **no flag was
+   exercised at all**; the measurement is of the no-argument form only. This does not change
+   the §4.1 finding (the dominant failure is protocol — 14 of 15 sessions never called
+   `report_observations`, which is independent of which invocation was being traced), but it
+   does bound §4.2: "recovery is partial" is established for the no-argument form of six
+   commands, not for those commands generally. Any re-run should deduplicate by invocation
+   string before applying `--limit`, which would raise distinct coverage roughly five-fold at
+   identical cost. Reproduce the table with
+   `python3 .claude/skills/retrieve-caruca-run/scripts/caruca_run.py <cmd> -s 3 -v numbers`
+   alongside the configurations file.
 
 ---
 

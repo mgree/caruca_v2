@@ -1,0 +1,3206 @@
+[
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-b",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-b_MRWIR",
+          "identifier": "MRWIR"
+        }
+      ]
+    },
+    "true_str": "cat -b",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-b",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-b_MRWIR",
+              "true_string": "-b"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-b",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-b_MRWIR",
+                "identifier": "MRWIR"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -b"
+        },
+        "return_code": 0,
+        "stdout": "     1\tc\n     2\ta\n     3\tr\n     4\tu\n     5\tc\n     6\ta\n\n     7\tHi\n     8\tHello\n\n     9\tThe quick brown fox jumped over the lazy dog.\n    10\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    11\tUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n    12\tHere's some punctuation characters like \" or ; or |. How about { or ]!\n    13\tHere's even more such as %, ^ and @. Maybe | and ; one more time\n    14\tb\n    15\tr\n    16\to\n    17\tw\n    18\tn\n\n    19\tDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \n    20\tExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n    21\tSentence without the first letter \n    22\tfoo\n    23\tbarbaz\n    24\tThere's some punctuation characters like \" or ' or |. How about } and [?\n    25\tThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-T",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-T_DCRNB",
+          "identifier": "DCRNB"
+        }
+      ]
+    },
+    "true_str": "cat -T",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-T",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-T_DCRNB",
+              "true_string": "-T"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-T",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-T_DCRNB",
+                "identifier": "DCRNB"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -T"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-n",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-n_MDPNL",
+          "identifier": "MDPNL"
+        }
+      ]
+    },
+    "true_str": "cat -n",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-n",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-n_MDPNL",
+              "true_string": "-n"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-n",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-n_MDPNL",
+                "identifier": "MDPNL"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -n"
+        },
+        "return_code": 0,
+        "stdout": "     1\tc\n     2\ta\n     3\tr\n     4\tu\n     5\tc\n     6\ta\n     7\t\n     8\tHi\n     9\tHello\n    10\t\n    11\tThe quick brown fox jumped over the lazy dog.\n    12\tLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n    13\tUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n    14\t\n    15\tHere's some punctuation characters like \" or ; or |. How about { or ]!\n    16\tHere's even more such as %, ^ and @. Maybe | and ; one more time\n    17\tb\n    18\tr\n    19\to\n    20\tw\n    21\tn\n    22\t\n    23\tDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \n    24\tExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n    25\tSentence without the first letter \n    26\tfoo\n    27\tbarbaz\n    28\tThere's some punctuation characters like \" or ' or |. How about } and [?\n    29\tThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "--help",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG--help_ANCIQ",
+          "identifier": "ANCIQ"
+        }
+      ]
+    },
+    "true_str": "cat --help",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "--help",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG--help_ANCIQ",
+              "true_string": "--help"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "--help",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG--help_ANCIQ",
+                "identifier": "ANCIQ"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat --help"
+        },
+        "return_code": 0,
+        "stdout": "Usage: cat [OPTION]... [FILE]...\nConcatenate FILE(s) to standard output.\n\nWith no FILE, or when FILE is -, read standard input.\n\n  -A, --show-all           equivalent to -vET\n  -b, --number-nonblank    number nonempty output lines, overrides -n\n  -e                       equivalent to -vE\n  -E, --show-ends          display $ at end of each line\n  -n, --number             number all output lines\n  -s, --squeeze-blank      suppress repeated empty output lines\n  -t                       equivalent to -vT\n  -T, --show-tabs          display TAB characters as ^I\n  -u                       (ignored)\n  -v, --show-nonprinting   use ^ and M- notation, except for LFD and TAB\n      --help        display this help and exit\n      --version     output version information and exit\n\nExamples:\n  cat f - g  Output f's contents, then standard input, then g's contents.\n  cat        Copy standard input to standard output.\n\nGNU coreutils online help: <https://www.gnu.org/software/coreutils/>\nReport any translation bugs to <https://translationproject.org/team/>\nFull documentation <https://www.gnu.org/software/coreutils/cat>\nor available locally via: info '(coreutils) cat invocation'\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "wf",
+            "stdout"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-A",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-A_OFSOI",
+          "identifier": "OFSOI"
+        }
+      ]
+    },
+    "true_str": "cat -A",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-A",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-A_OFSOI",
+              "true_string": "-A"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-A",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-A_OFSOI",
+                "identifier": "OFSOI"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -A"
+        },
+        "return_code": 0,
+        "stdout": "c$\na$\nr$\nu$\nc$\na$\n$\nHi$\nHello$\n$\nThe quick brown fox jumped over the lazy dog.$\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.$\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.$\n$\nHere's some punctuation characters like \" or ; or |. How about { or ]!$\nHere's even more such as %, ^ and @. Maybe | and ; one more time$\nb$\nr$\no$\nw$\nn$\n$\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. $\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.$\nSentence without the first letter $\nfoo$\nbarbaz$\nThere's some punctuation characters like \" or ' or |. How about } and [?$\nThere's even more such as %, ^ and @. Maybe \" and ' one more time$\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-E",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-E_EHMRO",
+          "identifier": "EHMRO"
+        }
+      ]
+    },
+    "true_str": "cat -E",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-E",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-E_EHMRO",
+              "true_string": "-E"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-E",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-E_EHMRO",
+                "identifier": "EHMRO"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -E"
+        },
+        "return_code": 0,
+        "stdout": "c$\na$\nr$\nu$\nc$\na$\n$\nHi$\nHello$\n$\nThe quick brown fox jumped over the lazy dog.$\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.$\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.$\n$\nHere's some punctuation characters like \" or ; or |. How about { or ]!$\nHere's even more such as %, ^ and @. Maybe | and ; one more time$\nb$\nr$\no$\nw$\nn$\n$\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. $\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.$\nSentence without the first letter $\nfoo$\nbarbaz$\nThere's some punctuation characters like \" or ' or |. How about } and [?$\nThere's even more such as %, ^ and @. Maybe \" and ' one more time$\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-v",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-v_INWGA",
+          "identifier": "INWGA"
+        }
+      ]
+    },
+    "true_str": "cat -v",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-v",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-v_INWGA",
+              "true_string": "-v"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-v",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-v_INWGA",
+                "identifier": "INWGA"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -v"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-t",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-t_FQXFY",
+          "identifier": "FQXFY"
+        }
+      ]
+    },
+    "true_str": "cat -t",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-t",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-t_FQXFY",
+              "true_string": "-t"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-t",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-t_FQXFY",
+                "identifier": "FQXFY"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -t"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-e",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-e_CRBBA",
+          "identifier": "CRBBA"
+        }
+      ]
+    },
+    "true_str": "cat -e",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-e",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-e_CRBBA",
+              "true_string": "-e"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-e",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-e_CRBBA",
+                "identifier": "CRBBA"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -e"
+        },
+        "return_code": 0,
+        "stdout": "c$\na$\nr$\nu$\nc$\na$\n$\nHi$\nHello$\n$\nThe quick brown fox jumped over the lazy dog.$\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.$\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.$\n$\nHere's some punctuation characters like \" or ; or |. How about { or ]!$\nHere's even more such as %, ^ and @. Maybe | and ; one more time$\nb$\nr$\no$\nw$\nn$\n$\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. $\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.$\nSentence without the first letter $\nfoo$\nbarbaz$\nThere's some punctuation characters like \" or ' or |. How about } and [?$\nThere's even more such as %, ^ and @. Maybe \" and ' one more time$\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-s",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-s_NHYNN",
+          "identifier": "NHYNN"
+        }
+      ]
+    },
+    "true_str": "cat -s",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-s",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-s_NHYNN",
+              "true_string": "-s"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-s",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-s_NHYNN",
+                "identifier": "NHYNN"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -s"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": null,
+          "args": [
+            {
+              "value": "relpath_1",
+              "relative": true,
+              "relation": "child"
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "*",
+          "symbol": "PATH_LMIGW",
+          "identifier": "LMIGW"
+        }
+      ]
+    },
+    "true_str": "cat relpath_1",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "relpath_1",
+                  "relative": true,
+                  "sandbox": "/tmp/toplevel_3b6_nktz/sandbox_d1kdfuy2",
+                  "content": "HUMAN_TEXT",
+                  "arg_type": "file",
+                  "true_string": "relpath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "relpath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "relpath_1",
+                    "relative": true,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat relpath_1"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "relpath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/relpath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/relpath_1"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/relpath_1"
+          ]
+        ]
+      },
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "relpath_1",
+                  "relative": true,
+                  "sandbox": "/tmp/toplevel_79b0mmqo/sandbox_7e4ti0a7",
+                  "arg_type": "directory_empty",
+                  "true_string": "relpath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "relpath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "relpath_1",
+                    "relative": true,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat relpath_1"
+        },
+        "return_code": 1,
+        "stdout": "",
+        "stderr": "cat: relpath_1: Is a directory\n",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "relpath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/relpath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/relpath_1"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ]
+        ]
+      },
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "relpath_1",
+                  "relative": true,
+                  "sandbox": "/tmp/toplevel__a_5snq8/sandbox_nkdof0zg",
+                  "arg_type": "directory_nonempty",
+                  "true_string": "relpath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "relpath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "relpath_1",
+                    "relative": true,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat relpath_1"
+        },
+        "return_code": 1,
+        "stdout": "",
+        "stderr": "cat: relpath_1: Is a directory\n",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "relpath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/relpath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/relpath_1"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ]
+        ]
+      },
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "nonexistent_path/relpath_1",
+                  "relative": true,
+                  "sandbox": "/tmp/toplevel_j25uz1yn/sandbox_rg724ao1",
+                  "parent_exists": false,
+                  "arg_type": "nonexistent",
+                  "true_string": "nonexistent_path/relpath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "nonexistent_path/relpath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "relpath_1",
+                    "relative": true,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat nonexistent_path/relpath_1"
+        },
+        "return_code": 1,
+        "stdout": "",
+        "stderr": "cat: nonexistent_path/relpath_1: No such file or directory\n",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "nonexistent_path/relpath_1"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ]
+        ]
+      },
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "relpath_1",
+                  "relative": true,
+                  "sandbox": "/tmp/toplevel_wz6kfwky/sandbox_r4h0wixd",
+                  "parent_exists": true,
+                  "arg_type": "nonexistent",
+                  "true_string": "relpath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "relpath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "relpath_1",
+                    "relative": true,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat relpath_1"
+        },
+        "return_code": 1,
+        "stdout": "",
+        "stderr": "cat: relpath_1: No such file or directory\n",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "relpath_1"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": null,
+          "args": [
+            {
+              "value": "abspath_1",
+              "relative": false,
+              "relation": "child"
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "*",
+          "symbol": "PATH_LMIGW",
+          "identifier": "LMIGW"
+        }
+      ]
+    },
+    "true_str": "cat abspath_1",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "abspath_1",
+                  "relative": false,
+                  "sandbox": "/tmp/toplevel_8d_dapix/sandbox_grx60q5j",
+                  "content": "HUMAN_TEXT",
+                  "arg_type": "file",
+                  "true_string": "/tmp/toplevel_8d_dapix/sandbox_grx60q5j/abspath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "/tmp/toplevel_8d_dapix/sandbox_grx60q5j/abspath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "abspath_1",
+                    "relative": false,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat /tmp/toplevel_8d_dapix/sandbox_grx60q5j/abspath_1"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ]
+        ]
+      },
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "abspath_1",
+                  "relative": false,
+                  "sandbox": "/tmp/toplevel_3plrwag0/sandbox_3q4aqy29",
+                  "arg_type": "directory_empty",
+                  "true_string": "/tmp/toplevel_3plrwag0/sandbox_3q4aqy29/abspath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "/tmp/toplevel_3plrwag0/sandbox_3q4aqy29/abspath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "abspath_1",
+                    "relative": false,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat /tmp/toplevel_3plrwag0/sandbox_3q4aqy29/abspath_1"
+        },
+        "return_code": 1,
+        "stdout": "",
+        "stderr": "cat: /tmp/toplevel_3plrwag0/sandbox_3q4aqy29/abspath_1: Is a directory\n",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ]
+        ]
+      },
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "abspath_1",
+                  "relative": false,
+                  "sandbox": "/tmp/toplevel_hfp83f6_/sandbox_8jcid50q",
+                  "arg_type": "directory_nonempty",
+                  "true_string": "/tmp/toplevel_hfp83f6_/sandbox_8jcid50q/abspath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "/tmp/toplevel_hfp83f6_/sandbox_8jcid50q/abspath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "abspath_1",
+                    "relative": false,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat /tmp/toplevel_hfp83f6_/sandbox_8jcid50q/abspath_1"
+        },
+        "return_code": 1,
+        "stdout": "",
+        "stderr": "cat: /tmp/toplevel_hfp83f6_/sandbox_8jcid50q/abspath_1: Is a directory\n",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ]
+        ]
+      },
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "nonexistent_path/abspath_1",
+                  "relative": false,
+                  "sandbox": "/tmp/toplevel_zyrd9aqy/sandbox_z9ppygec",
+                  "parent_exists": false,
+                  "arg_type": "nonexistent",
+                  "true_string": "/tmp/toplevel_zyrd9aqy/sandbox_z9ppygec/nonexistent_path/abspath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "/tmp/toplevel_zyrd9aqy/sandbox_z9ppygec/nonexistent_path/abspath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "abspath_1",
+                    "relative": false,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat /tmp/toplevel_zyrd9aqy/sandbox_z9ppygec/nonexistent_path/abspath_1"
+        },
+        "return_code": 1,
+        "stdout": "",
+        "stderr": "cat: /tmp/toplevel_zyrd9aqy/sandbox_z9ppygec/nonexistent_path/abspath_1: No such file or directory\n",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/nonexistent_path/abspath_1"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ]
+        ]
+      },
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": null,
+              "args": [
+                {
+                  "value": "abspath_1",
+                  "relative": false,
+                  "sandbox": "/tmp/toplevel_t44b4c93/sandbox_cm1ghg0r",
+                  "parent_exists": true,
+                  "arg_type": "nonexistent",
+                  "true_string": "/tmp/toplevel_t44b4c93/sandbox_cm1ghg0r/abspath_1"
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "*",
+              "symbol": "PATH_LMIGW",
+              "true_string": "/tmp/toplevel_t44b4c93/sandbox_cm1ghg0r/abspath_1"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": null,
+                "args": [
+                  {
+                    "value": "abspath_1",
+                    "relative": false,
+                    "relation": "child"
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "*",
+                "symbol": "PATH_LMIGW",
+                "identifier": "LMIGW"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat /tmp/toplevel_t44b4c93/sandbox_cm1ghg0r/abspath_1"
+        },
+        "return_code": 1,
+        "stdout": "",
+        "stderr": "cat: /tmp/toplevel_t44b4c93/sandbox_cm1ghg0r/abspath_1: No such file or directory\n",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/tmp/sandbox_outer/sandbox_inner/abspath_1"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ],
+          [
+            "wf",
+            "stderr"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "-u",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG-u_ICHFX",
+          "identifier": "ICHFX"
+        }
+      ]
+    },
+    "true_str": "cat -u",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "-u",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG-u_ICHFX",
+              "true_string": "-u"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "-u",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG-u_ICHFX",
+                "identifier": "ICHFX"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat -u"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": []
+    },
+    "true_str": "cat",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [],
+          "string": {
+            "name": "cat",
+            "body": []
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat"
+        },
+        "return_code": 0,
+        "stdout": "c\na\nr\nu\nc\na\n\nHi\nHello\n\nThe quick brown fox jumped over the lazy dog.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nHere's some punctuation characters like \" or ; or |. How about { or ]!\nHere's even more such as %, ^ and @. Maybe | and ; one more time\nb\nr\no\nw\nn\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nSentence without the first letter \nfoo\nbarbaz\nThere's some punctuation characters like \" or ' or |. How about } and [?\nThere's even more such as %, ^ and @. Maybe \" and ' one more time\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "stdin"
+          ],
+          [
+            "wf",
+            "stdout"
+          ],
+          [
+            "rf",
+            "stdin"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "command": {
+      "name": "cat",
+      "body": [
+        {
+          "flag": "--version",
+          "args": [
+            {
+              "value": ""
+            }
+          ],
+          "flag_followed_by_equals": false,
+          "arity": "?",
+          "symbol": "FLAG--version_CLNVF",
+          "identifier": "CLNVF"
+        }
+      ]
+    },
+    "true_str": "cat --version",
+    "configs": [
+      {
+        "command": {
+          "name": "cat",
+          "body": [
+            {
+              "flag": "--version",
+              "args": [
+                {
+                  "value": "",
+                  "arg_type": "no_env",
+                  "true_string": ""
+                }
+              ],
+              "flag_followed_by_equals": false,
+              "node_type": "args",
+              "arity": "?",
+              "symbol": "FLAG--version_CLNVF",
+              "true_string": "--version"
+            }
+          ],
+          "string": {
+            "name": "cat",
+            "body": [
+              {
+                "flag": "--version",
+                "args": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "flag_followed_by_equals": false,
+                "arity": "?",
+                "symbol": "FLAG--version_CLNVF",
+                "identifier": "CLNVF"
+              }
+            ]
+          },
+          "stdin": "HUMAN_TEXT",
+          "true_string": "cat --version"
+        },
+        "return_code": 0,
+        "stdout": "cat (GNU coreutils) 9.4\nCopyright (C) 2023 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by Torbjorn Granlund and Richard M. Stallman.\n",
+        "stderr": "",
+        "traces": [
+          [
+            "rf",
+            "/usr/bin/cat"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.preload"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/etc/ld.so.cache"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "rf",
+            "/usr/lib/aarch64-linux-gnu/libc.so.6"
+          ],
+          [
+            "wf",
+            "stdout"
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -28,3 +28,13 @@ should be written at a standard suitable for inclusion in a paper (precise metho
 numbers, clear v1-vs-v2 delta documentation), not just informal internal notes. This also raises the
 stakes on [[feedback_v1_v2_framing]] — paper reviewers are exactly the audience where framing v2 as
 extending v1's capabilities, rather than critiquing v1, matters most.
+
+**Greenberg's guidance, as Tiran restated it to him on 2026-10-05:** the hard part of the
+resubmission is not the code engineering but finding the "gold nugget" that makes the paper
+interesting. Weigh proposed directions by whether they could be that result, not by how much
+engineering they demonstrate. Tiran's current candidate is "how to divide the work" as a
+downstream quality measure ([[pash-work-scheduling]]), pending Greenberg's answer.
+
+**The paper's own reviews are not on file (checked 2026-10-13).** `ai_docs/docs/Caruca v1 submission
+reviews.md` is NSF's review of Greenberg's 2023 *grant proposal*, not of the paper, and Tiran is not
+sure the paper's reviews can be obtained. See [[project-proposal-reviews-vision]].

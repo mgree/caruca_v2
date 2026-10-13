@@ -77,6 +77,14 @@ never demonstrates or measures whether the *same generated specifications* hold 
 variants of these commands, so the cross-platform motivation and the evaluation's scope don't quite
 meet.
 
+> **Note added 6 October 2026.** v1 already holds material for this, and the paper uses none of it.
+> `benchmarks/bsd/man/` has 87 BSD man pages (added June–July 2024). `benchmarks/busybox/` has 240
+> reference grammars for BusyBox v1.30.1 (April 2024), and its README names six commands dropped
+> because the grammar format cannot express their syntax (`find`, `ps`, `su`, `umount`, `sysctl`,
+> `md5sum`). A syntax-level comparison across GNU, BSD and busybox needs no non-Linux tracing at all,
+> so it covers part of this gap more cheaply than the case study below. Details:
+> `memory/caruca_v1_cross_platform_assets.md`.
+
 **Opportunity:** even a small case study — running the generated invocations against BSD/macOS builds
 of a handful of coreutils inside a VM or CI matrix — would let the paper's motivating claim and its
 evidence line up directly. **v2 relevance:** directly relevant to the "isolation backend" question

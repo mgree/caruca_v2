@@ -24,10 +24,10 @@ export const dynamic = "force-dynamic";
  */
 
 const STAGE_LABEL: Record<string, string> = {
-  syntax_spec: "Stage 1 · specification",
-  generate: "Stage 2 · invocations",
-  trace: "Stage 3 · tracing",
-  annotate: "Stage 4 · annotation",
+  syntax_spec: "1 · syntax description",
+  generate: "2 · command lines and setups",
+  trace: "3 · run and trace",
+  annotate: "4 · consumer description",
 };
 
 function fmt(value: number | null): string {

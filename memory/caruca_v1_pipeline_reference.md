@@ -60,6 +60,18 @@ Entry point: `caruca = "caruca:main"` (pyproject) → **argparse** subparsers in
   during generation, not a real type system.
 - Module sizes: `ir/` 1,249 lines, `tracer/` 946, `annotator/` 586, `cli/` 354; loose `llm.py` 163,
   `oracle.py` 120.
+- **The syntax spec's standalone uses (added 2026-10-06).** Outside generation, the grammar feeds two
+  things. (1) `oracle.py::oracle(invocation)`: `shlex`-splits a real command line, strips a leading
+  `sudo`, loads the grammar, removes every recognised flag, option and argument, and returns the
+  unrecognised remainder (empty means fully recognised). The paper's coverage study runs it over
+  `eval/user-scripts/invocations.txt`. (2) The ShellCheck adapter emits a Haskell module named
+  `Caruca.DangerousDelete`, with two checks. **Missing destination** (`annotator/__init__.py` around
+  lines 80–105): derived when a usage has at least 2 positional `Path`s and the required-path count is
+  at least 2. Every `Path`-typed *option* (for example `cp -t/--target-directory`) is collected as an
+  exemption flag. The rendered check fires when an invocation has fewer arguments than required, no
+  flags, and only static arguments. **Dangerous delete**: `DeletePattern`s pairing a predicate (flags
+  plus argument count) with the arguments that tracing showed get deleted, so it depends on behaviour
+  as well as syntax. Context: [[project-greenberg-caruca-purpose]].
 
 ## Latent v1 bugs / gotchas spotted (don't trip over these)
 

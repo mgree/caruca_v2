@@ -79,9 +79,15 @@ describe("where each step has to run", () => {
     expect(whereItMustRun("v1", "syntax_spec", "cat").where).toBe("mac");
   });
 
-  it("sends v2's trace to the VM for a destructive command only", () => {
+  it("sends v2's trace to the VM always, because v1 traces there", () => {
+    // Task 014 phase 3. A v2 trace on this Mac would observe BSD coreutils against v1's GNU
+    // ones in the VM, so the comparison would partly measure the platform.
+    expect(whereItMustRun("v2", "trace", "cat").where).toBe("lima");
+    expect(whereItMustRun("v2", "trace", "cat").reason).toContain("BSD");
+  });
+
+  it("still gives a destructive command the harder reason", () => {
     expect(whereItMustRun("v2", "trace", "rm").where).toBe("lima");
-    expect(whereItMustRun("v2", "trace", "cat").where).toBe("mac");
     expect(whereItMustRun("v2", "trace", "rm").reason).toContain("destructive");
   });
 

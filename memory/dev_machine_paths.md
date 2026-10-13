@@ -25,3 +25,11 @@ paths on each. **Neither path is stale or wrong** — pick by platform (`darwin`
   - CLAUDE.md's environment-constraint notes (no strace/overlayfs/docker/parallel, system
     Python 3.11) describe the WSL PC; macOS equally cannot run the Linux-only trace
     toolchain — tracing needs a provisioned Linux host from either machine.
+  - **The Mac's shell is zsh, and two of its expansions break ordinary commands** (both hit on
+    2026-10-06). A word starting with `=` is command-path expansion, so `echo =====` fails with
+    "==== not found" and aborts the whole command chain; use `echo ---` as a separator. An unquoted
+    glob in a flag is expanded first, so `grep -r --include=*.py` fails with "no matches found"; write
+    `--include='*.py'`.
+  - The Mac has the `pash-annotations` 0.2.4 source in the uv cache
+    (`~/.cache/uv/archive-v0/*/pash_annotations/`), so PaSh's current annotation classes can be read
+    without the `pash` Lima VM.

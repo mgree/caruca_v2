@@ -23,8 +23,9 @@ when copying or adapting this file. See `LICENSE-TEMPLATES.md` for the full term
 
 # Task 012: The PaSh Downstream Study — Does PaSh Work as Well with v2's Annotations as with v1's? (`caruca-v2 downstream pash`)
 
-> **Status:** Created 2026-09-22 at Tiran's direction. **Specification only. Nothing is
-> built, installed, or spent.** Phase 0 is a spike in a new VM and spends nothing. The only API
+> **Status:** Created 2026-09-22 at Tiran's direction. **Phase 0 mostly done (2026-10-05):
+> PaSh is installed and running in the `pash` VM; one item and the exit gate remain (§7).
+> No study code is built and nothing is spent.** Phase 0 is a spike in a new VM and spends nothing. The only API
 > spend is in Phase 2 (v2 runs on split-mode traces, estimated $10-30), and it gets its own cost
 > line priced from a measured one-command pilot before the rest run.
 > **Created:** 2026-09-22 · **Owner:** Tiran Dagan
@@ -453,33 +454,45 @@ Code placement follows task 006's decision (in-package, under the same test regi
 
 ### Phase 0: spike — stand up PaSh and settle how annotations get in (no repo code, no spend)
 
-- [ ] Create Lima VM `pash`: Ubuntu 24.04, `vz`, aarch64, 8 vCPU / 8 GiB / 40 GiB.
+- [x] Create Lima VM `pash`: Ubuntu 24.04, `vz`, aarch64, 8 vCPU / 8 GiB / 40 GiB.
       **Mounts differ from the `caruca` VM on purpose.** The matrix runs `rm` and `tee` under
       annotations that may be wrong, so the Mac home is mounted **read-only**. The only writable
       mount is `eval/downstream/pash/results/`, and every script runs in a fresh directory on the
       guest's own disk, never on a mounted path. A mistranslated `rm` must not be able to reach Mac files.
-- [ ] **Same coreutils version as the `caruca` VM.** Annotations derived from coreutils version X
+- [x] **Same coreutils version as the `caruca` VM.** *(9.4 in both, 2026-10-05.)* Annotations derived from coreutils version X
       must be tested against version X. Record `coreutils --version` in both VMs; a mismatch blocks Phase 4.
-- [ ] Clone `binpash/pash` and build natively. Record: builds on aarch64 or not, and what broke.
-- [ ] Establish the annotation format the build reads (JSON directory vs `pash_annotations`
+- [x] Clone `binpash/pash` and build natively. *(Builds natively on aarch64 at `42a8b87`.)* Record: builds on aarch64 or not, and what broke.
+- [x] Establish the annotation format the build reads (JSON directory vs `pash_annotations`
       generator classes), whether a `"default"` case is required, where stock annotations live,
       and what PaSh does with a command that has no annotation (arm A0 depends on it). Diff the
       stock annotations for the nine against v1's copy in `benchmarks/annotations/pash/`.
+      *(Python classes only; no PaSh since 2022 reads JSON, including the paper's revision. Only
+      `uniq` of the nine has a stock parallelizability annotation. `pash_vm_setup.md` §1, §3.)*
 - [ ] Establish how to read, per command node, whether PaSh parallelized it, at what width, and
-      whether it fell back to `bash`.
-- [ ] Measure PaSh's fixed overhead per run (startup + compilation) on a trivial script, and
+      whether it fell back to `bash`. **Still open: the blocker for the exit gate.** Works for a
+      one-command script (the log shows `r_split`/`r_merge`); not yet per node in a multi-command one.
+- [x] Measure PaSh's fixed overhead per run (startup + compilation) on a trivial script, and
       size the Phase 4 matrix from it. Rough expectation: Tier A is on the order of 10,000-20,000
       runs (≈100 in-domain invocations × ~6 input shapes × 2 split strategies × ~15 arm
       instances), so at ~1 s of overhead each, 5-10 VM-hours before timing runs. Canaries run
-      only on their own command, not the whole matrix.
-- [ ] Establish PaSh's configuration surface for splitting (consecutive chunks vs round-robin
-      `--r_split`, `--width`) and pin the configuration. A wrong class can surface under one
+      only on their own command, not the whole matrix. *(Measured ~0.15 s, not ~1 s: Tier A
+      overhead is ~40 minutes, not 5-10 hours.)*
+- [x] Establish PaSh's configuration surface for splitting (consecutive chunks vs round-robin
+      `--r_split`, `--width`) and pin the configuration. *(Done 2026-10-05,
+      `ai_docs/analysis/pash_work_scheduling.md`: `--r_split` is now a no-op; round-robin is
+      always on where the annotation allows it, and its one knob is `--r_split_batch_size`
+      (default 1,000,000 bytes). Consecutive chunks are chosen by the annotation, not by a flag.
+      There is no dynamic hand-out. **Pin: width 8, batch size left at the default** — tuning it
+      gained 7-10% on a CPU-heavy `grep`, which is a performance question, not this study's;
+      record both values with every timing run.)* A wrong class can surface under one
       split strategy and not another, so Tier A correctness runs use **both** strategies.
-- [ ] **Revision pinning rule, fixed in advance:** the newest revision that builds on aarch64 *and*
+- [x] **Revision pinning rule, fixed in advance:** the newest revision that builds on aarch64 *and*
       reads JSON annotations. If none does, compare the cost of a generator-format emitter against
       pinning an older revision, and prefer the revision closest to the paper's November 2024 run
       when the costs are similar. Record the commit, and the `binpash/annotations` commit if separate.
-- [ ] Write `ai_docs/docs/pash_vm_setup.md`.
+      *(Resolved: no revision reads JSON, so pin modern (`42a8b87`, `pash-annotations` 0.2.4) and
+      the adapter emits Python classes.)*
+- [x] Write `ai_docs/docs/pash_vm_setup.md`.
 - **Exit gate:** a hand-edited `cat` annotation visibly changes PaSh's decision on a one-line
   script, *and* the 10 `oneliners` scripts match `bash` byte-for-byte under stock annotations
   (small inputs).
@@ -539,8 +552,10 @@ Code placement follows task 006's decision (in-package, under the same test regi
 
 ### Phase 4: run the matrix (VM; no spend)
 
-- [ ] All arms × (Tier A in-domain + out-of-domain, both split strategies) × Tier B, width 8.
-      Correctness from every run; timing k=5 on timing inputs.
+- [ ] All arms × (Tier A in-domain + out-of-domain, both split strategies) × Tier B, width 8,
+      default `--r_split_batch_size`. Correctness from every run; timing k=5 on timing inputs.
+      Speedups depend on how evenly the input divides into slices (up to ~10% on the
+      2026-10-05 sweep), so timing inputs are sized identically across arms.
 - [ ] For any Tier B script that diverges and contains more than one of the nine commands,
       re-run with **one command's annotation swapped at a time** to attribute the harm.
 
@@ -679,8 +694,42 @@ VM-hours.
 
 ## 12. Progress
 
-Nothing started. Phase 0 is next and needs no approval (no spend, no repo code). The first 👤
-gate is the Phase 2 cost line.
+Phase 0 is under way (see `ai_docs/docs/pash_vm_setup.md` §5 for what is settled and what is
+open). The first 👤 gate is still the Phase 2 cost line.
+
+**2026-10-05, work scheduling (side investigation, not a study measurement).** Watching PaSh's
+workers led to `ai_docs/analysis/pash_work_scheduling.md`: how `r_split` deals fixed-size slices
+to workers, a comparison with OpenMP's `static` / `dynamic` / `guided` scheduling, and a 430-run
+width × batch-size sweep (best 4.73x against the default's 4.29x; width matters far more than
+slice size). **Tiran's decisions:** PaSh's source is not modified; the OpenMP comparison is kept
+for later annotation design, which is outside this task. Tools and reproducers are in
+`scripts/pash/` (see its README): `try-pash.sh`, `pash-workers.sh` (per-run worker timeline),
+`pash-sweep.sh`, and `repro/` (one-line pipelines for each PaSh behaviour found during setup,
+with a runner).
+
+**2026-10-05, email to Profs. Greenberg and Eiers (sent 21:14).** Tiran proposed that v2's value
+may extend from *whether* a command can be split to *how* to split it (how many workers, what
+chunk size), judged downstream by the speedup good load balancing gives, with OpenMP's
+`static` / `dynamic` / `guided` scheduling (from course 810C, high-performance computing) as the
+reference. Evidence sent: two worker charts (300 KB slices: 46 slices, 92% of ideal overlap,
+4.59x; 1 MB: 13 slices, 79%, 4.18x) and the sweep table. Framed adding dynamic/guided scheduling
+to PaSh as a possible separate paper, not this task. **Asked Prof. Greenberg to confirm the
+direction is worthwhile before pursuing it; no answer yet. Until there is one, nothing in this
+task changes.**
+
+Two things the sent email did not include, so a follow-up should not assume the advisors know
+them: (1) the grep runs used PaSh's own grep annotation, not a Caruca one, so they measure PaSh's
+work division, not annotation quality; (2) the question of whether single-command tests suffice.
+They do not: an annotation's value depends on its neighbours in a script (consecutive
+parallelizable commands stay split; one sequential command forces a merge and re-split; merge
+cost differs by command). That is why Tier B (multi-command benchmark scripts) exists. One
+factual slip in the sent email: it calls 300 KB "PaSh's default batch size"; the default is
+1 MB, and 300 KB was a chosen setting.
+
+**Corrections made the same day while saving the reproducers:** the double-quote wrong-answer
+bug needs single backslashes inside double quotes (the setup document had shown doubled ones,
+which do not trigger it), and the `head -5` compiler crash did not reproduce. Both are corrected
+in `ai_docs/docs/pash_vm_setup.md` §5.
 
 **2026-09-22, review before any work began.** A self-review of the first draft (requested by
 Tiran) added: the trace-mode finding and the split-mode arms (§1.3, §3); single-command swapping

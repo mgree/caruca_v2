@@ -1,0 +1,791 @@
+[
+ {
+  "name": "bc",
+  "body": [],
+  "string": {
+   "name": "bc",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc"
+ },
+ {
+  "name": "bc",
+  "body": [],
+  "string": {
+   "name": "bc",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc"
+ },
+ {
+  "name": "bc",
+  "body": [],
+  "string": {
+   "name": "bc",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc"
+ },
+ {
+  "name": "bc",
+  "body": [],
+  "string": {
+   "name": "bc",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc"
+ },
+ {
+  "name": "bc",
+  "body": [],
+  "string": {
+   "name": "bc",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc"
+ },
+ {
+  "name": "bc",
+  "body": [],
+  "string": {
+   "name": "bc",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc"
+ },
+ {
+  "name": "bc",
+  "body": [],
+  "string": {
+   "name": "bc",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc"
+ },
+ {
+  "name": "bc",
+  "body": [],
+  "string": {
+   "name": "bc",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": "-i",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-i_UROXR",
+    "true_string": "-i"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": "-i",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-i_UROXR",
+     "identifier": "UROXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc -i"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": "-s",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-s_FHZLT",
+    "true_string": "-s"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": "-s",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-s_FHZLT",
+     "identifier": "FHZLT"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc -s"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": "-h",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-h_BCGYI",
+    "true_string": "-h"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": "-h",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-h_BCGYI",
+     "identifier": "BCGYI"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc -h"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": "-w",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-w_TNDLY",
+    "true_string": "-w"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": "-w",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-w_TNDLY",
+     "identifier": "TNDLY"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc -w"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YORIG",
+    "true_string": "-v"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YORIG",
+     "identifier": "YORIG"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc -v"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": "-l",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-l_HCWPL",
+    "true_string": "-l"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": "-l",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-l_HCWPL",
+     "identifier": "HCWPL"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc -l"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": "-q",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-q_OVAAH",
+    "true_string": "-q"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": "-q",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-q_OVAAH",
+     "identifier": "OVAAH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc -q"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc relpath_1"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc relpath_1"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc relpath_1"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc nonexistent_path/relpath_1"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc relpath_1"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "bc",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_COHBU",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "bc",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_COHBU",
+     "identifier": "COHBU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "bc sandbox_placeholder/abspath_1"
+ }
+]

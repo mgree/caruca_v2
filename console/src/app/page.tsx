@@ -1,117 +1,326 @@
-import { listRuns } from "../data/runs.js";
-import { listV1Runs } from "../data/v1Runs.js";
-import { indexedRunIds } from "../data/metricsDb.js";
-import { Badge, Callout, count } from "../components/ui.js";
-import { RunsTable } from "../components/RunSelection.js";
+import Link from "next/link";
+import {
+  commandOverview,
+  knownCommands,
+  runDate,
+  CONFIRMATION_COMMANDS,
+  PINNED_COMMANDS,
+  type StepOverview,
+} from "../data/commandOverview.js";
+import { estimateCost } from "../data/preflight.js";
+import type { Stage } from "../data/schema.js";
+import { Badge, usd, count } from "../components/ui.js";
 
 // Every page reads the run directories at request time, so a run that finishes while the page
 // is open shows up on reload. Nothing here is cached or pre-rendered.
 export const dynamic = "force-dynamic";
 
-const STAGE_LABEL: Record<string, string> = {
-  syntax_spec: "1 · specification",
-  generate: "2 · invocations",
-  trace: "3 · tracing",
-  annotate: "4 · annotation",
+/**
+ * The home screen: one command's pipeline, four steps, v1 beside v2.
+ *
+ * The three things a person comes here to do, in the order they do them: see where this
+ * command stands step by step, run the next step on either side, and open a step's result or
+ * its comparison. Everything else — the full run list, the matrix across commands, the
+ * findings — is one link away, not on this page.
+ */
+
+const STEP: Record<Stage, { name: string; does: string; v1: string; v2: string }> = {
+  syntax_spec: {
+    name: "Syntax description",
+    does: "the man page in; the flags, their aliases and the types of their values out",
+    v1: "syntax-spec",
+    v2: "naive-llm",
+  },
+  generate: {
+    name: "Command lines and file setups",
+    does: "the description in; every command line to test, and the files each one needs, out",
+    v1: "generate",
+    v2: "generate",
+  },
+  trace: {
+    name: "Run and trace",
+    does: "each command line runs in a prepared folder; what it touched is recorded",
+    v1: "trace",
+    v2: "trace",
+  },
+  annotate: {
+    name: "Consumer description",
+    does: "the traces in; the description a tool such as PaSh reads out",
+    v1: "annotate",
+    v2: "annotate",
+  },
 };
 
-export default function RunsPage() {
-  const { runs, startedWithoutRecord, unreadable } = listRuns();
-  const v1 = listV1Runs();
-  const indexed = indexedRunIds();
-  const orphaned = [...indexed].filter(
-    (id) => !runs.some((run) => run.runId === id),
-  ).length;
+const STEP_NUMBER: Record<Stage, number> = {
+  syntax_spec: 1,
+  generate: 2,
+  trace: 3,
+  annotate: 4,
+};
+
+function Picker({ current }: { current: string }) {
+  const all = knownCommands();
+  const pinned = new Set<string>([...PINNED_COMMANDS, ...CONFIRMATION_COMMANDS]);
+  const others = all.filter((c) => !pinned.has(c));
+  const group = (title: string, commands: readonly string[]) => (
+    <div className="picker__group">
+      <span className="picker__title">{title}</span>
+      {commands.map((candidate) => (
+        <Link
+          key={candidate}
+          className={`picker__item mono${candidate === current ? " picker__item--current" : ""}`}
+          href={candidate === current ? "/" : `/?command=${encodeURIComponent(candidate)}`}
+          aria-current={candidate === current ? "page" : undefined}
+        >
+          {candidate}
+        </Link>
+      ))}
+    </div>
+  );
+  return (
+    <nav className="picker" aria-label="Command">
+      {group("the study's nine", PINNED_COMMANDS)}
+      {group("the six confirmation commands", CONFIRMATION_COMMANDS)}
+      {others.length > 0 ? group("others with runs", others) : null}
+    </nav>
+  );
+}
+
+function ScoreCell({ step, command }: { step: StepOverview; command: string }) {
+  const cell = step.score;
+  if (!cell) {
+    return (
+      <div className="side side--score">
+        <div className="side__name">v1 against v2</div>
+        <p className="side__empty">Not scored yet. A campaign scores both sides by one instrument.</p>
+      </div>
+    );
+  }
+  const verdictTone =
+    cell.verdict === "replicates"
+      ? "ok"
+      : cell.verdict === "improves"
+        ? "info"
+        : cell.verdict === "diverges"
+          ? "warn"
+          : "muted";
+  const verdictWord = cell.verdict === "unscoreable" ? "not scoreable" : cell.verdict;
+  return (
+    <div className="side side--score">
+      <div className="side__name">v1 against v2</div>
+      <div className="score">
+        <span className="score__value mono">
+          {cell.pooledCounts
+            ? `${cell.pooledCounts.top} of ${cell.pooledCounts.bottom}`
+            : cell.value === null
+              ? "—"
+              : cell.value.toFixed(3)}
+        </span>
+        <Badge tone={verdictTone}>{verdictWord}</Badge>
+      </div>
+      <div className="side__meta">
+        {cell.headline.label} · {cell.samples} sample{cell.samples === 1 ? "" : "s"}
+        {cell.spread !== null && cell.spread > 0 ? ` · moved ${cell.spread.toFixed(3)} between samples` : ""}
+      </div>
+      <div className="side__actions">
+        <Link href={`/compare/${step.stage}/${encodeURIComponent(command)}`}>
+          Compare the two outputs →
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function V1Cell({ step, command }: { step: StepOverview; command: string }) {
+  const { v1 } = step;
+  const latest = v1.latestRun;
+  return (
+    <div className="side side--v1">
+      <div className="side__name">
+        v1 · <span className="mono">caruca {STEP[step.stage].v1}</span>
+      </div>
+      <ul className="artifacts">
+        {v1.artifacts.map((artifact) => (
+          <li key={artifact.path} className={artifact.present ? "artifact" : "artifact artifact--absent"}>
+            <span className="artifact__mark" aria-hidden="true">
+              {artifact.present ? "✓" : "–"}
+            </span>
+            <span>
+              {artifact.label}
+              {artifact.summary && artifact.summary !== "present" ? (
+                <span className="artifact__summary mono"> {artifact.summary}</span>
+              ) : null}
+              {!artifact.present ? <span className="artifact__summary"> not on disk</span> : null}
+            </span>
+          </li>
+        ))}
+      </ul>
+      {latest ? (
+        <div className="side__meta">
+          Last run from here: {latest.manifest.started_at.slice(0, 10)} ·{" "}
+          <span className="mono">{latest.manifest.where === "lima" ? "VM" : "this Mac"}</span> ·{" "}
+          {latest.manifest.outcome}
+          {v1.runCount > 1 ? ` · ${v1.runCount} runs` : ""}
+        </div>
+      ) : null}
+      <div className="side__actions">
+        {step.score ? (
+          <Link href={`/compare/${step.stage}/${encodeURIComponent(command)}`}>
+            View v1&apos;s output →
+          </Link>
+        ) : null}
+        <Link href={`/live?command=${encodeURIComponent(command)}&stage=${step.stage}&side=v1`}>
+          Run v1 →
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+function V2Cell({
+  step,
+  command,
+  isNext,
+  estimate,
+}: {
+  step: StepOverview;
+  command: string;
+  isNext: boolean;
+  estimate: { usd: number | null; basis: string };
+}) {
+  const { v2 } = step;
+  const latest = v2.latestOk ?? v2.latest;
+  const runHref = `/live?command=${encodeURIComponent(command)}&stage=${step.stage}&side=v2`;
+  return (
+    <div className="side side--v2">
+      <div className="side__name">
+        v2 · <span className="mono">caruca-v2 {STEP[step.stage].v2}</span>
+      </div>
+      {latest ? (
+        <>
+          <div className="row" style={{ gap: 8 }}>
+            {latest.status === "ok" ? <Badge tone="ok">result</Badge> : <Badge tone="bad">failed</Badge>}
+            <span className="side__meta" style={{ marginTop: 0 }}>
+              {runDate(latest)} · <span className="mono">{latest.model}</span> ·{" "}
+              <span className="mono">{usd(latest.costUsd)}</span> ·{" "}
+              <span className="mono">{count(latest.promptTokens + latest.completionTokens)}</span> tokens
+            </span>
+          </div>
+          <div className="side__meta">
+            {v2.okCount} with a result
+            {v2.failedCount > 0 ? `, ${v2.failedCount} failed` : ""} ·{" "}
+            <Link href={`/runs?command=${encodeURIComponent(command)}&stage=${step.stage}`}>all runs of this step</Link>
+          </div>
+        </>
+      ) : (
+        <p className="side__empty">No v2 run of this step yet.</p>
+      )}
+      <div className="side__actions">
+        {latest ? (
+          <>
+            <Link href={`/runs/${latest.runId}`}>View v2&apos;s output →</Link>
+            <Link href={`/runs/${latest.runId}/inspect`}>Inside the run →</Link>
+          </>
+        ) : null}
+        {isNext ? (
+          <Link className="btn btn--primary" href={runHref}>
+            Run step {STEP_NUMBER[step.stage]} on v2
+            {estimate.usd !== null ? <span className="btn__hint">~{usd(estimate.usd)}</span> : null}
+          </Link>
+        ) : (
+          <Link href={runHref}>
+            Run v2 again →
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default async function HomePage({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+  const params = await searchParams;
+  const raw = params["command"];
+  const command = (Array.isArray(raw) ? raw[0] : raw) ?? "cat";
+  const model = "openai/gpt-4o";
+
+  const overview = commandOverview(command);
+  const nextStep = overview.steps.find((step) => step.stage === overview.nextStage);
 
   return (
     <main className="page page--wide">
       <div className="accent-bar" />
       <div className="page__head">
-        <h1>Runs</h1>
-        <Badge mono>{count(runs.length)} with a record</Badge>
-        {startedWithoutRecord.length > 0 ? (
-          <Badge tone="warn" mono>
-            {count(startedWithoutRecord.length)} started, recorded nothing
-          </Badge>
-        ) : null}
+        <h1 className="mono">{command}</h1>
         <Badge tone="muted" mono>
-          {count(v1.runs.length)} v1 runs
+          --max-arity 1 --max-count 1
         </Badge>
+        <span className="spacer">
+          <Link href={`/pipeline?command=${encodeURIComponent(command)}`}>
+            What each step would run, and cost →
+          </Link>
+        </span>
       </div>
-
-      {/*
-        Three sources, three different counts. Saying which one a number is, every time it is
-        shown, is the whole point of this screen's header - a run count quoted without its
-        basis is the same mistake as a rate quoted without its denominator.
-      */}
       <p className="page__sub">
-        Counted three ways, because they disagree: {count(runs.length + startedWithoutRecord.length)}{" "}
-        directories on disk, {count(runs.length)} holding a manifest, {count(indexed.size)} known
-        to <span className="code-inline">eval/metrics.db</span>
-        {orphaned > 0 ? ` (${count(orphaned)} of those have no directory left)` : null}.
+        Four steps, v1 on the left and v2 on the right. Each step reads the one before it.{" "}
+        {nextStep ? (
+          <>
+            Next for v2: <strong>step {STEP_NUMBER[nextStep.stage]}, {STEP[nextStep.stage].name.toLowerCase()}</strong>.
+          </>
+        ) : (
+          <>v2 has a result at every step.</>
+        )}
       </p>
 
-      <div className="stack">
-        {startedWithoutRecord.length > 0 ? (
-          <Callout title="Started and recorded nothing" tone="warn">
-            <p>
-              {count(startedWithoutRecord.length)} directories are empty. A run directory is
-              created when the run starts, and its manifest is written only when the run ends,
-              so a run that dies in between leaves a shell behind. These are counted rather
-              than hidden: a failure that cannot be seen cannot be reported.
-            </p>
-            <p>
-              They are listed at the bottom of this page and can be selected for deletion.
-              Nothing can depend on them, so they are the one group that is safe to clear out
-              without thinking about it.
-            </p>
-          </Callout>
-        ) : null}
+      <Picker current={command} />
 
-        {orphaned > 0 ? (
-          <Callout title="Known to the database, gone from disk" tone="neutral">
-            <p>
-              {count(orphaned)} runs have rows in <span className="code-inline">eval/metrics.db</span>{" "}
-              but no directory. Their per-turn tokens, cost and timing survive; their prompts,
-              responses and outputs do not, so they cannot be replayed or inspected.
-            </p>
-          </Callout>
-        ) : null}
+      {overview.campaignsAbsent.length > 0 ? (
+        <p className="side__meta" style={{ marginBottom: 16 }}>
+          No campaign ledger on this machine for{" "}
+          <span className="mono">{overview.campaignsAbsent.join(", ")}</span>, so the middle
+          column cannot show a score. Copy <span className="mono">eval/campaigns/</span> across, or
+          run a campaign.
+        </p>
+      ) : null}
 
-        {unreadable.length > 0 ? (
-          <Callout title="Unreadable" tone="warn">
-            <p>
-              {unreadable.length} directories hold data that could not be parsed. This is a
-              defect to investigate, not a run that died.
-            </p>
-          </Callout>
-        ) : null}
+      <ol className="steps">
+        {overview.steps.map((step) => {
+          const isNext = step.stage === overview.nextStage;
+          const estimate = estimateCost(step.stage, model);
+          return (
+            <li key={step.stage} className={`step${isNext ? " step--next" : ""}`}>
+              <div className="step__title">
+                <span className="step__n" aria-hidden="true">
+                  {STEP_NUMBER[step.stage]}
+                </span>
+                <h2>
+                  <span className="sr-only">Step {STEP_NUMBER[step.stage]}: </span>
+                  {STEP[step.stage].name}
+                </h2>
+                <span className="step__does">{STEP[step.stage].does}</span>
+              </div>
+              <div className="step__grid">
+                <V1Cell step={step} command={command} />
+                <ScoreCell step={step} command={command} />
+                <V2Cell
+                  step={step}
+                  command={command}
+                  isNext={isNext}
+                  estimate={{ usd: estimate.usdPerRun, basis: estimate.basis }}
+                />
+              </div>
+            </li>
+          );
+        })}
+      </ol>
 
-        {v1.runs.length === 0 ? (
-          <Callout title="No v1 runs yet" tone="neutral">
-            <p>
-              v1 writes no run record of its own, so one exists only for a run this console
-              started. Live runs arrive in Phase 5; until then this list is v2&apos;s runs only.
-            </p>
-          </Callout>
-        ) : null}
-
-        <RunsTable
-          runs={runs.map((run) => ({
-            runId: run.runId,
-            stage: run.stage,
-            command: run.command,
-            model: run.model,
-            turns: run.turns,
-            promptTokens: run.promptTokens,
-            completionTokens: run.completionTokens,
-            costUsd: run.costUsd,
-            status: run.status,
-            hasRecording: run.hasRecording,
-          }))}
-          emptyRunIds={startedWithoutRecord}
-        />
-      </div>
+      <p className="page__foot">
+        Across every command: <Link href="/compare">the comparison matrix</Link> ·{" "}
+        <Link href="/runs">all runs</Link> · <Link href="/findings">findings</Link>
+      </p>
     </main>
   );
 }

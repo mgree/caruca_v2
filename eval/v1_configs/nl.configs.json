@@ -1,0 +1,1904 @@
+[
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [],
+  "string": {
+   "name": "nl",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-d",
+    "args": [
+     {
+      "value": ",",
+      "arg_type": "no_env",
+      "true_string": ","
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-d_XEKTH",
+    "true_string": "-d ,"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-d",
+     "args": [
+      {
+       "value": ","
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-d_XEKTH",
+     "identifier": "XEKTH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -d ,"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-d",
+    "args": [
+     {
+      "value": "\n\t",
+      "arg_type": "no_env",
+      "true_string": "\n\t"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-d_XEKTH",
+    "true_string": "-d '\n\t'"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-d",
+     "args": [
+      {
+       "value": "\n\t"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-d_XEKTH",
+     "identifier": "XEKTH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -d '\n\t'"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_HMPZO",
+    "true_string": "-p"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_HMPZO",
+     "identifier": "HMPZO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -p"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-i",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-i_YDRWJ",
+    "true_string": "-i -1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-i",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-i_YDRWJ",
+     "identifier": "YDRWJ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -i -1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-i",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-i_YDRWJ",
+    "true_string": "-i 0"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-i",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-i_YDRWJ",
+     "identifier": "YDRWJ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -i 0"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-i",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-i_YDRWJ",
+    "true_string": "-i 1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-i",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-i_YDRWJ",
+     "identifier": "YDRWJ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -i 1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-w",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-w_NCMFH",
+    "true_string": "-w -1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-w",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-w_NCMFH",
+     "identifier": "NCMFH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -w -1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-w",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-w_NCMFH",
+    "true_string": "-w 0"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-w",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-w_NCMFH",
+     "identifier": "NCMFH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -w 0"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-w",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-w_NCMFH",
+    "true_string": "-w 1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-w",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-w_NCMFH",
+     "identifier": "NCMFH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -w 1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-b_HMNLZ",
+    "true_string": "-b a"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-b_HMNLZ",
+     "identifier": "HMNLZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -b a"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "t",
+      "arg_type": "no_env",
+      "true_string": "t"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-b_HMNLZ",
+    "true_string": "-b t"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": "t"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-b_HMNLZ",
+     "identifier": "HMNLZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -b t"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "n",
+      "arg_type": "no_env",
+      "true_string": "n"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-b_HMNLZ",
+    "true_string": "-b n"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": "n"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-b_HMNLZ",
+     "identifier": "HMNLZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -b n"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "pBRE",
+      "arg_type": "no_env",
+      "true_string": "pBRE"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-b_HMNLZ",
+    "true_string": "-b pBRE"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": "pBRE"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-b_HMNLZ",
+     "identifier": "HMNLZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -b pBRE"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-h",
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-h_WKZWA",
+    "true_string": "-h a"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-h",
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-h_WKZWA",
+     "identifier": "WKZWA"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -h a"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-h",
+    "args": [
+     {
+      "value": "t",
+      "arg_type": "no_env",
+      "true_string": "t"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-h_WKZWA",
+    "true_string": "-h t"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-h",
+     "args": [
+      {
+       "value": "t"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-h_WKZWA",
+     "identifier": "WKZWA"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -h t"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-h",
+    "args": [
+     {
+      "value": "n",
+      "arg_type": "no_env",
+      "true_string": "n"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-h_WKZWA",
+    "true_string": "-h n"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-h",
+     "args": [
+      {
+       "value": "n"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-h_WKZWA",
+     "identifier": "WKZWA"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -h n"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-h",
+    "args": [
+     {
+      "value": "pBRE",
+      "arg_type": "no_env",
+      "true_string": "pBRE"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-h_WKZWA",
+    "true_string": "-h pBRE"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-h",
+     "args": [
+      {
+       "value": "pBRE"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-h_WKZWA",
+     "identifier": "WKZWA"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -h pBRE"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-v_YRAFQ",
+    "true_string": "-v -1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-v_YRAFQ",
+     "identifier": "YRAFQ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -v -1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-v_YRAFQ",
+    "true_string": "-v 0"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-v_YRAFQ",
+     "identifier": "YRAFQ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -v 0"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-v_YRAFQ",
+    "true_string": "-v 1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-v_YRAFQ",
+     "identifier": "YRAFQ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -v 1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-n",
+    "args": [
+     {
+      "value": "ln",
+      "arg_type": "no_env",
+      "true_string": "ln"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-n_VKPLE",
+    "true_string": "-n ln"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-n",
+     "args": [
+      {
+       "value": "ln"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-n_VKPLE",
+     "identifier": "VKPLE"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -n ln"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-n",
+    "args": [
+     {
+      "value": "rn",
+      "arg_type": "no_env",
+      "true_string": "rn"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-n_VKPLE",
+    "true_string": "-n rn"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-n",
+     "args": [
+      {
+       "value": "rn"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-n_VKPLE",
+     "identifier": "VKPLE"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -n rn"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-n",
+    "args": [
+     {
+      "value": "rz",
+      "arg_type": "no_env",
+      "true_string": "rz"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-n_VKPLE",
+    "true_string": "-n rz"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-n",
+     "args": [
+      {
+       "value": "rz"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-n_VKPLE",
+     "identifier": "VKPLE"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -n rz"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_DUGPG",
+    "true_string": "--version"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_DUGPG",
+     "identifier": "DUGPG"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl --version"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-f_MAIWZ",
+    "true_string": "-f a"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-f_MAIWZ",
+     "identifier": "MAIWZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -f a"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "t",
+      "arg_type": "no_env",
+      "true_string": "t"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-f_MAIWZ",
+    "true_string": "-f t"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "t"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-f_MAIWZ",
+     "identifier": "MAIWZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -f t"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "n",
+      "arg_type": "no_env",
+      "true_string": "n"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-f_MAIWZ",
+    "true_string": "-f n"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "n"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-f_MAIWZ",
+     "identifier": "MAIWZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -f n"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "pBRE",
+      "arg_type": "no_env",
+      "true_string": "pBRE"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-f_MAIWZ",
+    "true_string": "-f pBRE"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "pBRE"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-f_MAIWZ",
+     "identifier": "MAIWZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -f pBRE"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-l",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-l_CPIPG",
+    "true_string": "-l -1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-l",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-l_CPIPG",
+     "identifier": "CPIPG"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -l -1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-l",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-l_CPIPG",
+    "true_string": "-l 0"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-l",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-l_CPIPG",
+     "identifier": "CPIPG"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -l 0"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-l",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-l_CPIPG",
+    "true_string": "-l 1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-l",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-l_CPIPG",
+     "identifier": "CPIPG"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -l 1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl relpath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl relpath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl relpath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl nonexistent_path/relpath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl relpath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_FHFRO",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_FHFRO",
+     "identifier": "FHFRO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-s",
+    "args": [
+     {
+      "value": ",",
+      "arg_type": "no_env",
+      "true_string": ","
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-s_MGQZX",
+    "true_string": "-s ,"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-s",
+     "args": [
+      {
+       "value": ","
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-s_MGQZX",
+     "identifier": "MGQZX"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -s ,"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "-s",
+    "args": [
+     {
+      "value": "\n\t",
+      "arg_type": "no_env",
+      "true_string": "\n\t"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-s_MGQZX",
+    "true_string": "-s '\n\t'"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "-s",
+     "args": [
+      {
+       "value": "\n\t"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-s_MGQZX",
+     "identifier": "MGQZX"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl -s '\n\t'"
+ },
+ {
+  "name": "nl",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_NFAZX",
+    "true_string": "--help"
+   }
+  ],
+  "string": {
+   "name": "nl",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_NFAZX",
+     "identifier": "NFAZX"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "nl --help"
+ }
+]

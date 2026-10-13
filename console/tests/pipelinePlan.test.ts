@@ -38,9 +38,11 @@ describe("the previewed command matches where the step runs", () => {
     expect(step.v2Argv?.join(" ")).toContain("--lima-instance caruca");
   });
 
-  it("uses the host for a trace that does not need the VM", () => {
+  it("traces in the VM even for a harmless command, because v1 traces there", () => {
+    // Task 014 phase 3: tracing BSD coreutils here against v1's GNU ones in the VM would
+    // compare the platforms as much as the systems.
     const step = planStep("trace", "v2", { ...BASE, command: "cat", platform: "linux" });
-    expect(step.v2Argv?.join(" ")).toContain("--isolation host");
+    expect(step.v2Argv?.join(" ")).toContain("--isolation lima");
   });
 
   it("sends v2's annotate through the VM on macOS, because it calls v1's", () => {
@@ -97,14 +99,14 @@ describe("v1's steps are the forms §3 records", () => {
     expect(step.blockers.join(" ")).toContain("OPENAI_API_KEY");
   });
 
-  it("says a live v1 stage 1 is a paid call v1 does not meter", () => {
+  it("says a live v1 stage 1 is a paid call v1 keeps no record of", () => {
     const step = planStep("syntax_spec", "v1", {
       ...BASE,
       v1Stage1: "live",
       openAiKeyPresent: true,
     });
     expect(step.blockers).toEqual([]);
-    expect(step.notes.join(" ")).toContain("does not meter");
+    expect(step.notes.join(" ")).toContain("records nothing about itself");
   });
 });
 

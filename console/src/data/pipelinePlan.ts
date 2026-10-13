@@ -27,10 +27,10 @@ import { estimateCost, whereItMustRun, type CostEstimate } from "./preflight.js"
 export const STAGE_ORDER: readonly Stage[] = ["syntax_spec", "generate", "trace", "annotate"];
 
 export const STAGE_TITLE: Record<Stage, string> = {
-  syntax_spec: "Stage 1 · specification",
-  generate: "Stage 2 · invocations and configurations",
-  trace: "Stage 3 · execution and tracing",
-  annotate: "Stage 4 · annotation",
+  syntax_spec: "Step 1 · syntax description",
+  generate: "Step 2 · command lines and file setups",
+  trace: "Step 3 · run and trace",
+  annotate: "Step 4 · consumer description",
 };
 
 /** What each side does at this stage, in one sentence. */
@@ -157,7 +157,8 @@ export function planStep(stage: Stage, side: "v1" | "v2", options: PlanOptions):
             );
           }
           notes.push(
-            "A live v1 stage 1 is a paid call v1 does not meter. The console's forwarder records the tokens and cost OpenRouter reports, which is the first time v1's LLM step has been costed.",
+            "v1's LLM step records nothing about itself: no tokens, no cost, no model as routed. " +
+              "The console meters this one call, so a live run is the only way those figures exist.",
           );
         } else if (mode === "fetch") {
           invocation = v1SyntaxSpec(command, { fetch: true, root: v1Root() });

@@ -1,6 +1,6 @@
 ---
 name: project-pash-downstream-study
-description: Task 012 (2026-09-22) — PaSh as downstream consumer for v1-vs-v2; Tiran's four design decisions; the trace-mode finding (v1 at --stdin simple can never emit stateless); annotation-format unknown
+description: Task 012 — PaSh as downstream consumer for v1-vs-v2; Tiran's four design decisions; the trace-mode finding (v1 at --stdin simple can never emit stateless); Phase 0 run 2026-10-05 (PaSh installed, annotation format resolved as Python classes, decision probe still unsolved)
 metadata:
   type: project
 ---
@@ -39,9 +39,8 @@ State it precisely — a first draft of it overstated the point and Tiran caught
   much parallelism mined specifications actually unlock has never been reported for v1 or v2.
   That is task 012's main product. v2's `generate` has the same `--stdin/--content split` knobs.
 
-**Biggest open unknown:** whether current PaSh still reads JSON annotations (moved to
-`binpash/annotations` 2022-09-08; JSON now under `old_annotations/`, live format is Python generator
-classes). Task 012 Phase 0 settles it with a pinning rule fixed in advance.
+**That open unknown is now RESOLVED** — see the Phase 0 entry at the end of this file. Current PaSh
+does not read JSON at all, and neither did the paper's revision.
 
 **Why:** a future session picking this up should start at task 012's Phase 0 and not re-derive the
 design, and should not repeat the "conservatism is caused by the bound" claim without the
@@ -81,3 +80,38 @@ classed `stateless` where truth is `side-effectful`, in all three runs.** Nine P
 as `_v1.1` beside the originals; see `ai_docs/docs/presentations/ASSEMBLY.md`. Still unreconciled
 by deliberate choice: `CLAUDE.md` and `PRODUCT.md` (same Q1 wording, WSL-only machine description),
 and the live Dropbox deck, which the repo cannot edit.
+
+**Phase 0 run 2026-10-05 — PaSh installed. Full record in `ai_docs/docs/pash_vm_setup.md`;** only
+the decision-changing facts are repeated here.
+
+- **No PaSh since 2022-09-08 reads JSON annotations, including the revision the paper ran.** JSON
+  was deleted in `binpash/pash` commit `92364f6a`; the paper's-run revision `0d0a563b` (2024-11-18)
+  already required `pash-annotations==0.2.2`, a Python-class format. Established by reading
+  `pyproject.toml`, `requirements.txt` at that revision, and the dispatch in
+  `pash_annotations/annotation_generation/AnnotationGeneration.py`. **This resolves task 012's
+  pinning rule with no judgement call: pin modern, adapter emits Python classes.** It also sharpens
+  the Greenberg question — Caruca's committed JSON annotations could not have been consumed by the
+  paper's own PaSh.
+- **Installed and verified on aarch64**: `binpash/pash` at `42a8b87` (2026-09-29),
+  `pash-annotations` 0.2.4, in a new Lima VM `pash` (Ubuntu 24.04.4, coreutils **9.4 — matches the
+  `caruca` VM**, Mac home mounted **read-only**, verified). `libdash`/`libbash` C extensions build
+  natively, so the x86-fallback plans are not needed. Output byte-identical to `bash` on a
+  `sort | uniq -c | sort -rn` pipeline at width 8.
+- **PaSh's own installer is broken on Ubuntu 24.04**: `scripts/distro-deps.sh` omits
+  `python3-venv`, which `setup-pash.sh` needs immediately. Install `python3.12-venv` first.
+- **Of task 012's nine commands, only `uniq` has a stock parallelizability annotation.** `cat`,
+  `tail`, `tee`, `rm` have input/output generators but no parallelizability one; `pwd`,
+  `sha256sum`, `tac`, `wc` are absent from the dispatch table entirely (`wc`'s generator file
+  exists but is unreachable). The hand-written comparison arm is far thinner than planned.
+- **Fixed overhead is 0.15 s per run**, not the ~1 s task 012 assumed — so Tier A's ~15,000 runs is
+  ~40 minutes of overhead, not 5-10 VM-hours.
+- **`--assert_all_regions_parallelizable` passes vacuously** when PaSh never attempts a region, so
+  it cannot be used alone as a decision probe. **Reading the per-command parallelization decision is
+  unsolved and is now Phase 4's blocker**; the exit gate is therefore NOT met. Untried candidates:
+  `--graphviz dot`, higher debug levels, `-p` captured from stdout (it writes to stdout, not stderr).
+
+**Framing changed 2026-10-06.** Greenberg's position, as Tiran relayed it, is that v1's objective is
+the overall syntax definition of a command and parallelization is a side topic
+([[project-greenberg-caruca-purpose]]). Task 012 therefore tests one consumer, not v1's purpose. Its
+findings stand. When presenting them, don't frame PaSh speedup as the measure of whether v1 works.
+Facts about PaSh's grep annotation, old and current: [[pash-grep-annotation-current-vs-json]].

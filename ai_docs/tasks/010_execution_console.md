@@ -1202,3 +1202,48 @@ counts. Until task 005 adds them, the console shows "not recorded" for both, nev
   in `telemetry.py`. Written up in
   `ai_docs/analysis/findings/cost-is-not-reproducible-at-identical-tokens.md` and
   `memory/project_cost_not_reproducible.md`.
+
+- **2026-10-13: two acceptance items verified, three defects found, by driving the page.**
+  Server started with `npm --prefix console run dev` (started from the wrong folder it fails
+  with `ENOENT package.json`, which the README's "cd console" already covers). The console suite
+  passed, 216 tests in 15 files, and `tsc --noEmit` was clean.
+
+  **Verified from §10:**
+  - *A console run of v1 matches the parity study's v1 run.* v1's free `trace cat` in the Lima
+    VM, started from the Live page (`eval/v1_runs/2026-10-13T160403Z_cat_f3d9efdf`, 2.4 s,
+    exit 0), compared with `outputs/cat.parity.json` by `harness.trace_recovery.compare_traces`:
+    35 of 35 configurations paired, 374 raw pairs on each side, core 35/35 and inference 28/28,
+    precision and recall 1.000 on both tiers. v1's per-process random names did not prevent an
+    exact match for `cat`.
+  - *v1's working files are untouched.* sha256 of all 36 files in `$CARUCA_V1_ROOT/caruca/outputs/`
+    identical before and after. (Separately, v1's checkout shows `save/ls.json` modified, mtime
+    2026-09-03 — the Lima setup day — not by this run. Reported to Tiran, not changed.)
+
+  **Not yet true, found in the code, not only the docs:**
+  - **v1's stage 4 cannot be started from the page.** `LiveConsole.tsx` starts v1's `generate`,
+    `syntax_spec` and `trace` only; there is no annotate button. §4 says every CLI function is
+    reachable; this one is not.
+  - **The server's v1 annotate path could not work even with a button.** `startRun.ts` builds
+    `join(runDir, "<cmd>.json")` from a *freshly minted* run id, so the input trace is looked for
+    in an empty folder, and `StartV1Options` has no way to name the earlier trace run whose
+    `cat.json` should be annotated. The v2 side has the same shape of need (its `annotate` takes
+    v1's traces by default) and should share whatever "pick an input run" control is added.
+  - **The OpenRouter metering forwarder (decision 8, §7) does not exist in code.** No module
+    listens for v1's request, `processes.ts` passes `process.env` through unchanged, nothing sets
+    `OPENAI_BASE_URL`, and `recordedEnvNames()` does not even list it. The one successful live v1
+    stage-1 run (`2026-09-29T203030Z_cat_4a6226d1`) has `llm_cost_usd: null`; the two before it
+    failed with v1's "Please provide an OpenAI API key" because the server's shell had no
+    `OPENAI_API_KEY`, and two more were stopped during DSPy's back-off against a bad endpoint.
+    So §10's "v1's stage 1 runs through OpenRouter, and is metered" is not met. Until it is, a
+    live v1 stage 1 only works when whoever starts the server exports `OPENAI_API_KEY` and
+    `OPENAI_BASE_URL` by hand, and records nothing.
+  - **Two smaller things.** The Pipeline page still says "Nothing here executes anything — live
+    runs are the next piece of work." And v2's stage 3 defaults to `--isolation host` for a
+    non-destructive command, which runs macOS's `cat` where v1's row beside it runs GNU's in the
+    VM; a side-by-side at the default compares two operating systems' `cat`. Task 013 W3(c)
+    makes the same point for campaigns.
+
+  Phase 6 remains unstarted. Tiran's direction the same day: PaSh is a consumer to test with,
+  not the objective; the pipeline running end to end with every failure diagnosed comes first;
+  and v1's source is never modified — console and `v1.py` fixes only
+  (`memory/feedback_never_modify_v1_source.md`).

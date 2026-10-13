@@ -378,8 +378,27 @@ export function whereItMustRun(
     return { where: "mac", reason: "the parity study ran it on the host" };
   }
 
-  if (stage === "trace" && DESTRUCTIVE_COMMANDS.includes(command as never)) {
-    return { where: "lima", reason: `${command} is destructive; the host refuses to execute it` };
+  if (stage === "trace") {
+    // A destructive command has the harder reason, and it is the blocking one, so it is
+    // reported in preference.
+    if (DESTRUCTIVE_COMMANDS.includes(command as never)) {
+      return { where: "lima", reason: `${command} is destructive; the host refuses to execute it` };
+    }
+
+    // Otherwise v2 traces wherever v1's row traces (task 014 phase 3). Asked of the v1 branch
+    // rather than restated, so the two sides cannot drift apart.
+    //
+    // The reason is not only safety: v1 traces GNU coreutils inside the VM, so a v2 trace left
+    // on this Mac would observe BSD `cat` against v1's GNU `cat`, and the comparison would
+    // partly measure the platform rather than the two systems.
+    const v1Trace = whereItMustRun("v1", "trace", command, platform);
+    return {
+      where: v1Trace.where,
+      reason:
+        v1Trace.where === "lima"
+          ? "v1 traces in the VM, so tracing on the host would compare BSD coreutils with GNU"
+          : `v1 traces on the host here (${v1Trace.reason}), so both sides see the same programs`,
+    };
   }
   if (stage === "annotate" && platform === "darwin") {
     return { where: "lima", reason: "it calls v1's annotate, which cannot run on macOS" };

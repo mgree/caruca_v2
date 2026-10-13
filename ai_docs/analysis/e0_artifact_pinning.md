@@ -184,6 +184,40 @@ and CSV in the session scratchpad, key numbers reproduced here:
   paper's Q4 hours, and the baseline-inefficiency figure for the adaptive-querying
   experiment (S4/E-series).
 
+**The mechanism, in closed form (added 6 October 2026).** The sweep above measures the
+redundancy; this is why it happens, and it makes the rate predictable without running the
+generator. `ir/syntax.py::__filtered_args` selects *exactly* `count = min(n, max_count)` of the
+`n` optional argument positions, once per combination, and each selected position's
+`syntax_variation()` includes its own absent case (`Arity.OPTIONAL` → `[0, 1]`). So every
+combination independently re-emits the invocation formed by using none of the positions it
+selected. An invocation that uses **k** optional positions is therefore emitted
+
+> **C(n − k, max_count − k)** times,
+
+and only invocations spending the full budget (k = max_count) appear once. Verified exactly on
+`cat` (n = 13: twelve flags plus the optional operand) at the shipped `--max-count 4` — emitted
+counts 715 / 220 / 55 / 10 for k = 0 / 1 / 2 / 3, against predicted 715 / 220 / 55 / 10. Two
+consequences the empirical sweep does not state:
+
+- **A command's duplicate rate is fixed by (n, max_count) alone**, not by what the command
+  does, which is why the per-command median sits as high as 75.7%.
+- **The redundancy grows with the bound**, so it is worst exactly where cost already hurts.
+  Measured: `cat` 44% → 69% → 82% → **89%** at `--max-count` 1 → 2 → 3 → 4; `tail` 32% → 53% →
+  68%. At the shipped default `cat` emits **13,200 lines for 1,392 distinct invocations**, of
+  which bare `cat` alone accounts for 715.
+
+Reproduce with `caruca generate CMD --max-arity 1 --max-count N | sort | uniq -c | sort -rn`.
+Nothing in `cli/trace.py` deduplicates between `string_invocations(...)` and
+`Tracer(...).run(invocations)` — confirmed by reading the whole path, and visible in v1's own
+committed output: `caruca/outputs/tail.parity.json` holds 41 entries, 28 distinct, with bare
+`tail` traced 14 times (14 of its 49 recorded executions, 29%).
+
+**This is a redundancy defect, not a correctness one** — every invocation emitted is valid, and
+repeated executions yield identical observations that the annotator aggregates, so no
+specification is wrong because of it. It is a cost finding, and it runs in v1's favour: the
+paper's Q4 hours were measured with the repeats included, so the method is cheaper than
+published. Frame it that way (`memory/feedback_v1_v2_framing.md`).
+
 ## What E0 changes downstream
 
 1. **E1 gains a sharper motivating frame:** of the paper's three examples, one describes a

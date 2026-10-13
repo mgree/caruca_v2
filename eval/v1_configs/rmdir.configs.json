@@ -1,0 +1,5712 @@
+[
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-p",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-p_WVOQY",
+    "true_string": "-p"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-p",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-p_WVOQY",
+     "identifier": "WVOQY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -p sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_MJMIY",
+    "true_string": "--version"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_MJMIY",
+     "identifier": "MJMIY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --version sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--ignore-fail-on-non-empty",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+    "true_string": "--ignore-fail-on-non-empty"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--ignore-fail-on-non-empty",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--ignore-fail-on-non-empty_CXJOY",
+     "identifier": "CXJOY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --ignore-fail-on-non-empty sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_DUZFO",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_DUZFO",
+     "identifier": "DUZFO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir --help sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v nonexistent_path/relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v relpath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "rmdir",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_YPEZG",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "+",
+    "symbol": "PATH_NAQRD",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "rmdir",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_YPEZG",
+     "identifier": "YPEZG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "+",
+     "symbol": "PATH_NAQRD",
+     "identifier": "NAQRD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "rmdir -v sandbox_placeholder/abspath_1"
+ }
+]

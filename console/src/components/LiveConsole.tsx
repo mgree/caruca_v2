@@ -27,11 +27,18 @@ import { Badge, Callout, Card, usd } from "./ui.js";
 import type { Stage } from "../data/schema.js";
 
 const STAGE_LABEL: Record<Stage, string> = {
-  syntax_spec: "1 · specification",
-  generate: "2 · invocations",
-  trace: "3 · tracing",
-  annotate: "4 · annotation",
+  syntax_spec: "1 · syntax description",
+  generate: "2 · command lines and setups",
+  trace: "3 · run and trace",
+  annotate: "4 · consumer description",
 };
+const STAGE_NAME: Record<Stage, string> = {
+  syntax_spec: "syntax description",
+  generate: "command lines and file setups",
+  trace: "run and trace",
+  annotate: "consumer description",
+};
+const STEP_NUMBER: Record<Stage, number> = { syntax_spec: 1, generate: 2, trace: 3, annotate: 4 };
 
 export interface LiveConsoleProps {
   readonly command: string;
@@ -40,6 +47,11 @@ export interface LiveConsoleProps {
   readonly rows: number;
   /** Per-stage estimates, computed on the server from measured runs. */
   readonly estimates: Record<string, { usd: number | null; basis: string }>;
+  /**
+   * When set, only this step's controls are shown, for both sides. The home screen links
+   * here from a step, so the person arrives with one decision to make, not fourteen buttons.
+   */
+  readonly focus?: { readonly stage: Stage; readonly side: "v1" | "v2" } | null;
 }
 
 interface PendingConfirmation {
@@ -49,7 +61,7 @@ interface PendingConfirmation {
   readonly basis: string;
 }
 
-export function LiveConsole({ command, model, cols, rows, estimates }: LiveConsoleProps) {
+export function LiveConsole({ command, model, cols, rows, estimates, focus = null }: LiveConsoleProps) {
   const [runs, setRuns] = useState<LiveRunSummary[]>([]);
   const [started, setStarted] = useState<StartedRunSummary[]>([]);
   const [confirming, setConfirming] = useState<PendingConfirmation | null>(null);
@@ -179,6 +191,62 @@ export function LiveConsole({ command, model, cols, rows, estimates }: LiveConso
     });
   };
 
+  /**
+   * v1's start buttons, one list so the focused view can filter it by step. Each names what
+   * it does in the words the CLI uses, and says when it runs for a long time.
+   */
+  const v1Buttons: {
+    stage: Stage;
+    label: string;
+    title?: string;
+    paid?: boolean;
+    onClick: () => void;
+  }[] = [
+    {
+      stage: "syntax_spec",
+      label: "syntax-spec --fetch",
+      title: "Reads v1's committed grammar. Free.",
+      onClick: () => startFree("v1", "syntax_spec"),
+    },
+    {
+      stage: "syntax_spec",
+      label: "syntax-spec, live model call",
+      title: "v1's one LLM step, through the console. Paid.",
+      paid: true,
+      onClick: () =>
+        setConfirming({
+          side: "v1",
+          stage: "syntax_spec",
+          estimateUsd: null,
+          basis: "v1's LLM step has never been metered",
+        }),
+    },
+    {
+      stage: "generate",
+      label: "generate",
+      title: "Prints the command lines; runs nothing. Free.",
+      onClick: () => startFree("v1", "generate"),
+    },
+    {
+      stage: "generate",
+      label: "generate at v1's defaults (long)",
+      title: "The same, at --max-count 4. Minutes on a wide command.",
+      onClick: () => startFree("v1", "generate", { full: true }),
+    },
+    {
+      stage: "trace",
+      label: "trace in the VM",
+      title: "Runs every command line under strace inside the Lima VM. Free.",
+      onClick: () => startFree("v1", "trace"),
+    },
+    {
+      stage: "trace",
+      label: "trace at v1's defaults (long)",
+      title: "The same, at --max-count 4.",
+      onClick: () => startFree("v1", "trace", { full: true }),
+    },
+  ];
+
   return (
     <div className="stack">
       {error ? (
@@ -231,138 +299,115 @@ export function LiveConsole({ command, model, cols, rows, estimates }: LiveConso
         </Callout>
       ) : null}
 
-      <Card title={`Start a step on ${command}`}>
+      <Card
+        title={
+          focus
+            ? `Step ${STEP_NUMBER[focus.stage]} on ${command} · ${STAGE_NAME[focus.stage]}`
+            : `Start a step on ${command}`
+        }
+        aside={
+          focus ? (
+            <a href={`/live?command=${encodeURIComponent(command)}`}>Show every step</a>
+          ) : null
+        }
+      >
         <div className="split">
           <div>
-            <div className="label" style={{ marginBottom: 8 }}>
-              v1 — free
-            </div>
+            <div className="side__name">v1 · caruca</div>
             <div className="row" style={{ gap: 8 }}>
-              <button
-                className="btn"
-                type="button"
-                disabled={pending}
-                onClick={() => startFree("v1", "generate")}
-              >
-                generate (prints, runs nothing)
-              </button>
-              <button
-                className="btn"
-                type="button"
-                disabled={pending}
-                onClick={() => startFree("v1", "syntax_spec")}
-              >
-                syntax-spec --fetch
-              </button>
-              <button
-                className="btn"
-                type="button"
-                disabled={pending}
-                onClick={() => startFree("v1", "generate", { full: true })}
-              >
-                generate (v1 defaults — long)
-              </button>
-              <button
-                className="btn"
-                type="button"
-                disabled={pending}
-                onClick={() => startFree("v1", "trace")}
-              >
-                trace (in the Lima VM)
-              </button>
-              <button
-                className="btn"
-                type="button"
-                disabled={pending}
-                onClick={() => startFree("v1", "trace", { full: true })}
-              >
-                trace at v1 defaults (long)
-              </button>
+              {v1Buttons
+                .filter((button) => !focus || button.stage === focus.stage)
+                .map((button) => (
+                  <button
+                    key={button.label}
+                    className="btn"
+                    type="button"
+                    disabled={pending}
+                    onClick={button.onClick}
+                    title={button.title}
+                  >
+                    {button.label}
+                    {button.paid ? <span className="faint"> paid</span> : null}
+                  </button>
+                ))}
+              {focus?.stage === "annotate" ? (
+                <p className="side__empty">
+                  v1&apos;s annotate cannot be started from here yet: it needs the trace run to
+                  read, and that control is task 014, phase 3. Until then, run it in the VM by hand.
+                </p>
+              ) : null}
             </div>
-            <p className="event__detail faint">
-              All of these are free — v1 calls no model except at stage 1.{" "}
-              <span className="mono">generate</span> prints invocations and executes nothing;{" "}
-              <span className="mono">--fetch</span> reads v1&apos;s committed specification;{" "}
-              <span className="mono">trace</span> executes them under strace inside the VM and
-              writes into this run&apos;s own folder, never v1&apos;s.
-            </p>
-
-            <div className="label" style={{ margin: "14px 0 8px" }}>
-              v1 — paid
-            </div>
-            <button
-              className="btn"
-              type="button"
-              disabled={pending}
-              onClick={() =>
-                setConfirming({
-                  side: "v1",
-                  stage: "syntax_spec",
-                  estimateUsd: null,
-                  basis: "v1's LLM step has never been metered",
-                })
-              }
-            >
-              syntax-spec (live model call)
-            </button>
+            {!focus ? (
+              <p className="event__detail faint">
+                Free unless marked paid. <span className="mono">generate</span> prints command
+                lines and runs nothing; <span className="mono">--fetch</span> reads v1&apos;s
+                committed grammar; <span className="mono">trace</span> runs the command lines under
+                strace inside the VM and writes into this run&apos;s own folder, never v1&apos;s.
+              </p>
+            ) : null}
           </div>
 
           <div>
-            <div className="label" style={{ marginBottom: 8 }}>
-              v2 — every stage calls a paid model
-            </div>
+            <div className="side__name">v2 · caruca-v2</div>
             <div className="row" style={{ gap: 8 }}>
-              {(Object.keys(STAGE_LABEL) as Stage[]).map((stage) => (
-                <button
-                  key={stage}
-                  className="btn"
-                  type="button"
-                  disabled={pending}
-                  onClick={() =>
-                    setConfirming({
-                      side: "v2",
-                      stage,
-                      estimateUsd: estimates[stage]?.usd ?? null,
-                      basis: estimates[stage]?.basis ?? "no measured runs",
-                    })
-                  }
-                >
-                  {STAGE_LABEL[stage]}
-                  {estimates[stage]?.usd != null ? (
-                    <span className="faint"> ~{usd(estimates[stage]!.usd!)}</span>
-                  ) : null}
-                </button>
-              ))}
+              {(Object.keys(STAGE_LABEL) as Stage[])
+                .filter((stage) => !focus || stage === focus.stage)
+                .map((stage) => (
+                  <button
+                    key={stage}
+                    className={focus && focus.side === "v2" ? "btn btn--primary" : "btn"}
+                    type="button"
+                    disabled={pending}
+                    onClick={() =>
+                      setConfirming({
+                        side: "v2",
+                        stage,
+                        estimateUsd: estimates[stage]?.usd ?? null,
+                        basis: estimates[stage]?.basis ?? "no measured runs",
+                      })
+                    }
+                  >
+                    {focus ? `Run step ${STEP_NUMBER[stage]} on v2` : STAGE_LABEL[stage]}
+                    {estimates[stage]?.usd != null ? (
+                      <span className="btn__hint"> ~{usd(estimates[stage]!.usd!)}</span>
+                    ) : null}
+                  </button>
+                ))}
             </div>
             <p className="event__detail faint">
-              Each opens a confirmation with the estimate and what it is based on.
+              Every v2 step calls a paid model. The button opens a confirmation with the estimate
+              and what it is based on.
             </p>
 
-            <div className="label" style={{ margin: "14px 0 8px" }}>
-              v2 — free tools
-            </div>
-            <div className="row" style={{ gap: 8 }}>
-              <button
-                className="btn"
-                type="button"
-                disabled={pending}
-                onClick={() => startTool("score-self-test")}
-              >
-                score --self-test
-              </button>
-              <button
-                className="btn"
-                type="button"
-                disabled={pending}
-                onClick={() => startTool("metrics-rebuild")}
-              >
-                metrics rebuild
-              </button>
-            </div>
-            <p className="event__detail faint">
-              Neither calls a model. <span className="mono">--self-test</span> scores each
-              committed exemplar against itself, so every cell must come out perfect.
-            </p>
+            {!focus ? (
+              <>
+                <div className="side__name" style={{ margin: "14px 0 8px" }}>
+                  v2 · free tools
+                </div>
+                <div className="row" style={{ gap: 8 }}>
+                  <button
+                    className="btn"
+                    type="button"
+                    disabled={pending}
+                    onClick={() => startTool("score-self-test")}
+                  >
+                    score --self-test
+                  </button>
+                  <button
+                    className="btn"
+                    type="button"
+                    disabled={pending}
+                    onClick={() => startTool("metrics-rebuild")}
+                  >
+                    metrics rebuild
+                  </button>
+                </div>
+                <p className="event__detail faint">
+                  Neither calls a model. <span className="mono">--self-test</span> scores each
+                  committed exemplar against itself, so every cell must come out perfect.
+                </p>
+              </>
+            ) : null}
           </div>
         </div>
       </Card>

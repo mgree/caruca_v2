@@ -1,0 +1,2110 @@
+[
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [],
+  "string": {
+   "name": "split",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "1b",
+      "arg_type": "no_env",
+      "true_string": "1b"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-b_BVVPS",
+    "true_string": "-b 1b"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": "1b"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-b_BVVPS",
+     "identifier": "BVVPS"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -b 1b"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "1k",
+      "arg_type": "no_env",
+      "true_string": "1k"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-b_BVVPS",
+    "true_string": "-b 1k"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": "1k"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-b_BVVPS",
+     "identifier": "BVVPS"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -b 1k"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "1m",
+      "arg_type": "no_env",
+      "true_string": "1m"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-b_BVVPS",
+    "true_string": "-b 1m"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": "1m"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-b_BVVPS",
+     "identifier": "BVVPS"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -b 1m"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "1g",
+      "arg_type": "no_env",
+      "true_string": "1g"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-b_BVVPS",
+    "true_string": "-b 1g"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": "1g"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-b_BVVPS",
+     "identifier": "BVVPS"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -b 1g"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "1t",
+      "arg_type": "no_env",
+      "true_string": "1t"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-b_BVVPS",
+    "true_string": "-b 1t"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": "1t"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-b_BVVPS",
+     "identifier": "BVVPS"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -b 1t"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--numeric-suffixes",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER--numeric-suffixes_CPTRJ",
+    "true_string": "--numeric-suffixes -1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--numeric-suffixes",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER--numeric-suffixes_CPTRJ",
+     "identifier": "CPTRJ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --numeric-suffixes -1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--numeric-suffixes",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER--numeric-suffixes_CPTRJ",
+    "true_string": "--numeric-suffixes 0"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--numeric-suffixes",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER--numeric-suffixes_CPTRJ",
+     "identifier": "CPTRJ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --numeric-suffixes 0"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--numeric-suffixes",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER--numeric-suffixes_CPTRJ",
+    "true_string": "--numeric-suffixes 1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--numeric-suffixes",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER--numeric-suffixes_CPTRJ",
+     "identifier": "CPTRJ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --numeric-suffixes 1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split relpath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split relpath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split relpath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split nonexistent_path/relpath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split relpath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_KQMCH",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_KQMCH",
+     "identifier": "KQMCH"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-e",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-e_CMOSX",
+    "true_string": "-e"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-e",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-e_CMOSX",
+     "identifier": "CMOSX"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -e"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--verbose",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--verbose_TDDMK",
+    "true_string": "--verbose"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--verbose",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--verbose_TDDMK",
+     "identifier": "TDDMK"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --verbose"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-n",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-n_IPHEB",
+    "true_string": "-n -1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-n",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-n_IPHEB",
+     "identifier": "IPHEB"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -n -1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-n",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-n_IPHEB",
+    "true_string": "-n 0"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-n",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-n_IPHEB",
+     "identifier": "IPHEB"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -n 0"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-n",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-n_IPHEB",
+    "true_string": "-n 1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-n",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-n_IPHEB",
+     "identifier": "IPHEB"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -n 1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--additional-suffix",
+    "args": [
+     {
+      "value": "string",
+      "arg_type": "no_env",
+      "true_string": "string"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "STRING--additional-suffix_JEGOW",
+    "true_string": "--additional-suffix string"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--additional-suffix",
+     "args": [
+      {
+       "value": "string"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "STRING--additional-suffix_JEGOW",
+     "identifier": "JEGOW"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --additional-suffix string"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--hex-suffixes",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER--hex-suffixes_EUICT",
+    "true_string": "--hex-suffixes -1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--hex-suffixes",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER--hex-suffixes_EUICT",
+     "identifier": "EUICT"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --hex-suffixes -1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--hex-suffixes",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER--hex-suffixes_EUICT",
+    "true_string": "--hex-suffixes 0"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--hex-suffixes",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER--hex-suffixes_EUICT",
+     "identifier": "EUICT"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --hex-suffixes 0"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--hex-suffixes",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER--hex-suffixes_EUICT",
+    "true_string": "--hex-suffixes 1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--hex-suffixes",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER--hex-suffixes_EUICT",
+     "identifier": "EUICT"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --hex-suffixes 1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-d",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-d_VWMAG",
+    "true_string": "-d"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-d",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-d_VWMAG",
+     "identifier": "VWMAG"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -d"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-l",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-l_WRISI",
+    "true_string": "-l -1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-l",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-l_WRISI",
+     "identifier": "WRISI"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -l -1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-l",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-l_WRISI",
+    "true_string": "-l 0"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-l",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-l_WRISI",
+     "identifier": "WRISI"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -l 0"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-l",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-l_WRISI",
+    "true_string": "-l 1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-l",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-l_WRISI",
+     "identifier": "WRISI"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -l 1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_FSSCZ",
+    "true_string": "--version"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_FSSCZ",
+     "identifier": "FSSCZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --version"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-u",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-u_QHVRB",
+    "true_string": "-u"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-u",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-u_QHVRB",
+     "identifier": "QHVRB"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -u"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-a",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-a_AZGFP",
+    "true_string": "-a -1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-a",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-a_AZGFP",
+     "identifier": "AZGFP"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -a -1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-a",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-a_AZGFP",
+    "true_string": "-a 0"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-a",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-a_AZGFP",
+     "identifier": "AZGFP"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -a 0"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-a",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-a_AZGFP",
+    "true_string": "-a 1"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-a",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-a_AZGFP",
+     "identifier": "AZGFP"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -a 1"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "string",
+      "arg_type": "no_env",
+      "true_string": "string"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "STRING_DBTEA",
+    "true_string": "string"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "string"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "STRING_DBTEA",
+     "identifier": "DBTEA"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split string"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-C",
+    "args": [
+     {
+      "value": "1b",
+      "arg_type": "no_env",
+      "true_string": "1b"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-C_EGRHL",
+    "true_string": "-C 1b"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-C",
+     "args": [
+      {
+       "value": "1b"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-C_EGRHL",
+     "identifier": "EGRHL"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -C 1b"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-C",
+    "args": [
+     {
+      "value": "1k",
+      "arg_type": "no_env",
+      "true_string": "1k"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-C_EGRHL",
+    "true_string": "-C 1k"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-C",
+     "args": [
+      {
+       "value": "1k"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-C_EGRHL",
+     "identifier": "EGRHL"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -C 1k"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-C",
+    "args": [
+     {
+      "value": "1m",
+      "arg_type": "no_env",
+      "true_string": "1m"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-C_EGRHL",
+    "true_string": "-C 1m"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-C",
+     "args": [
+      {
+       "value": "1m"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-C_EGRHL",
+     "identifier": "EGRHL"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -C 1m"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-C",
+    "args": [
+     {
+      "value": "1g",
+      "arg_type": "no_env",
+      "true_string": "1g"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-C_EGRHL",
+    "true_string": "-C 1g"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-C",
+     "args": [
+      {
+       "value": "1g"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-C_EGRHL",
+     "identifier": "EGRHL"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -C 1g"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-C",
+    "args": [
+     {
+      "value": "1t",
+      "arg_type": "no_env",
+      "true_string": "1t"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-C_EGRHL",
+    "true_string": "-C 1t"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-C",
+     "args": [
+      {
+       "value": "1t"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-C_EGRHL",
+     "identifier": "EGRHL"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -C 1t"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--filter",
+    "args": [
+     {
+      "value": "ls",
+      "arg_type": "no_env",
+      "true_string": "ls"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--filter_EKJTY",
+    "true_string": "--filter ls"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--filter",
+     "args": [
+      {
+       "value": "ls"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--filter_EKJTY",
+     "identifier": "EKJTY"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --filter ls"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--filter",
+    "args": [
+     {
+      "value": "pwd",
+      "arg_type": "no_env",
+      "true_string": "pwd"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--filter_EKJTY",
+    "true_string": "--filter pwd"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--filter",
+     "args": [
+      {
+       "value": "pwd"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--filter_EKJTY",
+     "identifier": "EKJTY"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --filter pwd"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-x",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-x_EWZJZ",
+    "true_string": "-x"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-x",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-x_EWZJZ",
+     "identifier": "EWZJZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -x"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-t",
+    "args": [
+     {
+      "value": ",",
+      "arg_type": "no_env",
+      "true_string": ","
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-t_LIWGQ",
+    "true_string": "-t ,"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-t",
+     "args": [
+      {
+       "value": ","
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-t_LIWGQ",
+     "identifier": "LIWGQ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -t ,"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "-t",
+    "args": [
+     {
+      "value": "\n\t",
+      "arg_type": "no_env",
+      "true_string": "\n\t"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-t_LIWGQ",
+    "true_string": "-t '\n\t'"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "-t",
+     "args": [
+      {
+       "value": "\n\t"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-t_LIWGQ",
+     "identifier": "LIWGQ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split -t '\n\t'"
+ },
+ {
+  "name": "split",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_EJCOU",
+    "true_string": "--help"
+   }
+  ],
+  "string": {
+   "name": "split",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_EJCOU",
+     "identifier": "EJCOU"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "split --help"
+ }
+]

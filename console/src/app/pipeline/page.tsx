@@ -17,10 +17,9 @@ export const dynamic = "force-dynamic";
 /**
  * Pipeline: build a run, and see what it would do before it does it (§6.1, §6.2).
  *
- * **Nothing on this screen executes anything.** Phase 5 adds that. What it does now is the
- * part that has to be right first: show the two chains as they really are, show every command
- * line, and say which steps would cost money and how much, from measured runs rather than from
- * a guess.
+ * This screen plans a run; the Live page starts one. What it has to get right first is the
+ * part a run cannot undo: show the two chains as they really are, show every command line, and
+ * say which steps would cost money and how much, from measured runs rather than from a guess.
  */
 
 /** The parity study's nine commands, pinned in the picker. */
@@ -66,8 +65,8 @@ export default async function PipelinePage({
         </Badge>
       </div>
       <p className="page__sub">
-        What a run would consist of. Nothing here executes anything — live runs are the next
-        piece of work.
+        What a run would consist of, and what it would cost, before anything starts. To run it,
+        take the command line to the Live page.
       </p>
 
       <div className="stack">
