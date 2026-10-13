@@ -197,7 +197,8 @@ def build_parser() -> argparse.ArgumentParser:
         "(default: %(default)s).",
     )
     _add_shared_flags(generate)
-    generate.set_defaults(handler=_run_generate)
+    # Stage 2's own output cap; `--max-tokens` still overrides it.
+    generate.set_defaults(handler=_run_generate, max_tokens=generate_stage.GENERATE_MAX_TOKENS)
 
     trace = subparsers.add_parser(
         "trace",
@@ -477,6 +478,18 @@ def _run_naive_llm(args: argparse.Namespace, ui: ui_module.UI) -> int:
 def _run_generate(args: argparse.Namespace, ui: ui_module.UI) -> int:
     command = " ".join(args.command)
 
+    def show(event: dict) -> None:
+        if event["kind"] == "turn":
+            ui.detail(
+                f"turn {event['turn']}/{event['max_turns']}",
+                f"{event['prompt_tokens'] + event['completion_tokens']:,} tokens · "
+                f"${event['cost_usd']:.4f} · {event['seconds']:.1f} s · "
+                f"{event['lines']} line(s) · {event['why']}"
+                + (" — continuing" if event["continues"] else ""),
+            )
+        else:
+            ui.detail("then", event["message"])
+
     with ui.working(f"asking {args.model} to enumerate invocations for {command}"):
         result = generate_stage.run(
             command,
@@ -497,6 +510,7 @@ def _run_generate(args: argparse.Namespace, ui: ui_module.UI) -> int:
             db_path=args.db,
             log_conversation=args.log_conversation,
             provider=args.provider,
+            progress=show,
         )
 
     manifest = result.manifest
@@ -634,6 +648,18 @@ def _run_trace(args: argparse.Namespace, ui: ui_module.UI) -> int:
 def _run_annotate(args: argparse.Namespace, ui: ui_module.UI) -> int:
     command = " ".join(args.command)
 
+    def show(event: dict) -> None:
+        if event["kind"] == "turn":
+            ui.detail(
+                f"turn {event['turn']}/{event['max_turns']}",
+                f"{event['prompt_tokens'] + event['completion_tokens']:,} tokens · "
+                f"${event['cost_usd']:.4f} · {event['seconds']:.1f} s · "
+                f"{event['lines']} line(s) · {event['why']}"
+                + (" — continuing" if event["continues"] else ""),
+            )
+        else:
+            ui.detail("then", event["message"])
+
     with ui.working(f"asking {args.model} for a {args.format} annotation for {command}"):
         result = annotate_stage.run(
             command,
@@ -651,6 +677,7 @@ def _run_annotate(args: argparse.Namespace, ui: ui_module.UI) -> int:
             db_path=args.db,
             log_conversation=args.log_conversation,
             provider=args.provider,
+            progress=show,
         )
 
     manifest = result.manifest

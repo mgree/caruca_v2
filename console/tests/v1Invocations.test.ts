@@ -23,7 +23,7 @@ import {
 } from "../src/data/v1Invocations.js";
 import { v1ProtectedOutputs, v1Root, repoPaths } from "../src/data/paths.js";
 
-const RUN_DIR = join(repoPaths().v1Runs, "2026-09-22T120000Z_cat_test1234");
+const RUN_DIR = join(join(repoPaths().root, "eval", "v1_runs"), "2026-09-22T120000Z_cat_test1234");
 
 describe("the forms §3 records", () => {
   it("generate runs on the Mac from v1's own venv, in v1's package directory", () => {
@@ -150,7 +150,7 @@ describe("the guard on v1's output paths", () => {
   });
 
   it("refuses a path that escapes into the checkout with ..", () => {
-    const sneaky = join(repoPaths().v1Runs, "..", "..", "..", "caruca", "caruca", "outputs", "x");
+    const sneaky = join(join(repoPaths().root, "eval", "v1_runs"), "..", "..", "..", "caruca", "caruca", "outputs", "x");
     expect(() => refuseUnsafeOutput(sneaky)).toThrow(UnsafeV1OutputError);
   });
 

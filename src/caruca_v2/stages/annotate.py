@@ -13,6 +13,7 @@ pipeline instead.
 from __future__ import annotations
 
 import json
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -150,6 +151,7 @@ def run(
     log_conversation: bool = False,
     provider: str | None = None,
     client: OpenAI | None = None,
+    progress: Callable[[dict[str, Any]], None] | None = None,
 ) -> AnnotateResult:
     """Derive one consumer's annotation from a traces file, and diff it against v1's."""
     if fmt not in v1.ANNOTATION_FORMATS:
@@ -185,6 +187,29 @@ def run(
         max_turns=max_turns,
         provider=provider,
         client=active_client,
+        on_turn=(
+            None
+            if progress is None
+            else lambda index, response, nxt: progress(
+                {
+                    "kind": "turn",
+                    "turn": index + 1,
+                    "max_turns": max_turns,
+                    "prompt_tokens": response.prompt_tokens,
+                    "completion_tokens": response.completion_tokens,
+                    "cost_usd": response.cost_usd,
+                    "seconds": response.wall_clock_seconds,
+                    "lines": sum(1 for line in response.text.splitlines() if line.strip()),
+                    "finish_reason": response.finish_reason,
+                    "continues": nxt is not None,
+                    "why": (
+                        "cut off by the token cap"
+                        if nxt is not None
+                        else "the model says it is done"
+                    ),
+                }
+            )
+        ),
     )
 
     if log_conversation:

@@ -421,6 +421,10 @@ pre,
   padding: 12px 14px;
   min-height: 320px;
   overflow: auto;
+  max-width: 100%;
+}
+.terminal__body .xterm {
+  max-width: 100%;
 }
 /*
  * xterm draws its own screen element with a light default border, which shows as a box inside
@@ -450,8 +454,12 @@ pre,
 /* ---- split: v1 left, v2 right (decision 4) ---- */
 .split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  /* minmax(0, …): a pane may shrink below its content, so a fixed-width terminal can never
+     push the grid past the window; the terminal body scrolls instead. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 @media (max-width: 1100px) {
   .split {
@@ -606,6 +614,10 @@ pre,
 a.btn:hover {
   text-decoration: none;
 }
+.btn--small {
+  padding: 2px 9px;
+  font-size: var(--text-caption);
+}
 .btn__hint {
   font-family: var(--font-mono);
   font-size: var(--text-caption);
@@ -673,6 +685,36 @@ a.btn:hover {
 .picker__item--current:hover {
   background: var(--ink);
   color: #fff;
+}
+
+.picker__form {
+  margin-top: 4px;
+}
+.picker__input {
+  width: 16ch;
+  padding: 4px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-small);
+  color: var(--ink);
+  background: var(--surface-page);
+  caret-color: var(--blue);
+}
+.picker__input::placeholder {
+  color: var(--text-faint);
+}
+.picker__select {
+  padding: 4px 8px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-small);
+  color: var(--ink);
+  background: var(--surface-page);
+  max-width: 28ch;
+}
+.picker__hint {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
 }
 
 /* ---- the four steps ---- */
@@ -804,6 +846,108 @@ a.btn:hover {
   margin: 28px 0 0;
   font-size: var(--text-small);
   color: var(--text-secondary);
+}
+
+/* ---- the side-by-side popup ---- */
+.artifact-dialog {
+  width: min(96vw, 1560px);
+  height: min(92vh, 1000px);
+  padding: 0;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface-page);
+  color: var(--text-body);
+  box-shadow: var(--shadow-overlay);
+}
+.artifact-dialog::backdrop {
+  background: rgba(11, 31, 51, 0.45);
+}
+.artifact-dialog__frame {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+.artifact-dialog__head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border-default);
+}
+.artifact-dialog__head h2 {
+  font-size: var(--text-h4);
+  color: var(--ink);
+}
+.artifact-dialog__hint {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  margin-right: auto;
+}
+.artifact-dialog__panes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  min-height: 0;
+}
+.artifact-pane {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+.artifact-pane + .artifact-pane {
+  border-left: 1px solid var(--border-default);
+}
+.artifact-pane__head {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 16px;
+  background: var(--surface-thead);
+  border-bottom: 1px solid var(--border-default);
+}
+.artifact-pane__source {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+}
+.artifact-pane__text {
+  margin: 0;
+  padding: 14px 16px;
+  overflow: auto;
+  flex: 1;
+  white-space: pre;
+  background: var(--surface-code);
+  color: var(--ink);
+  line-height: 1.45;
+  tab-size: 4;
+}
+@media (max-width: 1000px) {
+  .artifact-dialog__panes {
+    grid-template-columns: 1fr;
+    overflow: auto;
+  }
+  .artifact-pane + .artifact-pane {
+    border-left: 0;
+    border-top: 1px solid var(--border-default);
+  }
+}
+
+/* ---- housekeeping at the foot of the pipeline page ---- */
+.housekeeping {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-default);
+}
+.housekeeping h2 {
+  font-size: var(--text-h4);
+}
+.cleanup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 72ch;
 }
 
 /* ---- a note that opens on request ---- */

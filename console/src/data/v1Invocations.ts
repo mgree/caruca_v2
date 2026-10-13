@@ -125,9 +125,14 @@ export function refuseUnsafeOutput(path: string, root = v1Root()): string {
   return resolved;
 }
 
-/** The folder a v1 run writes into: `eval/v1_runs/<run_id>/`. */
+/**
+ * The folder a v1 run writes into: `eval/v1_runs/<run_id>/`.
+ *
+ * Always the live folder, never a `CARUCA_EVAL_ROOT` archive: that override exists so old
+ * runs can be *read* from where they were moved, and a new run must not land among them.
+ */
 export function v1RunDir(runId: string): string {
-  return join(repoPaths().v1Runs, runId);
+  return join(repoPaths().root, "eval", "v1_runs", runId);
 }
 
 /** Shell-quote one argument. Used only for the `sh -lc` form v1.py already requires. */

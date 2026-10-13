@@ -1,0 +1,8414 @@
+[
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-C",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-C_KNPPB",
+    "true_string": "-C -1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-C",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-C_KNPPB",
+     "identifier": "KNPPB"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -C -1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-C",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-C_KNPPB",
+    "true_string": "-C 0"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-C",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-C_KNPPB",
+     "identifier": "KNPPB"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -C 0 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-C",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-C_KNPPB",
+    "true_string": "-C 1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-C",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-C_KNPPB",
+     "identifier": "KNPPB"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -C 1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-d",
+    "args": [
+     {
+      "value": "read",
+      "arg_type": "no_env",
+      "true_string": "read"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-d_SZWHG",
+    "true_string": "-d read"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-d",
+     "args": [
+      {
+       "value": "read"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-d_SZWHG",
+     "identifier": "SZWHG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -d read a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-d",
+    "args": [
+     {
+      "value": "skip",
+      "arg_type": "no_env",
+      "true_string": "skip"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-d_SZWHG",
+    "true_string": "-d skip"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-d",
+     "args": [
+      {
+       "value": "skip"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-d_SZWHG",
+     "identifier": "SZWHG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -d skip a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-d",
+    "args": [
+     {
+      "value": "recurse",
+      "arg_type": "no_env",
+      "true_string": "recurse"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-d_SZWHG",
+    "true_string": "-d recurse"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-d",
+     "args": [
+      {
+       "value": "recurse"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-d_SZWHG",
+     "identifier": "SZWHG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -d recurse a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-r",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-r_ZYZTC",
+    "true_string": "-r"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-r",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-r_ZYZTC",
+     "identifier": "ZYZTC"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -r a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-dir",
+    "args": [
+     {
+      "value": "*.txt",
+      "arg_type": "no_env",
+      "true_string": "*.txt"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--exclude-dir_RDRKL",
+    "true_string": "--exclude-dir '*.txt'"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-dir",
+     "args": [
+      {
+       "value": "*.txt"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--exclude-dir_RDRKL",
+     "identifier": "RDRKL"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-dir '*.txt' a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-dir",
+    "args": [
+     {
+      "value": "*.py",
+      "arg_type": "no_env",
+      "true_string": "*.py"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--exclude-dir_RDRKL",
+    "true_string": "--exclude-dir '*.py'"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-dir",
+     "args": [
+      {
+       "value": "*.py"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--exclude-dir_RDRKL",
+     "identifier": "RDRKL"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-dir '*.py' a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-dir",
+    "args": [
+     {
+      "value": "*.c",
+      "arg_type": "no_env",
+      "true_string": "*.c"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--exclude-dir_RDRKL",
+    "true_string": "--exclude-dir '*.c'"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-dir",
+     "args": [
+      {
+       "value": "*.c"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--exclude-dir_RDRKL",
+     "identifier": "RDRKL"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-dir '*.c' a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-dir",
+    "args": [
+     {
+      "value": "*.h",
+      "arg_type": "no_env",
+      "true_string": "*.h"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--exclude-dir_RDRKL",
+    "true_string": "--exclude-dir '*.h'"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-dir",
+     "args": [
+      {
+       "value": "*.h"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--exclude-dir_RDRKL",
+     "identifier": "RDRKL"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-dir '*.h' a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-U",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-U_BWCRG",
+    "true_string": "-U"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-U",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-U_BWCRG",
+     "identifier": "BWCRG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -U a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-E",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-E_IOJBO",
+    "true_string": "-E"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-E",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-E_IOJBO",
+     "identifier": "IOJBO"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -E a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-P",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-P_JASRJ",
+    "true_string": "-P"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-P",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-P_JASRJ",
+     "identifier": "JASRJ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -P a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-i",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-i_JECHA",
+    "true_string": "-i"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-i",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-i_JECHA",
+     "identifier": "JECHA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -i a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--color",
+    "args": [
+     {
+      "value": "never",
+      "arg_type": "no_env",
+      "true_string": "never"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION--color_GROXF",
+    "true_string": "--color never"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--color",
+     "args": [
+      {
+       "value": "never"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION--color_GROXF",
+     "identifier": "GROXF"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --color never a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--color",
+    "args": [
+     {
+      "value": "always",
+      "arg_type": "no_env",
+      "true_string": "always"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION--color_GROXF",
+    "true_string": "--color always"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--color",
+     "args": [
+      {
+       "value": "always"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION--color_GROXF",
+     "identifier": "GROXF"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --color always a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--color",
+    "args": [
+     {
+      "value": "auto",
+      "arg_type": "no_env",
+      "true_string": "auto"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION--color_GROXF",
+    "true_string": "--color auto"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--color",
+     "args": [
+      {
+       "value": "auto"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION--color_GROXF",
+     "identifier": "GROXF"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --color auto a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-w",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-w_WMDGC",
+    "true_string": "-w"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-w",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-w_WMDGC",
+     "identifier": "WMDGC"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -w a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-m",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-m_QMMJG",
+    "true_string": "-m -1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-m",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-m_QMMJG",
+     "identifier": "QMMJG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -m -1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-m",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-m_QMMJG",
+    "true_string": "-m 0"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-m",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-m_QMMJG",
+     "identifier": "QMMJG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -m 0 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-m",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-m_QMMJG",
+    "true_string": "-m 1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-m",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-m_QMMJG",
+     "identifier": "QMMJG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -m 1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-h",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-h_LOMSR",
+    "true_string": "-h"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-h",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-h_LOMSR",
+     "identifier": "LOMSR"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -h a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-s",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-s_GFJZF",
+    "true_string": "-s"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-s",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-s_GFJZF",
+     "identifier": "GFJZF"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -s a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-T",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-T_BVPDD",
+    "true_string": "-T"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-T",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-T_BVPDD",
+     "identifier": "BVPDD"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -T a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-B",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-B_PFNVY",
+    "true_string": "-B -1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-B",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-B_PFNVY",
+     "identifier": "PFNVY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -B -1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-B",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-B_PFNVY",
+    "true_string": "-B 0"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-B",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-B_PFNVY",
+     "identifier": "PFNVY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -B 0 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-B",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-B_PFNVY",
+    "true_string": "-B 1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-B",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-B_PFNVY",
+     "identifier": "PFNVY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -B 1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-D",
+    "args": [
+     {
+      "value": "read",
+      "arg_type": "no_env",
+      "true_string": "read"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-D_ELFPA",
+    "true_string": "-D read"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-D",
+     "args": [
+      {
+       "value": "read"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-D_ELFPA",
+     "identifier": "ELFPA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -D read a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-D",
+    "args": [
+     {
+      "value": "skip",
+      "arg_type": "no_env",
+      "true_string": "skip"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION-D_ELFPA",
+    "true_string": "-D skip"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-D",
+     "args": [
+      {
+       "value": "skip"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION-D_ELFPA",
+     "identifier": "ELFPA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -D skip a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--no-group-separator",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--no-group-separator_GKYAG",
+    "true_string": "--no-group-separator"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--no-group-separator",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--no-group-separator_GKYAG",
+     "identifier": "GKYAG"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --no-group-separator a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from nonexistent_path/relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from nonexistent_path/relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from sandbox_placeholder/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from sandbox_placeholder/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from sandbox_placeholder/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from sandbox_placeholder/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from sandbox_placeholder/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from sandbox_placeholder/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from sandbox_placeholder/nonexistent_path/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from sandbox_placeholder/nonexistent_path/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude-from",
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH--exclude-from_SQMHT",
+    "true_string": "--exclude-from sandbox_placeholder/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude-from",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH--exclude-from_SQMHT",
+     "identifier": "SQMHT"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude-from sandbox_placeholder/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--include",
+    "args": [
+     {
+      "value": "string",
+      "arg_type": "no_env",
+      "true_string": "string"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "STRING--include_DIJFN",
+    "true_string": "--include string"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--include",
+     "args": [
+      {
+       "value": "string"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "STRING--include_DIJFN",
+     "identifier": "DIJFN"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --include string a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--line-buffered",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--line-buffered_ZFBRM",
+    "true_string": "--line-buffered"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--line-buffered",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--line-buffered_ZFBRM",
+     "identifier": "ZFBRM"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --line-buffered a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-V",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-V_NOVEK",
+    "true_string": "-V"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-V",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-V_NOVEK",
+     "identifier": "NOVEK"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -V a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f nonexistent_path/relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f nonexistent_path/relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f relpath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f relpath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f sandbox_placeholder/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f sandbox_placeholder/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f sandbox_placeholder/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f sandbox_placeholder/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f sandbox_placeholder/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f sandbox_placeholder/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f sandbox_placeholder/nonexistent_path/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f sandbox_placeholder/nonexistent_path/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-f",
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "PATH-f_FFTLA",
+    "true_string": "-f sandbox_placeholder/abspath_1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-f",
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "PATH-f_FFTLA",
+     "identifier": "FFTLA"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -f sandbox_placeholder/abspath_1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-G",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-G_KJIAY",
+    "true_string": "-G"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-G",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-G_KJIAY",
+     "identifier": "KJIAY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -G a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-v",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-v_DTRLW",
+    "true_string": "-v"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-v",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-v_DTRLW",
+     "identifier": "DTRLW"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -v a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-l",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-l_HTWDD",
+    "true_string": "-l"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-l",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-l_HTWDD",
+     "identifier": "HTWDD"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -l a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-c",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-c_FGPNK",
+    "true_string": "-c"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-c",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-c_FGPNK",
+     "identifier": "FGPNK"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -c a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-q",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-q_BLNMN",
+    "true_string": "-q"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-q",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-q_BLNMN",
+     "identifier": "BLNMN"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -q a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-H",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-H_SPGVR",
+    "true_string": "-H"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-H",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-H_SPGVR",
+     "identifier": "SPGVR"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -H a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-A",
+    "args": [
+     {
+      "value": "-1",
+      "arg_type": "no_env",
+      "true_string": "-1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-A_PCAQX",
+    "true_string": "-A -1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-A",
+     "args": [
+      {
+       "value": "-1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-A_PCAQX",
+     "identifier": "PCAQX"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -A -1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-A",
+    "args": [
+     {
+      "value": "0",
+      "arg_type": "no_env",
+      "true_string": "0"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-A_PCAQX",
+    "true_string": "-A 0"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-A",
+     "args": [
+      {
+       "value": "0"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-A_PCAQX",
+     "identifier": "PCAQX"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -A 0 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-A",
+    "args": [
+     {
+      "value": "1",
+      "arg_type": "no_env",
+      "true_string": "1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "INTEGER-A_PCAQX",
+    "true_string": "-A 1"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-A",
+     "args": [
+      {
+       "value": "1"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "INTEGER-A_PCAQX",
+     "identifier": "PCAQX"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -A 1 a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-n",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-n_ETLGW",
+    "true_string": "-n"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-n",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-n_ETLGW",
+     "identifier": "ETLGW"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -n a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--group-separator",
+    "args": [
+     {
+      "value": ",",
+      "arg_type": "no_env",
+      "true_string": ","
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--group-separator_VTGAU",
+    "true_string": "--group-separator ,"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--group-separator",
+     "args": [
+      {
+       "value": ","
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--group-separator_VTGAU",
+     "identifier": "VTGAU"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --group-separator , a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--group-separator",
+    "args": [
+     {
+      "value": "\n\t",
+      "arg_type": "no_env",
+      "true_string": "\n\t"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--group-separator_VTGAU",
+    "true_string": "--group-separator '\n\t'"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--group-separator",
+     "args": [
+      {
+       "value": "\n\t"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--group-separator_VTGAU",
+     "identifier": "VTGAU"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --group-separator '\n\t' a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--binary-files",
+    "args": [
+     {
+      "value": "binary",
+      "arg_type": "no_env",
+      "true_string": "binary"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION--binary-files_OTEQI",
+    "true_string": "--binary-files binary"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--binary-files",
+     "args": [
+      {
+       "value": "binary"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION--binary-files_OTEQI",
+     "identifier": "OTEQI"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --binary-files binary a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--binary-files",
+    "args": [
+     {
+      "value": "without-match",
+      "arg_type": "no_env",
+      "true_string": "without-match"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION--binary-files_OTEQI",
+    "true_string": "--binary-files without-match"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--binary-files",
+     "args": [
+      {
+       "value": "without-match"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION--binary-files_OTEQI",
+     "identifier": "OTEQI"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --binary-files without-match a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--binary-files",
+    "args": [
+     {
+      "value": "text",
+      "arg_type": "no_env",
+      "true_string": "text"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "SELECTION--binary-files_OTEQI",
+    "true_string": "--binary-files text"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--binary-files",
+     "args": [
+      {
+       "value": "text"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "SELECTION--binary-files_OTEQI",
+     "identifier": "OTEQI"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --binary-files text a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-I",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-I_TXUFS",
+    "true_string": "-I"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-I",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-I_TXUFS",
+     "identifier": "TXUFS"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -I a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude",
+    "args": [
+     {
+      "value": "*.txt",
+      "arg_type": "no_env",
+      "true_string": "*.txt"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--exclude_KWMBD",
+    "true_string": "--exclude '*.txt'"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude",
+     "args": [
+      {
+       "value": "*.txt"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--exclude_KWMBD",
+     "identifier": "KWMBD"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude '*.txt' a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude",
+    "args": [
+     {
+      "value": "*.py",
+      "arg_type": "no_env",
+      "true_string": "*.py"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--exclude_KWMBD",
+    "true_string": "--exclude '*.py'"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude",
+     "args": [
+      {
+       "value": "*.py"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--exclude_KWMBD",
+     "identifier": "KWMBD"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude '*.py' a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude",
+    "args": [
+     {
+      "value": "*.c",
+      "arg_type": "no_env",
+      "true_string": "*.c"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--exclude_KWMBD",
+    "true_string": "--exclude '*.c'"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude",
+     "args": [
+      {
+       "value": "*.c"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--exclude_KWMBD",
+     "identifier": "KWMBD"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude '*.c' a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--exclude",
+    "args": [
+     {
+      "value": "*.h",
+      "arg_type": "no_env",
+      "true_string": "*.h"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING--exclude_KWMBD",
+    "true_string": "--exclude '*.h'"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--exclude",
+     "args": [
+      {
+       "value": "*.h"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING--exclude_KWMBD",
+     "identifier": "KWMBD"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --exclude '*.h' a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-R",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-R_VQHVW",
+    "true_string": "-R"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-R",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-R_VQHVW",
+     "identifier": "VQHVW"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -R a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-z",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-z_BMCFW",
+    "true_string": "-z"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-z",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-z_BMCFW",
+     "identifier": "BMCFW"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -z a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_ZJEHR",
+    "true_string": "--help"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_ZJEHR",
+     "identifier": "ZJEHR"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --help a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a relpath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a relpath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a relpath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "nonexistent_path/relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "nonexistent_path/relpath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a nonexistent_path/relpath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "relpath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "relpath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "relpath_1",
+       "relative": true,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a relpath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "content": "HUMAN_TEXT",
+      "arg_type": "file",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_empty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "arg_type": "directory_nonempty",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "nonexistent_path/abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": false,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "sandbox_placeholder/nonexistent_path/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a sandbox_placeholder/nonexistent_path/abspath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "sandbox": "sandbox_placeholder",
+      "parent_exists": true,
+      "arg_type": "nonexistent",
+      "true_string": "sandbox_placeholder/abspath_1"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "*",
+    "symbol": "PATH_ZYMXR",
+    "true_string": "sandbox_placeholder/abspath_1"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "abspath_1",
+       "relative": false,
+       "relation": "child"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "*",
+     "symbol": "PATH_ZYMXR",
+     "identifier": "ZYMXR"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep a sandbox_placeholder/abspath_1"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-F",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-F_MSHFE",
+    "true_string": "-F"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-F",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-F_MSHFE",
+     "identifier": "MSHFE"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -F a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--no-ignore-case",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--no-ignore-case_INRFY",
+    "true_string": "--no-ignore-case"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--no-ignore-case",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--no-ignore-case_INRFY",
+     "identifier": "INRFY"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --no-ignore-case a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-e",
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "_STRING-e_KVCIS",
+    "true_string": "-e a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-e",
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "_STRING-e_KVCIS",
+     "identifier": "KVCIS"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -e a a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-x",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-x_RZGLH",
+    "true_string": "-x"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-x",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-x_RZGLH",
+     "identifier": "RZGLH"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -x a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-L",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-L_RWIWM",
+    "true_string": "-L"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-L",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-L_RWIWM",
+     "identifier": "RWIWM"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -L a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-b",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-b_KPQBV",
+    "true_string": "-b"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-b",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-b_KPQBV",
+     "identifier": "KPQBV"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -b a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-o",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-o_XYWZS",
+    "true_string": "-o"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-o",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-o_XYWZS",
+     "identifier": "XYWZS"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -o a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "--label",
+    "args": [
+     {
+      "value": "string",
+      "arg_type": "no_env",
+      "true_string": "string"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "STRING--label_PDWLC",
+    "true_string": "--label string"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "--label",
+     "args": [
+      {
+       "value": "string"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "STRING--label_PDWLC",
+     "identifier": "PDWLC"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep --label string a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-Z",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-Z_BDKDI",
+    "true_string": "-Z"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-Z",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-Z_BDKDI",
+     "identifier": "BDKDI"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -Z a"
+ },
+ {
+  "name": "grep",
+  "body": [
+   {
+    "flag": "-a",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-a_BDJEN",
+    "true_string": "-a"
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "a",
+      "arg_type": "no_env",
+      "true_string": "a"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "1",
+    "symbol": "_STRING_LACFZ",
+    "true_string": "a"
+   }
+  ],
+  "string": {
+   "name": "grep",
+   "body": [
+    {
+     "flag": "-a",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-a_BDJEN",
+     "identifier": "BDJEN"
+    },
+    {
+     "flag": null,
+     "args": [
+      {
+       "value": "a"
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "1",
+     "symbol": "_STRING_LACFZ",
+     "identifier": "LACFZ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "grep -a a"
+ }
+]

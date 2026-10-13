@@ -35,3 +35,4 @@ node_modules/
 eval/campaigns/
 # eval/docs_variants/
 # eval/parity_diffs/
+eval/_archive/**/campaigns/

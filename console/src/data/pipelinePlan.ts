@@ -101,7 +101,8 @@ export interface PlanOptions {
 }
 
 function v1RunFile(runId: string, name: string): string {
-  return join(repoPaths().v1Runs, runId, name);
+  // The live folder, never a CARUCA_EVAL_ROOT archive: this names where a NEW run writes.
+  return join(repoPaths().root, "eval", "v1_runs", runId, name);
 }
 
 /**

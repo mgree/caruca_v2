@@ -38,4 +38,5 @@ metadata:
   `caruca generate CMD --max-count 1`, Mac `.venv`).
 - Tasks 009 and 011 are superseded for execution by 014; their diagnosis stands.
 - Task numbering: 014 and 015 taken 2026-10-13; the pash-downstream-study session's planned
-  VM-provisioning/benchmark task should take 016.
+  VM-provisioning/benchmark task was to take 016, but 016 went to the naive Claude Code arm on
+  2026-10-13 (`project_naive_claude_code_arm.md`); that VM task should take 017.

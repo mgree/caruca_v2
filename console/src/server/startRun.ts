@@ -13,6 +13,9 @@ import { randomBytes } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { join } from "node:path";
 import { repoPaths, v1Root } from "../data/paths.js";
+import { existsSync } from "node:fs";
+import { listRuns } from "../data/runs.js";
+import { listV1Runs } from "../data/v1Runs.js";
 import {
   displayInvocation,
   v1Annotate,
@@ -115,6 +118,31 @@ export interface StartedRun {
 }
 
 /**
+ * The newest trace file on disk for `command`, from either side.
+ *
+ * Step 4 reads step 3's output, and until the input-run picker exists (task 014 phase 3) the
+ * newest run is the only sensible default: v2's own trace runs first, then the v1 trace runs
+ * this console recorded. Both are in v1's traces format, so either side's annotate can read
+ * either file. Returns null when neither side has traced the command yet.
+ */
+export function latestTraceFile(
+  command: string,
+  prefer: "v2" | "v1" = "v2",
+): { readonly path: string; readonly from: "v2" | "v1"; readonly runId: string } | null {
+  const slug = command.replace(/\s+/g, "_");
+  const v2 = listRuns()
+    .runs.filter((run) => run.stage === "trace" && run.command === command && run.status === "ok")
+    .map((run) => ({ path: join(run.dir, `${slug}.traces.json`), from: "v2" as const, runId: run.runId }))
+    .filter((candidate) => existsSync(candidate.path));
+  const v1 = listV1Runs()
+    .runs.filter((run) => run.manifest.subcommand === "trace" && run.manifest.command === command)
+    .map((run) => ({ path: join(run.dir, `${slug}.json`), from: "v1" as const, runId: run.runId }))
+    .filter((candidate) => existsSync(candidate.path));
+  const ordered = prefer === "v2" ? [...v2, ...v1] : [...v1, ...v2];
+  return ordered[0] ?? null;
+}
+
+/**
  * Start one of v1's steps.
  *
  * Only stage 1 in `live` mode costs anything, and only then is a confirmation required. v1's
@@ -149,14 +177,18 @@ export function startV1(options: StartV1Options): StartedRun {
         ...(options.limaInstance ? { limaInstance: options.limaInstance } : {}),
       });
       break;
-    case "annotate":
-      invocation = v1Annotate(
-        options.format ?? "pash",
-        options.command,
-        join(runDir, `${options.command}.json`),
-        { ...(options.limaInstance ? { limaInstance: options.limaInstance } : {}) },
-      );
+    case "annotate": {
+      const source = latestTraceFile(options.command, "v1");
+      if (!source) {
+        throw new Error(
+          `Nothing to annotate: no trace run of ${options.command} exists on either side. Run step 3 first.`,
+        );
+      }
+      invocation = v1Annotate(options.format ?? "pash", options.command, source.path, {
+        ...(options.limaInstance ? { limaInstance: options.limaInstance } : {}),
+      });
       break;
+    }
   }
 
   const run = start({
@@ -239,6 +271,10 @@ export function startV2(options: StartV2Options): StartedRun {
   if (options.stage === "annotate") {
     argv.push("--v1-runner", where === "lima" ? "lima" : "host");
     if (where === "lima") argv.push("--lima-instance", options.limaInstance ?? "caruca");
+    // The newest trace run on disk, v2's own first. Without this, v2 falls back to v1's
+    // default trace file, which exists for only 18 commands.
+    const source = latestTraceFile(options.command, "v2");
+    if (source) argv.push("--traces", source.path);
     argv.push(options.format ?? "pash");
   }
 

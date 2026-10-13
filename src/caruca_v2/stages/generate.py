@@ -16,6 +16,7 @@ page in stage 1 — not a hint about method.
 from __future__ import annotations
 
 import json
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -48,10 +49,42 @@ V1_DEFAULT_SKIP: str | None = None  # v1's `--skip` has no default: nothing is s
 # What v1's bare `--skip` means (`cli/__init__.py:10`, `const=DEFAULT_SKIP`).
 V1_SKIP_CONST = "--version,--help,--interactive"
 
-DEFAULT_MAX_TURNS = 4
+DEFAULT_MAX_TURNS = 12
 
 INVOCATIONS_SUFFIX = ".invocations.txt"
 CONFIGS_SUFFIX = ".configs.json"
+RAW_CONFIGS_SUFFIX = ".configs.raw.json"
+
+# Stage 2 returns a long enumeration, so it gets its own output cap: the model's maximum per
+# turn (gpt-4o: 16,384). At v2's global default (4,096 per turn, 4 turns) `cat` at v1's bound
+# was cut off by the cap rather than finished by the model (seen from the console, 2026-10-13).
+GENERATE_MAX_TOKENS = 16_384
+
+# What each `arg_type` does on disk, read from v1's `prepare_env` implementations
+# (ir/environment.py:56-240, commit d8032407). Stated to the model because v1's schema names
+# the types and says nothing about what they mean (task 011 §3, "the fourth instance").
+ARG_TYPES = (
+    '`"no_env"` (a value with nothing on disk: a flag with no value, a number, a word), '
+    '`"file"` (a regular file is created with the given `content`), '
+    '`"directory_empty"` (an empty directory is created), '
+    '`"directory_nonempty"` (a directory with files in it is created), '
+    '`"nonexistent"` (the path is absent; `parent_exists` says whether its parent directory '
+    "exists), "
+    '`"already"` (the path must already exist and nothing is created; v1 uses it only for '
+    "`.` and `..`)"
+)
+
+
+def _config_examples() -> str:
+    """Two real v1 configurations, frozen in `prompts/generate/v1_examples.json`."""
+    path = prompting.prompts_root() / STAGE / "v1_examples.json"
+    payload = json.loads(path.read_text())
+    # One object per line, exactly as the output must be written: a pretty-printed example
+    # was copied as a multi-line layout by the model, which the line parser rejects.
+    return "\n".join(
+        json.dumps(example, separators=(", ", ": ")) for example in payload["examples"]
+    )
+
 
 
 @dataclass(frozen=True)
@@ -63,6 +96,9 @@ class ParsedOutput:
     line_count: int
     unparseable_lines: list[str]
     malformed_objects: int
+    """True when the objects spanned lines and were recovered as a stream: content usable,
+    format not followed."""
+    stream_decoded: bool = False
 
     @property
     def parsed(self) -> int:
@@ -80,6 +116,11 @@ def parse_jsonl(text: str) -> ParsedOutput:
     configs: list[dict[str, Any]] = []
     unparseable: list[str] = []
     malformed = 0
+    # Code fences are asked against and still appear; they carry nothing, so they are dropped
+    # before parsing rather than counted as unparseable lines.
+    text = "\n".join(
+        line for line in text.splitlines() if not line.strip().startswith("```")
+    )
     lines = [line for line in text.splitlines() if line.strip()]
 
     for line in lines:
@@ -96,12 +137,43 @@ def parse_jsonl(text: str) -> ParsedOutput:
         invocations.append(str(entry["invocation"]))
         configs.append(entry["config"])
 
+    # A model that lays objects out over several lines defeats the line parser even though
+    # every object is complete. Decode the text as a stream of consecutive objects instead,
+    # and say so in the record: the format was not followed, but the content is usable.
+    stream_decoded = False
+    if not configs and unparseable:
+        decoder = json.JSONDecoder()
+        position = 0
+        recovered: list[Any] = []
+        while position < len(text):
+            while position < len(text) and text[position] in " \t\r\n,[]":
+                position += 1
+            if position >= len(text):
+                break
+            try:
+                entry, end = decoder.raw_decode(text, position)
+            except json.JSONDecodeError:
+                break
+            recovered.append(entry)
+            position = end
+        usable = [
+            e for e in recovered if isinstance(e, dict) and "invocation" in e and "config" in e
+        ]
+        if usable:
+            stream_decoded = True
+            unparseable = []
+            malformed = len(recovered) - len(usable)
+            for entry in usable:
+                invocations.append(str(entry["invocation"]))
+                configs.append(entry["config"])
+
     return ParsedOutput(
         invocations=invocations,
         configs=configs,
         line_count=len(lines),
         unparseable_lines=unparseable[:20],
         malformed_objects=malformed,
+        stream_decoded=stream_decoded,
     )
 
 
@@ -173,8 +245,14 @@ def run(
     log_conversation: bool = False,
     provider: str | None = None,
     client: OpenAI | None = None,
+    progress: Callable[[dict[str, Any]], None] | None = None,
 ) -> GenerateResult:
-    """Ask a model to enumerate a command's invocations, then measure what came back."""
+    """Ask a model to enumerate a command's invocations, then measure what came back.
+
+    `progress` receives one event per model turn (`kind: "turn"`, with the turn index, tokens,
+    cost, seconds, the lines returned so far and whether another turn follows) and one per
+    slow phase after the model (`kind: "phase"`). For showing activity; it changes nothing.
+    """
     slug = v1.slug(command)
 
     active_client = client or llm.build_client()
@@ -197,6 +275,8 @@ def run(
             "stdin_values": ", ".join(variation_values.get(stdin_variation, [])) or "(none)",
             "content_values": ", ".join(variation_values.get(content_variation, [])) or "(none)",
             "skip_flags": skip_flags or "(none)",
+            "config_examples": _config_examples(),
+            "arg_types": ARG_TYPES,
         },
     )
 
@@ -213,6 +293,31 @@ def run(
         provider=provider,
         exhaust_instruction=llm.EXHAUST_INSTRUCTION,
         client=active_client,
+        on_turn=(
+            None
+            if progress is None
+            else lambda index, response, nxt: progress(
+                {
+                    "kind": "turn",
+                    "turn": index + 1,
+                    "max_turns": max_turns,
+                    "prompt_tokens": response.prompt_tokens,
+                    "completion_tokens": response.completion_tokens,
+                    "cost_usd": response.cost_usd,
+                    "seconds": response.wall_clock_seconds,
+                    "lines": sum(1 for line in response.text.splitlines() if line.strip()),
+                    "finish_reason": response.finish_reason,
+                    "continues": nxt is not None,
+                    "why": (
+                        "cut off by the token cap"
+                        if response.finish_reason == "length"
+                        else "asked once whether anything is missing"
+                        if nxt is not None
+                        else "the model says it is done"
+                    ),
+                }
+            )
+        ),
     )
 
     if log_conversation:
@@ -250,7 +355,22 @@ def run(
         configs_path = run_dir.file(f"{slug}{CONFIGS_SUFFIX}")
         configs_path.write_text(json.dumps(parsed.configs, indent=1) + "\n")
 
+        if progress is not None:
+            progress(
+                {
+                    "kind": "phase",
+                    "message": f"checking {len(parsed.configs)} configurations with v1's own model",
+                }
+            )
         outcome = v1.validate_configs(configs_path)
+        if outcome.passed and outcome.normalized is not None:
+            # The file v1 would have written: every entry re-emitted through v1's own model
+            # (computed fields present, defaults filled, bookkeeping in v1's form). The
+            # model's own text is kept beside it, so what the model wrote stays inspectable.
+            run_dir.file(f"{slug}{RAW_CONFIGS_SUFFIX}").write_text(
+                json.dumps(parsed.configs, indent=1) + "\n"
+            )
+            configs_path.write_text(json.dumps(outcome.normalized, indent=1) + "\n")
         validation = ValidationReport(
             passed=outcome.passed,
             available=outcome.available,
@@ -269,6 +389,13 @@ def run(
 
     comparison: dict[str, Any] = {"available": False, "error": "comparison not requested"}
     if compare:
+        if progress is not None:
+            progress(
+                {
+                    "kind": "phase",
+                    "message": "comparing against v1's own enumeration (runs v1's generate)",
+                }
+            )
         # Same bounds on both sides, or the diff measures the bounds instead of the model.
         reference = v1.reference_invocations(
             command,
@@ -348,6 +475,7 @@ def run(
                 # A run that hit the turn cap while still truncated did not finish
                 # enumerating. Distinguishing that from a model that simply stopped is
                 # what separates "the cap bound" from "the model bound".
+                "stream_decoded": parsed.stream_decoded,
                 "hit_turn_cap_while_truncated": truncated and len(responses) >= max_turns,
                 # Recorded because this stage nudges a self-terminated model for more (see
                 # `llm.complete_series`); a result from it is partly measuring the nudge.

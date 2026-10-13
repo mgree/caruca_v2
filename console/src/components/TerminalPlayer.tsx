@@ -55,7 +55,7 @@ export function TerminalPlayer({ header, events, durationSeconds }: TerminalPlay
         cursorBlink: false,
         convertEol: false,
         fontFamily: "'JetBrains Mono', Consolas, monospace",
-        fontSize: 12.5,
+        fontSize: 11.5,
         lineHeight: 1.35,
         theme: {
           background: "#0B1F33",

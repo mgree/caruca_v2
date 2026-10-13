@@ -186,8 +186,9 @@ def test_continuation_happens_only_when_the_token_cap_cut_the_response(fake_v1_r
     _, runs, client = invoke(jsonl("mkdir relpath_1"), "mkdir", finish_reason="length")
 
     manifest = read_manifest(runs[0])
-    assert manifest["turns"] == 4  # the default cap
-    assert len(client.calls) == 4
+    cap = generate.DEFAULT_MAX_TURNS  # the default cap (12 since 2026-10-13)
+    assert manifest["turns"] == cap
+    assert len(client.calls) == cap
     assert manifest["checks"]["parse"]["hit_turn_cap_while_truncated"] is True
     assert client.calls[1]["messages"][-1]["content"] == llm.CONTINUE_INSTRUCTION
 
@@ -228,18 +229,18 @@ def test_every_turn_gets_its_own_sidecar_and_metrics_row(
 
     sidecars = sorted(runs[0].glob("*.telemetry.json"))
     assert [path.name for path in sidecars] == [
-        f"mkdir.turn-{turn:02d}.telemetry.json" for turn in range(4)
+        f"mkdir.turn-{turn:02d}.telemetry.json" for turn in range(generate.DEFAULT_MAX_TURNS)
     ]
 
     with sqlite3.connect(tmp_path / "metrics.db") as connection:
         connection.row_factory = sqlite3.Row
         rows = connection.execute("SELECT turn FROM runs ORDER BY turn").fetchall()
-    assert [row["turn"] for row in rows] == [0, 1, 2, 3]
+    assert [row["turn"] for row in rows] == list(range(generate.DEFAULT_MAX_TURNS))
 
     manifest = read_manifest(runs[0])
     # Totals are summed across turns, not taken from the last one.
-    assert manifest["prompt_tokens"] == 6842 * 4
-    assert manifest["cost_usd"] == pytest.approx(0.0213 * 4)
+    assert manifest["prompt_tokens"] == 6842 * generate.DEFAULT_MAX_TURNS
+    assert manifest["cost_usd"] == pytest.approx(0.0213 * generate.DEFAULT_MAX_TURNS)
 
 
 def test_unusable_output_fails_without_writing_output_files(fake_v1_root: Path, invoke):
@@ -315,3 +316,14 @@ def test_the_sentinel_is_recognised_when_it_trails_real_output(fake_v1_root: Pat
     assert parse["unparseable_lines"] == 0
     assert parse["objects_parsed"] == 1
     assert len(client.calls) == 1
+
+
+def test_the_prompt_carries_v1s_exact_shape_and_the_two_frozen_examples(fake_v1_root: Path):
+    """The model is shown v1's own output, field by field, not only the schema."""
+    examples = generate._config_examples()
+    assert '"true_string": "ls -a"' in examples
+    assert '"true_string": "mv relpath_1 relpath_2"' in examples
+    assert '"identifier"' in examples  # the `string` record is shown filled, never empty
+    types = ("no_env", "file", "directory_empty", "directory_nonempty", "nonexistent", "already")
+    for arg_type in types:
+        assert f'`"{arg_type}"`' in generate.ARG_TYPES

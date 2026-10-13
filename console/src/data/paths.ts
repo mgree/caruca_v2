@@ -80,16 +80,32 @@ export interface RepoPaths {
   readonly v1Configs: string;
 }
 
+/**
+ * Where the run data lives.
+ *
+ * Normally `eval/` and `ai_docs/analysis/findings/`. On 2026-10-13 everything recorded before
+ * task 014 was moved to `eval/_archive/2026-10-13_parity/` for a clean slate; setting
+ * `CARUCA_EVAL_ROOT` to that folder makes the console read the archive instead — which is how
+ * the test suite keeps running against real run directories. v1's configuration expansions
+ * are inputs, not results, so they stay under `eval/v1_configs/` either way.
+ */
 export function repoPaths(root = findRepoRoot()): RepoPaths {
+  // The override is a reading aid. It applies only where the archive actually exists under
+  // this root, so a throwaway root made by a test (which has an `eval/` and no archive) keeps
+  // its own folders. Writes never go through it: see `v1RunDir`.
+  const requested = process.env.CARUCA_EVAL_ROOT;
+  const override =
+    requested && existsSync(resolve(root, requested)) ? resolve(root, requested) : null;
+  const evalRoot = override ?? join(root, "eval");
   return {
     root,
-    v2Runs: join(root, "eval", "runs"),
-    v1Runs: join(root, "eval", "v1_runs"),
-    campaigns: join(root, "eval", "campaigns"),
-    metricsDb: join(root, "eval", "metrics.db"),
-    findings: join(root, "ai_docs", "analysis", "findings"),
+    v2Runs: join(evalRoot, "runs"),
+    v1Runs: join(evalRoot, "v1_runs"),
+    campaigns: join(evalRoot, "campaigns"),
+    metricsDb: join(evalRoot, "metrics.db"),
+    findings: override ? join(evalRoot, "findings") : join(root, "ai_docs", "analysis", "findings"),
     prompts: join(root, "prompts"),
-    parityDiffs: join(root, "eval", "parity_diffs"),
+    parityDiffs: join(evalRoot, "parity_diffs"),
     v1Configs: join(root, "eval", "v1_configs"),
   };
 }

@@ -224,8 +224,13 @@ def complete_series(
     provider: str | None = None,
     exhaust_instruction: str | None = None,
     client: OpenAI | None = None,
+    on_turn: Callable[[int, LLMResponse, str | None], None] | None = None,
 ) -> list[LLMResponse]:
     """Call the model, continuing while the token cap is what stopped it.
+
+    `on_turn(index, response, next_instruction)` is called after every turn, with the
+    instruction the next turn will be given or None when the series ends there. It exists so
+    a long series shows progress while it runs; it changes nothing about the series.
 
     By default a model that finishes early has finished: it is never nudged for more.
     Continuation exists so that a stage whose output is longer than one response is not
@@ -260,15 +265,18 @@ def complete_series(
         )
         responses.append(response)
 
+        instruction: str | None
         if response.finish_reason == "length":
             instruction = CONTINUE_INSTRUCTION
         elif exhaust_instruction is not None:
             # The model stopped on its own. Ask once whether it is actually finished, and
             # accept the answer: the sentinel, or a turn that adds nothing, ends the series.
-            if declares_complete(response.text):
-                break
-            instruction = exhaust_instruction
+            instruction = None if declares_complete(response.text) else exhaust_instruction
         else:
+            instruction = None
+        if on_turn is not None:
+            on_turn(len(responses) - 1, response, instruction)
+        if instruction is None:
             break
 
         conversation.append({"role": "assistant", "content": response.text})

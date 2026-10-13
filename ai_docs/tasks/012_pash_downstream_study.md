@@ -241,7 +241,20 @@ produced" for that command and run as A0 for it.** They are counted, never dropp
 ### Tier A: synthesized micro-scripts (all nine commands)
 
 One minimal pipeline per (command, invocation), in the forms PaSh can parallelize: input from a
-file, e.g. `cat "$IN" | CMD FLAGS > "$OUT"` and `CMD FLAGS "$IN1" "$IN2" > "$OUT"`.
+file, ending **at standard output** — `cat "$IN" | CMD FLAGS | wc -c`, with the harness capturing
+stdout.
+
+> **Corrected 13 October 2026. This section previously specified
+> `cat "$IN" | CMD FLAGS > "$OUT"` and `CMD FLAGS "$IN1" "$IN2" > "$OUT"`.** Measured in the VM: a
+> **trailing `> file` redirect makes PaSh fall back to plain `bash`** — `cat in.txt | grep 9 > o.txt`
+> is not parallelized, while `cat in.txt | grep 9 | wc -l` is. Every script in that shape would have
+> silently disabled the thing this study measures, and because a fall-back still produces the correct
+> answer it would have looked like a clean result. A second shape rule from the same session: the
+> pattern in a `grep` must be **single-quoted** — PaSh returns the wrong answer (0 instead of 928)
+> when it parallelizes a double-quoted pattern, which is a PaSh bug and a live instance of why the
+> stock-PaSh exclusion gate in this section exists. Both are recorded in
+> `ai_docs/docs/pash_vm_setup.md`. **Before Tier B is assembled, PaSh's own benchmark scripts must be
+> checked for trailing redirects too** — any that redirect would measure nothing.
 
 - **In-domain invocations:** v1's configurations at task 008's bound, regenerated in split mode
   in Phase 2 (`eval/v1_configs/<cmd>.pashmode.configs.json`). These are the invocations both pipelines were asked to
@@ -468,9 +481,14 @@ Code placement follows task 006's decision (in-package, under the same test regi
       stock annotations for the nine against v1's copy in `benchmarks/annotations/pash/`.
       *(Python classes only; no PaSh since 2022 reads JSON, including the paper's revision. Only
       `uniq` of the nine has a stock parallelizability annotation. `pash_vm_setup.md` §1, §3.)*
-- [ ] Establish how to read, per command node, whether PaSh parallelized it, at what width, and
-      whether it fell back to `bash`. **Still open: the blocker for the exit gate.** Works for a
-      one-command script (the log shows `r_split`/`r_merge`); not yet per node in a multi-command one.
+- [x] Establish how to read, per command node, whether PaSh parallelized it, at what width, and
+      whether it fell back to `bash`. **SOLVED 2026-10-13 — a `PATH` shim.** Each worker runs
+      `bash -c ' CMD … '`, so the command is looked up on `PATH`; a wrapper of the same name
+      earlier on `PATH` logs one line per invocation, and a count above one is positive,
+      per-command proof. Demonstrated at width 8 with per-worker start/end/busy times. Full
+      recipe and its three cautions (it also catches PaSh's own calls; it costs a fork per worker;
+      it cannot work for a shell builtin such as `pwd`) in
+      `ai_docs/docs/pash_vm_setup.md` §3.3. **The exit gate can now be attempted.**
 - [x] Measure PaSh's fixed overhead per run (startup + compilation) on a trivial script, and
       size the Phase 4 matrix from it. Rough expectation: Tier A is on the order of 10,000-20,000
       runs (≈100 in-domain invocations × ~6 input shapes × 2 split strategies × ~15 arm

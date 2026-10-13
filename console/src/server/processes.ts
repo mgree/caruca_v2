@@ -77,7 +77,9 @@ export class ProcessStartError extends Error {}
 export class ProgramNotAllowedError extends ProcessStartError {}
 
 /** The terminal size every run uses. Recorded with the run, because v1's output depends on it. */
-export const TERMINAL_COLS = 117;
+// 90 columns at 11.5px mono is about 620px, so two panes sit side by side inside a 1400px
+// band with real margins (Tiran, 2026-10-13: the panes must never extend past the window).
+export const TERMINAL_COLS = 90;
 export const TERMINAL_ROWS = 34;
 
 /** How much output a reattaching page is given. Enough for a long trace's progress bar. */

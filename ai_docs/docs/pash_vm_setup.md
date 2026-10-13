@@ -7,7 +7,8 @@
 
 # Running PaSh on this Mac — the `pash` VM
 
-**Written 5 October 2026**, updated the same day with the verification results. Phase 0 of
+**Written 5 October 2026**, updated the same day with the verification results, and again on
+13 October 2026 when the per-command decision probe was solved (§3.3). Phase 0 of
 [`../tasks/012_pash_downstream_study.md`](../tasks/012_pash_downstream_study.md). PaSh is the
 compiler that rewrites a shell script so its pipelines run in parallel; the downstream study feeds
 it annotations from v1 and from v2 and checks what it does with them.
@@ -189,7 +190,7 @@ All present on `pash`:
 | `--assert_all_regions_parallelizable` | **do not use alone — it passes vacuously.** See §3.3 |
 | `--output_time` | per-run timing |
 
-### 3.3 Reading the decision — harder than it looks, and not fully solved
+### 3.3 Reading the decision — SOLVED, after three wrong attempts
 
 Measured 2026-10-05, and the first two attempts were wrong, so the record matters:
 
@@ -212,12 +213,48 @@ Measured 2026-10-05, and the first two attempts were wrong, so the record matter
   those cases. That mistake was made and caught here; the working demo at `~/try-pash.sh` in the
   VM has the corrected form.
 
-**Still to settle before Phase 4:** attributing a decision to a *particular command node* when a
-region contains several. The region-level reading is solved (above), and the log does name the
-per-node fan-out, so this is now tractable rather than open-ended. Candidates not yet tried: `--graphviz dot --graphviz_dir DIR`
-(dumps the dataflow graph, most likely to give per-node detail), higher debug levels, and
-`-p` captured from stdout. The study needs a per-node reading, and a region-level signal is not
-enough: a region contains several commands.
+#### The per-command answer: a `PATH` shim (solved 2026-10-13)
+
+The three findings above read the decision at *region* level, which is not enough — a region holds
+several commands, and the study needs to know whether **one named command** was parallelized. That
+is now solved, and it does not need the dataflow graph.
+
+Each worker runs `r_wrap bash -c ' CMD … '` (visible in the `-d 2` log), so **the command is looked
+up on `PATH`**. Put a wrapper of the same name earlier on `PATH`; it timestamps itself, calls the
+real binary, timestamps again, and appends one line:
+
+```sh
+mkdir shim
+export PASH_WORKER_LOG=$PWD/workers.tsv
+cat > shim/grep <<'EOF'
+#!/bin/bash
+s=$(date +%s.%N); /usr/bin/grep "$@"; rc=$?; e=$(date +%s.%N)
+printf '%s\t%s\t%s\n' "$$" "$s" "$e" >> "$PASH_WORKER_LOG"
+exit $rc
+EOF
+chmod +x shim/grep
+PATH=$PWD/shim:$PATH "$PASH_TOP/pa.sh" -w 8 -d 2 --log_file pash.log script.sh
+wc -l < workers.tsv        # invocations of THAT command
+```
+
+**An invocation count above one is positive, per-command proof that this command was
+parallelized** — the thing §3.3's earlier attempts could not give. Demonstrated at width 8: 8
+concurrent workers, with each worker's start, end and busy time.
+
+Three cautions, all observed:
+
+- **It catches more than the workload.** A shim for `rm` also intercepts PaSh's own cleanup calls.
+  The shim logs full arguments; filter to the workload's argument shape and report both counts, so
+  the filtering is visible rather than assumed.
+- **It costs a fork and two `date` calls per worker** — single-digit milliseconds. Measure it
+  against an unshimmed run before quoting per-worker times; never subtract silently.
+- **It cannot work for a shell builtin** (`pwd`), which is never looked up on `PATH`.
+- **Width is not process count.** At width 8 the log shows 8 workers running at once but more
+  processes in total, because PaSh runs a round per input batch (1 MB by default). Concurrency is
+  the parallelism; the process count is not.
+
+**Consequence for task 012:** its Phase 0 checkbox "establish how to read, per command node,
+whether PaSh parallelized it" is met by this, and its exit gate can now be attempted.
 
 ### 3.4 Supplying your own annotations — use `--local-annotations-dir`, not the installed package
 

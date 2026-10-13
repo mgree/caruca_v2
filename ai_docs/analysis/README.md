@@ -37,6 +37,12 @@ content in `CLAUDE.md`.
 
 ## findings/
 
+**Archived 13 October 2026.** At Tiran's direction the twelve finding files, every run under
+`eval/runs/` and `eval/v1_runs/`, the metrics database, the campaign ledgers and the parity
+drill-downs were moved — not deleted — to `eval/_archive/2026-10-13_parity/` (its README lists
+each). The folder below is empty until task 014's runs produce new findings; the archived ones
+remain citable and the console can read them with `CARUCA_EVAL_ROOT` pointed at the archive.
+
 Since 22 September 2026, each conclusion this project reaches also lives as its own file in
 [`findings/`](findings/) — one claim per file, with the numbers behind it, what each is counted
 over, the campaign or runs it came from, and any correction it has been through.

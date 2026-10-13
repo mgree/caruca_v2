@@ -10,6 +10,10 @@ import {
 import { estimateCost } from "../data/preflight.js";
 import type { Stage } from "../data/schema.js";
 import { Badge, usd, count } from "../components/ui.js";
+import { ArtifactCompare } from "../components/ArtifactCompare.js";
+import { CommandSelect } from "../components/CommandSelect.js";
+import { CommandCleanup } from "../components/CommandCleanup.js";
+import { v1SupportedCommands } from "../data/v1Commands.js";
 
 // Every page reads the run directories at request time, so a run that finishes while the page
 // is open shows up on reload. Nothing here is cached or pre-rendered.
@@ -60,6 +64,7 @@ const STEP_NUMBER: Record<Stage, number> = {
 
 function Picker({ current }: { current: string }) {
   const all = knownCommands();
+  const supported = v1SupportedCommands();
   const pinned = new Set<string>([...PINNED_COMMANDS, ...CONFIRMATION_COMMANDS]);
   const others = all.filter((c) => !pinned.has(c));
   const group = (title: string, commands: readonly string[]) => (
@@ -82,6 +87,21 @@ function Picker({ current }: { current: string }) {
       {group("the study's nine", PINNED_COMMANDS)}
       {group("the six confirmation commands", CONFIRMATION_COMMANDS)}
       {others.length > 0 ? group("others with runs", others) : null}
+      <div className="picker__group picker__form">
+        <span className="picker__title">every command v1 supports</span>
+        <CommandSelect
+          current={current}
+          groups={[
+            { label: "the study's nine", commands: PINNED_COMMANDS },
+            { label: "the six confirmation commands", commands: CONFIRMATION_COMMANDS },
+            {
+              label: `all ${supported.length} in v1's syntax_specs/`,
+              commands: supported,
+            },
+          ]}
+        />
+        <span className="picker__hint">read from v1&apos;s checkout; choosing one opens its pipeline</span>
+      </div>
     </nav>
   );
 }
@@ -93,6 +113,14 @@ function ScoreCell({ step, command }: { step: StepOverview; command: string }) {
       <div className="side side--score">
         <div className="side__name">v1 against v2</div>
         <p className="side__empty">Not scored yet. A campaign scores both sides by one instrument.</p>
+        <div className="side__actions">
+          <ArtifactCompare
+            command={command}
+            stage={step.stage}
+            stepName={STEP[step.stage].name}
+            disabled={!step.v1.complete && step.v2.latestOk === null}
+          />
+        </div>
       </div>
     );
   }
@@ -123,8 +151,9 @@ function ScoreCell({ step, command }: { step: StepOverview; command: string }) {
         {cell.spread !== null && cell.spread > 0 ? ` · moved ${cell.spread.toFixed(3)} between samples` : ""}
       </div>
       <div className="side__actions">
+        <ArtifactCompare command={command} stage={step.stage} stepName={STEP[step.stage].name} />
         <Link href={`/compare/${step.stage}/${encodeURIComponent(command)}`}>
-          Compare the two outputs →
+          How it was scored →
         </Link>
       </div>
     </div>
@@ -137,7 +166,7 @@ function V1Cell({ step, command }: { step: StepOverview; command: string }) {
   return (
     <div className="side side--v1">
       <div className="side__name">
-        v1 · <span className="mono">caruca {STEP[step.stage].v1}</span>
+        v1 · <span className="mono">caruca {STEP[step.stage].v1} {command}</span>
       </div>
       <ul className="artifacts">
         {v1.artifacts.map((artifact) => (
@@ -170,7 +199,7 @@ function V1Cell({ step, command }: { step: StepOverview; command: string }) {
           </Link>
         ) : null}
         <Link href={`/live?command=${encodeURIComponent(command)}&stage=${step.stage}&side=v1`}>
-          Run v1 →
+          Run v1 <span className="mono">{STEP[step.stage].v1} {command}</span> →
         </Link>
       </div>
     </div>
@@ -194,7 +223,7 @@ function V2Cell({
   return (
     <div className="side side--v2">
       <div className="side__name">
-        v2 · <span className="mono">caruca-v2 {STEP[step.stage].v2}</span>
+        v2 · <span className="mono">caruca-v2 {STEP[step.stage].v2} {command}</span>
       </div>
       {latest ? (
         <>
@@ -224,12 +253,12 @@ function V2Cell({
         ) : null}
         {isNext ? (
           <Link className="btn btn--primary" href={runHref}>
-            Run step {STEP_NUMBER[step.stage]} on v2
+            Run step {STEP_NUMBER[step.stage]} on v2 · <span className="mono">{command}</span>
             {estimate.usd !== null ? <span className="btn__hint">~{usd(estimate.usd)}</span> : null}
           </Link>
         ) : (
           <Link href={runHref}>
-            Run v2 again →
+            Run v2 <span className="mono">{STEP[step.stage].v2} {command}</span> again →
           </Link>
         )}
       </div>
@@ -279,10 +308,10 @@ export default async function HomePage({
 
       {overview.campaignsAbsent.length > 0 ? (
         <p className="side__meta" style={{ marginBottom: 16 }}>
-          No campaign ledger on this machine for{" "}
-          <span className="mono">{overview.campaignsAbsent.join(", ")}</span>, so the middle
-          column cannot show a score. Copy <span className="mono">eval/campaigns/</span> across, or
-          run a campaign.
+          No campaign has been scored since the clean slate of 13 October 2026, so the middle
+          column has no verdicts yet. A verdict appears once a campaign (
+          <span className="mono">caruca-v2 sweep</span>) scores both sides by one instrument; the
+          September ledgers are in <span className="mono">eval/_archive/2026-10-13_parity/</span>.
         </p>
       ) : null}
 
@@ -321,6 +350,16 @@ export default async function HomePage({
         Across every command: <Link href="/compare">the comparison matrix</Link> ·{" "}
         <Link href="/runs">all runs</Link> · <Link href="/findings">findings</Link>
       </p>
+
+      <section className="housekeeping" aria-label="Housekeeping">
+        <h2>Start <span className="mono">{command}</span> over</h2>
+        <p className="side__meta" style={{ margin: "4px 0 10px", maxWidth: "72ch" }}>
+          Removes every run of this command on both sides — v2&apos;s run folders, any that
+          recorded nothing, the v1 runs started from here — and their database rows. v1&apos;s own
+          files and its checkout are never touched. You see what would go before anything does.
+        </p>
+        <CommandCleanup command={command} />
+      </section>
     </main>
   );
 }

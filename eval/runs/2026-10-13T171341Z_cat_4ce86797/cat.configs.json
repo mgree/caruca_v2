@@ -1,0 +1,3912 @@
+[
+ {
+  "name": "cat",
+  "body": [],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "relpath_1",
+      "relative": true,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "flag": null,
+    "args": [
+     {
+      "value": "abspath_1",
+      "relative": false,
+      "content": "HUMAN_TEXT",
+      "arg_type": "file"
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "arity": "1",
+    "node_type": "args"
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-A",
+    "node_type": "flag",
+    "alias": [
+     "--show-all"
+    ]
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-u",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "-v",
+    "node_type": "flag",
+    "alias": [
+     "--show-nonprinting"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--help",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-e",
+    "node_type": "flag",
+    "alias": []
+   },
+   {
+    "value": "--version",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-n",
+    "node_type": "flag",
+    "alias": [
+     "--number"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-s",
+    "node_type": "flag",
+    "alias": [
+     "--squeeze-blank"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-t",
+    "node_type": "flag",
+    "alias": []
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ },
+ {
+  "name": "cat",
+  "body": [
+   {
+    "value": "-b",
+    "node_type": "flag",
+    "alias": [
+     "--number-nonblank"
+    ]
+   },
+   {
+    "value": "-E",
+    "node_type": "flag",
+    "alias": [
+     "--show-ends"
+    ]
+   },
+   {
+    "value": "-T",
+    "node_type": "flag",
+    "alias": [
+     "--show-tabs"
+    ]
+   }
+  ],
+  "string": {},
+  "stdin": "HUMAN_TEXT"
+ }
+]

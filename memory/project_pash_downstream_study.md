@@ -105,7 +105,19 @@ the decision-changing facts are repeated here.
   exists but is unreachable). The hand-written comparison arm is far thinner than planned.
 - **Fixed overhead is 0.15 s per run**, not the ~1 s task 012 assumed — so Tier A's ~15,000 runs is
   ~40 minutes of overhead, not 5-10 VM-hours.
-- **`--assert_all_regions_parallelizable` passes vacuously** when PaSh never attempts a region, so
+- **Per-command decision probe — SOLVED 2026-10-13, correcting the entry below.** Each PaSh worker
+runs `bash -c ' CMD … '`, so the command is resolved through `PATH`. A wrapper of the same name
+placed earlier on `PATH` logs one line per invocation; **a count above one is positive, per-command
+proof that this command was parallelized**. Demonstrated at width 8 with per-worker start/end/busy
+times. Three cautions: it also intercepts PaSh's own calls to that command (filter on argument
+shape and report both counts), it costs a fork plus two `date` calls per worker, and it cannot work
+for a shell builtin such as `pwd`. Recipe in `ai_docs/docs/pash_vm_setup.md` §3.3; task 012's
+Phase 0 box is ticked and its exit gate can now be attempted. Also corrected in 012 §4 the same
+day: the Tier A script shape it specified ended in `> "$OUT"`, and a trailing redirect makes PaSh
+fall back to plain `bash` — every such script would have measured nothing while still returning the
+right answer.
+
+**`--assert_all_regions_parallelizable` passes vacuously** when PaSh never attempts a region, so
   it cannot be used alone as a decision probe. **Reading the per-command parallelization decision is
   unsolved and is now Phase 4's blocker**; the exit gate is therefore NOT met. Untried candidates:
   `--graphviz dot`, higher debug levels, `-p` captured from stdout (it writes to stdout, not stderr).

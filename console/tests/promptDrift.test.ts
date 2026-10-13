@@ -78,13 +78,16 @@ describe("against the runs on disk", () => {
   it("reports no drift for the great majority of runs", () => {
     // If this starts failing wholesale, the check has reverted to comparing rendered text to
     // a template, which is always false.
-    const drifted = runs.filter((summary) => {
+    // Stage 2's prompt was changed on purpose on 2026-10-13 (v1's exact output shape, the
+    // enforced bound rule), so every archived `generate` run now drifts, correctly. The
+    // check's own health is judged on the other three stages, whose prompts did not change.
+    const drifted = runs.filter((summary) => summary.stage !== "generate").filter((summary) => {
       const m = loadRun(summary.dir).manifest;
       return checkPromptDrift(m.prompt_files, m.prompt_system, m.prompt_user).some(
         (check) => check.verdict === "changed",
       );
     });
-    expect(drifted.length).toBeLessThan(runs.length * 0.05);
+    expect(drifted.length).toBeLessThan(runs.filter((s) => s.stage !== "generate").length * 0.05);
   });
 
   it("still catches the one run whose prompt genuinely changed afterwards", () => {

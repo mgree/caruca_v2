@@ -12,7 +12,7 @@
  * shown, and the server refuses the run if that figure has moved — so nobody agrees to one
  * number and is charged against another.
  */
-import { useCallback, useEffect, useState, useTransition } from "react";
+import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import {
   liveRuns,
   startV1Run,
@@ -54,17 +54,11 @@ export interface LiveConsoleProps {
   readonly focus?: { readonly stage: Stage; readonly side: "v1" | "v2" } | null;
 }
 
-interface PendingConfirmation {
-  readonly side: "v1" | "v2";
-  readonly stage: Stage;
-  readonly estimateUsd: number | null;
-  readonly basis: string;
-}
 
 export function LiveConsole({ command, model, cols, rows, estimates, focus = null }: LiveConsoleProps) {
   const [runs, setRuns] = useState<LiveRunSummary[]>([]);
   const [started, setStarted] = useState<StartedRunSummary[]>([]);
-  const [confirming, setConfirming] = useState<PendingConfirmation | null>(null);
+  const autoStarted = useRef(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
@@ -88,6 +82,21 @@ export function LiveConsole({ command, model, cols, rows, estimates, focus = nul
   useEffect(refresh, [refresh]);
 
   /**
+   * Arriving from a step's "Run … on v2" button means the person has already decided to run
+   * it, so it starts at once (Tiran, 2026-10-13: no confirmation prompt for a paid model).
+   * The server still checks that the estimate the page carries is the one it computed.
+   */
+  useEffect(() => {
+    if (focus && focus.side === "v2" && !autoStarted.current) {
+      autoStarted.current = true;
+      startV2Now(focus.stage);
+    }
+    // Only on arrival: `focus` and `estimates` come from the URL and the server, not from
+    // anything this component changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focus?.stage, focus?.side]);
+
+  /**
    * Runs the server still holds, not only the ones still going.
    *
    * A run can finish in a couple of hundred milliseconds — v1's `generate` does — and showing
@@ -95,7 +104,12 @@ export function LiveConsole({ command, model, cols, rows, estimates, focus = nul
    * finished run's recording and backlog until it is forgotten, so a finished terminal still
    * has something worth reading in it.
    */
-  const shown = runs.slice().sort((a, b) => b.startedAt - a.startedAt);
+  // Only this command's runs: the server keeps every finished run since it started, and a
+  // `cat` trace left on screen above a `grep` page reads as grep's. Run ids carry the command.
+  const marker = `_${command.replace(/\s+/g, "_")}_`;
+  const shown = runs
+    .filter((run) => run.runId.includes(marker))
+    .sort((a, b) => b.startedAt - a.startedAt);
   const active = shown;
 
   const startFree = (side: "v1" | "v2", stage: Stage, options: { full?: boolean } = {}) => {
@@ -146,27 +160,40 @@ export function LiveConsole({ command, model, cols, rows, estimates, focus = nul
     });
   };
 
-  const confirmAndStart = () => {
-    if (!confirming) return;
-    const request = confirming;
-    setConfirming(null);
+  /** Start a v2 step now. The estimate shown on the button is sent along, so the server can refuse a stale figure. */
+  const startV2Now = (stage: Stage) => {
     setError(null);
     startTransition(async () => {
       try {
-        const summary =
-          request.side === "v2"
-            ? await startV2Run({
-                stage: request.stage,
-                command,
-                model,
-                confirmation: { acceptedUsd: request.estimateUsd, confirmed: true },
-              })
-            : await startV1Run({
-                stage: request.stage,
-                command,
-                stage1Mode: "live",
-                confirmation: { acceptedUsd: request.estimateUsd, confirmed: true },
-              });
+        const summary = await startV2Run({
+          stage,
+          command,
+          model,
+          // The study's bound, the one the pipeline page shows. Without it v2's step 2 runs
+          // at v1's default (--max-count 4) and its comparison line reads "v1 produced
+          // 13,200" for cat instead of 35.
+          bounds: { maxArity: 1, maxCount: 1 },
+          confirmation: { acceptedUsd: estimates[stage]?.usd ?? null, confirmed: true },
+        });
+        setStarted((current) => [summary, ...current]);
+        refresh();
+      } catch (cause) {
+        setError((cause as Error).message);
+      }
+    });
+  };
+
+  /** v1's one model call, started now. Unmetered until the forwarder exists (task 014 phase 3). */
+  const startV1Live = () => {
+    setError(null);
+    startTransition(async () => {
+      try {
+        const summary = await startV1Run({
+          stage: "syntax_spec",
+          command,
+          stage1Mode: "live",
+          confirmation: { acceptedUsd: null, confirmed: true },
+        });
         setStarted((current) => [summary, ...current]);
         refresh();
       } catch (cause) {
@@ -204,46 +231,46 @@ export function LiveConsole({ command, model, cols, rows, estimates, focus = nul
   }[] = [
     {
       stage: "syntax_spec",
-      label: "syntax-spec --fetch",
+      label: `syntax-spec --fetch ${command}`,
       title: "Reads v1's committed grammar. Free.",
       onClick: () => startFree("v1", "syntax_spec"),
     },
     {
       stage: "syntax_spec",
-      label: "syntax-spec, live model call",
+      label: `syntax-spec ${command}, live model call`,
       title: "v1's one LLM step, through the console. Paid.",
       paid: true,
-      onClick: () =>
-        setConfirming({
-          side: "v1",
-          stage: "syntax_spec",
-          estimateUsd: null,
-          basis: "v1's LLM step has never been metered",
-        }),
+      onClick: startV1Live,
     },
     {
       stage: "generate",
-      label: "generate",
+      label: `generate ${command}`,
       title: "Prints the command lines; runs nothing. Free.",
       onClick: () => startFree("v1", "generate"),
     },
     {
       stage: "generate",
-      label: "generate at v1's defaults (long)",
+      label: `generate ${command} at v1's defaults (long)`,
       title: "The same, at --max-count 4. Minutes on a wide command.",
       onClick: () => startFree("v1", "generate", { full: true }),
     },
     {
       stage: "trace",
-      label: "trace in the VM",
+      label: `trace ${command} in the VM`,
       title: "Runs every command line under strace inside the Lima VM. Free.",
       onClick: () => startFree("v1", "trace"),
     },
     {
       stage: "trace",
-      label: "trace at v1's defaults (long)",
+      label: `trace ${command} at v1's defaults (long)`,
       title: "The same, at --max-count 4.",
       onClick: () => startFree("v1", "trace", { full: true }),
+    },
+    {
+      stage: "annotate",
+      label: `annotate pash ${command}, in the VM`,
+      title: "Reads the newest trace run of this command on disk and writes the PaSh description. Free.",
+      onClick: () => startFree("v1", "annotate"),
     },
   ];
 
@@ -258,44 +285,6 @@ export function LiveConsole({ command, model, cols, rows, estimates, focus = nul
       {message ? (
         <Callout title="Note" tone="neutral">
           <p>{message}</p>
-        </Callout>
-      ) : null}
-
-      {confirming ? (
-        <Callout title="This calls a paid model" tone="warn">
-          <p>
-            {confirming.side === "v1" ? "v1" : "v2"} {STAGE_LABEL[confirming.stage]} on{" "}
-            <span className="mono">{command}</span> with{" "}
-            <span className="mono">{model}</span>.
-          </p>
-          <p>
-            {confirming.estimateUsd === null ? (
-              <>
-                There is no estimate: nothing comparable has been measured, so the cost is
-                genuinely unknown rather than small.
-              </>
-            ) : (
-              <>
-                Estimated <span className="mono">{usd(confirming.estimateUsd)}</span> —{" "}
-                {confirming.basis}.
-              </>
-            )}
-          </p>
-          {confirming.side === "v1" ? (
-            <p>
-              v1 does not meter its own LLM step, so v1 itself will record no tokens and no
-              cost. The console&apos;s meter records what the provider reports, which is the
-              first time this step has been costed.
-            </p>
-          ) : null}
-          <div className="row" style={{ marginTop: 10 }}>
-            <button className="btn btn--primary" type="button" onClick={confirmAndStart}>
-              Start it
-            </button>
-            <button className="btn" type="button" onClick={() => setConfirming(null)}>
-              Cancel
-            </button>
-          </div>
         </Callout>
       ) : null}
 
@@ -330,12 +319,6 @@ export function LiveConsole({ command, model, cols, rows, estimates, focus = nul
                     {button.paid ? <span className="faint"> paid</span> : null}
                   </button>
                 ))}
-              {focus?.stage === "annotate" ? (
-                <p className="side__empty">
-                  v1&apos;s annotate cannot be started from here yet: it needs the trace run to
-                  read, and that control is task 014, phase 3. Until then, run it in the VM by hand.
-                </p>
-              ) : null}
             </div>
             {!focus ? (
               <p className="event__detail faint">
@@ -358,16 +341,9 @@ export function LiveConsole({ command, model, cols, rows, estimates, focus = nul
                     className={focus && focus.side === "v2" ? "btn btn--primary" : "btn"}
                     type="button"
                     disabled={pending}
-                    onClick={() =>
-                      setConfirming({
-                        side: "v2",
-                        stage,
-                        estimateUsd: estimates[stage]?.usd ?? null,
-                        basis: estimates[stage]?.basis ?? "no measured runs",
-                      })
-                    }
+                    onClick={() => startV2Now(stage)}
                   >
-                    {focus ? `Run step ${STEP_NUMBER[stage]} on v2` : STAGE_LABEL[stage]}
+                    {focus ? `Run step ${STEP_NUMBER[stage]} on v2 · ${command}` : `${STAGE_LABEL[stage]} · ${command}`}
                     {estimates[stage]?.usd != null ? (
                       <span className="btn__hint"> ~{usd(estimates[stage]!.usd!)}</span>
                     ) : null}
@@ -375,8 +351,8 @@ export function LiveConsole({ command, model, cols, rows, estimates, focus = nul
                 ))}
             </div>
             <p className="event__detail faint">
-              Every v2 step calls a paid model. The button opens a confirmation with the estimate
-              and what it is based on.
+              Every v2 step calls a paid model; the figure on the button is the estimate from
+              measured runs, and the run starts as soon as it is pressed.
             </p>
 
             {!focus ? (

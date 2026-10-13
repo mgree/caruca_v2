@@ -1247,3 +1247,12 @@ counts. Until task 005 adds them, the console shows "not recorded" for both, nev
   not the objective; the pipeline running end to end with every failure diagnosed comes first;
   and v1's source is never modified — console and `v1.py` fixes only
   (`memory/feedback_never_modify_v1_source.md`).
+
+- **2026-10-13, later: the console's work moved under task 014 phase 3.** That document's
+  progress section records the design pass (one command's pipeline as the home screen, Live
+  focused on one step, Runs as a filterable list, four-section navigation, plain step names
+  everywhere), the side-by-side artifact popup, step 4 taking the newest trace run on both
+  sides with v1's annotate button (closing the first two defects above in their simplest form),
+  the free-text command box, and the clean slate (`eval/_archive/2026-10-13_parity/`). The
+  forwarder (third defect), the Performance screen, the Syntax viewer and phase 6 remain open
+  there. 227 console tests.

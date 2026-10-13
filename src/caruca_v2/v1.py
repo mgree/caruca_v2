@@ -431,23 +431,76 @@ print(json.dumps({"by_invocation": by_invocation, "count": total,
 
 
 _VALIDATE_CONFIGS_SCRIPT = """
-import json, sys, traceback
+import json, random, string, sys, traceback
 
 from caruca.ir.environment import CommandConfig
 
-result = {"passed": False, "count": 0, "error": None, "traceback": None, "invalid_index": None}
+result = {"passed": False, "count": 0, "error": None, "traceback": None, "invalid_index": None,
+          "normalized": None}
 try:
     payload = json.loads(open(sys.argv[1]).read())
     if not isinstance(payload, list):
         raise TypeError(
             f"expected a JSON list of CommandConfig objects, got {type(payload).__name__}"
         )
+    normalized = []
     for index, entry in enumerate(payload):
         result["invalid_index"] = index
-        CommandConfig.model_validate(entry)
+        # v1's model accepts a flag as its own `Flag` node, but v1's enumerator only ever writes
+        # a flag as an `args` node carrying one `no_env` argument. Both render to the same
+        # command line; the file must have v1's shape, so the first form becomes the second.
+        for node in entry.get("body", []):
+            if isinstance(node, dict) and node.get("node_type") == "flag":
+                flag = node.pop("value", "")
+                node.pop("alias", None)
+                node.update(
+                    flag=flag,
+                    args=[{"value": "", "arg_type": "no_env"}],
+                    flag_followed_by_equals=False,
+                    node_type="args",
+                    arity="?",
+                )
+        config = CommandConfig.model_validate(entry)
+        # Re-emit through v1's own model so the file on disk has v1's shape: v1's computed
+        # fields (`true_string` at every level) appear, defaults are filled, and unknown keys
+        # are dropped. Two bookkeeping fields v1's enumerator fills but its model cannot
+        # recover are synthesised in v1's own form when the model left them out: a `symbol`
+        # per node (`FLAG<flag>_<5 letters>` / `PATH_<5 letters>`, ir/syntax.py:87) and the
+        # `string` record of the invocation before environments were attached.
+        dumped = json.loads(config.model_dump_json())
+        for node, raw_node in zip(dumped.get("body", []), entry.get("body", [])):
+            if not node.get("symbol"):
+                ident = "".join(random.choices(string.ascii_uppercase, k=5))
+                flag = node.get("flag")
+                node["symbol"] = (f"FLAG{flag}" if flag else "PATH") + f"_{ident}"
+        if not dumped.get("string"):
+            dumped["string"] = {
+                "name": dumped["name"],
+                "body": [
+                    {
+                        "flag": node.get("flag"),
+                        "args": [
+                            {"value": arg.get("value", "")}
+                            | (
+                                {"relative": arg["relative"], "relation": "child"}
+                                if "relative" in arg
+                                else {}
+                            )
+                            for arg in node.get("args", [])
+                        ],
+                        "flag_followed_by_equals": node.get("flag_followed_by_equals", False),
+                        "arity": node.get("arity"),
+                        "symbol": node["symbol"],
+                        "identifier": node["symbol"].rsplit("_", 1)[-1],
+                    }
+                    for node in dumped.get("body", [])
+                ],
+            }
+        normalized.append(dumped)
     result["invalid_index"] = None
     result["count"] = len(payload)
     result["passed"] = True
+    result["normalized"] = normalized
 except BaseException as exc:
     result["error"] = f"{type(exc).__name__}: {exc}"
     result["traceback"] = traceback.format_exc()
@@ -505,6 +558,8 @@ class ConfigValidationResult:
     error: str | None = None
     traceback: str | None = None
     invalid_index: int | None = None
+    """The entries re-emitted through v1's own model, in v1's file shape. None unless passed."""
+    normalized: list[dict[str, Any]] | None = None
 
     @classmethod
     def unavailable(cls, reason: str) -> ConfigValidationResult:
@@ -524,6 +579,7 @@ def validate_configs(configs_path: Path) -> ConfigValidationResult:
         error=data["error"],
         traceback=data["traceback"],
         invalid_index=data["invalid_index"],
+        normalized=data.get("normalized"),
     )
 
 

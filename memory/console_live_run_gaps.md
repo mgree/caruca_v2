@@ -52,3 +52,27 @@ list belongs in `ai_docs/tasks/010_execution_console.md`; `caruca-v2-03` was wri
 Related: [[v1-llm-via-openrouter]] (what decision 8 was meant to achieve),
 [[cost-not-reproducible]] (why metering v1's step matters),
 [[feedback-never-modify-v1-source]] (fixes go in the wrapper, never v1).
+
+## Step 2 runs from the console use a different bound than the v1 pane (observed 2026-10-13)
+
+Established by reading `console/src/components/LiveConsole.tsx` (`startFree`) and
+`console/src/server/startRun.ts`, and the manifest of run `2026-10-13T170439Z_cat_143b659b`:
+
+- The console starts a **v1** run with `bounds: { maxCount: 1 }` unless "full" is chosen, and
+  the v1 pane of the "Command lines and file setups" diff reads `eval/v1_configs/<cmd>.configs.json`,
+  which for `cat` is a max-count-1 file (35 setups, 17 distinct command lines, dated 2026-09-14).
+- The console starts a **v2** step-2 run with **no bounds at all**, so the CLI default applies:
+  `V1_DEFAULT_MAX_COUNT = 4` in `src/caruca_v2/stages/generate.py`. The prompt told the model
+  "at most 4 optional flags", and the built-in comparison scored it against v1 at max-count 4
+  (1,392 distinct command lines). The two panes are therefore at different bounds.
+- At max-count 4 the model cannot finish: every turn after the first hit the 4,096-token output
+  cap, the 4-turn cap stopped it mid-line (3 partial lines dropped), 173 command lines out,
+  recall 173/1,392, precision 173/173. Stopping point was inside the three-flag combinations.
+- v2's flag nodes use v1's `Flag` model (`node_type: "flag"`, `ir/environment.py:348`), which is
+  in the schema the prompt shows but which v1's own serialised output never uses for `cat`
+  (v1 writes flags as `args` nodes with `arg_type: "no_env"`). v2 also leaves `string` as `{}`
+  and omits `true_string`/`symbol`. Not a scoring issue (comparison is by command line) but a
+  shape difference any v1-consuming step would notice.
+- v2 emits one setup per path operand (`file`), v1 five (file, empty dir, non-empty dir,
+  missing with parent, missing without parent). Expected under the current arm: task 014
+  decision 1 makes the five-variant request a *second* arm, not yet built.

@@ -1,0 +1,246 @@
+[
+ {
+  "name": "pwd",
+  "body": [],
+  "string": {
+   "name": "pwd",
+   "body": []
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "pwd"
+ },
+ {
+  "name": "pwd",
+  "body": [
+   {
+    "flag": "-L",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-L_ABCDE",
+    "true_string": "-L"
+   }
+  ],
+  "string": {
+   "name": "pwd",
+   "body": [
+    {
+     "flag": "-L",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-L_ABCDE",
+     "identifier": "ABCDE"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "pwd -L"
+ },
+ {
+  "name": "pwd",
+  "body": [
+   {
+    "flag": "--logical",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--logical_FGHIJ",
+    "true_string": "--logical"
+   }
+  ],
+  "string": {
+   "name": "pwd",
+   "body": [
+    {
+     "flag": "--logical",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--logical_FGHIJ",
+     "identifier": "FGHIJ"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "pwd --logical"
+ },
+ {
+  "name": "pwd",
+  "body": [
+   {
+    "flag": "-P",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG-P_KLMNO",
+    "true_string": "-P"
+   }
+  ],
+  "string": {
+   "name": "pwd",
+   "body": [
+    {
+     "flag": "-P",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG-P_KLMNO",
+     "identifier": "KLMNO"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "pwd -P"
+ },
+ {
+  "name": "pwd",
+  "body": [
+   {
+    "flag": "--physical",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--physical_PQRST",
+    "true_string": "--physical"
+   }
+  ],
+  "string": {
+   "name": "pwd",
+   "body": [
+    {
+     "flag": "--physical",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--physical_PQRST",
+     "identifier": "PQRST"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "pwd --physical"
+ },
+ {
+  "name": "pwd",
+  "body": [
+   {
+    "flag": "--help",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--help_UVWXY",
+    "true_string": "--help"
+   }
+  ],
+  "string": {
+   "name": "pwd",
+   "body": [
+    {
+     "flag": "--help",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--help_UVWXY",
+     "identifier": "UVWXY"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "pwd --help"
+ },
+ {
+  "name": "pwd",
+  "body": [
+   {
+    "flag": "--version",
+    "args": [
+     {
+      "value": "",
+      "arg_type": "no_env",
+      "true_string": ""
+     }
+    ],
+    "flag_followed_by_equals": false,
+    "node_type": "args",
+    "arity": "?",
+    "symbol": "FLAG--version_ZABCD",
+    "true_string": "--version"
+   }
+  ],
+  "string": {
+   "name": "pwd",
+   "body": [
+    {
+     "flag": "--version",
+     "args": [
+      {
+       "value": ""
+      }
+     ],
+     "flag_followed_by_equals": false,
+     "arity": "?",
+     "symbol": "FLAG--version_ZABCD",
+     "identifier": "ZABCD"
+    }
+   ]
+  },
+  "stdin": "HUMAN_TEXT",
+  "true_string": "pwd --version"
+ }
+]

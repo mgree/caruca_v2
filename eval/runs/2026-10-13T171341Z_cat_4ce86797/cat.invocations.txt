@@ -1,0 +1,173 @@
+cat
+cat relpath_1
+cat abspath_1
+cat -A
+cat -b
+cat -e
+cat -E
+cat -n
+cat -s
+cat -t
+cat -T
+cat -u
+cat -v
+cat --help
+cat --version
+cat -A relpath_1
+cat -A abspath_1
+cat -b relpath_1
+cat -b abspath_1
+cat -e relpath_1
+cat -e abspath_1
+cat -E relpath_1
+cat -E abspath_1
+cat -n relpath_1
+cat -n abspath_1
+cat -s relpath_1
+cat -s abspath_1
+cat -t relpath_1
+cat -t abspath_1
+cat -T relpath_1
+cat -T abspath_1
+cat -u relpath_1
+cat -u abspath_1
+cat -v relpath_1
+cat -v abspath_1
+cat --help relpath_1
+cat --help abspath_1
+cat --version relpath_1
+cat --version abspath_1
+cat -A -b
+cat -A -e
+cat -A -E
+cat -A -n
+cat -A -s
+cat -A -t
+cat -A -T
+cat -A -u
+cat -A -v
+cat -A --help
+cat -A --version
+cat -b -e
+cat -b -E
+cat -b -n
+cat -b -s
+cat -b -t
+cat -b -T
+cat -b -u
+cat -b -v
+cat -b --help
+cat -b --version
+cat -e -E
+cat -e -n
+cat -e -s
+cat -e -t
+cat -e -T
+cat -e -u
+cat -e -v
+cat -e --help
+cat -e --version
+cat -E -n
+cat -E -s
+cat -E -t
+cat -E -T
+cat -E -u
+cat -E -v
+cat -E --help
+cat -E --version
+cat -n -s
+cat -n -t
+cat -n -T
+cat -n -u
+cat -n -v
+cat -n --help
+cat -n --version
+cat -s -t
+cat -s -T
+cat -s -u
+cat -s -v
+cat -s --help
+cat -s --version
+cat -t -T
+cat -t -u
+cat -t -v
+cat -t --help
+cat -t --version
+cat -T -u
+cat -T -v
+cat -T --help
+cat -T --version
+cat -u -v
+cat -u --help
+cat -u --version
+cat -v --help
+cat -v --version
+cat --help --version
+cat -A -b -e
+cat -A -b -E
+cat -A -b -n
+cat -A -b -s
+cat -A -b -t
+cat -A -b -T
+cat -A -b -u
+cat -A -b -v
+cat -A -b --help
+cat -A -b --version
+cat -A -e -E
+cat -A -e -n
+cat -A -e -s
+cat -A -e -t
+cat -A -e -T
+cat -A -e -u
+cat -A -e -v
+cat -A -e --help
+cat -A -e --version
+cat -A -E -n
+cat -A -E -s
+cat -A -E -t
+cat -A -E -T
+cat -A -E -u
+cat -A -E -v
+cat -A -E --help
+cat -A -E --version
+cat -A -n -s
+cat -A -n -t
+cat -A -n -T
+cat -A -n -u
+cat -A -n -v
+cat -A -n --help
+cat -A -n --version
+cat -A -s -t
+cat -A -s -T
+cat -A -s -u
+cat -A -s -v
+cat -A -s --help
+cat -A -s --version
+cat -A -t -T
+cat -A -t -u
+cat -A -t -v
+cat -A -t --help
+cat -A -t --version
+cat -A -T -u
+cat -A -T -v
+cat -A -T --help
+cat -A -T --version
+cat -A -u -v
+cat -A -u --help
+cat -A -u --version
+cat -A -v --help
+cat -A -v --version
+cat -A --help --version
+cat -b -e -E
+cat -b -e -n
+cat -b -e -s
+cat -b -e -t
+cat -b -e -T
+cat -b -e -u
+cat -b -e -v
+cat -b -e --help
+cat -b -e --version
+cat -b -E -n
+cat -b -E -s
+cat -b -E -t
+cat -b -E -T

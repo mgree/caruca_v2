@@ -11,6 +11,9 @@ import { analyzeDeletion, deleteRuns, type DeletionAnalysis, type DeletionResult
 import { listFindings } from "../data/findings.js";
 import { recheckEvidence, recipeOf, type RecheckOutcome } from "../data/recheck.js";
 import { countEnumeration } from "../data/preflight.js";
+import { stepArtifacts, type StepArtifacts } from "../data/stepArtifacts.js";
+import { runIdsForCommand, type CommandRunIds } from "../data/commandRuns.js";
+import type { Stage } from "../data/schema.js";
 import { all, get, stop, type LiveRun, type RunState, type StopResult } from "../server/processes.js";
 import {
   startV1,
@@ -205,4 +208,35 @@ export async function startV2ToolRun(tool: V2Tool): Promise<StartedRunSummary> {
   const started = startV2Tool(tool);
   revalidatePath("/");
   return summarize(started.run, started.commandLine, started.paid);
+}
+
+/** Both sides' artifacts for one step of one command, as text, for the side-by-side popup. Reads only. */
+export async function loadStepArtifacts(command: string, stage: Stage): Promise<StepArtifacts> {
+  return stepArtifacts(command, stage);
+}
+
+/** Every run of one command on both sides, and what deleting them all would cost. Reads only. */
+export async function previewCommandDeletion(
+  command: string,
+): Promise<{ ids: CommandRunIds; analysis: DeletionAnalysis }> {
+  const ids = runIdsForCommand(command);
+  return { ids, analysis: analyzeDeletion(ids.all) };
+}
+
+/**
+ * Delete every run of one command: v2's runs, v2's empty shells, and the v1 runs this console
+ * recorded, with their database rows. The ids are collected again here, so a page that went
+ * stale cannot delete something other than what it described. v1's own checkout is never
+ * touched: `deleteRuns` refuses anything outside the two run folders.
+ */
+export async function confirmCommandDeletion(
+  command: string,
+  reason: string,
+): Promise<DeletionResult> {
+  const ids = runIdsForCommand(command);
+  const trimmed = reason.trim();
+  const result = deleteRuns(ids.all, trimmed ? { reason: trimmed } : {});
+  revalidatePath("/");
+  revalidatePath("/runs");
+  return result;
 }

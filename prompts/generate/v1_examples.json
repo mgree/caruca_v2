@@ -1,0 +1,126 @@
+{
+ "_provenance": "Generated 2026-10-13 by v1's own expansion (v1.reference_configs, --max-arity 1 --max-count 1, v1 commit d8032407) for two of the stage-1 exemplar commands. The five-letter identifiers are v1's random per-process names, frozen here so the prompt is byte-stable. Regenerate with scripts/regenerate_generate_examples.py if v1's format changes.",
+ "examples": [
+  {
+   "invocation": "ls -a",
+   "config": {
+    "name": "ls",
+    "body": [
+     {
+      "flag": "-a",
+      "args": [
+       {
+        "value": "",
+        "arg_type": "no_env",
+        "true_string": ""
+       }
+      ],
+      "flag_followed_by_equals": false,
+      "node_type": "args",
+      "arity": "?",
+      "symbol": "FLAG-a_QRYJL",
+      "true_string": "-a"
+     }
+    ],
+    "string": {
+     "name": "ls",
+     "body": [
+      {
+       "flag": "-a",
+       "args": [
+        {
+         "value": ""
+        }
+       ],
+       "flag_followed_by_equals": false,
+       "arity": "?",
+       "symbol": "FLAG-a_QRYJL",
+       "identifier": "QRYJL"
+      }
+     ]
+    },
+    "stdin": "HUMAN_TEXT",
+    "true_string": "ls -a"
+   }
+  },
+  {
+   "invocation": "mv relpath_1 relpath_2",
+   "config": {
+    "name": "mv",
+    "body": [
+     {
+      "flag": null,
+      "args": [
+       {
+        "value": "relpath_1",
+        "relative": true,
+        "sandbox": "sandbox_placeholder",
+        "content": "HUMAN_TEXT",
+        "arg_type": "file",
+        "true_string": "relpath_1"
+       }
+      ],
+      "flag_followed_by_equals": false,
+      "node_type": "args",
+      "arity": "+",
+      "symbol": "PATH_VXSWY",
+      "true_string": "relpath_1"
+     },
+     {
+      "flag": null,
+      "args": [
+       {
+        "value": "relpath_2",
+        "relative": true,
+        "sandbox": "sandbox_placeholder",
+        "content": "HUMAN_TEXT",
+        "arg_type": "file",
+        "true_string": "relpath_2"
+       }
+      ],
+      "flag_followed_by_equals": false,
+      "node_type": "args",
+      "arity": "1",
+      "symbol": "PATH_AYBXV",
+      "true_string": "relpath_2"
+     }
+    ],
+    "string": {
+     "name": "mv",
+     "body": [
+      {
+       "flag": null,
+       "args": [
+        {
+         "value": "relpath_1",
+         "relative": true,
+         "relation": "child"
+        }
+       ],
+       "flag_followed_by_equals": false,
+       "arity": "+",
+       "symbol": "PATH_VXSWY",
+       "identifier": "VXSWY"
+      },
+      {
+       "flag": null,
+       "args": [
+        {
+         "value": "relpath_2",
+         "relative": true,
+         "relation": "child"
+        }
+       ],
+       "flag_followed_by_equals": false,
+       "arity": "1",
+       "symbol": "PATH_AYBXV",
+       "identifier": "AYBXV"
+      }
+     ]
+    },
+    "stdin": "HUMAN_TEXT",
+    "true_string": "mv relpath_1 relpath_2"
+   }
+  }
+ ]
+}
