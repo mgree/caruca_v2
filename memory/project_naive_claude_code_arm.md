@@ -46,5 +46,18 @@ subscription; `claude auth status` confirms), so runs bill the subscription, not
 `Caruca via Claude Code CLI/sync_to_vm.sh`, README excluded. No CLAUDE.md exists above it. Residual
 hazard: the Mac home (both checkouts) is mounted at `/Users/tirandagan` inside the VM.
 
+**Golden image (2026-10-13).** Runs use a clone of Lima VM `naive-golden`, not the caruca VM: created
+with `limactl create --name=naive-golden template:ubuntu-24.04 --mount-none --cpus 4 --memory 4 --disk 20`;
+Claude Code 2.1.296 installed (native installer); package at `~/naive-arm` (guest home
+`/home/tirandagan.guest`); no mounts, no `/Users` inside. Stock image already has `strace` and
+`unshare`; `kernel.apparmor_restrict_unprivileged_userns=1` left as stock. Reset = `limactl clone
+naive-golden <run>` then `limactl delete -f <run>`; `limactl snapshot` is **unimplemented on vz**
+(verified) and qemu is not installed. `sync_to_vm.sh [vm]` copies the package with `limactl copy`. Run flow (scripts in the folder,
+tested 2026-10-13): `./new_run_vm.sh <name>` → `limactl shell <name>` (welcome lands in `~/naive-arm`)
+→ `naive-run [-i] <cmd> [PROMPT_vN.md]` → `./collect_run.sh <name>` (results to
+`eval/naive_claude_code/<date>_<name>/`, clone deleted). `limactl clone` needs the source stopped;
+`new_run_vm.sh` stops the golden image itself.
+Sign-in to the golden image was pending when this was written; check `claude auth status` there.
+
 **Status.** Package built 2026-10-13; no run yet. Related: [[caruca_v2_baseline_scope]] (the naive
 single-prompt control, task 001) and task 007 (agentic SDK arm) are the other two LLM arms.

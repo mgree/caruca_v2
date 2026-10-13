@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# Run one experiment session in this VM. Installed at ~/bin/naive-run by new_run_vm.sh.
+#
+#   naive-run <command> [PROMPT_vN.md]        headless: full JSON log in ~/naive-arm/runs/
+#   naive-run -i <command> [PROMPT_vN.md]     interactive: watch the session, answer its prompts
+#
+# Default prompt version: PROMPT_v1.md. The command must not be one of the samples (tee uniq grep rm).
+set -euo pipefail
+cd ~/naive-arm
+MODE=headless
+if [ "${1:-}" = "-i" ]; then MODE=interactive; shift; fi
+CMD="${1:?usage: naive-run [-i] <command> [PROMPT_vN.md]}"
+P="${2:-PROMPT_v1.md}"
+case "$CMD" in tee|uniq|grep|rm) echo "error: $CMD is a sample command and cannot be a test target" >&2; exit 2;; esac
+[ -f "$P" ] || { echo "error: no such prompt file: $P (have: $(ls PROMPT_v*.md | tr '\n' ' '))" >&2; exit 2; }
+BIN="$(command -v "$CMD" || true)"; MAN="$(man -w "$CMD" 2>/dev/null || true)"
+[ -n "$BIN" ] || { echo "error: $CMD is not installed in this VM" >&2; exit 2; }
+[ -n "$MAN" ] || { echo "error: no manual page for $CMD in this VM" >&2; exit 2; }
+if [ -n "$(ls -A output 2>/dev/null)" ]; then
+  echo "error: output/ is not empty; this clone has been used. Make a fresh clone for a new run." >&2; exit 2
+fi
+PROMPT="$(sed -e "s|{{COMMAND}}|$CMD|g" -e "s|{{PATH}}|$BIN|g" -e "s|{{MANPAGE_PATH}}|$MAN|g" "$P")"
+TAG="${CMD}_${P%.md}"
+mkdir -p runs
+{
+  echo "command=$CMD"; echo "prompt=$P"; echo "binary=$BIN"; echo "manpage=$MAN"; echo "mode=$MODE"
+  echo "started=$(date -Is)"; echo "claude=$(claude --version)"; echo "os=$(lsb_release -ds) $(uname -m)"
+  echo "host=$(hostname)"
+} > "runs/$TAG.env"
+echo "== $TAG: $MODE run of $CMD with $P (binary $BIN, man $MAN)"
+if [ "$MODE" = headless ]; then
+  echo "== log: ~/naive-arm/runs/$TAG.jsonl   (last event, type=result, has tokens/cost/duration)"
+  claude -p "$PROMPT" --output-format stream-json --verbose > "runs/$TAG.jsonl"
+  echo "finished=$(date -Is)" >> "runs/$TAG.env"
+  echo "== done. Files written:"; find output -type f | sort
+  echo "== result event:"; tail -1 "runs/$TAG.jsonl" | python3 -c 'import json,sys; r=json.load(sys.stdin); print({k:r.get(k) for k in ("duration_ms","num_turns","total_cost_usd","usage","is_error")})' 2>/dev/null || true
+else
+  echo "== interactive; the prompt is passed as the first message. When you exit, run: find ~/naive-arm/output -type f"
+  claude "$PROMPT"
+  echo "finished=$(date -Is)" >> "runs/$TAG.env"
+fi

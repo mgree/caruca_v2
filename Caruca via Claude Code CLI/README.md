@@ -23,6 +23,13 @@ formats/pash_annotation.md     format of PaSh's three annotation files, derived 
 samples/{tee,uniq,grep,rm}/    <cmd>.py from v1; pash/ = PaSh's parser table + generator classes, verbatim
 samples/PASH_ANNOTATIONS_LICENSE  MIT licence of the copied PaSh files
 output/                        where the session writes its files (output/<cmd>.py and output/pash/*)
+
+Operator tooling (never copied into the VM's work folder):
+new_run_vm.sh <name>           clone naive-golden -> <name>, start it, copy the package in fresh, install helper + welcome
+collect_run.sh <name> [dest]   copy output/ and runs/ out of a clone into eval/naive_claude_code/, delete the clone
+sync_to_vm.sh [vm]             copy the package into a VM (used by new_run_vm.sh; run against naive-golden to update it)
+vm/naive-run                   the in-VM helper: fills the placeholders and runs one session
+vm/bashrc-welcome.sh           the welcome printed on every interactive shell in a clone; lands you in ~/naive-arm
 ```
 
 `tee`, `uniq`, `grep` and `rm` are the samples, so they **cannot be test commands**. Everything else is fair.
@@ -117,130 +124,134 @@ four parts (contains or adds, why, expected, observed). Rerun the leakage check 
 (the operator notes in the design record, task 016, list the withheld words) and note which withheld
 words the new version introduces. Add a line to task 016's revision log.
 
-## The environment: Claude Code inside the Lima VM
+## The environment: a golden VM, cloned for every run
 
-Claude Code runs **inside** the VM used for v1 tracing, so a session is driven from within the
-experimental environment rather than from the Mac. Installed 2026-10-13:
+Runs happen in a throwaway clone of a **golden image**, a Lima VM named `naive-golden` that holds
+nothing but Ubuntu 24.04, Claude Code and this package. The golden image is never run in; each run
+starts from a fresh clone of it and the clone is deleted afterwards, so every run begins from a
+byte-identical machine. Lima cannot roll a VM back on this Mac (snapshots are unimplemented on the vz
+backend, and qemu is not installed), so cloning is the reset.
+
+Why not the `caruca` VM, where v1's tracing runs: it has v1 installed in the guest home, the
+user-namespace fix already applied, and the Mac home (both checkouts) mounted read-write. A session
+there is naive by prompt but not by environment, and a destructive test command can damage the
+tracing setup. Claude Code 2.1.296 is installed there too (2026-10-13), but it is not used for runs.
+
+### What the golden image contains
+
+Built 2026-10-13 with the steps below.
 
 | Item | Value |
 |---|---|
-| VM | Lima instance `caruca`, Ubuntu 24.04.4, arm64, 8 vCPU / 8 GiB |
-| Install | native installer, `curl -fsSL https://claude.ai/install.sh \| bash`; no Node needed |
-| Binary | `~/.local/bin/claude` in the guest home `/home/tirandagan.guest`; on `PATH` in login shells (`bash -lc`) |
-| Version | 2.1.296 |
-| Package copy | `~/naive-arm` in the guest home, written by `./sync_to_vm.sh` from this folder; README excluded |
-| Sign-in | done 2026-10-13 by Tiran: claude.ai account (Max subscription), stored in the guest home. `~/.claude/settings.json` holds only a theme; no global `CLAUDE.md` |
+| VM | `naive-golden`, Lima template `ubuntu-24.04` (Ubuntu 24.04.4, arm64), vz backend, 4 vCPU / 4 GiB / 20 GiB, **no mounts** (`--mount-none`; there is no `/Users` inside) |
+| Claude Code | 2.1.296, native installer, `~/.local/bin/claude` in the guest home `/home/tirandagan.guest`; on `PATH` in login shells |
+| Package | `~/naive-arm`: the prompts, `formats/`, `samples/`, empty `output/` and `runs/`; no README, no sync script |
+| Sign-in | see "Sign in once" below; the credentials live in the image and are inherited by every clone |
+| Stock tools present | `strace`, `unshare`, `man`, `python3` (all in the stock cloud image); no `docker` |
+| Stock restriction left in place | `kernel.apparmor_restrict_unprivileged_userns = 1`, so unprivileged user namespaces are blocked as on any stock Ubuntu 24.04; a session that wants a sandbox has to deal with that itself |
+| Nothing from this project | no `CLAUDE.md` anywhere above `~/naive-arm`, no v1, no repo |
 
-**Signing in again, if ever needed.** Run `limactl shell caruca`, then `claude`, then `/login`. The VM has
-no browser, so Claude Code prints a URL: open it on the Mac, finish the sign-in, and paste the code
-it gives you back into the VM. The credentials are stored in the guest home, separate from the Mac's.
-An `ANTHROPIC_API_KEY` in the environment works instead if the run should bill an API key rather than
-the subscription; either way, record which was used, because cost reporting differs.
+### Building the golden image (from scratch, on the Mac)
 
-**Re-installing or upgrading.** Re-run the installer line above inside the VM. Update the version in
-the table and in the run records.
+```sh
+# 1. create and start: Ubuntu 24.04, no mounts
+limactl create --name=naive-golden template:ubuntu-24.04 --mount-none --cpus 4 --memory 4 --disk 20 --tty=false
+limactl start naive-golden --tty=false
 
-## Contamination hazard: keep the session away from the project
+# 2. install Claude Code (native installer; no Node needed)
+limactl shell naive-golden -- bash -lc 'curl -fsSL https://claude.ai/install.sh | bash'
+limactl shell naive-golden -- bash -lc 'claude --version'
 
-Claude Code loads `CLAUDE.md` from the working directory and every parent directory, plus the global
-`~/.claude/CLAUDE.md`. This folder lives inside the caruca_v2 repo, whose `CLAUDE.md` describes v1's
-whole pipeline. A session started here would be primed with everything the experiment withholds.
+# 3. copy the package in (README and sync script are left out by the script)
+cd "$HOME/dev/stevens/caruca_v2/Caruca via Claude Code CLI" && ./sync_to_vm.sh naive-golden
+```
 
-So the session runs from `~/naive-arm` in the guest home, where nothing above it has a `CLAUDE.md`
-(checked 2026-10-13). `sync_to_vm.sh` keeps that copy current and never copies this README.
+**Sign in once** (by hand; the VM has no browser):
 
-Two residual hazards to know about:
+```sh
+limactl shell naive-golden
+claude          # then /login; open the printed URL on the Mac, paste the code back
+exit
+```
 
-- The Mac home is mounted read-write inside the VM at `/Users/tirandagan`, so the v1 and v2
-  checkouts are reachable if the session goes looking. Nothing points it there; if a run log shows it
-  reading under `/Users`, record that as a finding, and consider a VM without the mount for later runs.
-- Before each run, confirm `~/.claude/CLAUDE.md` does not exist in the guest home and that
-  `~/.claude/settings.json` is absent or deliberate (it can pre-approve tools). Record the permission
-  mode used.
+```sh
+# 4. verify, then stop; the image is only ever started again to update it
+limactl shell naive-golden -- bash -lc 'claude auth status | grep loggedIn; ls ~/.claude/CLAUDE.md 2>&1; cat ~/.claude/settings.json'
+limactl stop naive-golden
+```
 
-## Launching a run, step by step
+**Updating the image** (new prompt version, changed sample, newer Claude Code): `limactl start
+naive-golden`, make the change (`./sync_to_vm.sh naive-golden`, or re-run the installer line), `limactl
+stop naive-golden`. Note the change in this README; clones made afterwards carry it, earlier runs did not.
 
-All commands marked *Mac* run on the Mac; all marked *VM* run inside `limactl shell caruca`.
+## Running a command with Claude
 
-1. **Sync the package** (*Mac*), after any change to a prompt, format or sample:
+### The short way (scripts)
+
+```sh
+cd "$HOME/dev/stevens/caruca_v2/Caruca via Claude Code CLI"
+./new_run_vm.sh naive-run-sed-v2        # 1. fresh clone of naive-golden, package copied in fresh, helper installed
+limactl shell naive-run-sed-v2          # 2. the welcome message lands you in ~/naive-arm and shows the commands
+```
+
+Inside the clone:
+
+```sh
+naive-run sed PROMPT_v2.md              # headless; full log in runs/sed_PROMPT_v2.jsonl, metadata in runs/sed_PROMPT_v2.env
+naive-run -i sed PROMPT_v2.md           # or interactive: watch it, answer its permission prompts
+exit
+```
+
+Back on the Mac:
+
+```sh
+./collect_run.sh naive-run-sed-v2       # 3. copies output/ and runs/ to eval/naive_claude_code/<date>_naive-run-sed-v2/ and deletes the clone
+```
+
+Then fill in the "Observed" part of the prompt version's entry above and add the run to task 016.
+
+`naive-run` refuses a sample command (tee, uniq, grep, rm), a command with no binary or no manual
+page in the VM, an unknown prompt file, and a clone whose `output/` is not empty (one run per clone).
+It records the command, prompt version, binary path, manual-page path, mode, timestamps, Claude Code
+version and OS in `runs/<command>_<version>.env`. `new_run_vm.sh` stops the golden image if it is
+running (Lima clones only a stopped VM), and reports whether the clone is signed in and free of any
+global `CLAUDE.md`.
+
+### What the scripts do, by hand
+
+1. **Clone and start** (*Mac*): `limactl clone naive-golden "$RUN" --tty=false && limactl start "$RUN" --tty=false`,
+   then `./sync_to_vm.sh "$RUN"` so the package is the repo's current one, not the golden image's copy.
+
+2. **Check the clone is clean** (*VM*): no `~/.claude/CLAUDE.md`; `~/.claude/settings.json` holds only a
+   theme; `claude auth status` says logged in; `output/` is empty.
+
+3. **Fill the three placeholders** (*VM*): the command, its binary's path (`command -v`) and its manual
+   page's path (`man -w`):
 
    ```sh
-   cd "$HOME/dev/stevens/caruca_v2/Caruca via Claude Code CLI" && ./sync_to_vm.sh
-   ```
-
-2. **Enter the VM and check it is clean** (*Mac*, then *VM*):
-
-   ```sh
-   limactl shell caruca
-   cd ~/naive-arm
-   ls ~/.claude/CLAUDE.md 2>/dev/null && echo "STOP: global CLAUDE.md present"
-   cat ~/.claude/settings.json          # should hold only a theme
-   claude auth status | grep loggedIn   # expect true
-   rm -rf output/* && ls output         # start empty
-   ```
-
-3. **Choose the prompt version and the command** (*VM*). Not tee, uniq, grep or rm. The prompt has
-   three placeholders: the command, its binary's path and its manual page's path.
-
-   ```sh
-   P=PROMPT_v2.md
-   CMD=sed
-   BIN=$(command -v "$CMD"); MAN=$(man -w "$CMD")
-   echo "$BIN $MAN"                      # both must be non-empty
+   P=PROMPT_v2.md; CMD=sed; BIN=$(command -v "$CMD"); MAN=$(man -w "$CMD")
    fill() { sed -e "s|{{COMMAND}}|$CMD|g" -e "s|{{PATH}}|$BIN|g" -e "s|{{MANPAGE_PATH}}|$MAN|g" "$1"; }
    ```
 
-4. **Run it**, one of two ways (*VM*).
-
-   Headless, with the complete machine-readable log (preferred for measurement):
+4. **Run** (*VM*). Headless, with the complete machine-readable log (`stream-json` output requires
+   `--verbose`, checked on 2.1.293 and 2.1.296):
 
    ```sh
-   mkdir -p runs
-   claude -p "$(fill "$P")" \
-     --output-format stream-json --verbose > "runs/${CMD}_${P%.md}.jsonl"
+   claude -p "$(fill "$P")" --output-format stream-json --verbose > "runs/${CMD}_${P%.md}.jsonl"
    ```
 
-   The last event in the log has `"type": "result"` with token usage, cost, duration and turn count.
-   Every tool call and result is an earlier event. A headless run cannot answer questions; if the
+   The last event in the log has `"type": "result"` with token usage, cost, duration and turn count;
+   every tool call and result is an earlier event. A headless run cannot answer questions; if the
    session stops to ask one, that is a result, and the interactive mode shows what it wanted.
+   Interactive: `claude "$(fill "$P")"` starts the session with the prompt as its first message. To
+   skip permission prompts, add `--permission-mode bypassPermissions` and record that you did.
 
-   Interactive, to watch it work and answer its permission prompts:
-
-   ```sh
-   fill "$P" > /tmp/prompt.md
-   claude     # paste the contents of /tmp/prompt.md as the first message
-   ```
-
-   To let an interactive session run without permission prompts, start it with
-   `claude --permission-mode bypassPermissions` and record that you did.
-
-5. **Collect the results** (*VM*). The Mac home is mounted, so copy straight into the repo:
-
-   ```sh
-   DEST="/Users/tirandagan/dev/stevens/caruca_v2/eval/naive_claude_code/$(date +%Y-%m-%d)_${CMD}_${P%.md}"
-   mkdir -p "$DEST" && cp -r output runs/"${CMD}_${P%.md}.jsonl" "$DEST"/ 2>/dev/null
-   claude --version > "$DEST/claude_version.txt"; lsb_release -ds >> "$DEST/claude_version.txt"
-   ```
-
-6. **Write it down** (*Mac*): fill in the "Observed" part of the prompt version's entry above, and
-   add the run to the record list in task 016. Then clear `output/` in the VM before the next run.
-
-### A cleaner environment, when wanted
-
-The caruca VM is the v1 tracing machine, and it shows: `strace` and `unshare` are installed, the
-user-namespace fix is already applied (`kernel.apparmor_restrict_unprivileged_userns=0`), v1 is
-installed in `~/caruca-venv`, and the Mac home is mounted read-write. A session there is naive by
-prompt, not by environment, and a destructive test command can damage the tracing setup.
-
-The better arrangement is a fresh Ubuntu 24.04 VM with no mount and nothing but Claude Code, kept as
-a golden image and cloned for each run so every run starts identical (`limactl clone naive naive-run`;
-Lima snapshots need the qemu backend, and these VMs use vz). Cost: about ten minutes, a second
-sign-in, and a few GB of disk per clone. Not built as of 2026-10-13; if it is, record it here and
-note which VM every run used.
+5. **Collect and delete** (*Mac*): `limactl copy -r "$RUN:~/naive-arm/output" <dest>/output`, the same
+   for `runs`, then `limactl delete -f "$RUN"`.
 
 ## What to record per run
 
-- command under test; prompt version; date; machine (Lima VM `caruca`, Ubuntu 24.04) and `claude --version`
+- command under test; prompt version; date; the clone's name and that it came from `naive-golden` (Ubuntu 24.04, arm64); `claude --version`
 - model id and permission mode used
 - wall-clock, input/output tokens, cost (from the `result` event)
 - everything under `output/`, copied out before the next run

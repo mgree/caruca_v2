@@ -73,7 +73,8 @@ Caruca via Claude Code CLI/
 │   └── pash_annotation.md       what <command>.json must look like
 ├── samples/{tee,uniq,grep,rm}/  <cmd>.py from v1, and pash/ with PaSh's own three annotation files, byte-for-byte
 ├── samples/PASH_ANNOTATIONS_LICENSE   MIT licence of the copied PaSh files
-├── sync_to_vm.sh                copies the package into the VM without the README
+├── new_run_vm.sh / collect_run.sh / sync_to_vm.sh   operator scripts: make a run clone, collect it, copy the package in
+├── vm/naive-run, vm/bashrc-welcome.sh  installed into each clone: the one-command runner and the login welcome
 └── output/                      where the session writes output/<cmd>.py and output/pash/*
 ```
 
@@ -120,6 +121,7 @@ nothing about documentation, isolation, tracing or how to decide a behaviour cla
 | v1 of the prompt now asks the session to test the binary against its specification | Review feedback replaced "how you arrive at the two files is entirely up to you" with "Please generate a correct spec without my intervention. Please be certain to test the binary against the spec you generate." This is the one method instruction v1 carries; recorded as such in the README. |
 | Folder at the repo root, not under `ai_docs/` | It is a runnable package, not a document, and it must be copyable as one unit. |
 | The session runs from a **copy outside any checkout** | Claude Code loads `CLAUDE.md` from the working directory and every parent, plus `~/.claude/CLAUDE.md`. This repo's `CLAUDE.md` describes v1's whole pipeline. A session started inside the repo would be primed with exactly what the experiment withholds. |
+| Runs happen in a **throwaway clone of a golden VM** (`naive-golden`: Ubuntu 24.04, no mounts, Claude Code, the package), not in the `caruca` VM | Tiran asked 2026-10-13 whether to avoid the caruca VM or reset it. The caruca VM carries v1, the user-namespace fix and a read-write mount of the Mac home, so it is not a naive environment, and Lima cannot roll it back (snapshots unimplemented on vz; no qemu). A clone per run gives a byte-identical start every time and closes the mount hazard. |
 | Operator notes in a separate `README.md`, deleted from the copy before a run | The run instructions name tracing, sandboxes and documentation; the session must not read them. |
 | Two run modes: interactive and headless with a `stream-json` log | Interactive shows what it wants to ask; headless gives a complete machine-readable record with tokens, cost and duration (Claude Code 2.1.293; `stream-json` needs `--verbose` in print mode). |
 | `output/` is a real directory the prompt names | Avoids the session choosing its own location and the operator hunting for the files. |
@@ -140,11 +142,12 @@ project's name reaches the session.
 
 ## 5. Running it
 
-The operator notes in the folder's `README.md` are the authoritative procedure. In short: copy the
-folder into the Lima VM as `~/naive-arm`, confirm no global `CLAUDE.md` is present, delete the
-README from the copy, choose a prompt version, substitute the command into it, run either interactively or with
-`claude -p … --output-format stream-json --verbose > runs/<command>.jsonl`, then copy `output/`
-and the log back under `eval/`.
+The operator notes in the folder's `README.md` are the authoritative procedure, including how the
+golden image was built. In short: clone `naive-golden` into a run VM and start it, confirm the clone
+is clean, choose a prompt version and a command, fill the three placeholders (command, binary path,
+manual-page path), run either interactively or with
+`claude -p … --output-format stream-json --verbose > runs/<command>_<version>.jsonl`, copy `output/`
+and `runs/` out with `limactl copy`, delete the clone.
 
 Record per run: command, prompt version, date, machine, `claude --version`, model id, permission mode,
 wall-clock, tokens, cost, the two files, and the observations below.
@@ -176,5 +179,7 @@ wall-clock, tokens, cost, the two files, and the observations below.
 |---|---|---|
 | 2026-10-13 | Package created: prompt, two format documents, four sample pairs, operator notes. | Tiran's direction above. |
 | 2026-10-13 | Claude Code 2.1.296 installed inside the Lima VM `caruca` (native installer, guest home); package staged at `~/naive-arm` by the new `sync_to_vm.sh`; README gained an environment section. Tiran signed in the same day with the claude.ai account (Max subscription). | Tiran: run the prompts "from within the environment and not have to escape out of it or control it from above", so the session is as naive as the VM is. |
+| 2026-10-13 | Run tooling added at Tiran's request: `new_run_vm.sh <name>` (stop golden if running, clone, start, copy the package fresh from the repo, install `~/bin/naive-run` and a `.bashrc` welcome that lands every interactive shell in `~/naive-arm` with the run commands), `collect_run.sh <name>` (copy `output/` and `runs/` into `eval/naive_claude_code/`, delete the clone), in-VM `naive-run [-i] <cmd> [PROMPT_vN.md]` (fills the three placeholders, refuses sample commands and used clones, writes a `.env` metadata file beside the log). Tested end to end on a throwaway clone and deleted it. README "Running a command with Claude" rewritten around the scripts. | Tiran 2026-10-13: "create a script that will create a image copy… When I start the shell in that clone… the welcome message should give me instructions how to start the experiment, landing me in the right ~ folder". |
+| 2026-10-13 | Golden image `naive-golden` built (Ubuntu 24.04 template, `--mount-none`, Claude Code 2.1.296, package copied in); runs now use a clone per run, deleted afterwards. `sync_to_vm.sh` rewritten to copy via `limactl copy` into any named VM. README gained "Building the golden image" and "Running a command with Claude". Sign-in to the golden image pending at the time of writing. | Tiran 2026-10-13: "should i avoid using the original caruca vm and instead create a copy each time i want to run?" and "let's pre-install claude code to the naive image too". |
 | 2026-10-13 | Review feedback applied to both prompts: technical terms for syntax ("options, option argument types, operand types"); `{{PATH}}` and `{{MANPAGE_PATH}}` placeholders; behaviour annotation changed from v1's JSON to PaSh's three Python-side files; "must follow their format exactly" sentence dropped; closing line replaced by "generate a correct spec without my intervention… test the binary against the spec". Samples: `bc` out, `uniq` in; v1 JSON annotations replaced by PaSh's files from `pash_annotations` 0.2.4. `formats/pash_annotation.md` rewritten. Pre-review v1 closing line, for the record: "How you arrive at the two files is entirely up to you." | Feedback on the prompt relayed by Tiran 2026-10-13. |
 | 2026-10-13 | Prompt renamed `PROMPT_v1.md`; `PROMPT_v2.md` added with the three-point guidance section (execution not memory; repeatability and reproducibility; OS and command version). | Tiran: "create several variations of the prompt … a version 2 which includes some behavior guidance". |
