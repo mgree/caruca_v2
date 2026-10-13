@@ -1,6 +1,6 @@
 ---
 name: project_naive_claude_code_arm
-description: Third, simplest arm created 2026-10-13 — a fresh Claude Code CLI session gets only a problem statement, two format docs and four verbatim v1 samples (tee, bc, grep, rm); folder "Caruca via Claude Code CLI" at repo root; must run from a copy outside any checkout
+description: Third, simplest arm created 2026-10-13 — a fresh Claude Code CLI session gets only a problem statement, two format docs and four verbatim v1 samples (tee, bc, grep, rm); folder `naive_llm_caruca` (formerly "naive_llm_caruca") at repo root; must run from a copy outside any checkout
 metadata:
   type: project
 ---
@@ -12,7 +12,7 @@ annotation, for downstream consumers such as PaSh), a plain-language description
 and samples of finished output. No method hints, no guardrails, no mention of how v1 works. The research
 question is how an unguided session solves it (does it read docs, run the binary, isolate it, trace it?).
 
-**Where.** Repo-root folder `Caruca via Claude Code CLI/` (name chosen by Tiran, spaces included):
+**Where.** Repo-root folder `naive_llm_caruca/` (name chosen by Tiran, spaces included):
 `PROMPT_v1.md` and `PROMPT_v2.md` (each with a `{{COMMAND}}` placeholder), `formats/`, `samples/`, `output/`, and an operator
 `README.md` the session must not see. Design record: `ai_docs/tasks/016_naive_claude_code_arm.md`.
 
@@ -43,7 +43,7 @@ revision log; each run records which version it used.
 (`curl -fsSL https://claude.ai/install.sh | bash`), version 2.1.296, at `~/.local/bin/claude` in the
 guest home (on PATH via `.profile`, so use `bash -lc`). Tiran signed in on 2026-10-13 with the claude.ai account (Max
 subscription; `claude auth status` confirms), so runs bill the subscription, not an API key. Package copy lives at `~/naive-arm` (guest home), written by
-`Caruca via Claude Code CLI/sync_to_vm.sh`, README excluded. No CLAUDE.md exists above it. Residual
+`naive_llm_caruca/sync_to_vm.sh`, README excluded. No CLAUDE.md exists above it. Residual
 hazard: the Mac home (both checkouts) is mounted at `/Users/tirandagan` inside the VM.
 
 **Golden image (2026-10-13).** Runs use a clone of Lima VM `naive-golden`, not the caruca VM: created

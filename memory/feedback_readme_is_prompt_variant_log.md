@@ -1,12 +1,12 @@
 ---
 name: feedback_readme_is_prompt_variant_log
-description: 2026-10-13 — Tiran wants the README in "Caruca via Claude Code CLI" continuously updated to annotate every prompt version and how the sessions behave differently; update it in the same turn as any prompt change or run
+description: 2026-10-13 — Tiran wants the README in `naive_llm_caruca` (formerly "naive_llm_caruca") continuously updated to annotate every prompt version and how the sessions behave differently; update it in the same turn as any prompt change or run
 metadata:
   type: feedback
 ---
 
 On 2026-10-13, while prompt version 2 was being added to the naive Claude Code arm
-(`Caruca via Claude Code CLI/`), Tiran said: "continuously update the README file in this working
+(`naive_llm_caruca/`), Tiran said: "continuously update the README file in this working
 folder to annotate and describe what the different prompts do and how they behave differently."
 
 **Why:** the folder is the experiment's own record. Tiran reads the README, not the task document, to

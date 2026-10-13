@@ -89,9 +89,9 @@ This is not the arm's user manual (that is the package's `README.md`) and not it
 
 - `ai_docs/tasks/016_naive_claude_code_arm.md`: sections 1 to 4 (what and why), 8 (progress), 9
   (implementation), 10 (revision log with Tiran's verbatim requests).
-- `Caruca via Claude Code CLI/README.md`: "Michael's feedback and what changed", "Prompt versions"
+- `naive_llm_caruca/README.md`: "Michael's feedback and what changed", "Prompt versions"
   with the run-1 Observed entry, "The environment", "Logging every tool call and command".
-- `Caruca via Claude Code CLI/PROMPT_v1.md`, `PROMPT_v2.md`, `formats/*.md`, `samples/`, the
+- `naive_llm_caruca/PROMPT_v1.md`, `PROMPT_v2.md`, `formats/*.md`, `samples/`, the
   scripts and `vm/` for exact quotations.
 - `memory/project_naive_claude_code_arm.md` and `memory/feedback_readme_is_prompt_variant_log.md`.
 - `ai_docs/analysis/v1_v2_parity_study.md` and task 012 for the core nine and the PaSh context;

@@ -1,4 +1,4 @@
-# Caruca via Claude Code CLI — operator notes
+# naive_llm_caruca — operator notes
 
 **These notes are for the experimenter. The Claude Code session must never see this file.**
 
@@ -200,7 +200,7 @@ limactl shell naive-golden -- bash -lc 'curl -fsSL https://claude.ai/install.sh 
 limactl shell naive-golden -- bash -lc 'claude --version'
 
 # 3. copy the package in (README and sync script are left out by the script)
-cd "$HOME/dev/stevens/caruca_v2/Caruca via Claude Code CLI" && ./sync_to_vm.sh naive-golden
+cd "$HOME/dev/stevens/caruca_v2/naive_llm_caruca" && ./sync_to_vm.sh naive-golden
 ```
 
 **Sign in once** (by hand; the VM has no browser):
@@ -226,7 +226,7 @@ stop naive-golden`. Note the change in this README; clones made afterwards carry
 ### The short way (scripts)
 
 ```sh
-cd "$HOME/dev/stevens/caruca_v2/Caruca via Claude Code CLI"
+cd "$HOME/dev/stevens/caruca_v2/naive_llm_caruca"
 ./new_run_vm.sh naive-run-sed-v2        # 1. fresh clone of naive-golden, package copied in fresh, helper installed
 limactl shell naive-run-sed-v2          # 2. the welcome message lands you in ~/naive-arm and shows the commands
 ```

@@ -25,7 +25,7 @@ when copying or adapting this file. See `LICENSE-TEMPLATES.md` for the full term
 
 > **Status (end of 2026-10-13):** package, environment and run tooling **built and tested**; see section 8 for the progress ledger and section 9 for how it is implemented. One real run happened (sed, prompt v1, interactive, with the first version of the tooling); it produced all four deliverables but its records were deleted the same evening because it came from a leaky layout. **One clean run exists (grep, v1, watch mode, 2026-10-13 19:05; collected), nothing scored.** Runs bill the Max subscription, so there is no metered spend to report.
 > **Created:** 2026-10-13 · **Owner:** Tiran Dagan
-> **Lives in:** the repo-root folder `Caruca via Claude Code CLI/` (Tiran's name for it).
+> **Lives in:** the repo-root folder `naive_llm_caruca/` (Tiran's name for it).
 > **Tiran's direction, 2026-10-13, verbatim:** "implement a very simple approach that has nothing
 > to do with V2 or replicating V1 … describe in a prompt what we're trying to accomplish … generate
 > the two output files that Caruca has generated, which are the JSON and the Python file … we are
@@ -65,7 +65,7 @@ Everything the session sees is inside the folder, and the folder is self-contain
 copied as one unit:
 
 ```
-Caruca via Claude Code CLI/
+naive_llm_caruca/
 ├── README.md                    operator notes and the living record of prompt versions and runs — never enters a VM
 ├── PROMPT_v1.md                 the task statement; {{COMMAND}}, {{PATH}}, {{MANPAGE_PATH}} are filled per run
 ├── PROMPT_v2.md                 the same plus a short section of behaviour guidance
