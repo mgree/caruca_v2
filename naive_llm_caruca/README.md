@@ -2,6 +2,9 @@
 
 **These notes are for the experimenter. The Claude Code session must never see this file.**
 
+The folder was called "Caruca via Claude Code CLI" until 2026-10-13 evening, when Tiran renamed it
+`naive_llm_caruca`. Older commit messages and the deleted run-1 records use the old name.
+
 ## What this folder is
 
 A third, deliberately minimal arm of the Caruca comparison. A fresh Claude Code CLI session is handed
