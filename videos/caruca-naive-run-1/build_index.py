@@ -18,12 +18,13 @@ for kind, cid, start, dur, extra in plan:
         if cid != "outro":
             js.append(f'tl.to("#host-{cid}",{{opacity:0,filter:"blur(10px)",scale:1.02,duration:{X},ease:"power2.inOut"}},{hs+hd-X:.3f});')
         if extra:
-            vos.append(f'''      <audio id="{extra}" class="clip" src="assets/audio/{extra}.mp3" data-start="{start+LEAD:.3f}" data-duration="{vo[extra]:.3f}" data-track-index="20" data-volume="0.75" data-audio-group="voices"></audio>''')
+            vos.append(f'''      <audio id="{extra}" class="clip" src="assets/audio/{extra}.mp3" data-start="{start+LEAD:.3f}" data-duration="{vo[extra]:.3f}" data-track-index="20" data-volume="1" data-audio-group="voices"></audio>''')
     else:
         a, label = extra
         n = cid[3:]
         lane = {"version":1,"lanes":[{"target":"volume","points":[{"t":0,"v":0},{"t":0.35,"v":1},{"t":round(dur-0.35,3),"v":1},{"t":round(dur,3),"v":0}]}]}
-        videos.append(f'''        <video id="{cid}" class="clip rec" src="assets/walkthrough.mp4" data-start="{start:.3f}" data-duration="{dur:.3f}" data-media-start="{a:.3f}" data-track-index="1" data-audio-group="voices" playsinline data-has-audio="true" data-automation={A(lane)}></video>''')
+        videos.append(f'''        <video id="{cid}" class="clip rec" src="assets/walkthrough.mp4" data-start="{start:.3f}" data-duration="{dur:.3f}" data-media-start="{a:.3f}" data-track-index="1" muted playsinline></video>''')
+        vos.append(f'''      <audio id="rec{n}" class="clip" src="assets/audio/recording_voice.m4a" data-start="{start:.3f}" data-duration="{dur:.3f}" data-media-start="{a:.3f}" data-track-index="21" data-volume="1" data-audio-group="voices" data-automation={A(lane)}></audio>''')
         js.append(f'tl.to("#stage-fx",{{filter:"blur(0px)",duration:{X},ease:"power2.inOut"}},{start-X:.3f});')
         js.append(f'tl.to("#stage-fx",{{filter:"blur(10px)",duration:{X},ease:"power2.inOut"}},{start+dur:.3f});')
         num, text = label.split(" · ", 1)

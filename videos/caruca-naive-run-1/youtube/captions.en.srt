@@ -1,0 +1,536 @@
+1
+00:00:06,200 --> 00:00:09,032
+Narrator: This is the first naive run of Caruca version two.
+
+2
+00:00:09,082 --> 00:00:13,183
+Narrator: A fresh Claude Code session, running inside a throwaway virtual machine,
+
+3
+00:00:13,233 --> 00:00:17,160
+Narrator: is given nothing but a short problem statement, two format documents,
+
+4
+00:00:17,210 --> 00:00:18,659
+Narrator: and a few worked examples.
+
+5
+00:00:18,709 --> 00:00:23,328
+Narrator: Its job: describe the grep command precisely enough that a shell parallelizer can
+
+6
+00:00:23,378 --> 00:00:24,193
+Narrator: use the result.
+
+7
+00:00:24,243 --> 00:00:26,211
+Narrator: No hand-written pipeline, no hints.
+
+8
+00:00:26,261 --> 00:00:27,652
+Narrator: Here is how the run went.
+
+9
+00:00:30,702 --> 00:00:34,322
+So I have the README, uh, open up so I can follow instructions,
+
+10
+00:00:34,442 --> 00:00:38,462
+and, um, I have my system prompt. I'm
+
+11
+00:00:38,542 --> 00:00:42,722
+going to look at list of VMs,
+
+12
+00:00:42,842 --> 00:00:46,902
+and we have naive-golden is running. We can shell
+
+13
+00:00:46,982 --> 00:00:50,542
+into it, and all it has is a working
+
+14
+00:00:51,222 --> 00:00:55,362
+instance of Claude, and that's
+
+15
+00:00:55,402 --> 00:00:59,522
+it. So let's stop this image
+
+16
+00:01:03,402 --> 00:01:07,059
+Narrator: Every run starts from a clone of a golden virtual machine image.
+
+17
+00:01:07,109 --> 00:01:10,707
+Narrator: The clone holds a working Claude Code install and nothing else,
+
+18
+00:01:10,757 --> 00:01:13,603
+Narrator: so no state carries over from one run to the next.
+
+19
+00:01:13,653 --> 00:01:18,816
+Narrator: Once the clone is up, a single script starts the session with prompt version one for grep.
+
+20
+00:01:20,766 --> 00:01:24,506
+and let's start executing
+
+21
+00:01:24,646 --> 00:01:28,546
+a command. So first thing first,
+
+22
+00:01:29,506 --> 00:01:33,246
+let's make sure we're in the right directory. We're going to the naive
+
+23
+00:01:33,966 --> 00:01:39,246
+LM Caruca, and we're going to run the new
+
+24
+00:01:41,026 --> 00:01:44,866
+V... run VM. Let's say we're gonna call this naive
+
+25
+00:01:45,585 --> 00:01:49,925
+run. Let's do grep. So
+
+26
+00:01:49,966 --> 00:01:54,686
+this is going to clone and, uh,
+
+27
+00:01:54,866 --> 00:01:59,466
+clone the naive image into a brand new, new
+
+28
+00:01:59,506 --> 00:02:03,686
+one. And I'm
+
+29
+00:02:03,706 --> 00:02:07,366
+gonna see that
+
+30
+00:02:07,426 --> 00:02:11,186
+we now have a clone called naive run grep. We're
+
+31
+00:02:11,246 --> 00:02:16,526
+going to shell into it. And
+
+32
+00:02:16,606 --> 00:02:20,746
+then we're going to start a naive run for
+
+33
+00:02:20,786 --> 00:02:25,386
+grep, and I'm gonna use prompt V one. And
+
+34
+00:02:25,406 --> 00:02:29,946
+that starts the process. This can take a couple of minutes, and
+
+35
+00:02:30,026 --> 00:02:34,946
+when this is done, we'll come back. By
+
+36
+00:02:34,986 --> 00:02:38,546
+the way, this, this is gonna collect, uh, all the logs.
+
+37
+00:02:39,405 --> 00:02:42,965
+Uh, the logs in, uh, Claude get stored as a
+
+38
+00:02:43,046 --> 00:02:46,646
+JSON transcript. Uh, we'll be back when this is done
+
+39
+00:02:48,366 --> 00:02:52,762
+Narrator: When the session finishes, a collect step pulls everything back out of the virtual
+
+40
+00:02:52,812 --> 00:02:57,153
+Narrator: machine: the four deliverable files, the full JSON transcript of every tool call,
+
+41
+00:02:57,203 --> 00:02:58,671
+Narrator: and the environment details.
+
+42
+00:02:58,721 --> 00:03:00,298
+Narrator: The clone is then thrown away.
+
+43
+00:03:01,591 --> 00:03:05,871
+All right, about 13, 14 minutes later, we
+
+44
+00:03:06,311 --> 00:03:09,931
+finished the, the run. So let's go down
+
+45
+00:03:09,971 --> 00:03:13,811
+the instructions, and the next thing is to collect the output.
+
+46
+00:03:13,951 --> 00:03:17,471
+So I'm gonna exit from the Lima image, and we're
+
+47
+00:03:17,491 --> 00:03:21,431
+gonna run the collect command, which
+
+48
+00:03:21,471 --> 00:03:25,591
+will copy from the
+
+49
+00:03:26,411 --> 00:03:29,971
+Lima image outputs all the working
+
+50
+00:03:30,951 --> 00:03:34,691
+files from Claude, which include the logs and bug, and
+
+51
+00:03:34,751 --> 00:03:39,131
+debugging and tracing. It'll bring it all into our
+
+52
+00:03:39,171 --> 00:03:42,851
+working folder. Let's refresh it and look
+
+53
+00:03:42,911 --> 00:03:46,491
+at the runs folder. So runs folder,
+
+54
+00:03:47,451 --> 00:03:51,131
+the prompt V1, and you can look at this yourself. You can look
+
+55
+00:03:51,231 --> 00:03:54,871
+at the PaSh output, which has the input output
+
+56
+00:03:54,951 --> 00:03:58,471
+generator grep. So this is the
+
+57
+00:03:59,071 --> 00:04:03,351
+Python file for grep. It ha- it creates a parallelizability
+
+58
+00:04:03,431 --> 00:04:08,371
+info generator for grep, and
+
+59
+00:04:09,051 --> 00:04:12,591
+it has a JSON syntax file.
+
+60
+00:04:14,491 --> 00:04:18,191
+And then it has
+
+61
+00:04:18,271 --> 00:04:21,951
+some other data it stored, and then it has the transcript. So
+
+62
+00:04:22,531 --> 00:04:26,051
+feel free if you want to look at this JSON file. Might
+
+63
+00:04:26,091 --> 00:04:29,791
+be a little tricky to look through this. Um, you might want
+
+64
+00:04:29,871 --> 00:04:34,051
+to at least do a format. Where's the formats?
+
+65
+00:04:34,871 --> 00:04:39,351
+I don't have a JSON formatter here. Oh, 'cause it's a JSONL. Um,
+
+66
+00:04:40,748 --> 00:04:45,166
+Narrator: The run folder is hard to read by eye, so the README recommends a second prompt.
+
+67
+00:04:45,216 --> 00:04:49,857
+Narrator: It asks Claude Code to reconstruct, from the transcript alone, what the session did,
+
+68
+00:04:49,907 --> 00:04:53,376
+Narrator: in what order, and why: as a written analysis and two diagrams.
+
+69
+00:04:54,529 --> 00:04:58,049
+but, um, a little trick is if you
+
+70
+00:04:58,129 --> 00:05:01,809
+go down the README file, let me open
+
+71
+00:05:01,869 --> 00:05:05,949
+up the README file again. At the bottom is a recommended prompt
+
+72
+00:05:06,009 --> 00:05:09,549
+to create a, an analysis including visuals. So I'm gonna start
+
+73
+00:05:09,589 --> 00:05:13,589
+a new prompt and prompt and post this
+
+74
+00:05:13,709 --> 00:05:19,069
+and let's see. Um, da,
+
+75
+00:05:19,169 --> 00:05:24,589
+da, um... That
+
+76
+00:05:24,629 --> 00:05:28,329
+should do it. I think so. Let's, um,
+
+77
+00:05:28,449 --> 00:05:32,749
+is this the right date, time? I'll
+
+78
+00:05:32,809 --> 00:05:42,709
+just copy this folder name into the prompt. And
+
+79
+00:05:42,789 --> 00:05:46,589
+let's run it. I'm gonna pause
+
+80
+00:05:46,709 --> 00:05:50,247
+and come back when it's done All right.
+
+81
+00:05:50,307 --> 00:05:54,227
+So while the skill is running, um, I've
+
+82
+00:05:54,307 --> 00:05:59,127
+invoked a skill that creates an Excalidraw, um,
+
+83
+00:05:59,227 --> 00:06:02,987
+graphic, uh, that depicts the process, um, that
+
+84
+00:06:03,127 --> 00:06:07,167
+the LLM followed. So I'm gonna exit from command
+
+85
+00:06:07,207 --> 00:06:12,207
+line here, and we will pause
+
+86
+00:06:12,307 --> 00:06:16,407
+and come back when this documentation
+
+87
+00:06:16,447 --> 00:06:16,626
+prompt completes All right, so we're back.
+
+88
+00:06:17,826 --> 00:06:22,714
+Narrator: The reconstructed timeline splits the session into eight phases over about twelve minutes.
+
+89
+00:06:22,764 --> 00:06:27,048
+Narrator: Most of the time went into probing the real grep binary and testing the output,
+
+90
+00:06:27,098 --> 00:06:27,871
+Narrator: not writing it.
+
+91
+00:06:27,921 --> 00:06:32,590
+Narrator: The first deliverable file was written seven minutes in, after eighty-five probe runs.
+
+92
+00:06:37,286 --> 00:06:41,206
+It's, um, that prompt is still doing an analysis.
+
+93
+00:06:41,266 --> 00:06:44,846
+It's quite extensive, but one of the things I noticed is that
+
+94
+00:06:44,886 --> 00:06:48,526
+there's already an Excalidraw in the analysis folder. So let's
+
+95
+00:06:48,886 --> 00:06:53,686
+see what's in there. I'm gonna open it up. And
+
+96
+00:06:53,726 --> 00:06:57,526
+this is what it, we have. So it, it's showing that, uh,
+
+97
+00:06:57,626 --> 00:07:01,546
+there were eight steps. Uh, the orientation,
+
+98
+00:07:01,646 --> 00:07:05,446
+identify binary and docs, find the tooling, probe
+
+99
+00:07:05,486 --> 00:07:09,346
+the binary, and it has, uh, some call times.
+
+100
+00:07:09,526 --> 00:07:13,046
+Um, this was four seconds, step two, twelve seconds, a hundred and
+
+101
+00:07:13,086 --> 00:07:16,766
+three seconds to find tooling. Step four, probe the binary, hundred
+
+102
+00:07:16,766 --> 00:07:20,586
+and twenty seconds, and it hung. That's interesting. Step five,
+
+103
+00:07:20,666 --> 00:07:24,446
+write, um, the four files. S-six, build
+
+104
+00:07:24,486 --> 00:07:28,146
+and run three check scripts. You can read this for yourself. Um,
+
+105
+00:07:28,586 --> 00:07:32,246
+I don't know, this is, uh, preliminary, but I'm curious to know
+
+106
+00:07:32,286 --> 00:07:35,866
+what happened here. Call twenty, probe batch hung for hundred and twenty
+
+107
+00:07:36,006 --> 00:07:39,526
+seconds. Stopped at call twenty-one, and rerun with
+
+108
+00:07:39,566 --> 00:07:43,366
+a slash dev at call twenty-two. So I'm not sure about that. Um,
+
+109
+00:07:43,706 --> 00:07:47,306
+so this is the Excalidraw diagram. And in
+
+110
+00:07:47,346 --> 00:07:51,186
+a few minutes, we're gonna have a text analysis of, um,
+
+111
+00:07:52,726 --> 00:07:56,526
+of the progress. We'll come back to see once it's, once
+
+112
+00:07:56,566 --> 00:07:59,340
+that's ready and, uh, finish up. All
+
+113
+00:08:00,540 --> 00:08:05,288
+Narrator: By the numbers: seven hundred thirty-nine seconds of wall clock, seventy-two tool calls,
+
+114
+00:08:05,338 --> 00:08:08,231
+Narrator: and about one dollar of model usage with Claude Haiku.
+
+115
+00:08:08,281 --> 00:08:11,448
+Narrator: The session also wrote three test scripts nobody asked for,
+
+116
+00:08:11,498 --> 00:08:14,283
+Narrator: and revised its own output once after a test failed.
+
+117
+00:08:16,274 --> 00:08:19,874
+right, we're back and the analysis is complete. I noticed that, uh,
+
+118
+00:08:20,014 --> 00:08:24,174
+the agent went, uh, back and forth on the
+
+119
+00:08:24,654 --> 00:08:28,594
+Excalidraw charts, um,
+
+120
+00:08:28,714 --> 00:08:32,794
+until the text was displaying properly, and it created PNGs.
+
+121
+00:08:32,874 --> 00:08:36,474
+And even more interesting is that it created an analysis file,
+
+122
+00:08:37,134 --> 00:08:41,414
+um, which I'll let you read. haven't gone through this yet, um, which describes,
+
+123
+00:08:41,834 --> 00:08:45,434
+uh, steps executed by the agent and the
+
+124
+00:08:45,474 --> 00:08:50,354
+tools that it used and the sequencing and information flow, um,
+
+125
+00:08:50,514 --> 00:08:54,394
+isolation and saf-safety, which is interesting 'cause we didn't prompt it. Um,
+
+126
+00:08:54,654 --> 00:08:59,314
+but, um, this is interesting. And then how it did some testing. And
+
+127
+00:08:59,454 --> 00:09:03,094
+ultimately, the output is in the output folder, and you can
+
+128
+00:09:03,194 --> 00:09:06,754
+see the PaSh output, but also the, um,
+
+129
+00:09:07,874 --> 00:09:11,534
+uh, comprehensive final Python output for the
+
+130
+00:09:11,574 --> 00:09:15,374
+grep command describing its syntax and behavior. And,
+
+131
+00:09:15,514 --> 00:09:18,034
+um, that concludes this walkthrough.
+
+132
+00:09:20,619 --> 00:09:21,650
+Narrator: Thanks for watching.
+
+133
+00:09:21,700 --> 00:09:23,488
+Narrator: The full run folder, the analysis,
+
+134
+00:09:23,538 --> 00:09:27,163
+Narrator: and the diagrams are in the Caruca version two repository on GitHub.
+

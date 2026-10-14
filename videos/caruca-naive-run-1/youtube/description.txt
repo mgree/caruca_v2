@@ -1,0 +1,23 @@
+Caruca: Naive LLM Run #1, by Tiran Dagan
+
+A fresh Claude Code session, running in a throwaway Ubuntu VM, gets only a short problem statement, two format documents and a few worked examples. Its task: describe the grep command precisely enough that a shell parallelizer (PaSh) can use the result. This walkthrough shows the first run end to end: cloning the VM, running prompt v1, collecting the output, and asking Claude Code to reconstruct its own session from the transcript.
+
+Run facts: GNU grep 3.11 on Ubuntu 24.04 (aarch64), Claude Code 2.1.296, model claude-haiku-5-5, 739 seconds, 72 tool calls, 85 probe runs of grep, $0.96 at list price.
+
+Chapters
+0:00 Intro: what a naive LLM run is
+0:28 Setup: the README and the golden VM
+1:02 Clone the VM and start the run
+2:47 Collect the output
+4:39 Ask Claude Code to analyse its own run
+6:16 The session, phase by phase
+7:59 By the numbers, and the written analysis
+9:19 End card
+
+Full transcript: open "Show transcript" under the video (captions are synced to the edit).
+
+Repository: https://github.com/tirandagan/caruca_v2
+Run folder: naive_llm_caruca/runs/2026-10-13_193448_naive-run-grep_grep_PROMPT_v1
+Caruca paper: https://arxiv.org/abs/2510.14279
+
+The narrated interludes between chapters are synthetic speech generated with ElevenLabs. Music generated with ElevenLabs Music.

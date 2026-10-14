@@ -42,3 +42,5 @@ a rigorous, academic instrument; precise, no hype.
 - Autonomous run: the user is not available mid-task. Decisions with receipts are listed in the handoff.
 - Brand: ink #0B1F33, blue #2563EB, teal #0E7490; Lexend Deca + JetBrains Mono; no emoji, no exclamation marks, sentence case.
 - Recording is 1614 px wide: letterboxed on an ink background inside 1920x1080, never cropped or stretched.
+- Recording audio leveled (user feedback 2026-10-13, "not balanced"): the source swings from about -38 LUFS (first two minutes) to -23 LUFS. `assets/audio/recording_voice.m4a` is a mono rebuild (high-pass 90 Hz, adaptive denoise, slow leveling, soft gate, two-pass loudnorm to -21 LUFS); every segment now measures -20.7 to -22.2 LUFS. Video clips play muted; this track plays in their place. Narrator at full level (-21.6 LUFS).
+- Narration voice changed to ElevenLabs voice id zs057lc0shdaAFXkm2Fm (user request).
