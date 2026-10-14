@@ -36,3 +36,12 @@ eval/campaigns/
 # eval/docs_variants/
 # eval/parity_diffs/
 eval/_archive/**/campaigns/
+
+# HyperFrames video projects: keep large media out of git (GitHub's 100 MB limit).
+# Source recordings and rendered videos live in ~/Documents; the project links to them.
+videos/*/assets/walkthrough.mp4
+videos/*/renders/
+videos/*/.hyperframes/
+videos/*/node_modules/
+videos/**/*.mp4
+videos/**/*.mov

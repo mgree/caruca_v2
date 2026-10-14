@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/></head><body>
+<template>
+<style>
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Bold.ttf') format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'JetBrains Mono';src:url('assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal}
+
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#0B1F33;color:#F4F7FB;font-family:'Lexend Deca',sans-serif;}
+#root .bg{position:absolute;inset:0;background:radial-gradient(1200px 800px at 18% 85%, rgba(14,116,144,0.22), rgba(11,31,51,0) 70%), linear-gradient(135deg,#0B1F33 0%,#0E2744 60%,#0B1F33 100%);}
+#root .rings{position:absolute;right:-340px;top:-420px;width:1200px;height:1200px;will-change:transform;}
+#root .rings circle{fill:none;stroke:#0E7490;stroke-width:1.5}
+#root .rule{position:absolute;left:120px;right:120px;top:148px;height:1px;background:#1E3A5F}
+#root .accent{position:absolute;left:120px;top:146px;width:80px;height:4px;border-radius:2px;background:linear-gradient(to right,#0E7490,#2563EB);transform-origin:left center}
+#root .micro{position:absolute;left:120px;top:96px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:0.08em;text-transform:uppercase;color:#7DD3E8;}
+#root .micro span{display:inline-block}
+#root .headline{position:absolute;left:120px;top:190px;font-size:64px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;color:#F4F7FB}
+#root .headline span{display:inline-block;opacity:0;margin-right:0.26em;will-change:transform}
+#root .sub{position:absolute;left:120px;top:290px;font-size:26px;font-weight:400;color:#A9BDD3;max-width:1500px;line-height:1.4}
+#root .mono{font-family:'JetBrains Mono',monospace}
+#root .card{position:absolute;background:#102B49;border:1px solid #27476E;border-radius:6px;padding:22px 26px;will-change:transform;transform-origin:50% 50%}
+#root .card .t{font-size:26px;font-weight:600;color:#F4F7FB}
+#root .card .d{font-size:21px;color:#A9BDD3;margin-top:6px;line-height:1.35}
+#root .card.blue{border-color:#2563EB;box-shadow:0 0 0 1px rgba(37,99,235,0.35) inset}
+#root .card.teal{border-color:#0E7490}
+#root .chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:18px;padding:6px 12px;border-radius:4px;background:#0E2744;border:1px solid #27476E;color:#CFE3F5;margin-right:10px}
+#root svg.wires{position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none}
+#root svg.wires path{fill:none;stroke:#2563EB;stroke-width:3;stroke-linecap:round}
+#root svg.wires path.teal{stroke:#0E7490}
+#root .mark{position:absolute;width:300px;height:200px;object-fit:contain}
+#root .chipmark{position:absolute;background:#F4F7FB;border-radius:18px;display:flex;align-items:center;justify-content:center;will-change:transform;box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+#root .chipmark img{width:86%;height:86%;object-fit:contain}
+#root .glow{position:absolute;border-radius:50%;background:radial-gradient(circle, rgba(37,99,235,0.55) 0%, rgba(14,116,144,0.25) 40%, rgba(11,31,51,0) 70%);opacity:0;will-change:transform,opacity}
+</style>
+<div id="root" data-composition-id="inter-3" data-width="1920" data-height="1080" data-duration="15.878">
+<div class="bg"></div>
+<svg class="rings" id="inter-3-rings" viewBox="0 0 1200 1200" aria-hidden="true">
+<circle cx="600" cy="600" r="160" opacity="0.10"/><circle cx="600" cy="600" r="260" opacity="0.08"/><circle cx="600" cy="600" r="360" opacity="0.07"/><circle cx="600" cy="600" r="460" opacity="0.05"/><circle cx="600" cy="600" r="560" opacity="0.04"/></svg>
+<div class="micro" id="inter-3-micro">Chapter 4 · ask Claude Code to analyse its own run</div>
+<div class="rule" id="inter-3-rule"></div><div class="accent" id="inter-3-accent"></div>
+<div class="headline"><span id="inter-3-h0">Reconstruct</span><span id="inter-3-h1">the</span><span id="inter-3-h2">session</span><span id="inter-3-h3">from</span><span id="inter-3-h4">its</span><span id="inter-3-h5">transcript</span></div>
+
+<div class="card" id="inter-3-a" style="left:120px;top:520px;width:440px;padding:28px"><div class="t mono" style="font-size:22px">transcript_….jsonl</div><div class="d">73 turns, 72 tool calls, timestamps, every command and result</div></div>
+<div class="card blue" id="inter-3-b" style="left:740px;top:520px;width:440px;padding:28px"><div class="t">The README's analysis prompt</div><div class="d">a second, separate Claude Code session: what happened, in what order, and why</div></div>
+<div class="card teal" id="inter-3-c0" style="left:1360px;top:420px;width:440px"><div class="t mono" style="font-size:22px">analysis.md</div><div class="d">timeline, sources, isolation, testing, cost</div></div>
+<div class="card teal" id="inter-3-c1" style="left:1360px;top:560px;width:440px"><div class="t mono" style="font-size:22px">session_workflow.png</div><div class="d">eight phases on one timeline</div></div>
+<div class="card teal" id="inter-3-c2" style="left:1360px;top:700px;width:440px"><div class="t mono" style="font-size:22px">information_flow.png</div><div class="d">what it read, what it wrote</div></div>
+<svg class="wires" id="inter-3-wires" viewBox="0 0 1920 1080"><path id="inter-3-w0" d="M560 600 L 740 600"/><path id="inter-3-w1" class="teal" d="M1180 590 C 1270 590, 1270 470, 1360 470"/><path id="inter-3-w2" class="teal" d="M1180 600 C 1270 600, 1270 610, 1360 610"/><path id="inter-3-w3" class="teal" d="M1180 610 C 1270 610, 1270 750, 1360 750"/></svg>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#inter-3-rings",{rotation:0,scale:1},{rotation:6,scale:1.03,duration:9,ease:"sine.inOut",repeat:3,yoyo:true},0);
+if(document.getElementById("inter-3-accent"))tl.fromTo("#inter-3-accent",{scaleX:0},{scaleX:1,duration:0.6,ease:"power3.out"},0.25);
+if(document.getElementById("inter-3-rule"))tl.fromTo("#inter-3-rule",{opacity:0},{opacity:1,duration:0.5},0.3);
+
+tl.fromTo("#inter-3-micro",{opacity:0,x:-20},{opacity:1,x:0,duration:0.5,ease:"power2.out"},0.15);
+tl.set("#inter-3-h0",{opacity:1,y:70},0.350);tl.to("#inter-3-h0",{y:0,duration:0.180,ease:"power4.out"},0.350);
+tl.set("#inter-3-h1",{opacity:1,y:44},0.497);tl.to("#inter-3-h1",{y:0,duration:0.154,ease:"power4.out"},0.497);
+tl.set("#inter-3-h2",{opacity:1,y:44},0.617);tl.to("#inter-3-h2",{y:0,duration:0.148,ease:"power4.out"},0.617);
+tl.set("#inter-3-h3",{opacity:1,y:44},0.715);tl.to("#inter-3-h3",{y:0,duration:0.142,ease:"power4.out"},0.715);
+tl.set("#inter-3-h4",{opacity:1,y:44},0.807);tl.to("#inter-3-h4",{y:0,duration:0.136,ease:"power4.out"},0.807);
+tl.set("#inter-3-h5",{opacity:1,y:44},0.893);tl.to("#inter-3-h5",{y:0,duration:0.130,ease:"power4.out"},0.893);
+tl.fromTo("#inter-3-a",{scale:0.6,opacity:0,y:0},{scale:1,opacity:1,y:0,duration:0.6,ease:"power3.out"},1.50);
+document.querySelectorAll("#inter-3-wires path").forEach(function(p){var L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;});
+tl.to("#inter-3-w0",{strokeDashoffset:0,duration:0.5,ease:"power2.out"},2.30);
+tl.fromTo("#inter-3-b",{scale:0.6,opacity:0,y:0},{scale:1,opacity:1,y:0,duration:0.6,ease:"power3.out"},2.90);
+document.querySelectorAll("#inter-3-wires path").forEach(function(p){var L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;});
+tl.to("#inter-3-w1",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},4.60);
+tl.to("#inter-3-w2",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},4.75);
+tl.to("#inter-3-w3",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},4.90);
+tl.fromTo("#inter-3-c0",{scale:0.6,opacity:0,y:14},{scale:1,opacity:1,y:0,duration:0.5,ease:"power3.out"},5.30);
+tl.fromTo("#inter-3-c1",{scale:0.6,opacity:0,y:14},{scale:1,opacity:1,y:0,duration:0.5,ease:"power3.out"},5.48);
+tl.fromTo("#inter-3-c2",{scale:0.6,opacity:0,y:14},{scale:1,opacity:1,y:0,duration:0.5,ease:"power3.out"},5.66);
+
+window.__timelines["inter-3"] = tl;
+})();
+</script>
+</template></body></html>

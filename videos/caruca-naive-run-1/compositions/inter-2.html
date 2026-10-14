@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/></head><body>
+<template>
+<style>
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Bold.ttf') format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'JetBrains Mono';src:url('assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal}
+
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#0B1F33;color:#F4F7FB;font-family:'Lexend Deca',sans-serif;}
+#root .bg{position:absolute;inset:0;background:radial-gradient(1200px 800px at 18% 85%, rgba(14,116,144,0.22), rgba(11,31,51,0) 70%), linear-gradient(135deg,#0B1F33 0%,#0E2744 60%,#0B1F33 100%);}
+#root .rings{position:absolute;right:-340px;top:-420px;width:1200px;height:1200px;will-change:transform;}
+#root .rings circle{fill:none;stroke:#0E7490;stroke-width:1.5}
+#root .rule{position:absolute;left:120px;right:120px;top:148px;height:1px;background:#1E3A5F}
+#root .accent{position:absolute;left:120px;top:146px;width:80px;height:4px;border-radius:2px;background:linear-gradient(to right,#0E7490,#2563EB);transform-origin:left center}
+#root .micro{position:absolute;left:120px;top:96px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:0.08em;text-transform:uppercase;color:#7DD3E8;}
+#root .micro span{display:inline-block}
+#root .headline{position:absolute;left:120px;top:190px;font-size:64px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;color:#F4F7FB}
+#root .headline span{display:inline-block;opacity:0;margin-right:0.26em;will-change:transform}
+#root .sub{position:absolute;left:120px;top:290px;font-size:26px;font-weight:400;color:#A9BDD3;max-width:1500px;line-height:1.4}
+#root .mono{font-family:'JetBrains Mono',monospace}
+#root .card{position:absolute;background:#102B49;border:1px solid #27476E;border-radius:6px;padding:22px 26px;will-change:transform;transform-origin:50% 50%}
+#root .card .t{font-size:26px;font-weight:600;color:#F4F7FB}
+#root .card .d{font-size:21px;color:#A9BDD3;margin-top:6px;line-height:1.35}
+#root .card.blue{border-color:#2563EB;box-shadow:0 0 0 1px rgba(37,99,235,0.35) inset}
+#root .card.teal{border-color:#0E7490}
+#root .chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:18px;padding:6px 12px;border-radius:4px;background:#0E2744;border:1px solid #27476E;color:#CFE3F5;margin-right:10px}
+#root svg.wires{position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none}
+#root svg.wires path{fill:none;stroke:#2563EB;stroke-width:3;stroke-linecap:round}
+#root svg.wires path.teal{stroke:#0E7490}
+#root .mark{position:absolute;width:300px;height:200px;object-fit:contain}
+#root .chipmark{position:absolute;background:#F4F7FB;border-radius:18px;display:flex;align-items:center;justify-content:center;will-change:transform;box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+#root .chipmark img{width:86%;height:86%;object-fit:contain}
+#root .glow{position:absolute;border-radius:50%;background:radial-gradient(circle, rgba(37,99,235,0.55) 0%, rgba(14,116,144,0.25) 40%, rgba(11,31,51,0) 70%);opacity:0;will-change:transform,opacity}
+</style>
+<div id="root" data-composition-id="inter-2" data-width="1920" data-height="1080" data-duration="15.181">
+<div class="bg"></div>
+<svg class="rings" id="inter-2-rings" viewBox="0 0 1200 1200" aria-hidden="true">
+<circle cx="600" cy="600" r="160" opacity="0.10"/><circle cx="600" cy="600" r="260" opacity="0.08"/><circle cx="600" cy="600" r="360" opacity="0.07"/><circle cx="600" cy="600" r="460" opacity="0.05"/><circle cx="600" cy="600" r="560" opacity="0.04"/></svg>
+<div class="micro" id="inter-2-micro">Chapter 3 · collect the output</div>
+<div class="rule" id="inter-2-rule"></div><div class="accent" id="inter-2-accent"></div>
+<div class="headline"><span id="inter-2-h0">Everything</span><span id="inter-2-h1">the</span><span id="inter-2-h2">session</span><span id="inter-2-h3">touched</span><span id="inter-2-h4">comes</span><span id="inter-2-h5">back</span><span id="inter-2-h6">out</span></div>
+<div style="position:absolute;left:120px;top:400px;width:1680px"><div id="inter-2-r0" style="display:flex;align-items:center;height:62px;border-bottom:1px solid #1E3A5F;opacity:0;will-change:transform"><div class="mono" style="font-size:26px;color:#7DD3E8;width:880px;white-space:pre">runs/2026-10-13_193448_naive-run-grep_grep_PROMPT_v1/</div><div style="width:160px"></div><div style="font-size:21px;color:#A9BDD3"></div></div><div id="inter-2-r1" style="display:flex;align-items:center;height:62px;border-bottom:1px solid #1E3A5F;opacity:0;will-change:transform"><div class="mono" style="font-size:23px;color:#F4F7FB;width:880px;white-space:pre">  output/grep.py</div><div style="width:160px"><span class="chip" style="border-color:#2563EB;color:#CFE3F5">deliverable</span></div><div style="font-size:21px;color:#A9BDD3">syntax description in the Caruca DSL</div></div><div id="inter-2-r2" style="display:flex;align-items:center;height:62px;border-bottom:1px solid #1E3A5F;opacity:0;will-change:transform"><div class="mono" style="font-size:23px;color:#F4F7FB;width:880px;white-space:pre">  output/pash/grep.json</div><div style="width:160px"><span class="chip" style="border-color:#2563EB;color:#CFE3F5">deliverable</span></div><div style="font-size:21px;color:#A9BDD3">PaSh parser table (62 flags, 22 options)</div></div><div id="inter-2-r3" style="display:flex;align-items:center;height:62px;border-bottom:1px solid #1E3A5F;opacity:0;will-change:transform"><div class="mono" style="font-size:23px;color:#F4F7FB;width:880px;white-space:pre">  output/pash/InputOutputInfoGeneratorGrep.py</div><div style="width:160px"><span class="chip" style="border-color:#2563EB;color:#CFE3F5">deliverable</span></div><div style="font-size:21px;color:#A9BDD3">what grep reads and writes</div></div><div id="inter-2-r4" style="display:flex;align-items:center;height:62px;border-bottom:1px solid #1E3A5F;opacity:0;will-change:transform"><div class="mono" style="font-size:23px;color:#F4F7FB;width:880px;white-space:pre">  output/pash/ParallelizabilityInfoGeneratorGrep.py</div><div style="width:160px"><span class="chip" style="border-color:#2563EB;color:#CFE3F5">deliverable</span></div><div style="font-size:21px;color:#A9BDD3">when its input can be split</div></div><div id="inter-2-r5" style="display:flex;align-items:center;height:62px;border-bottom:1px solid #1E3A5F;opacity:0;will-change:transform"><div class="mono" style="font-size:23px;color:#F4F7FB;width:880px;white-space:pre">  transcript_2b9d690b-….jsonl</div><div style="width:160px"><span class="chip" style="border-color:#0E7490;color:#CFE3F5">evidence</span></div><div style="font-size:21px;color:#A9BDD3">every turn and tool call, in order</div></div><div id="inter-2-r6" style="display:flex;align-items:center;height:62px;border-bottom:1px solid #1E3A5F;opacity:0;will-change:transform"><div class="mono" style="font-size:23px;color:#F4F7FB;width:880px;white-space:pre">  stream.jsonl · stream.actions.log</div><div style="width:160px"><span class="chip" style="border-color:#0E7490;color:#CFE3F5">evidence</span></div><div style="font-size:21px;color:#A9BDD3">the live event stream and 72 numbered actions</div></div><div id="inter-2-r7" style="display:flex;align-items:center;height:62px;border-bottom:1px solid #1E3A5F;opacity:0;will-change:transform"><div class="mono" style="font-size:23px;color:#F4F7FB;width:880px;white-space:pre">  environment.txt · run.env</div><div style="width:160px"><span class="chip" style="border-color:#0E7490;color:#CFE3F5">evidence</span></div><div style="font-size:21px;color:#A9BDD3">OS, binary path, grep 3.11, model, clock</div></div></div>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#inter-2-rings",{rotation:0,scale:1},{rotation:6,scale:1.03,duration:9,ease:"sine.inOut",repeat:3,yoyo:true},0);
+if(document.getElementById("inter-2-accent"))tl.fromTo("#inter-2-accent",{scaleX:0},{scaleX:1,duration:0.6,ease:"power3.out"},0.25);
+if(document.getElementById("inter-2-rule"))tl.fromTo("#inter-2-rule",{opacity:0},{opacity:1,duration:0.5},0.3);
+
+tl.fromTo("#inter-2-micro",{opacity:0,x:-20},{opacity:1,x:0,duration:0.5,ease:"power2.out"},0.15);
+tl.set("#inter-2-h0",{opacity:1,y:70},0.350);tl.to("#inter-2-h0",{y:0,duration:0.180,ease:"power4.out"},0.350);
+tl.set("#inter-2-h1",{opacity:1,y:44},0.497);tl.to("#inter-2-h1",{y:0,duration:0.154,ease:"power4.out"},0.497);
+tl.set("#inter-2-h2",{opacity:1,y:44},0.617);tl.to("#inter-2-h2",{y:0,duration:0.148,ease:"power4.out"},0.617);
+tl.set("#inter-2-h3",{opacity:1,y:44},0.715);tl.to("#inter-2-h3",{y:0,duration:0.142,ease:"power4.out"},0.715);
+tl.set("#inter-2-h4",{opacity:1,y:44},0.807);tl.to("#inter-2-h4",{y:0,duration:0.136,ease:"power4.out"},0.807);
+tl.set("#inter-2-h5",{opacity:1,y:44},0.893);tl.to("#inter-2-h5",{y:0,duration:0.130,ease:"power4.out"},0.893);
+tl.set("#inter-2-h6",{opacity:1,y:44},0.973);tl.to("#inter-2-h6",{y:0,duration:0.124,ease:"power4.out"},0.973);
+tl.set("#inter-2-r0",{opacity:1,y:70},1.700);tl.to("#inter-2-r0",{y:0,duration:0.180,ease:"power4.out"},1.700);
+tl.set("#inter-2-r1",{opacity:1,y:44},1.847);tl.to("#inter-2-r1",{y:0,duration:0.154,ease:"power4.out"},1.847);
+tl.set("#inter-2-r2",{opacity:1,y:44},1.967);tl.to("#inter-2-r2",{y:0,duration:0.148,ease:"power4.out"},1.967);
+tl.set("#inter-2-r3",{opacity:1,y:44},2.065);tl.to("#inter-2-r3",{y:0,duration:0.142,ease:"power4.out"},2.065);
+tl.set("#inter-2-r4",{opacity:1,y:44},2.157);tl.to("#inter-2-r4",{y:0,duration:0.136,ease:"power4.out"},2.157);
+tl.set("#inter-2-r5",{opacity:1,y:44},2.243);tl.to("#inter-2-r5",{y:0,duration:0.130,ease:"power4.out"},2.243);
+tl.set("#inter-2-r6",{opacity:1,y:44},2.323);tl.to("#inter-2-r6",{y:0,duration:0.124,ease:"power4.out"},2.323);
+tl.set("#inter-2-r7",{opacity:1,y:44},2.397);tl.to("#inter-2-r7",{y:0,duration:0.118,ease:"power4.out"},2.397);
+window.__timelines["inter-2"] = tl;
+})();
+</script>
+</template></body></html>

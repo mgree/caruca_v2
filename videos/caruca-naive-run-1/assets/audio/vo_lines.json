@@ -1,0 +1,9 @@
+[
+ {"id":"vo0","text":"This is the first naive run of Caruca version two. A fresh Claude Code session, running inside a throwaway virtual machine, is given nothing but a short problem statement, two format documents, and a few worked examples. Its job: describe the grep command precisely enough that a shell parallelizer can use the result. No hand-written pipeline, no hints. Here is how the run went."},
+ {"id":"vo1","text":"Every run starts from a clone of a golden virtual machine image. The clone holds a working Claude Code install and nothing else, so no state carries over from one run to the next. Once the clone is up, a single script starts the session with prompt version one for grep."},
+ {"id":"vo2","text":"When the session finishes, a collect step pulls everything back out of the virtual machine: the four deliverable files, the full JSON transcript of every tool call, and the environment details. The clone is then thrown away."},
+ {"id":"vo3","text":"The run folder is hard to read by eye, so the README recommends a second prompt. It asks Claude Code to reconstruct, from the transcript alone, what the session did, in what order, and why: as a written analysis and two diagrams."},
+ {"id":"vo4","text":"The reconstructed timeline splits the session into eight phases over about twelve minutes. Most of the time went into probing the real grep binary and testing the output, not writing it. The first deliverable file was written seven minutes in, after eighty-five probe runs."},
+ {"id":"vo5","text":"By the numbers: seven hundred thirty-nine seconds of wall clock, seventy-two tool calls, and about one dollar of model usage with Claude Haiku. The session also wrote three test scripts nobody asked for, and revised its own output once after a test failed."},
+ {"id":"vo6","text":"Thanks for watching. The full run folder, the analysis, and the diagrams are in the Caruca version two repository on GitHub."}
+]

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/></head><body>
+<template>
+<style>
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Bold.ttf') format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'JetBrains Mono';src:url('assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal}
+
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#0B1F33;color:#F4F7FB;font-family:'Lexend Deca',sans-serif;}
+#root .bg{position:absolute;inset:0;background:radial-gradient(1200px 800px at 18% 85%, rgba(14,116,144,0.22), rgba(11,31,51,0) 70%), linear-gradient(135deg,#0B1F33 0%,#0E2744 60%,#0B1F33 100%);}
+#root .rings{position:absolute;right:-340px;top:-420px;width:1200px;height:1200px;will-change:transform;}
+#root .rings circle{fill:none;stroke:#0E7490;stroke-width:1.5}
+#root .rule{position:absolute;left:120px;right:120px;top:148px;height:1px;background:#1E3A5F}
+#root .accent{position:absolute;left:120px;top:146px;width:80px;height:4px;border-radius:2px;background:linear-gradient(to right,#0E7490,#2563EB);transform-origin:left center}
+#root .micro{position:absolute;left:120px;top:96px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:0.08em;text-transform:uppercase;color:#7DD3E8;}
+#root .micro span{display:inline-block}
+#root .headline{position:absolute;left:120px;top:190px;font-size:64px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;color:#F4F7FB}
+#root .headline span{display:inline-block;opacity:0;margin-right:0.26em;will-change:transform}
+#root .sub{position:absolute;left:120px;top:290px;font-size:26px;font-weight:400;color:#A9BDD3;max-width:1500px;line-height:1.4}
+#root .mono{font-family:'JetBrains Mono',monospace}
+#root .card{position:absolute;background:#102B49;border:1px solid #27476E;border-radius:6px;padding:22px 26px;will-change:transform;transform-origin:50% 50%}
+#root .card .t{font-size:26px;font-weight:600;color:#F4F7FB}
+#root .card .d{font-size:21px;color:#A9BDD3;margin-top:6px;line-height:1.35}
+#root .card.blue{border-color:#2563EB;box-shadow:0 0 0 1px rgba(37,99,235,0.35) inset}
+#root .card.teal{border-color:#0E7490}
+#root .chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:18px;padding:6px 12px;border-radius:4px;background:#0E2744;border:1px solid #27476E;color:#CFE3F5;margin-right:10px}
+#root svg.wires{position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none}
+#root svg.wires path{fill:none;stroke:#2563EB;stroke-width:3;stroke-linecap:round}
+#root svg.wires path.teal{stroke:#0E7490}
+#root .mark{position:absolute;width:300px;height:200px;object-fit:contain}
+#root .chipmark{position:absolute;background:#F4F7FB;border-radius:18px;display:flex;align-items:center;justify-content:center;will-change:transform;box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+#root .chipmark img{width:86%;height:86%;object-fit:contain}
+#root .glow{position:absolute;border-radius:50%;background:radial-gradient(circle, rgba(37,99,235,0.55) 0%, rgba(14,116,144,0.25) 40%, rgba(11,31,51,0) 70%);opacity:0;will-change:transform,opacity}
+</style>
+<div id="root" data-composition-id="inter-0" data-width="1920" data-height="1080" data-duration="24.702">
+<div class="bg"></div>
+<svg class="rings" id="inter-0-rings" viewBox="0 0 1200 1200" aria-hidden="true">
+<circle cx="600" cy="600" r="160" opacity="0.10"/><circle cx="600" cy="600" r="260" opacity="0.08"/><circle cx="600" cy="600" r="360" opacity="0.07"/><circle cx="600" cy="600" r="460" opacity="0.05"/><circle cx="600" cy="600" r="560" opacity="0.04"/></svg>
+<div class="micro" id="inter-0-micro">Chapter 0 · what a naive run is</div>
+<div class="rule" id="inter-0-rule"></div><div class="accent" id="inter-0-accent"></div>
+<div class="headline"><span id="inter-0-h0">One</span><span id="inter-0-h1">prompt,</span><span id="inter-0-h2">one</span><span id="inter-0-h3">throwaway</span><span id="inter-0-h4">machine,</span><span id="inter-0-h5">four</span><span id="inter-0-h6">files</span></div>
+
+<div class="card" id="inter-0-in0" style="left:120px;top:430px;width:420px"><div class="t">Problem statement</div><div class="d">PROMPT_v1: describe <span class="mono">grep</span></div></div>
+<div class="card" id="inter-0-in1" style="left:120px;top:570px;width:420px"><div class="t">Two format documents</div><div class="d">Caruca syntax DSL · PaSh annotations</div></div>
+<div class="card" id="inter-0-in2" style="left:120px;top:710px;width:420px"><div class="t">Worked examples</div><div class="d"><span class="mono">tee · uniq · grep · rm</span></div></div>
+<div class="card blue" id="inter-0-vm" style="left:700px;top:520px;width:520px;padding:28px 30px"><div class="t">Throwaway Ubuntu VM</div><div class="d">Fresh Claude Code 2.1.296 session<br/>model <span class="mono">claude-haiku-5-5</span> · no hints, no pipeline</div></div>
+<div class="card" id="inter-0-out0" style="left:1380px;top:400px;width:420px"><div class="t mono" style="font-size:21px">output/grep.py</div><div class="d">syntax description</div></div>
+<div class="card" id="inter-0-out1" style="left:1380px;top:520px;width:420px"><div class="t mono" style="font-size:21px">pash/grep.json</div><div class="d">parser table</div></div>
+<div class="card" id="inter-0-out2" style="left:1380px;top:640px;width:420px"><div class="t mono" style="font-size:21px">InputOutputInfoGeneratorGrep.py</div><div class="d">what it reads and writes</div></div>
+<div class="card" id="inter-0-out3" style="left:1380px;top:760px;width:420px"><div class="t mono" style="font-size:21px">ParallelizabilityInfoGeneratorGrep.py</div><div class="d">can the input be split</div></div>
+<svg class="wires" id="inter-0-wires" viewBox="0 0 1920 1080">
+<path id="inter-0-w0" d="M540 478 C 620 478, 620 580, 700 580"/><path id="inter-0-w1" d="M540 618 L 700 618"/><path id="inter-0-w2" d="M540 758 C 620 758, 620 656, 700 656"/>
+<path id="inter-0-w3" class="teal" d="M1220 600 C 1300 600, 1300 448, 1380 448"/><path id="inter-0-w4" class="teal" d="M1220 605 C 1300 605, 1300 568, 1380 568"/><path id="inter-0-w5" class="teal" d="M1220 610 C 1300 610, 1300 688, 1380 688"/><path id="inter-0-w6" class="teal" d="M1220 615 C 1300 615, 1300 808, 1380 808"/>
+</svg>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#inter-0-rings",{rotation:0,scale:1},{rotation:6,scale:1.03,duration:9,ease:"sine.inOut",repeat:3,yoyo:true},0);
+if(document.getElementById("inter-0-accent"))tl.fromTo("#inter-0-accent",{scaleX:0},{scaleX:1,duration:0.6,ease:"power3.out"},0.25);
+if(document.getElementById("inter-0-rule"))tl.fromTo("#inter-0-rule",{opacity:0},{opacity:1,duration:0.5},0.3);
+
+tl.fromTo("#inter-0-micro",{opacity:0,x:-20},{opacity:1,x:0,duration:0.5,ease:"power2.out"},0.15);
+tl.set("#inter-0-h0",{opacity:1,y:70},0.350);tl.to("#inter-0-h0",{y:0,duration:0.180,ease:"power4.out"},0.350);
+tl.set("#inter-0-h1",{opacity:1,y:44},0.497);tl.to("#inter-0-h1",{y:0,duration:0.154,ease:"power4.out"},0.497);
+tl.set("#inter-0-h2",{opacity:1,y:44},0.617);tl.to("#inter-0-h2",{y:0,duration:0.148,ease:"power4.out"},0.617);
+tl.set("#inter-0-h3",{opacity:1,y:44},0.715);tl.to("#inter-0-h3",{y:0,duration:0.142,ease:"power4.out"},0.715);
+tl.set("#inter-0-h4",{opacity:1,y:44},0.807);tl.to("#inter-0-h4",{y:0,duration:0.136,ease:"power4.out"},0.807);
+tl.set("#inter-0-h5",{opacity:1,y:44},0.893);tl.to("#inter-0-h5",{y:0,duration:0.130,ease:"power4.out"},0.893);
+tl.set("#inter-0-h6",{opacity:1,y:44},0.973);tl.to("#inter-0-h6",{y:0,duration:0.124,ease:"power4.out"},0.973);
+tl.fromTo("#inter-0-in0",{scale:0.6,opacity:0,y:24},{scale:1,opacity:1,y:0,duration:0.55,ease:"power3.out"},1.60);
+tl.fromTo("#inter-0-in1",{scale:0.6,opacity:0,y:24},{scale:1,opacity:1,y:0,duration:0.55,ease:"power3.out"},1.75);
+tl.fromTo("#inter-0-in2",{scale:0.6,opacity:0,y:24},{scale:1,opacity:1,y:0,duration:0.55,ease:"power3.out"},1.90);
+document.querySelectorAll("#inter-0-wires path").forEach(function(p){var L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;});
+tl.to("#inter-0-w0",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},2.50);
+tl.to("#inter-0-w1",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},2.62);
+tl.to("#inter-0-w2",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},2.74);
+tl.fromTo("#inter-0-vm",{scale:0.6,opacity:0,y:0},{scale:1,opacity:1,y:0,duration:0.7,ease:"power3.out"},3.10);
+document.querySelectorAll("#inter-0-wires path").forEach(function(p){var L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;});
+tl.to("#inter-0-w3",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},5.20);
+tl.to("#inter-0-w4",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},5.32);
+tl.to("#inter-0-w5",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},5.44);
+tl.to("#inter-0-w6",{strokeDashoffset:0,duration:0.6,ease:"power2.out"},5.56);
+tl.fromTo("#inter-0-out0",{scale:0.6,opacity:0,y:16},{scale:1,opacity:1,y:0,duration:0.5,ease:"power3.out"},5.90);
+tl.fromTo("#inter-0-out1",{scale:0.6,opacity:0,y:16},{scale:1,opacity:1,y:0,duration:0.5,ease:"power3.out"},6.05);
+tl.fromTo("#inter-0-out2",{scale:0.6,opacity:0,y:16},{scale:1,opacity:1,y:0,duration:0.5,ease:"power3.out"},6.20);
+tl.fromTo("#inter-0-out3",{scale:0.6,opacity:0,y:16},{scale:1,opacity:1,y:0,duration:0.5,ease:"power3.out"},6.35);
+
+window.__timelines["inter-0"] = tl;
+})();
+</script>
+</template></body></html>

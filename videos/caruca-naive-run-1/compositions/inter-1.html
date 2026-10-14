@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/></head><body>
+<template>
+<style>
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Bold.ttf') format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'JetBrains Mono';src:url('assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal}
+
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#0B1F33;color:#F4F7FB;font-family:'Lexend Deca',sans-serif;}
+#root .bg{position:absolute;inset:0;background:radial-gradient(1200px 800px at 18% 85%, rgba(14,116,144,0.22), rgba(11,31,51,0) 70%), linear-gradient(135deg,#0B1F33 0%,#0E2744 60%,#0B1F33 100%);}
+#root .rings{position:absolute;right:-340px;top:-420px;width:1200px;height:1200px;will-change:transform;}
+#root .rings circle{fill:none;stroke:#0E7490;stroke-width:1.5}
+#root .rule{position:absolute;left:120px;right:120px;top:148px;height:1px;background:#1E3A5F}
+#root .accent{position:absolute;left:120px;top:146px;width:80px;height:4px;border-radius:2px;background:linear-gradient(to right,#0E7490,#2563EB);transform-origin:left center}
+#root .micro{position:absolute;left:120px;top:96px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:0.08em;text-transform:uppercase;color:#7DD3E8;}
+#root .micro span{display:inline-block}
+#root .headline{position:absolute;left:120px;top:190px;font-size:64px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;color:#F4F7FB}
+#root .headline span{display:inline-block;opacity:0;margin-right:0.26em;will-change:transform}
+#root .sub{position:absolute;left:120px;top:290px;font-size:26px;font-weight:400;color:#A9BDD3;max-width:1500px;line-height:1.4}
+#root .mono{font-family:'JetBrains Mono',monospace}
+#root .card{position:absolute;background:#102B49;border:1px solid #27476E;border-radius:6px;padding:22px 26px;will-change:transform;transform-origin:50% 50%}
+#root .card .t{font-size:26px;font-weight:600;color:#F4F7FB}
+#root .card .d{font-size:21px;color:#A9BDD3;margin-top:6px;line-height:1.35}
+#root .card.blue{border-color:#2563EB;box-shadow:0 0 0 1px rgba(37,99,235,0.35) inset}
+#root .card.teal{border-color:#0E7490}
+#root .chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:18px;padding:6px 12px;border-radius:4px;background:#0E2744;border:1px solid #27476E;color:#CFE3F5;margin-right:10px}
+#root svg.wires{position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none}
+#root svg.wires path{fill:none;stroke:#2563EB;stroke-width:3;stroke-linecap:round}
+#root svg.wires path.teal{stroke:#0E7490}
+#root .mark{position:absolute;width:300px;height:200px;object-fit:contain}
+#root .chipmark{position:absolute;background:#F4F7FB;border-radius:18px;display:flex;align-items:center;justify-content:center;will-change:transform;box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+#root .chipmark img{width:86%;height:86%;object-fit:contain}
+#root .glow{position:absolute;border-radius:50%;background:radial-gradient(circle, rgba(37,99,235,0.55) 0%, rgba(14,116,144,0.25) 40%, rgba(11,31,51,0) 70%);opacity:0;will-change:transform,opacity}
+</style>
+<div id="root" data-composition-id="inter-1" data-width="1920" data-height="1080" data-duration="18.664">
+<div class="bg"></div>
+<svg class="rings" id="inter-1-rings" viewBox="0 0 1200 1200" aria-hidden="true">
+<circle cx="600" cy="600" r="160" opacity="0.10"/><circle cx="600" cy="600" r="260" opacity="0.08"/><circle cx="600" cy="600" r="360" opacity="0.07"/><circle cx="600" cy="600" r="460" opacity="0.05"/><circle cx="600" cy="600" r="560" opacity="0.04"/></svg>
+<div class="micro" id="inter-1-micro">Chapter 2 · clone the VM and start the run</div>
+<div class="rule" id="inter-1-rule"></div><div class="accent" id="inter-1-accent"></div>
+<div class="headline"><span id="inter-1-h0">A</span><span id="inter-1-h1">clean</span><span id="inter-1-h2">clone</span><span id="inter-1-h3">for</span><span id="inter-1-h4">every</span><span id="inter-1-h5">run</span></div>
+
+<div class="card teal" id="inter-1-g" style="left:120px;top:430px;width:640px;padding:34px"><div class="micro" style="position:static;font-size:16px;color:#7DD3E8">golden image</div><div class="t" style="font-size:30px;margin-top:6px">naive-golden</div><div class="d">Ubuntu 24.04 · Claude Code 2.1.296<br/>no mounts, no project, nothing else</div></div>
+<div class="card blue" id="inter-1-c" style="left:1100px;top:430px;width:640px;padding:34px"><div class="micro" style="position:static;font-size:16px;color:#7DD3E8">clone for this run</div><div class="t" style="font-size:30px;margin-top:6px">naive-run-grep</div><div class="d">runs the session, then is deleted</div></div>
+<div id="inter-1-lbl" style="position:absolute;left:840px;top:470px;width:180px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:20px;color:#7DD3E8;opacity:0">clone</div>
+<svg class="wires" id="inter-1-wires" viewBox="0 0 1920 1080"><path id="inter-1-w0" d="M760 530 L 1100 530"/><path id="inter-1-w1" d="M1075 515 L 1100 530 L 1075 545"/></svg>
+<div id="inter-1-term" class="card" style="left:120px;top:720px;width:1680px;padding:20px 26px;background:#071626;border-color:#1E3A5F"><div class="mono" style="font-size:23px;color:#CFE3F5;white-space:pre"><span style="color:#7DD3E8">$ </span><span id="inter-1-cmd"></span><span id="inter-1-cur" style="display:inline-block;width:12px;height:26px;background:#CFE3F5;vertical-align:-3px"></span></div><div id="inter-1-status" class="mono" style="font-size:20px;color:#A9BDD3;margin-top:10px;opacity:0">session running unattended · 73 turns · 72 tool calls · 12 min 19 s</div></div>
+
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#inter-1-rings",{rotation:0,scale:1},{rotation:6,scale:1.03,duration:9,ease:"sine.inOut",repeat:3,yoyo:true},0);
+if(document.getElementById("inter-1-accent"))tl.fromTo("#inter-1-accent",{scaleX:0},{scaleX:1,duration:0.6,ease:"power3.out"},0.25);
+if(document.getElementById("inter-1-rule"))tl.fromTo("#inter-1-rule",{opacity:0},{opacity:1,duration:0.5},0.3);
+
+tl.fromTo("#inter-1-micro",{opacity:0,x:-20},{opacity:1,x:0,duration:0.5,ease:"power2.out"},0.15);
+tl.set("#inter-1-h0",{opacity:1,y:70},0.350);tl.to("#inter-1-h0",{y:0,duration:0.180,ease:"power4.out"},0.350);
+tl.set("#inter-1-h1",{opacity:1,y:44},0.497);tl.to("#inter-1-h1",{y:0,duration:0.154,ease:"power4.out"},0.497);
+tl.set("#inter-1-h2",{opacity:1,y:44},0.617);tl.to("#inter-1-h2",{y:0,duration:0.148,ease:"power4.out"},0.617);
+tl.set("#inter-1-h3",{opacity:1,y:44},0.715);tl.to("#inter-1-h3",{y:0,duration:0.142,ease:"power4.out"},0.715);
+tl.set("#inter-1-h4",{opacity:1,y:44},0.807);tl.to("#inter-1-h4",{y:0,duration:0.136,ease:"power4.out"},0.807);
+tl.set("#inter-1-h5",{opacity:1,y:44},0.893);tl.to("#inter-1-h5",{y:0,duration:0.130,ease:"power4.out"},0.893);
+tl.fromTo("#inter-1-g",{scale:0.6,opacity:0,y:0},{scale:1,opacity:1,y:0,duration:0.6,ease:"power3.out"},1.50);
+document.querySelectorAll("#inter-1-wires path").forEach(function(p){var L=p.getTotalLength();p.style.strokeDasharray=L;p.style.strokeDashoffset=L;});
+tl.to("#inter-1-w0",{strokeDashoffset:0,duration:0.5,ease:"power2.out"},2.40);
+tl.to("#inter-1-w1",{strokeDashoffset:0,duration:0.5,ease:"power2.out"},2.75);
+tl.fromTo("#inter-1-lbl",{opacity:0,y:8},{opacity:1,y:0,duration:0.4},2.6);
+tl.fromTo("#inter-1-c",{scale:0.6,opacity:0,y:0},{scale:1,opacity:1,y:0,duration:0.6,ease:"power3.out"},3.20);
+
+tl.fromTo("#inter-1-term",{opacity:0,y:20},{opacity:1,y:0,duration:0.5,ease:"power2.out"},4.6);
+(function(){var full="./new_run_vm.sh naive-run-grep  &&  limactl shell naive-run-grep  &&  naive-run grep PROMPT_v1.md";var el=document.getElementById("inter-1-cmd");var st={n:0};tl.to(st,{n:full.length,duration:3.2,ease:"none",onUpdate:function(){el.textContent=full.slice(0,Math.round(st.n));}},5.2);
+var cur=document.getElementById("inter-1-cur");var bl={p:0};tl.to(bl,{p:1,duration:18.7,ease:"none",onUpdate:function(){cur.style.opacity=((tl.time()%1)<0.5)?"1":"0";}},0);})();
+tl.fromTo("#inter-1-status",{opacity:0},{opacity:1,duration:0.5},9.0);
+
+window.__timelines["inter-1"] = tl;
+})();
+</script>
+</template></body></html>

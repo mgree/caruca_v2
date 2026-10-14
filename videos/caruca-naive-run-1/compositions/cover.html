@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/></head><body>
+<template>
+<style>
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Bold.ttf') format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'JetBrains Mono';src:url('assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal}
+
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#0B1F33;color:#F4F7FB;font-family:'Lexend Deca',sans-serif;}
+#root .bg{position:absolute;inset:0;background:radial-gradient(1200px 800px at 18% 85%, rgba(14,116,144,0.22), rgba(11,31,51,0) 70%), linear-gradient(135deg,#0B1F33 0%,#0E2744 60%,#0B1F33 100%);}
+#root .rings{position:absolute;right:-340px;top:-420px;width:1200px;height:1200px;will-change:transform;}
+#root .rings circle{fill:none;stroke:#0E7490;stroke-width:1.5}
+#root .rule{position:absolute;left:120px;right:120px;top:148px;height:1px;background:#1E3A5F}
+#root .accent{position:absolute;left:120px;top:146px;width:80px;height:4px;border-radius:2px;background:linear-gradient(to right,#0E7490,#2563EB);transform-origin:left center}
+#root .micro{position:absolute;left:120px;top:96px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:0.08em;text-transform:uppercase;color:#7DD3E8;}
+#root .micro span{display:inline-block}
+#root .headline{position:absolute;left:120px;top:190px;font-size:64px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;color:#F4F7FB}
+#root .headline span{display:inline-block;opacity:0;margin-right:0.26em;will-change:transform}
+#root .sub{position:absolute;left:120px;top:290px;font-size:26px;font-weight:400;color:#A9BDD3;max-width:1500px;line-height:1.4}
+#root .mono{font-family:'JetBrains Mono',monospace}
+#root .card{position:absolute;background:#102B49;border:1px solid #27476E;border-radius:6px;padding:22px 26px;will-change:transform;transform-origin:50% 50%}
+#root .card .t{font-size:26px;font-weight:600;color:#F4F7FB}
+#root .card .d{font-size:21px;color:#A9BDD3;margin-top:6px;line-height:1.35}
+#root .card.blue{border-color:#2563EB;box-shadow:0 0 0 1px rgba(37,99,235,0.35) inset}
+#root .card.teal{border-color:#0E7490}
+#root .chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:18px;padding:6px 12px;border-radius:4px;background:#0E2744;border:1px solid #27476E;color:#CFE3F5;margin-right:10px}
+#root svg.wires{position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none}
+#root svg.wires path{fill:none;stroke:#2563EB;stroke-width:3;stroke-linecap:round}
+#root svg.wires path.teal{stroke:#0E7490}
+#root .mark{position:absolute;width:300px;height:200px;object-fit:contain}
+#root .chipmark{position:absolute;background:#F4F7FB;border-radius:18px;display:flex;align-items:center;justify-content:center;will-change:transform;box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+#root .chipmark img{width:86%;height:86%;object-fit:contain}
+#root .glow{position:absolute;border-radius:50%;background:radial-gradient(circle, rgba(37,99,235,0.55) 0%, rgba(14,116,144,0.25) 40%, rgba(11,31,51,0) 70%);opacity:0;will-change:transform,opacity}
+</style>
+<div id="root" data-composition-id="cover" data-width="1920" data-height="1080" data-duration="5.500">
+<div class="bg"></div>
+<svg class="rings" id="cover-rings" viewBox="0 0 1200 1200" aria-hidden="true">
+<circle cx="600" cy="600" r="160" opacity="0.10"/><circle cx="600" cy="600" r="260" opacity="0.08"/><circle cx="600" cy="600" r="360" opacity="0.07"/><circle cx="600" cy="600" r="460" opacity="0.05"/><circle cx="600" cy="600" r="560" opacity="0.04"/></svg>
+
+<div class="glow" id="cover-glow" style="left:60px;top:200px;width:720px;height:720px"></div>
+<div class="chipmark" id="cover-mark" style="left:150px;top:370px;width:480px;height:340px"><img src="assets/logo.png" alt=""/></div>
+<div id="cover-kicker" class="micro" style="left:744px;top:300px;font-size:24px;color:#7DD3E8">Caruca v2 · naive LLM arm · walkthrough</div>
+<div class="headline" style="left:740px;top:360px;font-size:120px;line-height:1.02;max-width:1120px"><span id="cover-h0">Caruca:</span><span id="cover-h1">Naive</span><span id="cover-h2">LLM</span><span id="cover-h3">Run</span><span id="cover-h4">#1</span></div>
+<div id="cover-by" style="position:absolute;left:744px;top:650px;font-size:46px;font-weight:400;color:#CFE3F5;opacity:0;will-change:transform">by Tiran Dagan</div>
+<div id="cover-chips" style="position:absolute;left:744px;top:760px;opacity:0;will-change:transform"><span class="chip">grep</span><span class="chip">PROMPT_v1</span><span class="chip">claude-haiku-5-5</span><span class="chip">2026-10-13</span></div>
+<div class="accent" id="cover-accent" style="left:744px;top:730px;width:160px"></div>
+<div class="rule" id="cover-rule" style="left:744px;right:120px;top:732px"></div>
+
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#cover-rings",{rotation:0,scale:1},{rotation:6,scale:1.03,duration:9,ease:"sine.inOut",repeat:3,yoyo:true},0);
+if(document.getElementById("cover-accent"))tl.fromTo("#cover-accent",{scaleX:0},{scaleX:1,duration:0.6,ease:"power3.out"},0.25);
+if(document.getElementById("cover-rule"))tl.fromTo("#cover-rule",{opacity:0},{opacity:1,duration:0.5},0.3);
+
+
+tl.fromTo("#cover-mark",{scale:0.7,opacity:0},{scale:1,opacity:1,duration:0.9,ease:"power3.out"},0.3);
+tl.fromTo("#cover-glow",{opacity:0,scale:0.7},{opacity:0.42,scale:1,duration:1.1,ease:"power2.out"},0.2);
+(function(){var g=document.getElementById("cover-glow");var ph={p:0};tl.to(ph,{p:Math.PI*2*2,duration:4.2,ease:"none",onUpdate:function(){var s=Math.sin(ph.p);g.style.opacity=String(0.42+s*0.05);g.style.transform="scale("+(1+s*0.03)+")";}},1.3);})();
+tl.fromTo("#cover-kicker",{opacity:0,x:-20},{opacity:1,x:0,duration:0.5,ease:"power2.out"},0.6);
+tl.set("#cover-h0",{opacity:1,y:70},0.900);tl.to("#cover-h0",{y:0,duration:0.180,ease:"power4.out"},0.900);
+tl.set("#cover-h1",{opacity:1,y:44},1.047);tl.to("#cover-h1",{y:0,duration:0.154,ease:"power4.out"},1.047);
+tl.set("#cover-h2",{opacity:1,y:44},1.167);tl.to("#cover-h2",{y:0,duration:0.148,ease:"power4.out"},1.167);
+tl.set("#cover-h3",{opacity:1,y:44},1.265);tl.to("#cover-h3",{y:0,duration:0.142,ease:"power4.out"},1.265);
+tl.set("#cover-h4",{opacity:1,y:44},1.357);tl.to("#cover-h4",{y:0,duration:0.136,ease:"power4.out"},1.357);
+tl.fromTo("#cover-by",{opacity:0,y:20},{opacity:1,y:0,duration:0.5,ease:"power3.out"},1.49);
+tl.fromTo("#cover-chips",{opacity:0,y:16},{opacity:1,y:0,duration:0.5,ease:"power3.out"},1.79);
+
+window.__timelines["cover"] = tl;
+})();
+</script>
+</template></body></html>

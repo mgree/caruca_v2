@@ -23,7 +23,7 @@ when copying or adapting this file. See `LICENSE-TEMPLATES.md` for the full term
 
 # Task 016: The Naive Claude Code Arm — Problem Statement and Samples Only
 
-> **Status (end of 2026-10-13):** package, environment and run tooling **built and tested**; see section 8 for the progress ledger and section 9 for how it is implemented. One real run happened (sed, prompt v1, interactive, with the first version of the tooling); it produced all four deliverables but its records were deleted the same evening because it came from a leaky layout. **One clean run exists (grep, v1, watch mode, 2026-10-13 19:05; collected), nothing scored.** Runs bill the Max subscription, so there is no metered spend to report.
+> **Status (end of 2026-10-13):** package, environment and run tooling **built and tested**; see section 8 for the progress ledger and section 9 for how it is implemented. One real run happened (sed, prompt v1, interactive, with the first version of the tooling); it produced all four deliverables but its records were deleted the same evening because it came from a leaky layout. **Two clean runs exist (grep, v1, watch mode, 2026-10-13 19:05 and 19:34; both collected), nothing analysed or scored yet; the analysis prompt is ready in the README.** Runs bill the Max subscription, so there is no metered spend to report.
 > **Created:** 2026-10-13 · **Owner:** Tiran Dagan
 > **Lives in:** the repo-root folder `naive_llm_caruca/` (Tiran's name for it).
 > **Tiran's direction, 2026-10-13, verbatim:** "implement a very simple approach that has nothing
@@ -201,6 +201,9 @@ questions) and a line in the ledger below.
 | 2026-10-13 | Run 1: sed, v1, interactive, old tooling. All four deliverables produced in ~8 min / 45 tool calls. Showed the session reads everything in its folder (it read `PROMPT_v2.md` and the run's metadata) and goes looking outside it (filesystem search, GitHub API query for "caruca"). Records deleted by Tiran; summary kept in the README's v1 entry | README "PROMPT_v1 — Observed" |
 | 2026-10-13 | Leak fixed: prompts to `~/prompts`, run records to `~/runs`, work folder holds only formats, samples, output | section 9.2 |
 | 2026-10-13 | First clean run: grep, v1, watch mode, new layout (grep is a sample command, so the session had a finished answer in view). 327 s, 33 tool calls; tried to install `pash_annotations` from PyPI; ran the grep binary with patterns in 12 calls; all four files produced. Collected; not scored | README "PROMPT_v1 — Observed, run 2"; `runs/2026-10-13_190539_naive-run-grep_grep_PROMPT_v1/` |
+| 2026-10-13 | Run 3: grep, v1, watch mode, clone `naive-run-grep` (second clone of that name), collected to `runs/2026-10-13_193448_naive-run-grep_grep_PROMPT_v1/`; not yet read or scored | the run folder |
+| 2026-10-13 | Analysis prompt written into the README ("Analysing a collected run: a prompt to start from"): installs and uses the Excalidraw diagram skill (github.com/coleam00/excalidraw-diagram-skill) for a session-workflow diagram and an information-flow diagram, and asks eight evidence-backed questions of the logs. The skill is installed in `.claude/skills/excalidraw-diagram/` and committed with the repo (Tiran's call; it declares no licence; listed as third-party in `LICENSE-TEMPLATES.md`, upstream commit in `UPSTREAM.txt`) | README, `.claude/skills/excalidraw-diagram/` |
+| — | First analysis produced with that prompt | not yet |
 | — | Scoring: syntax file through `caruca-v2 score`; PaSh classes imported and exercised under `pash_annotations` in the pash VM | not yet; no scorer exists for the PaSh classes |
 | — | Second prompt version run on the same command, and the comparison written into the README | not yet |
 
@@ -283,9 +286,12 @@ one run per clone remains the rule; the packaging only guarantees nothing is mer
 ### 9.5 Collection and reading
 
 `collect_run.sh <vm> [--keep]` copies each `~/runs/<name>` to the package's `runs/<name>` (skipping
-names already present), adds `environment.txt`, saves any session the clone had that no run folder captured (the sign-in session, a bare `claude`
-from the home folder) as `runs/<date>_<time>_<vm>_other-sessions/`, and deletes the clone unless
-`--keep`. `tool_log.py [-r|--json] <file>` lists every tool call from either
+names already present), adds `environment.txt`, saves any session started in the clone outside the
+runner as `runs/<date>_<time>_<vm>_other-sessions/` (only when there is one), and deletes the clone
+unless `--keep`. Clones start with an empty session history (`new_run_vm.sh` clears
+`~/.claude/projects`), and the golden image's own history was emptied on 2026-10-13, after two
+inherited sessions (an "update claude" session and the sign-in) kept reappearing as "other
+sessions" on every collection. `tool_log.py [-r|--json] <file>` lists every tool call from either
 `stream.jsonl` or a transcript: number, time, tool, command or path, and with `-r` the result.
 
 ### 9.6 Logging facts established
@@ -305,6 +311,8 @@ environment the session runs in, so it is not used.
 |---|---|---|
 | 2026-10-13 | Package created: prompt, two format documents, four sample pairs, operator notes. | Tiran's direction above. |
 | 2026-10-13 | Claude Code 2.1.296 installed inside the Lima VM `caruca` (native installer, guest home); package staged at `~/naive-arm` by the new `sync_to_vm.sh`; README gained an environment section. Tiran signed in the same day with the claude.ai account (Max subscription). | Tiran: run the prompts "from within the environment and not have to escape out of it or control it from above", so the session is as naive as the VM is. |
+| 2026-10-13 | Inherited sessions removed: the golden image's `~/.claude/projects` emptied (sign-in kept), `new_run_vm.sh` empties it in each clone, so `_other-sessions` folders stop recurring; the redundant one from the 19:47 collection deleted. | Tiran 2026-10-13: a second folder appeared on every collection; "is that necessary?" |
+| 2026-10-13 | README gained the run-analysis prompt (skill install + invocation + eight questions + two diagrams + write-up rules). Excalidraw skill installed by Tiran; first as a nested git clone, which git recorded as a submodule pointer in commit `68dc99e` and the editor showed dimmed; inner `.git` removed, `UPSTREAM.txt` added, files staged as ordinary files. Kept in the repo by Tiran's decision; listed in `LICENSE-TEMPLATES.md`. | Tiran 2026-10-13: "improve this prompt and generate nice workflow diagrams using this skill"; "dont exclude the skill from github". |
 | 2026-10-13 | Folder renamed from "Caruca via Claude Code CLI" to `naive_llm_caruca` (git mv); every reference in the README, tasks 016 and 017, the document map and memory updated; scripts unaffected (they locate themselves by their own path). | Tiran 2026-10-13: "rename … to naive_llm_caruca". |
 | 2026-10-13 | Per-run packaging: each `naive-run` invocation gets its own `~/runs/<date>_<time>_<vm>_<cmd>_<version>/` with prompt, deliverables, raw stream, action log, transcript and run.env; `collect_run.sh` copies every run folder into the package's `runs/` and saves only sessions no run folder captured; the one-run-per-clone refusal became a `run_number_in_this_clone` marker and a note. Tested with a stand-in `claude`. Tiran then asked for this document to carry the progress so far and the implementation details (sections 8 and 9). | Tiran 2026-10-13: "all the commands, transcripts, tool calls, and outputs should be packaged in the same folder - each run separately". |
 | 2026-10-13 | Collected runs now accumulate in the package's own `runs/<date>_<vm>/` (Tiran: keep deliverables, scripts and runs in one folder); `sync_to_vm.sh` stages only prompts, formats/ and samples/ so `runs/` never enters a VM. Run 1 moved there from `eval/naive_claude_code/`. | Tiran 2026-10-13. |

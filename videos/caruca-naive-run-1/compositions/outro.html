@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/></head><body>
+<template>
+<style>
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Bold.ttf') format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'JetBrains Mono';src:url('assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal}
+
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#0B1F33;color:#F4F7FB;font-family:'Lexend Deca',sans-serif;}
+#root .bg{position:absolute;inset:0;background:radial-gradient(1200px 800px at 18% 85%, rgba(14,116,144,0.22), rgba(11,31,51,0) 70%), linear-gradient(135deg,#0B1F33 0%,#0E2744 60%,#0B1F33 100%);}
+#root .rings{position:absolute;right:-340px;top:-420px;width:1200px;height:1200px;will-change:transform;}
+#root .rings circle{fill:none;stroke:#0E7490;stroke-width:1.5}
+#root .rule{position:absolute;left:120px;right:120px;top:148px;height:1px;background:#1E3A5F}
+#root .accent{position:absolute;left:120px;top:146px;width:80px;height:4px;border-radius:2px;background:linear-gradient(to right,#0E7490,#2563EB);transform-origin:left center}
+#root .micro{position:absolute;left:120px;top:96px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:0.08em;text-transform:uppercase;color:#7DD3E8;}
+#root .micro span{display:inline-block}
+#root .headline{position:absolute;left:120px;top:190px;font-size:64px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;color:#F4F7FB}
+#root .headline span{display:inline-block;opacity:0;margin-right:0.26em;will-change:transform}
+#root .sub{position:absolute;left:120px;top:290px;font-size:26px;font-weight:400;color:#A9BDD3;max-width:1500px;line-height:1.4}
+#root .mono{font-family:'JetBrains Mono',monospace}
+#root .card{position:absolute;background:#102B49;border:1px solid #27476E;border-radius:6px;padding:22px 26px;will-change:transform;transform-origin:50% 50%}
+#root .card .t{font-size:26px;font-weight:600;color:#F4F7FB}
+#root .card .d{font-size:21px;color:#A9BDD3;margin-top:6px;line-height:1.35}
+#root .card.blue{border-color:#2563EB;box-shadow:0 0 0 1px rgba(37,99,235,0.35) inset}
+#root .card.teal{border-color:#0E7490}
+#root .chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:18px;padding:6px 12px;border-radius:4px;background:#0E2744;border:1px solid #27476E;color:#CFE3F5;margin-right:10px}
+#root svg.wires{position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none}
+#root svg.wires path{fill:none;stroke:#2563EB;stroke-width:3;stroke-linecap:round}
+#root svg.wires path.teal{stroke:#0E7490}
+#root .mark{position:absolute;width:300px;height:200px;object-fit:contain}
+#root .chipmark{position:absolute;background:#F4F7FB;border-radius:18px;display:flex;align-items:center;justify-content:center;will-change:transform;box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+#root .chipmark img{width:86%;height:86%;object-fit:contain}
+#root .glow{position:absolute;border-radius:50%;background:radial-gradient(circle, rgba(37,99,235,0.55) 0%, rgba(14,116,144,0.25) 40%, rgba(11,31,51,0) 70%);opacity:0;will-change:transform,opacity}
+</style>
+<div id="root" data-composition-id="outro" data-width="1920" data-height="1080" data-duration="10.894">
+<div class="bg"></div>
+<svg class="rings" id="outro-rings" viewBox="0 0 1200 1200" aria-hidden="true">
+<circle cx="600" cy="600" r="160" opacity="0.10"/><circle cx="600" cy="600" r="260" opacity="0.08"/><circle cx="600" cy="600" r="360" opacity="0.07"/><circle cx="600" cy="600" r="460" opacity="0.05"/><circle cx="600" cy="600" r="560" opacity="0.04"/></svg>
+
+<div class="glow" id="outro-glow" style="left:560px;top:120px;width:800px;height:800px"></div>
+<div class="chipmark" id="outro-mark" style="left:800px;top:230px;width:320px;height:230px"><img src="assets/logo.png" alt=""/></div>
+<div id="outro-t" style="position:absolute;left:0;right:0;top:510px;text-align:center;font-size:72px;font-weight:700;letter-spacing:-0.02em;opacity:0;will-change:transform">Caruca v2</div>
+<div id="outro-u" class="mono" style="position:absolute;left:0;right:0;top:615px;text-align:center;font-size:30px;color:#7DD3E8;opacity:0;will-change:transform">github.com/tirandagan/caruca_v2</div>
+<div id="outro-p" class="mono" style="position:absolute;left:0;right:0;top:675px;text-align:center;font-size:20px;color:#A9BDD3;opacity:0;will-change:transform">naive_llm_caruca/runs/2026-10-13_193448_naive-run-grep_grep_PROMPT_v1 · analysis/analysis.md</div>
+<div id="outro-by" style="position:absolute;left:0;right:0;top:760px;text-align:center;font-size:30px;color:#CFE3F5;opacity:0;will-change:transform">Recorded and narrated by Tiran Dagan · 2026-10-13</div>
+<div id="outro-fade" style="position:absolute;inset:0;background:#0B1F33;opacity:0"></div>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#outro-rings",{rotation:0,scale:1},{rotation:6,scale:1.03,duration:9,ease:"sine.inOut",repeat:3,yoyo:true},0);
+if(document.getElementById("outro-accent"))tl.fromTo("#outro-accent",{scaleX:0},{scaleX:1,duration:0.6,ease:"power3.out"},0.25);
+if(document.getElementById("outro-rule"))tl.fromTo("#outro-rule",{opacity:0},{opacity:1,duration:0.5},0.3);
+
+
+tl.fromTo("#outro-mark",{scale:0.7,opacity:0},{scale:1,opacity:1,duration:0.9,ease:"power3.out"},0.5);
+tl.fromTo("#outro-glow",{opacity:0,scale:0.7},{opacity:0.4,scale:1,duration:1.1,ease:"power2.out"},0.4);
+tl.fromTo("#outro-t",{opacity:0,y:20},{opacity:1,y:0,duration:0.5,ease:"power3.out"},1.2);
+tl.fromTo("#outro-u",{opacity:0,y:16},{opacity:1,y:0,duration:0.5,ease:"power3.out"},1.5);
+tl.fromTo("#outro-p",{opacity:0,y:12},{opacity:1,y:0,duration:0.5,ease:"power3.out"},1.8);
+tl.fromTo("#outro-by",{opacity:0,y:12},{opacity:1,y:0,duration:0.5,ease:"power3.out"},2.1);
+tl.to("#outro-fade",{opacity:1,duration:1.2,ease:"power1.in"},9.59);
+
+window.__timelines["outro"] = tl;
+})();
+</script>
+</template></body></html>

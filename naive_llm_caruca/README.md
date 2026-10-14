@@ -129,6 +129,27 @@ input/output class 43, parallelizability class 82. Whether it installed PaSh in 
 "stand-in" was, and whether any run happened before the files were first written, is to be read off
 the action log.
 
+**Observed, run 3.** *2026-10-13 19:34, `grep`, watch mode, clone `naive-run-grep` (second clone of
+that name), run 1 in that clone, model `claude-haiku-5-5`. Collected to
+`runs/2026-10-13_193448_naive-run-grep_grep_PROMPT_v1/`; analysed in
+[its `analysis/analysis.md`](runs/2026-10-13_193448_naive-run-grep_grep_PROMPT_v1/analysis/analysis.md)
+with two diagrams. Not scored.* 739 seconds, 73 turns, 72 tool calls (43 Bash, 9 Write, 15 Edit,
+4 Read, 1 TaskStop); $0.96 at list price. It read the manual page it was pointed to only for its
+version header (first 1500 bytes) and took the option list from `grep --help`; it ran the binary 85
+times on small files in a scratch directory under `/tmp`, with no other isolation, before writing
+the first file at 19:41:53 (seven minutes in); it then wrote three check scripts of its own, ran the
+real PaSh parser and classes from a `pash-annotations` 0.2.4 wheel it downloaded from PyPI (no
+`pip` in the image, so it unpacked and read it), and fed one finding back into both generator
+classes. It did not copy the sample: the parser table is the sample plus 30 entries (`-0`…`-9`
+and the `--color=WHEN` spellings) minus the two `--color WHEN` options; the syntax file reuses the
+sample's option inventory but has four syntaxes instead of one; both classes are rewritten. Its
+syntax file imports under v1's real DSL. Three things to carry forward: Claude Code's shell defines
+a `grep` function that runs its bundled ugrep, so the first `grep --version` reported ugrep 7.8.4
+(the session noticed and used `/usr/bin/grep` by path); it searched GitHub for "caruca", found this
+public repository and read three of our memory notes about grep, which shaped the four-syntax
+structure; and no output file states the grep version. One claim in its report is wrong: the
+sample's table already had `-y` and `-u`.
+
 ### PROMPT_v2 — execution is the standard
 
 **What it adds.** One section with three points, placed between the samples and the closing scope

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/></head><body>
+<template>
+<style>
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Regular.ttf') format('truetype');font-weight:400;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-SemiBold.ttf') format('truetype');font-weight:600;font-style:normal}
+@font-face{font-family:'Lexend Deca';src:url('assets/fonts/LexendDeca-Bold.ttf') format('truetype');font-weight:700;font-style:normal}
+@font-face{font-family:'JetBrains Mono';src:url('assets/fonts/JetBrainsMono-Regular.woff2') format('woff2');font-weight:400;font-style:normal}
+
+#root{position:absolute;inset:0;width:100%;height:100%;overflow:hidden;background:#0B1F33;color:#F4F7FB;font-family:'Lexend Deca',sans-serif;}
+#root .bg{position:absolute;inset:0;background:radial-gradient(1200px 800px at 18% 85%, rgba(14,116,144,0.22), rgba(11,31,51,0) 70%), linear-gradient(135deg,#0B1F33 0%,#0E2744 60%,#0B1F33 100%);}
+#root .rings{position:absolute;right:-340px;top:-420px;width:1200px;height:1200px;will-change:transform;}
+#root .rings circle{fill:none;stroke:#0E7490;stroke-width:1.5}
+#root .rule{position:absolute;left:120px;right:120px;top:148px;height:1px;background:#1E3A5F}
+#root .accent{position:absolute;left:120px;top:146px;width:80px;height:4px;border-radius:2px;background:linear-gradient(to right,#0E7490,#2563EB);transform-origin:left center}
+#root .micro{position:absolute;left:120px;top:96px;font-family:'JetBrains Mono',monospace;font-size:20px;letter-spacing:0.08em;text-transform:uppercase;color:#7DD3E8;}
+#root .micro span{display:inline-block}
+#root .headline{position:absolute;left:120px;top:190px;font-size:64px;font-weight:700;letter-spacing:-0.02em;line-height:1.1;color:#F4F7FB}
+#root .headline span{display:inline-block;opacity:0;margin-right:0.26em;will-change:transform}
+#root .sub{position:absolute;left:120px;top:290px;font-size:26px;font-weight:400;color:#A9BDD3;max-width:1500px;line-height:1.4}
+#root .mono{font-family:'JetBrains Mono',monospace}
+#root .card{position:absolute;background:#102B49;border:1px solid #27476E;border-radius:6px;padding:22px 26px;will-change:transform;transform-origin:50% 50%}
+#root .card .t{font-size:26px;font-weight:600;color:#F4F7FB}
+#root .card .d{font-size:21px;color:#A9BDD3;margin-top:6px;line-height:1.35}
+#root .card.blue{border-color:#2563EB;box-shadow:0 0 0 1px rgba(37,99,235,0.35) inset}
+#root .card.teal{border-color:#0E7490}
+#root .chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:18px;padding:6px 12px;border-radius:4px;background:#0E2744;border:1px solid #27476E;color:#CFE3F5;margin-right:10px}
+#root svg.wires{position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none}
+#root svg.wires path{fill:none;stroke:#2563EB;stroke-width:3;stroke-linecap:round}
+#root svg.wires path.teal{stroke:#0E7490}
+#root .mark{position:absolute;width:300px;height:200px;object-fit:contain}
+#root .chipmark{position:absolute;background:#F4F7FB;border-radius:18px;display:flex;align-items:center;justify-content:center;will-change:transform;box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+#root .chipmark img{width:86%;height:86%;object-fit:contain}
+#root .glow{position:absolute;border-radius:50%;background:radial-gradient(circle, rgba(37,99,235,0.55) 0%, rgba(14,116,144,0.25) 40%, rgba(11,31,51,0) 70%);opacity:0;will-change:transform,opacity}
+</style>
+<div id="root" data-composition-id="inter-5" data-width="1920" data-height="1080" data-duration="16.993">
+<div class="bg"></div>
+<svg class="rings" id="inter-5-rings" viewBox="0 0 1200 1200" aria-hidden="true">
+<circle cx="600" cy="600" r="160" opacity="0.10"/><circle cx="600" cy="600" r="260" opacity="0.08"/><circle cx="600" cy="600" r="360" opacity="0.07"/><circle cx="600" cy="600" r="460" opacity="0.05"/><circle cx="600" cy="600" r="560" opacity="0.04"/></svg>
+<div class="micro" id="inter-5-micro">Chapter 6 · by the numbers</div>
+<div class="rule" id="inter-5-rule"></div><div class="accent" id="inter-5-accent"></div>
+<div class="headline"><span id="inter-5-h0">What</span><span id="inter-5-h1">one</span><span id="inter-5-h2">naive</span><span id="inter-5-h3">run</span><span id="inter-5-h4">cost</span></div>
+<div class="card" id="inter-5-s0" style="left:120px;top:430px;width:400px;height:250px;padding:30px"><div style="display:flex;align-items:baseline;justify-content:center;height:130px"><span class="mono" id="inter-5-pre0" style="font-size:44px;color:#7DD3E8;opacity:0"></span><span class="mono" id="inter-5-n0" style="font-size:96px;color:#F4F7FB;font-variant-numeric:tabular-nums;display:inline-block;transform-origin:center center">0</span><span class="mono" id="inter-5-suf0" style="font-size:44px;color:#7DD3E8;margin-left:10px;opacity:0">s</span></div><div style="text-align:center;font-size:24px;color:#A9BDD3;margin-top:10px">wall clock</div></div><div class="card" id="inter-5-s1" style="left:550px;top:430px;width:400px;height:250px;padding:30px"><div style="display:flex;align-items:baseline;justify-content:center;height:130px"><span class="mono" id="inter-5-pre1" style="font-size:44px;color:#7DD3E8;opacity:0"></span><span class="mono" id="inter-5-n1" style="font-size:96px;color:#F4F7FB;font-variant-numeric:tabular-nums;display:inline-block;transform-origin:center center">0</span><span class="mono" id="inter-5-suf1" style="font-size:44px;color:#7DD3E8;margin-left:10px;opacity:0"></span></div><div style="text-align:center;font-size:24px;color:#A9BDD3;margin-top:10px">tool calls</div></div><div class="card" id="inter-5-s2" style="left:980px;top:430px;width:400px;height:250px;padding:30px"><div style="display:flex;align-items:baseline;justify-content:center;height:130px"><span class="mono" id="inter-5-pre2" style="font-size:44px;color:#7DD3E8;opacity:0"></span><span class="mono" id="inter-5-n2" style="font-size:96px;color:#F4F7FB;font-variant-numeric:tabular-nums;display:inline-block;transform-origin:center center">0</span><span class="mono" id="inter-5-suf2" style="font-size:44px;color:#7DD3E8;margin-left:10px;opacity:0"></span></div><div style="text-align:center;font-size:24px;color:#A9BDD3;margin-top:10px">probe runs of grep</div></div><div class="card" id="inter-5-s3" style="left:1410px;top:430px;width:400px;height:250px;padding:30px"><div style="display:flex;align-items:baseline;justify-content:center;height:130px"><span class="mono" id="inter-5-pre3" style="font-size:44px;color:#7DD3E8;opacity:0">$</span><span class="mono" id="inter-5-n3" style="font-size:96px;color:#F4F7FB;font-variant-numeric:tabular-nums;display:inline-block;transform-origin:center center">0</span><span class="mono" id="inter-5-suf3" style="font-size:44px;color:#7DD3E8;margin-left:10px;opacity:0"></span></div><div style="text-align:center;font-size:24px;color:#A9BDD3;margin-top:10px">list-price cost</div></div>
+<div id="inter-5-chips" style="position:absolute;left:120px;top:730px;opacity:0;will-change:transform"><span class="chip">claude-haiku-5-5</span><span class="chip">Claude Code 2.1.296</span><span class="chip">Ubuntu 24.04 · aarch64</span><span class="chip">GNU grep 3.11</span></div>
+<div id="inter-5-note" style="position:absolute;left:120px;top:810px;font-size:28px;color:#CFE3F5;opacity:0;will-change:transform;line-height:1.5">Unasked, it wrote <b style="color:#F4F7FB">3 test scripts</b> of its own and revised its output <b style="color:#F4F7FB">once</b> after a test failed.</div>
+</div>
+<script>
+(function(){
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo("#inter-5-rings",{rotation:0,scale:1},{rotation:6,scale:1.03,duration:9,ease:"sine.inOut",repeat:3,yoyo:true},0);
+if(document.getElementById("inter-5-accent"))tl.fromTo("#inter-5-accent",{scaleX:0},{scaleX:1,duration:0.6,ease:"power3.out"},0.25);
+if(document.getElementById("inter-5-rule"))tl.fromTo("#inter-5-rule",{opacity:0},{opacity:1,duration:0.5},0.3);
+
+tl.fromTo("#inter-5-micro",{opacity:0,x:-20},{opacity:1,x:0,duration:0.5,ease:"power2.out"},0.15);
+tl.set("#inter-5-h0",{opacity:1,y:70},0.350);tl.to("#inter-5-h0",{y:0,duration:0.180,ease:"power4.out"},0.350);
+tl.set("#inter-5-h1",{opacity:1,y:44},0.497);tl.to("#inter-5-h1",{y:0,duration:0.154,ease:"power4.out"},0.497);
+tl.set("#inter-5-h2",{opacity:1,y:44},0.617);tl.to("#inter-5-h2",{y:0,duration:0.148,ease:"power4.out"},0.617);
+tl.set("#inter-5-h3",{opacity:1,y:44},0.715);tl.to("#inter-5-h3",{y:0,duration:0.142,ease:"power4.out"},0.715);
+tl.set("#inter-5-h4",{opacity:1,y:44},0.807);tl.to("#inter-5-h4",{y:0,duration:0.136,ease:"power4.out"},0.807);
+tl.fromTo("#inter-5-s0",{scale:0.6,opacity:0,y:20},{scale:1,opacity:1,y:0,duration:0.6,ease:"power3.out"},1.50);
+tl.fromTo("#inter-5-s1",{scale:0.6,opacity:0,y:20},{scale:1,opacity:1,y:0,duration:0.6,ease:"power3.out"},1.65);
+tl.fromTo("#inter-5-s2",{scale:0.6,opacity:0,y:20},{scale:1,opacity:1,y:0,duration:0.6,ease:"power3.out"},1.80);
+tl.fromTo("#inter-5-s3",{scale:0.6,opacity:0,y:20},{scale:1,opacity:1,y:0,duration:0.6,ease:"power3.out"},1.95);
+(function(){var el=document.getElementById("inter-5-n0");var st={v:0};tl.to(st,{v:739,duration:1.6,ease:"power2.out",onUpdate:function(){el.textContent=st.v.toFixed(0);}},2.30);tl.fromTo(el,{scale:0.7},{scale:1,duration:1.6,ease:"power2.out"},2.30);
+tl.to("#inter-5-suf0",{opacity:1,duration:0.3},3.90);tl.to("#inter-5-pre0",{opacity:1,duration:0.3},2.30);})();
+(function(){var el=document.getElementById("inter-5-n1");var st={v:0};tl.to(st,{v:72,duration:1.6,ease:"power2.out",onUpdate:function(){el.textContent=st.v.toFixed(0);}},2.45);tl.fromTo(el,{scale:0.7},{scale:1,duration:1.6,ease:"power2.out"},2.45);
+tl.to("#inter-5-suf1",{opacity:1,duration:0.3},4.05);tl.to("#inter-5-pre1",{opacity:1,duration:0.3},2.45);})();
+(function(){var el=document.getElementById("inter-5-n2");var st={v:0};tl.to(st,{v:85,duration:1.6,ease:"power2.out",onUpdate:function(){el.textContent=st.v.toFixed(0);}},2.60);tl.fromTo(el,{scale:0.7},{scale:1,duration:1.6,ease:"power2.out"},2.60);
+tl.to("#inter-5-suf2",{opacity:1,duration:0.3},4.20);tl.to("#inter-5-pre2",{opacity:1,duration:0.3},2.60);})();
+(function(){var el=document.getElementById("inter-5-n3");var st={v:0};tl.to(st,{v:0.96,duration:1.6,ease:"power2.out",onUpdate:function(){el.textContent=st.v.toFixed(2);}},2.75);tl.fromTo(el,{scale:0.7},{scale:1,duration:1.6,ease:"power2.out"},2.75);
+tl.to("#inter-5-suf3",{opacity:1,duration:0.3},4.35);tl.to("#inter-5-pre3",{opacity:1,duration:0.3},2.75);})();
+tl.fromTo("#inter-5-chips",{opacity:0,y:14},{opacity:1,y:0,duration:0.5,ease:"power2.out"},5.0);
+tl.fromTo("#inter-5-note",{opacity:0,y:14},{opacity:1,y:0,duration:0.6,ease:"power2.out"},9.5);
+
+window.__timelines["inter-5"] = tl;
+})();
+</script>
+</template></body></html>

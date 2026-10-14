@@ -106,7 +106,32 @@ tool calls, tried `pip install pash-annotations` (no pip in the stock image; PyP
 with patterns in 12 calls, all four files produced; collected to the package's `runs/`; not scored.
 grep is a sample command, so this run is a copying test as much as a solving test.
 
-**Status.** Package built 2026-10-13; run 1 done the same day (see above). **Task 017** (created
+**Run 3 (2026-10-13 19:34).** grep, v1, watch mode, model **`claude-haiku-5-5`** (the golden image's
+default; the README did not record the model before this), collected to
+`runs/2026-10-13_193448_naive-run-grep_grep_PROMPT_v1/`; **analysed 2026-10-13** in its
+`analysis/analysis.md` (+ two Excalidraw diagrams); not scored. Facts established from the log (all
+read directly from `stream.jsonl` / `stream.actions.log`):
+- 739 s, 73 turns, 72 tool calls (43 Bash, 9 Write, 15 Edit, 4 Read, 1 TaskStop), $0.96 list;
+  output 123,918 tokens of which 82,852 thinking; cache reads 11.2M.
+- **Claude Code 2.1.296's Bash tool defines a shell function `grep` that execs its bundled ugrep**
+  (`grep --version` → "ugrep 7.8.4"); the session noticed at call 6 and used `/usr/bin/grep` by path.
+  Any run whose test command is `grep` has this confound; `run.env`'s `binary=` path is the fix.
+- **Leak: the public caruca_v2 repo is one GitHub search away.** The session searched
+  `api.github.com/search/repositories?q=caruca`, found `tirandagan/caruca_v2`, listed its tree and
+  read three `memory/*grep*` notes via raw.githubusercontent.com (calls 14–17); the four-syntax
+  structure of its `grep.py` follows those notes. Decide: block network in clones, or record it per run.
+- Manual page read only for its first 1500 bytes (version header); option list taken from `--help`.
+  85 probe invocations in `/tmp/grep_probe` before the first write (call 28, 19:41:53); no isolation.
+- Wrote 3 check scripts (syntax: 129 grep runs; PaSh: real parser/classes from the downloaded
+  0.2.4 wheel, 42 invocations; behaviour: split-and-concatenate on a 400-line corpus). One finding
+  (PaSh's parser leaves `--opt=value` tokens among operands) fed back into both generators.
+- Output: `grep.py` **imports under v1's real `caruca.ir.syntax`** (4 syntaxes; `min=0`, `arity=`
+  on Glob/Path accepted); parser table = sample + 30 entries (`-0..-9`, 20 `--color=WHEN`) − 2;
+  classes rewritten. No file states the grep version. Report error: claims the sample lacked `-y`/`-u`
+  (it has both).
+Run 2 (19:05) is still unanalysed.
+
+**Status.** Package built 2026-10-13; runs 1 to 3 done the same day (see above). **Task 017** (created
 2026-10-13) is the comprehensive write-up of how the arm was built, for the advisors; deliverable
 `ai_docs/docs/naive_claude_code_arm_how_it_was_built.md`, not started. Related: [[caruca_v2_baseline_scope]] (the naive
 single-prompt control, task 001) and task 007 (agentic SDK arm) are the other two LLM arms.
