@@ -245,7 +245,7 @@ body = f'''
 <div id="{cid}-t" style="position:absolute;left:0;right:0;top:510px;text-align:center;font-size:72px;font-weight:700;letter-spacing:-0.02em;opacity:0;will-change:transform">Caruca v2</div>
 <div id="{cid}-u" class="mono" style="position:absolute;left:0;right:0;top:615px;text-align:center;font-size:30px;color:#7DD3E8;opacity:0;will-change:transform">github.com/tirandagan/caruca_v2</div>
 <div id="{cid}-p" class="mono" style="position:absolute;left:0;right:0;top:675px;text-align:center;font-size:20px;color:#A9BDD3;opacity:0;will-change:transform">naive_llm_caruca/runs/2026-10-13_193448_naive-run-grep_grep_PROMPT_v1 · analysis/analysis.md</div>
-<div id="{cid}-by" style="position:absolute;left:0;right:0;top:760px;text-align:center;font-size:30px;color:#CFE3F5;opacity:0;will-change:transform">Recorded and narrated by Tiran Dagan · 2026-10-13</div>
+<div id="{cid}-by" style="position:absolute;left:0;right:0;top:760px;text-align:center;font-size:30px;color:#CFE3F5;opacity:0;will-change:transform">Recorded by Tiran Dagan · 2026-10-13 · interludes voiced with ElevenLabs</div>
 <div id="{cid}-fade" style="position:absolute;inset:0;background:#0B1F33;opacity:0"></div>'''
 js = f'''
 tl.fromTo("#{cid}-mark",{{scale:0.7,opacity:0}},{{scale:1,opacity:1,duration:0.9,ease:"power3.out"}},0.5);
