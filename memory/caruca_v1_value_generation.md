@@ -40,8 +40,11 @@ running it on the Mac (v1 `.venv`, Python 3.12.9). Related: [[project-naive-clau
   (`Path(ONE_OR_MORE)`) gives 0 lines with two files; v1's model output (two `EXACTLY_ONE` paths) gives
   2,272/2,272. Checked on ImageMagick 6.9.12-98 with `usenix.jpg`: an option plus one file fails ("no
   images defined"), one file alone prints the version. Distinct lines: agent 2,422 (63,048 total), reference
-  1,052 (7,308), model output 2,272 (14,616). v1's PaSh tracing does not use any of these: `run.sh` traces
-  `pash_syntax_specs/convert.py` (input, optional `-resize`, output: three positions).
+  1,052 (7,308), model output 2,272 (14,616). v1's PaSh tracing does not use any of these: `run.sh` runs
+  `caruca trace --pash --stdin split --content split`; `--pash` selects `caruca.pash_syntax_specs`
+  (`cli/trace.py` lines 11–12), whose `convert.py` is input, optional `-resize`, output (three positions,
+  unchanged since `38aefafd0`, 2024-11-28); `--content split` includes `usenix.jpg`. The paper's section 7.4
+  does not say which grammar or settings its `convert` projection (98.72 h at two flags) used.
 - **The CLI accepts an outside grammar directly:** `PYTHONPATH=<scratch> caruca generate <cmd> --path <pkg>`
   where `<scratch>/<pkg>/__init__.py` and `<scratch>/<pkg>/<cmd>.py` exist (used for runs 7 and 9).
 - **Running v1's generator on an outside grammar without touching v1:** put the file in a scratch package

@@ -327,8 +327,9 @@ express two-word options. v1's curated reference does not use positions this way
 one or more paths, with no output marked. The agent marks the output, as a second operand node, but
 keeps all options before all files, as the samples do. PaSh's parser table can express neither, and
 in PaSh's real parser this decides the result: the usual order turns option words into file names.
-v1's PaSh tracing script (`caruca/run.sh`) uses the three-position grammar with text content
-(`--content split`); whether that is why v1 recorded "no successful runs" was not established.
+v1's PaSh tracing script (`caruca/run.sh`, `caruca trace --pash`) uses the three-position grammar with
+its full content pool (`--content split`, which includes the one JPEG); why v1 recorded "no successful
+runs" was not established.
 
 **What is "correct" depends on the yardstick.** Scored against v1's reference, the agent loses one
 name and adds 275 spellings v1 does not have, and loses `-view`. Scored against the binary, the one

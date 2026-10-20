@@ -266,3 +266,17 @@ since 2024-12-04 (2024-11-28: "Found no successful runs. Defaulting to side-effe
 `benchmarks/MILESTONES` lists convert unchecked; v1's `pash_syntax_specs/convert.py` = input, `-resize`,
 output (3 positions: the syntax format can hold options between files, the samples never show it).
 Stock clone image also has `nerdctl` 2.3.5 + rootless containerd (unused by every run so far).
+**Run 8 in the addendum (2026-10-20):** written up as section 3, "A wide interface: `convert`", of
+`ai_docs/analysis/white_paper_addendum_naive_llm.md` (version 0.3, PDF 17 pages); analysis index updated.
+Suggestions there: widen the binary check to `-help`/library/listing commands; use positions for options
+between files; test options singly before combining (the paper's own 7.4 remark as a schedule); record which
+option orders a consumer annotation holds for. PaSh's own `img_convert.sh` benchmark uses options-first order
+(`convert -resize 70% "$i" "$out"`), which the agent's annotation handles; PaSh 0.2.4 ships no `convert`
+annotation; v1's hand-written one is `eval/pash-annotations/convert.json` (pure, args[1] → args[2]).
+**2026-10-20: runs 7 and 9 written up as section 4 of `ai_docs/analysis/white_paper_addendum_naive_llm.md`
+(version 0.4; convert is section 3, from the parallel session; PDF 23 pages, title "Naive LLM").** Facts
+re-verified at source for it: v1's split test needs each half's output to keep its input's line order
+(`tracer/data.py` 112–146), added 2025-12-21 (`c97306bb4`), after the committed `save/{cut,sort}.json`
+(2024-12-07/08); the paper (section 6.3) defines stateless as split-run-concatenate equality and (6.1) puts
+aggregator synthesis out of scope, while v1's code never emits `pure` (only S/N/E in `to_annotation`).
+Two sessions editing the addendum at once produced two "section 3"s; merged by agreement.
