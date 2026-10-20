@@ -77,5 +77,5 @@
  {"type": "arrow", "id": "a_s6_o4", "x": 600, "y": 824, "sw": 1, "stroke": "#1e3a5f", "points": [[0,0],[722,30]]},
 
  {"type": "text", "id": "footer", "x": 40, "y": 1050, "fs": 14, "stroke": "#64748b",
-  "text": "Not drawn: the formats shape every file. The option set, the argument counts and the value lists came from the binary, not from the manual or a sample.\nCounts of binary runs are estimates from the logged outputs of the agent's loops."}
+  "text": "The formats also shape convert.py (arrow left out for clarity). The option set, the argument counts and the value lists came from the binary, not from the manual or a sample.\nCounts of binary runs are estimates from the logged outputs of the agent's loops."}
 ]

@@ -1545,15 +1545,15 @@
    "boundElements": null,
    "link": null,
    "locked": false,
-   "text": "Not drawn: the formats shape every file. The option set, the argument counts and the value lists came from the binary, not from the manual or a sample.\nCounts of binary runs are estimates from the logged outputs of the agent's loops.",
-   "originalText": "Not drawn: the formats shape every file. The option set, the argument counts and the value lists came from the binary, not from the manual or a sample.\nCounts of binary runs are estimates from the logged outputs of the agent's loops.",
+   "text": "The formats also shape convert.py (arrow left out for clarity). The option set, the argument counts and the value lists came from the binary, not from the manual or a sample.\nCounts of binary runs are estimates from the logged outputs of the agent's loops.",
+   "originalText": "The formats also shape convert.py (arrow left out for clarity). The option set, the argument counts and the value lists came from the binary, not from the manual or a sample.\nCounts of binary runs are estimates from the logged outputs of the agent's loops.",
    "fontSize": 14,
    "fontFamily": 3,
    "textAlign": "left",
    "verticalAlign": "top",
    "containerId": null,
    "lineHeight": 1.25,
-   "width": 1268,
+   "width": 1462,
    "height": 35
   }
  ],
