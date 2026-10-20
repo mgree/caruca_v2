@@ -1,0 +1,563 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "fs": 26,
+  "stroke": "#1e40af",
+  "text": "cut, five jobs, two designs: the Caruca paper's v1 and the agent in run 6 (cut is not a sample)"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 64,
+  "fs": 16,
+  "stroke": "#64748b",
+  "text": "purple = done by a language model \u00b7 blue = done by hand-written code \u00b7 red text = where the two designs differ most \u00b7 green text = where they agree. Sections: Caruca paper (arXiv:2510.14279)."
+ },
+ {
+  "type": "text",
+  "id": "lane1",
+  "x": 40,
+  "y": 150,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "v1, as the\npaper designs it"
+ },
+ {
+  "type": "text",
+  "id": "lane1d",
+  "x": 40,
+  "y": 204,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "a fixed pipeline:\none model step,\nthen code"
+ },
+ {
+  "type": "rectangle",
+  "id": "v1",
+  "x": 240,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "v1t",
+  "x": 256,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "1 Syntax: a model writes it"
+ },
+ {
+  "type": "text",
+  "id": "v1b",
+  "x": 256,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "GPT-4o reads a bundled copy of\nthe man page (not --help, not the\nbinary), with worked examples\n(touch, rm, mv, ls); imported\nand type-checked; up to 3 tries\n(section 3)"
+ },
+ {
+  "type": "rectangle",
+  "id": "v2",
+  "x": 600,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v2t",
+  "x": 616,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "2 Choose what to run: code"
+ },
+ {
+  "type": "text",
+  "id": "v2b",
+  "x": 616,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "every combination of up to 4\nflags (the shipped limit); typed\nvalues: ranges 1, 1-, 1-2, -2,\n1,3; delimiters; paths from a\nfile-system model  (section 4)"
+ },
+ {
+  "type": "rectangle",
+  "id": "v3",
+  "x": 960,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v3t",
+  "x": 976,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "3 Run and observe: code"
+ },
+ {
+  "type": "text",
+  "id": "v3b",
+  "x": 976,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "each case isolated and traced\nwith strace; for PaSh, v1's own\nscript runs with split input\nso that the stateless test\ncan be made  (section 5)"
+ },
+ {
+  "type": "rectangle",
+  "id": "v4",
+  "x": 1320,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v4t",
+  "x": 1336,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "4 Decide behaviour: rules"
+ },
+ {
+  "type": "text",
+  "id": "v4b",
+  "x": 1336,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "stateless if running on split\ninput and joining the outputs\nequals one run; inputs and\noutputs from the recorded\nreads and writes; filtering;\ncwd use  (section 6.3)"
+ },
+ {
+  "type": "rectangle",
+  "id": "v5",
+  "x": 1680,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v5t",
+  "x": 1696,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "5 Write per consumer: code"
+ },
+ {
+  "type": "text",
+  "id": "v5b",
+  "x": 1696,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "adapters translate one\ninternal result into PaSh and\nShseer JSON, POSH YAML and\nShellCheck Haskell\n(section 6.4)"
+ },
+ {
+  "type": "arrow",
+  "id": "va1",
+  "x": 560,
+  "y": 220,
+  "sw": 2,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "va2",
+  "x": 920,
+  "y": 220,
+  "sw": 2,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "va3",
+  "x": 1280,
+  "y": 220,
+  "sw": 2,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "va4",
+  "x": 1640,
+  "y": 220,
+  "sw": 2,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "d1",
+  "x": 256,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "v1's reference and model output:\none syntax, -b/-c/-f all optional;\nthe agent: one syntax per selector\n('use one, and only one')"
+ },
+ {
+  "type": "text",
+  "id": "d2",
+  "x": 616,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "through v1's generator at 4 flags,\ncut runs 360 reference lines for\nreal; agent's file: 0 (every\nselector written as -b=1)"
+ },
+ {
+  "type": "text",
+  "id": "d3",
+  "x": 976,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "cut only reads, so isolation\nmatters little; v1 traces each\ncase, the agent reads the\nprinted output"
+ },
+ {
+  "type": "text",
+  "id": "d4",
+  "x": 1336,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#047857",
+  "text": "the same idea on both sides: split\nthe input, run on each piece, join,\ncompare with one run; v1: 35 cases\nall stateless; the agent: 45 runs"
+ },
+ {
+  "type": "text",
+  "id": "d5",
+  "x": 1696,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "v1's committed cut annotation: old\nPaSh JSON, 35 cases, stdout only;\nthe agent: PaSh's current form,\nnear-identical to PaSh's own files"
+ },
+ {
+  "type": "rectangle",
+  "id": "agentbox",
+  "x": 220,
+  "y": 400,
+  "w": 1800,
+  "h": 244,
+  "stroke": "#6d28d9",
+  "fill": "transparent",
+  "style": "dashed"
+ },
+ {
+  "type": "text",
+  "id": "agentboxl",
+  "x": 236,
+  "y": 410,
+  "fs": 15,
+  "stroke": "#6d28d9",
+  "text": "one Claude Code session, claude-fable-5-1 at medium effort: every step below is the model's own choice, in 17 tool calls and 104 seconds"
+ },
+ {
+  "type": "text",
+  "id": "lane2",
+  "x": 40,
+  "y": 464,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "run 6:\nthe agent"
+ },
+ {
+  "type": "text",
+  "id": "lane2d",
+  "x": 40,
+  "y": 518,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "no pipeline:\none model does\nevery job"
+ },
+ {
+  "type": "rectangle",
+  "id": "g1",
+  "x": 240,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g1t",
+  "x": 256,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "1 Syntax: the model"
+ },
+ {
+  "type": "text",
+  "id": "g1b",
+  "x": 256,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "no sample for cut: reads the\nmanual and --help; three\nsyntaxes, one per selector;\ncopies uniq's '=' marker onto\n-b, -c, -f, -d; misses that -d\nand -s need -f"
+ },
+ {
+  "type": "rectangle",
+  "id": "g2",
+  "x": 600,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g2t",
+  "x": 616,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "2 Choose what to run: model"
+ },
+ {
+  "type": "text",
+  "id": "g2b",
+  "x": 616,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "21 runs by hand (call 13):\nranges, long forms with '=',\nerrors (two selectors, none,\n2-char -d, -b0); never -d or -s\nwith -b/-c; 4 of 17 spellings\nnever run"
+ },
+ {
+  "type": "rectangle",
+  "id": "g3",
+  "x": 960,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g3t",
+  "x": 976,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "3 Run and observe: model"
+ },
+ {
+  "type": "text",
+  "id": "g3b",
+  "x": 976,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "plain shell in /tmp, on a\nthree-line file; reads what\ncut prints and its exit code;\nno strace (not needed for\na command that only reads)"
+ },
+ {
+  "type": "rectangle",
+  "id": "g4",
+  "x": 1320,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g4t",
+  "x": 1336,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "4 Decide behaviour: model"
+ },
+ {
+  "type": "text",
+  "id": "g4b",
+  "x": 1336,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "reasons that each line is\nindependent, then tests it after\nwriting: 5,000 lines, 4 chunks,\njoin = one run (5 option sets);\nround robin equal as a multiset"
+ },
+ {
+  "type": "rectangle",
+  "id": "g5",
+  "x": 1680,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g5t",
+  "x": 1696,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "5 Write PaSh's form: model"
+ },
+ {
+  "type": "text",
+  "id": "g5b",
+  "x": 1696,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "table = PaSh's own minus -M\n(which GNU cut rejects); classes\nmatch PaSh's, except no split\nunder -z; checked only against\nstand-ins that accept anything"
+ },
+ {
+  "type": "arrow",
+  "id": "ga1",
+  "x": 560,
+  "y": 534,
+  "sw": 2,
+  "stroke": "#6d28d9",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "ga2",
+  "x": 920,
+  "y": 534,
+  "sw": 2,
+  "stroke": "#6d28d9",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "ga3",
+  "x": 1280,
+  "y": 534,
+  "sw": 2,
+  "stroke": "#6d28d9",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "ga4",
+  "x": 1640,
+  "y": 534,
+  "sw": 2,
+  "stroke": "#6d28d9",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "scale",
+  "x": 40,
+  "y": 670,
+  "fs": 15,
+  "stroke": "#374151",
+  "text": "Scale for cut. v1's generator, at its shipped limit of 4 flags, writes 75,172 command lines from its reference grammar, 11,651 of them distinct (measured here); cut accepts 1,783,\nof which 360 do real work (the rest carry --help or --version). The agent ran cut 21 times before writing and 45 times after, all hand-chosen."
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 730,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "v1 is shown as the paper designs it (sections 2-6), not as run for this comparison. Counts marked 'measured here' come from v1's own generator and GNU coreutils 9.4 in the pash VM. Method, not quality, is compared."
+ }
+]

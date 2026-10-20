@@ -1,0 +1,371 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "fs": 24,
+  "stroke": "#1e40af",
+  "text": "Session workflow: sort, PROMPT_v1, 2026-10-20 16:03  (Claude Code 2.1.296, model claude-fable-5-1 at medium effort, 23 tool calls, 304 s)"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 62,
+  "fs": 16,
+  "stroke": "#64748b",
+  "text": "Six phases on one timeline, left to right. Segment widths are not to scale; durations are written under each phase. Times are local (UTC-4). Web tools off; no network use."
+ },
+ {
+  "type": "line",
+  "id": "spine",
+  "x": 80,
+  "y": 380,
+  "sw": 3,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    1820,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "ellipse",
+  "id": "d0",
+  "x": 73,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#3b82f6",
+  "fill": "#3b82f6",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d1",
+  "x": 383,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#3b82f6",
+  "fill": "#3b82f6",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d2",
+  "x": 713,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d3",
+  "x": 1053,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#c2410c",
+  "fill": "#c2410c",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d4",
+  "x": 1333,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#047857",
+  "fill": "#a7f3d0",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d5",
+  "x": 1673,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#3b82f6",
+  "fill": "#3b82f6",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d6",
+  "x": 1893,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#047857",
+  "fill": "#047857",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "t_start",
+  "x": 74,
+  "y": 296,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "16:03:53"
+ },
+ {
+  "type": "text",
+  "id": "t_end",
+  "x": 1906,
+  "y": 296,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "16:08:54",
+  "align": "right"
+ },
+ {
+  "type": "text",
+  "id": "p0",
+  "x": 92,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "1 Read formats + samples"
+ },
+ {
+  "type": "text",
+  "id": "c0",
+  "x": 92,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "calls 1-14 \u00b7 23 s"
+ },
+ {
+  "type": "text",
+  "id": "cd0",
+  "x": 92,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "folder \u00b7 syntax format (call 1);\ncall 2 batch: 31.2 KB, saved to a\nfile, 2 KB preview; call 3: cat of\nit, saved again; calls 4-14: Read\ntool on PaSh's format and the uniq,\ngrep and tee samples"
+ },
+ {
+  "type": "text",
+  "id": "p1",
+  "x": 402,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "2 Manual, search"
+ },
+ {
+  "type": "text",
+  "id": "c1",
+  "x": 402,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "calls 15-16 \u00b7 32 s"
+ },
+ {
+  "type": "text",
+  "id": "cd1",
+  "x": 402,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "manual rendered in full, --version\n(coreutils 9.4), --help (call 15);\nrm's sample, import attempts and a\nfind over / for caruca and\npash_annotations: none (call 16)"
+ },
+ {
+  "type": "text",
+  "id": "p2",
+  "x": 732,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "3 Probe sort (88 runs)"
+ },
+ {
+  "type": "text",
+  "id": "c2",
+  "x": 732,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "calls 17-18 \u00b7 141 s"
+ },
+ {
+  "type": "text",
+  "id": "cd2",
+  "x": 732,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "in /tmp/sorttest on tiny files:\n-o once only, -c vs -o, --check=\nvalues, -k forms, -S suffixes,\n--batch-size >= 2, -t, --files0-from,\n-u implies -s, 'sort -m' of sorted\nchunks equals one sort"
+ },
+ {
+  "type": "text",
+  "id": "p3",
+  "x": 1072,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "4 Write all 4"
+ },
+ {
+  "type": "text",
+  "id": "c3",
+  "x": 1072,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "call 19 \u00b7 28 s"
+ },
+ {
+  "type": "text",
+  "id": "cd3",
+  "x": 1072,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "one shell call writes all\nfour; prints 21 flags,\n12 options"
+ },
+ {
+  "type": "text",
+  "id": "p4",
+  "x": 1352,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "5 Test what it wrote"
+ },
+ {
+  "type": "text",
+  "id": "c4",
+  "x": 1352,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "calls 20-22 \u00b7 60 s"
+ },
+ {
+  "type": "text",
+  "id": "cd4",
+  "x": 1352,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "harness 1: every spelling run, about\n128 sort runs; ends 'BAD = 8', not\nmentioned again; harness 2: classes\non stand-ins; 20 option sets split\nin 2, 3, 5 parts and merged, about\n825 runs, 0 failures; round robin\nbreaks -s and -u (8 runs)"
+ },
+ {
+  "type": "text",
+  "id": "p5",
+  "x": 1692,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "6 Clean, report"
+ },
+ {
+  "type": "text",
+  "id": "c5",
+  "x": 1692,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "call 23 \u00b7 17 s"
+ },
+ {
+  "type": "text",
+  "id": "cd5",
+  "x": 1692,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "deletes __pycache__;\nreport at 16:08:54"
+ },
+ {
+  "type": "line",
+  "id": "fw",
+  "x": 1060,
+  "y": 124,
+  "sw": 2,
+  "style": "dashed",
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    470
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "fwl",
+  "x": 1060,
+  "y": 100,
+  "fs": 16,
+  "stroke": "#c2410c",
+  "text": "FILES WRITTEN 16:07:09, 199 s in (call 19: all four at once)",
+  "align": "center"
+ },
+ {
+  "type": "text",
+  "id": "fwb",
+  "x": 1050,
+  "y": 610,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "text": "binary run before this point: --version, --help\nand 88 probes (calls 17-18)",
+  "align": "right"
+ },
+ {
+  "type": "text",
+  "id": "fwa",
+  "x": 1072,
+  "y": 610,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "text": "after this point: about 960 runs, against stand-in\nmodules the session wrote itself"
+ },
+ {
+  "type": "text",
+  "id": "miss",
+  "x": 1360,
+  "y": 160,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "the stand-ins do not enforce PaSh's rule that round\nrobin needs a concatenating aggregator; in PaSh's\nreal code the class fails and PaSh silently drops\nits answer for every ordinary sort"
+ },
+ {
+  "type": "text",
+  "id": "iso",
+  "x": 80,
+  "y": 156,
+  "fs": 14,
+  "stroke": "#b45309",
+  "text": "isolation: none; sort only reads, except -o (written in\n/tmp/sorttest) and --compress-program=gzip, which it ran;\nscratch folders deleted at the end"
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 690,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "Phase boundaries are tool-call numbers from stream.actions.log; a phase's duration runs from its first call to the next phase's first call, the last to the report.\nThe session started at 16:03:50. Run counts after the write are counted from the harness code, which runs sort once per case, part and merge."
+ }
+]

@@ -1,0 +1,7 @@
+# recorded by the operator after the run, 2026-10-20
+imagemagick	8:6.9.12.98+dfsg1-5.2build2
+imagemagick-6.q16	8:6.9.12.98+dfsg1-5.2build2
+libmagickcore-6.q16-7t64:arm64	8:6.9.12.98+dfsg1-5.2build2
+libmagickwand-6.q16-7t64:arm64	8:6.9.12.98+dfsg1-5.2build2
+Version: ImageMagick 6.9.12-98 Q16 aarch64 18038 https://legacy.imagemagick.org
+/usr/bin/convert-im6.q16
