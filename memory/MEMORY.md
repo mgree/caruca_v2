@@ -53,3 +53,4 @@
 - [Large media out of git](feedback_large_media_out_of_git.md) — 2026-10-13: recordings/renders live in ~/Documents, symlinked + gitignored; a 169 MB mp4 blocked a push
 - [Caruca YouTube video](project_caruca_youtube_video.md) — 2026-10-13: HyperFrames edit of naive run #1 at videos/caruca-naive-run-1; ElevenLabs voice zs057lc0shdaAFXkm2Fm; key lacks speech-to-text, 3-concurrent limit
 - [md-to-pdf and wide diagrams](reference_md_to_pdf_wide_diagrams.md) — the repo converter downscales relative images to 1,600 px (blurs Excalidraw renders); absolute image paths bypass it; landscape diagrams stay small on printed portrait pages
+- [Naive LLM addenda stand alone](feedback_naive_llm_standalone.md) — 2026-10-20: naive-arm proposals go in white_paper_addendum_naive_llm.md under a "Naive LLM" heading, citing only primary sources (paper, v1 code/git, run logs), never the earlier rebuild's findings

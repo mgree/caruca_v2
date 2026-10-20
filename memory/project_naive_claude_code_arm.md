@@ -192,5 +192,7 @@ formatting (tuple vs list, trailing newline); v1's committed `caruca/save/rm.jso
 cases, both side-effectful, path as input and output. The paper's rm figure: 8,749,056 invocation
 configurations (section 2.2). **Caveat found after the analysis:** `rm` is one of v1's own few-shot examples
 (`llm.py:116`), so v1's model had rm's reference answer in its prompt, just as the agent had it in
-`samples/`. The run-5 analysis and its v1 diagram say "v1's model matched its reference for rm" without
-this caveat; correct them before the PDF circulates.
+`samples/`. Applied 2026-10-20: the run-5 analysis gained a plain-language "What this run
+teaches" section (Tiran asked for the insights, not verbose or technical), the v1 claims and diagram now
+carry the caveat, and the PDF was regenerated (17 pages). Runs 1 and 2 have no run folder any more (run 1
+deleted by Tiran; run 2's folder is absent from `runs/`), so only runs 3-5 can be re-read from logs.

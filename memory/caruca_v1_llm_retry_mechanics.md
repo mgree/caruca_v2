@@ -118,3 +118,9 @@ bundled man page plus v1's curated reference `syntax_specs/<c>.py` for `touch`, 
 (`llm.py:116`), so for any of those four commands the target's own reference answer is in the prompt.**
 v1's shipped LLM output for `rm` matching the reference is therefore not an independent result. The
 paper names three examples (`rm`, `mv`, `touch`); the code has four.
+
+**The four example commands are inside v1's scored set (checked 2026-10-20).** `eval/llm_correctness.sh`
+scores every `syntax_specs/*.py` (120 files), which includes `rm`, `mv`, `touch` and `ls`, whose reference
+answers are in the model's prompt as examples. By AST, the shipped LLM output equals the reference for
+`mv` and `touch`; `rm` differs only in formatting (tuple vs list); `ls` differs (not examined). *Not
+established:* whether the paper's 116/120 or our 78/116 denominator excludes these four.

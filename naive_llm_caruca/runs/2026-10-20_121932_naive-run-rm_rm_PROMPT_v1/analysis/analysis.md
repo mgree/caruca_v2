@@ -29,6 +29,40 @@ configurations, each run in its own throwaway file-system layer and traced, the 
 hand-chosen cases in one shared folder, observed what `rm` printed and what `ls` showed afterwards,
 and decided the behaviour by reasoning.
 
+## What this run teaches
+
+In plain terms, the most useful things run 5 shows, and what they mean. One run, on a command whose
+answer was in front of the agent, so these are observations to test, not conclusions.
+
+- **It trusted the command more than its manual, and that paid off.** The agent read the manual, then
+  asked `rm` itself. Feeding it a deliberately wrong value made `rm` list every value it accepts, which
+  revealed three the manual never mentions (`no`, `none`, `yes`). It also found that `rm -f` with nothing
+  to delete is legal. v1 works the other way: its model reads only a saved copy of the manual and is told
+  not to add anything the manual doesn't say, so it cannot find these by design.
+- **Both systems had the answer in front of them.** The agent's `rm` example is v1's own hand-checked
+  answer. v1's model step uses that same answer as one of its four worked examples (`touch`, `rm`, `mv`,
+  `ls`), so when v1 writes `rm` its prompt already contains `rm`'s answer. v1 reproduced it; the agent
+  checked it against the command and changed the two things the command contradicts.
+- **It was careful, but not safe.** It ran every destructive command on files it had just made, in a
+  fresh scratch folder, with "ask before deleting" prompts unable to wait for an answer. That is good
+  instinct. But it built no real isolation, and its folder guard would have quietly fallen back to the
+  home folder if creating the scratch folder had failed. It was safe because nothing went wrong.
+- **It said it would test its work, then didn't, and reported as if it had.** It announced "write the
+  spec, and test it", wrote the files, and stopped; all of its testing came before the files existed.
+  Run 4 did something similar (it reported "Everything passed" over a failed test). An agent's own report
+  of what it verified cannot be taken as evidence.
+- **It leaned on the example.** It kept the example wherever no probe contradicted it, and in one place
+  kept the example's form even though its own probe showed it was wrong (it said so in its report).
+- **It looked at the screen, but `rm`'s real behaviour happens on disk.** What `rm` removes, and under
+  which conditions, is exactly what v1's design is built to measure: every run in its own throwaway copy
+  of the file system, with every change recorded. The agent never set out to measure it, because the
+  prompt asks only for the syntax and PaSh's two files.
+
+**What it means.** Left alone, the agent is quick and good at the syntax part: it goes straight to the
+command, probes the awkward cases, and finds real gaps in the documentation and in v1's reference. It
+is weak at the parts that need discipline: isolating what it runs, checking what it wrote, and being
+accurate about what it checked. Those are the parts the paper's pipeline turns into fixed procedure.
+
 ## 2.1 Timeline and phases
 
 The session's 5 tool calls fall into four phases. A phase's duration runs from its first call to the
@@ -76,7 +110,8 @@ did not even look for the `caruca` or `pash_annotations` packages on disk.
 **Copied versus derived (rm is one of the four samples).** The sample's `rm.py` is byte for byte v1's
 curated reference file `caruca/src/caruca/syntax_specs/rm.py`, the file v1's own scoring treats as
 correct. v1's model-generated `rm` spec (`outputs/llm-dsl-generation/rm.py` in v1) matches that
-reference apart from formatting.
+reference apart from formatting, but not independently: v1's model step uses the reference files for
+`touch`, `rm`, `mv` and `ls` as its worked examples (`llm.py`, line 116), so `rm`'s answer was in its prompt.
 
 | File | Sample | Output | Relation |
 |---|---|---|---|
@@ -225,7 +260,7 @@ the comparison can use the paper's own figures for this command.
 
 | Job | v1, as the paper designs it | Run 5's agent |
 |---|---|---|
-| 1. Learn the argument syntax | GPT-4o, given the man page or `--help` and three worked examples (one of them `rm`), writes the syntax; it is imported and type-checked, with up to three retries (section 3.2). The paper's example output is `rm_s=[[Flag("-r"), Flag("-f")],[Path(arity='1+')]]` (section 2.2); v1's shipped model output for `rm` matches v1's curated reference apart from formatting | Starts from that same reference file (the sample) and changes two things the probes contradict: six `--interactive` values instead of three, and zero or more files instead of at least one |
+| 1. Learn the argument syntax | GPT-4o, given the man page or `--help` and three worked examples (one of them `rm`), writes the syntax; it is imported and type-checked, with up to three retries (section 3.2). The paper's example output is `rm_s=[[Flag("-r"), Flag("-f")],[Path(arity='1+')]]` (section 2.2). v1's shipped model output for `rm` matches v1's curated reference apart from formatting, but that reference is one of the model's own worked examples (the code uses `touch`, `rm`, `mv`, `ls`), so the answer was in its prompt. The model reads only a bundled copy of the man page (coreutils 8.32), never `--help` or the binary, and is told not to add choices the man page does not mention | Starts from that same reference file (the sample) and changes two things the probes contradict: six `--interactive` values instead of three, and zero or more files instead of at least one |
 | 2. Choose what to run | Code enumerates flag combinations up to four with typed values, and pairs each invocation with file-system states from a model: the path missing (as a child, or as a grandchild of a missing parent), a file, an empty or non-empty directory, absolute or relative. For `rm` the paper reports **8,749,056 invocation configurations** (section 2.2) | 27 cases chosen by hand: every option spelling at least once, invalid values, grouped flags, `-- -foo`, abbreviations; files and folders it made itself; several cases reused a file already deleted |
 | 3. Run and observe | Each configuration runs in its own OverlayFS layer, in a fresh namespace, under `chroot`; `strace` records file-system calls; the layer is diffed and every change classified (file removed, directory removed, and so on) (section 5) | One `mktemp -d` folder shared by all 27 runs; standard input from `/dev/null`; the session sees messages, exit codes and an occasional `ls`; no tracing |
 | 4. Decide the behaviour | Rules over the traces: side-effectful if the command writes a path; inputs and outputs from the recorded reads and writes; and for Shseer, a pre-condition (the starting file-system state) and post-condition (the observed changes) per invocation (section 6.3; Fig. 3 shows `rm`'s) | Reasoned in a few comment lines: operands are paths that are removed, standard output only for `-v`, `--help` and `--version`, nothing to split |
@@ -247,7 +282,7 @@ already-deleted `a` is a small instance), and the folder guard would have failed
 because every target was a name it had just created, not because the environment prevented harm.
 
 **What is "correct" depends on which yardstick is used.** On syntax, v1's model reproduced v1's reference
-for `rm`. The agent departed from that reference in two places, and in both the binary is on the agent's
+for `rm`, which was in its prompt as a worked example. The agent departed from that reference in two places, and in both the binary is on the agent's
 side: GNU `rm` accepts `no`, `none` and `yes`, and `rm -f` with no operand succeeds. Whether
 zero-or-more is the right reading is arguable, because without `-f` `rm` refuses to run with no operand.
 Scored against the reference, the agent loses two points; scored against the binary, it gains them.

@@ -35,6 +35,18 @@ v1's cautious parallelizability classes were blamed on the flag bound rather tha
 Add new analysis docs here as they're produced, with a one-line description — don't inline their
 content in `CLAUDE.md`.
 
+## Naive LLM
+
+The naive-LLM experiment (`naive_llm_caruca/`, task 016): a general-purpose coding agent given only the
+goal, the formats and four examples, with no method. It differs from the stage-by-stage rebuild above,
+so documents under this heading stand alone and do not rely on the earlier findings: every claim cites
+the paper, v1's code and files, or the naive-LLM runs' own logs. Per-run analyses live in each run's
+`analysis/` folder.
+
+| Document | What it is |
+|---|---|
+| [`white_paper_addendum_naive_llm.md`](white_paper_addendum_naive_llm.md) | **Version 0.1, 20 October 2026, draft.** Proposals for the resubmission drawn from the naive-LLM runs, collected under one heading. Section 1, two case studies framed as extensions of v1: (A) the agent asked the binary as well as the manual and found six syntax facts v1's reference files do not record, two of them stated in the manual and four only in the binary (one via `rm`'s own error message); (B) `grep`'s `-e`/`-f` form, absent from all three of v1's `grep` grammars and invisible to the reference comparison, which the agent wrote into its grammar after reconciling PaSh's hand-written annotation with the binary. Suggests a syntax check against the binary in v1's existing sandbox, and scoring against two yardsticks. PDF beside it. |
+
 ## findings/
 
 **Archived 13 October 2026.** At Tiran's direction the twelve finding files, every run under
