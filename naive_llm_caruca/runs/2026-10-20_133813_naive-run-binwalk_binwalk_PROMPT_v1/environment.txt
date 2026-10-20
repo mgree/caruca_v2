@@ -1,0 +1,5 @@
+2.1.296 (Claude Code)
+Ubuntu 24.04.4 LTS
+aarch64
+  "authMethod": "claude.ai",
+  "subscriptionType": "max"

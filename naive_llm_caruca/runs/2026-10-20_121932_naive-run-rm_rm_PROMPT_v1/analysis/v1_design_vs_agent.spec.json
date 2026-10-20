@@ -1,0 +1,563 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "fs": 26,
+  "stroke": "#1e40af",
+  "text": "rm, five jobs, two designs: the Caruca paper's v1 (rm is its running example) and the agent in run 5"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 64,
+  "fs": 16,
+  "stroke": "#64748b",
+  "text": "purple = done by a language model \u00b7 blue = done by hand-written code \u00b7 red text = where the two designs differ most. Section numbers refer to the Caruca paper (arXiv:2510.14279)."
+ },
+ {
+  "type": "text",
+  "id": "lane1",
+  "x": 40,
+  "y": 150,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "v1, as the\npaper designs it"
+ },
+ {
+  "type": "text",
+  "id": "lane1d",
+  "x": 40,
+  "y": 204,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "a fixed pipeline:\none model step,\nthen code"
+ },
+ {
+  "type": "rectangle",
+  "id": "v1",
+  "x": 240,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "v1t",
+  "x": 256,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "1 Syntax: a model writes it"
+ },
+ {
+  "type": "text",
+  "id": "v1b",
+  "x": 256,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "GPT-4o reads a bundled copy of\nthe man page (not --help, not the\nbinary), with worked examples that\ninclude rm's own answer; told not\nto add choices the man page\nlacks; up to 3 tries (section 3)"
+ },
+ {
+  "type": "rectangle",
+  "id": "v2",
+  "x": 600,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v2t",
+  "x": 616,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "2 Choose what to run: code"
+ },
+ {
+  "type": "text",
+  "id": "v2b",
+  "x": 616,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "every combination of up to 4\nflags; typed values: integers\n-1, 0, 1, every choice, paths\nfrom a file-system model;\ninputs: book text, arithmetic,\nJSON, images  (section 4)"
+ },
+ {
+  "type": "rectangle",
+  "id": "v3",
+  "x": 960,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v3t",
+  "x": 976,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "3 Run and observe: code"
+ },
+ {
+  "type": "text",
+  "id": "v3b",
+  "x": 976,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "each case in a throwaway\nfile-system layer (OverlayFS),\nfresh namespace, chroot;\nstrace records every file\nread and write; changes are\ndiffed after  (section 5)"
+ },
+ {
+  "type": "rectangle",
+  "id": "v4",
+  "x": 1320,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v4t",
+  "x": 1336,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "4 Decide behaviour: rules"
+ },
+ {
+  "type": "text",
+  "id": "v4b",
+  "x": 1336,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "stateless if running on split\ninput and joining the outputs\nequals one run; inputs and\noutputs from the recorded\nreads and writes; filtering;\ncwd use  (section 6.3)"
+ },
+ {
+  "type": "rectangle",
+  "id": "v5",
+  "x": 1680,
+  "y": 140,
+  "w": 320,
+  "h": 160,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v5t",
+  "x": 1696,
+  "y": 152,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "5 Write per consumer: code"
+ },
+ {
+  "type": "text",
+  "id": "v5b",
+  "x": 1696,
+  "y": 180,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "adapters translate one\ninternal result into PaSh and\nShseer JSON, POSH YAML and\nShellCheck Haskell\n(section 6.4)"
+ },
+ {
+  "type": "arrow",
+  "id": "va1",
+  "x": 560,
+  "y": 220,
+  "sw": 2,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "va2",
+  "x": 920,
+  "y": 220,
+  "sw": 2,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "va3",
+  "x": 1280,
+  "y": 220,
+  "sw": 2,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "va4",
+  "x": 1640,
+  "y": 220,
+  "sw": 2,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "d1",
+  "x": 256,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "v1's model reproduced its reference\nfor rm, which is one of its own\nworked examples; the agent changed\n2 things the binary supports"
+ },
+ {
+  "type": "text",
+  "id": "d2",
+  "x": 616,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "the paper: 8,749,056 configurations\nfor rm (section 2.2); the agent: 27"
+ },
+ {
+  "type": "text",
+  "id": "d3",
+  "x": 976,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "v1 gives every run its own layer;\nthe agent used one mktemp folder,\nwith a guard that is not fail-safe"
+ },
+ {
+  "type": "text",
+  "id": "d4",
+  "x": 1336,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "v1: pre- and post-conditions per\nfile-system state (Fig. 3); the\nagent: one paragraph of reasoning"
+ },
+ {
+  "type": "text",
+  "id": "d5",
+  "x": 1696,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "v1's committed rm annotation: path\nis input and output, side-effectful;\nthe agent: path as output only"
+ },
+ {
+  "type": "rectangle",
+  "id": "agentbox",
+  "x": 220,
+  "y": 400,
+  "w": 1800,
+  "h": 244,
+  "stroke": "#6d28d9",
+  "fill": "transparent",
+  "style": "dashed"
+ },
+ {
+  "type": "text",
+  "id": "agentboxl",
+  "x": 236,
+  "y": 410,
+  "fs": 15,
+  "stroke": "#6d28d9",
+  "text": "one Claude Code session, claude-fable-5-1 at medium effort: every step below is the model's own choice, in 5 shell calls and 60 seconds"
+ },
+ {
+  "type": "text",
+  "id": "lane2",
+  "x": 40,
+  "y": 464,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "run 5:\nthe agent"
+ },
+ {
+  "type": "text",
+  "id": "lane2d",
+  "x": 40,
+  "y": 518,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "no pipeline:\none model does\nevery job"
+ },
+ {
+  "type": "rectangle",
+  "id": "g1",
+  "x": 240,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g1t",
+  "x": 256,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "1 Syntax: the model"
+ },
+ {
+  "type": "text",
+  "id": "g1b",
+  "x": 256,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "takes the sample, which is v1's\nown reference file for rm, and\nchanges 2 things from probes: 6\n--interactive values, zero or\nmore files (rm -f alone exits 0)"
+ },
+ {
+  "type": "rectangle",
+  "id": "g2",
+  "x": 600,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g2t",
+  "x": 616,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "2 Choose what to run: model"
+ },
+ {
+  "type": "text",
+  "id": "g2b",
+  "x": 616,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "27 runs by hand (call 3): every\noption spelling once or more,\nbad values, grouped flags,\n'-- -foo', abbreviations. Several\nreuse a file already deleted"
+ },
+ {
+  "type": "rectangle",
+  "id": "g3",
+  "x": 960,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g3t",
+  "x": 976,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "3 Run and observe: model"
+ },
+ {
+  "type": "text",
+  "id": "g3b",
+  "x": 976,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "cd $(mktemp -d), plain shell;\nstdin from /dev/null so prompts\ncannot wait; sees messages, exit\ncodes and ls; no namespace, no\nstrace, nothing aimed at /"
+ },
+ {
+  "type": "rectangle",
+  "id": "g4",
+  "x": 1320,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g4t",
+  "x": 1336,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "4 Decide behaviour: model"
+ },
+ {
+  "type": "text",
+  "id": "g4b",
+  "x": 1336,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "reasons: files are removed paths\n(outputs), stdout only with -v,\n--help, --version; nothing to\nsplit. Never tried a write-\nprotected file, -I with 4+\nfiles, or /"
+ },
+ {
+  "type": "rectangle",
+  "id": "g5",
+  "x": 1680,
+  "y": 444,
+  "w": 320,
+  "h": 180,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g5t",
+  "x": 1696,
+  "y": 456,
+  "fs": 16,
+  "stroke": "#1e40af",
+  "text": "5 Write PaSh's form: model"
+ },
+ {
+  "type": "text",
+  "id": "g5b",
+  "x": 1696,
+  "y": 484,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "parser table = the sample's;\ntwo classes; all four written\nin one call (call 4) and only\nchecked for parsing; never\nrun against rm"
+ },
+ {
+  "type": "arrow",
+  "id": "ga1",
+  "x": 560,
+  "y": 534,
+  "sw": 2,
+  "stroke": "#6d28d9",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "ga2",
+  "x": 920,
+  "y": 534,
+  "sw": 2,
+  "stroke": "#6d28d9",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "ga3",
+  "x": 1280,
+  "y": 534,
+  "sw": 2,
+  "stroke": "#6d28d9",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "ga4",
+  "x": 1640,
+  "y": 534,
+  "sw": 2,
+  "stroke": "#6d28d9",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "scale",
+  "x": 40,
+  "y": 670,
+  "fs": 15,
+  "stroke": "#374151",
+  "text": "Scale for rm. The paper's own running example: for rm, Caruca generates 8,749,056 invocation configurations, pairing each invocation with file-system states (path missing, a file,\nan empty or non-empty directory) so that pre- and post-conditions can be read off what changed. The agent ran rm 27 times, on files and folders it created itself."
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 730,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "v1 is shown as the paper designs it (sections 2-6), not as run for this comparison. The rm sample's syntax file is v1's curated reference (syntax_specs/rm.py). Method, not quality, is compared here."
+ }
+]

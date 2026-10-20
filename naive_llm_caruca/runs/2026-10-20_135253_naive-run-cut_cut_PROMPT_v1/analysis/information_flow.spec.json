@@ -1,0 +1,500 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "fs": 26,
+  "stroke": "#1e40af",
+  "text": "Information flow: what the session read or ran for cut, and which output file each source fed"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 64,
+  "fs": 16,
+  "stroke": "#64748b",
+  "text": "blue = given in the VM \u00b7 orange = the binary itself \u00b7 red dashed = absent \u00b7 green = deliverables. Call numbers refer to stream.actions.log. cut is not a sample: no finished answer was in front of it."
+ },
+ {
+  "type": "rectangle",
+  "id": "s1",
+  "x": 40,
+  "y": 130,
+  "w": 560,
+  "h": 56,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "s1t",
+  "x": 320,
+  "y": 148,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "Manual page + cut --help  (call 12)",
+  "align": "center"
+ },
+ {
+  "type": "text",
+  "id": "s1d",
+  "x": 40,
+  "y": 196,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "option list with LIST / DELIM / STRING; 'use one, and only one of -b, -c\nor -f'; the four range forms. GNU coreutils 9.4 (also --version)"
+ },
+ {
+  "type": "rectangle",
+  "id": "s2",
+  "x": 40,
+  "y": 290,
+  "w": 560,
+  "h": 56,
+  "stroke": "#1e3a5f",
+  "fill": "#60a5fa"
+ },
+ {
+  "type": "text",
+  "id": "s2t",
+  "x": 320,
+  "y": 308,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "Samples: uniq, grep, tee  (calls 4-11, 13)",
+  "align": "center"
+ },
+ {
+  "type": "text",
+  "id": "s2d",
+  "x": 40,
+  "y": 356,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "file shapes and comment style; uniq's flag_followed_by_equals=True on\nshort options (v1's own reference) was copied; rm's sample never opened"
+ },
+ {
+  "type": "rectangle",
+  "id": "s3",
+  "x": 40,
+  "y": 450,
+  "w": 560,
+  "h": 56,
+  "stroke": "#1e3a5f",
+  "fill": "#60a5fa"
+ },
+ {
+  "type": "text",
+  "id": "s3t",
+  "x": 320,
+  "y": 468,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "Both format documents  (calls 1, 4)",
+  "align": "center"
+ },
+ {
+  "type": "text",
+  "id": "s3d",
+  "x": 40,
+  "y": 516,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "the DSL's node types (Range, Char, Separator); PaSh's three files;\nthe interface methods the two classes call"
+ },
+ {
+  "type": "rectangle",
+  "id": "s4",
+  "x": 40,
+  "y": 610,
+  "w": 560,
+  "h": 56,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa"
+ },
+ {
+  "type": "text",
+  "id": "s4t",
+  "x": 320,
+  "y": 628,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "Probes: 21 runs of cut in /tmp  (call 13)",
+  "align": "center"
+ },
+ {
+  "type": "text",
+  "id": "s4d",
+  "x": 40,
+  "y": 676,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "exactly one selector; -d must be one character; '-' is stdin; -n ignored;\n-z works. Never tried -d or -s with -b/-c (cut rejects both)"
+ },
+ {
+  "type": "rectangle",
+  "id": "s5",
+  "x": 40,
+  "y": 770,
+  "w": 560,
+  "h": 56,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa"
+ },
+ {
+  "type": "text",
+  "id": "s5t",
+  "x": 320,
+  "y": 788,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "Split-and-join test: 45 runs  (call 15)",
+  "align": "center"
+ },
+ {
+  "type": "text",
+  "id": "s5d",
+  "x": 40,
+  "y": 836,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "5,000 lines, 5 option sets: 4 consecutive chunks joined = one run;\nround robin equal only as a multiset. Done after writing; changed nothing"
+ },
+ {
+  "type": "rectangle",
+  "id": "s6",
+  "x": 40,
+  "y": 930,
+  "w": 560,
+  "h": 56,
+  "stroke": "#b91c1c",
+  "fill": "#fee2e2",
+  "style": "dashed"
+ },
+ {
+  "type": "text",
+  "id": "s6t",
+  "x": 320,
+  "y": 948,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "The network and PaSh's code: nothing",
+  "align": "center"
+ },
+ {
+  "type": "text",
+  "id": "s6d",
+  "x": 40,
+  "y": 996,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "0 URLs; caruca and pash_annotations not installed, not fetched;\nstand-ins written instead (calls 16-17)"
+ },
+ {
+  "type": "rectangle",
+  "id": "o1",
+  "x": 1324,
+  "y": 160,
+  "w": 580,
+  "h": 66,
+  "stroke": "#047857",
+  "fill": "#a7f3d0"
+ },
+ {
+  "type": "text",
+  "id": "o1t",
+  "x": 1614,
+  "y": 168,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "output/cut.py, 54 lines\n3 syntaxes, one per selector (-b, -c, -f)",
+  "align": "center"
+ },
+ {
+  "type": "rectangle",
+  "id": "o2",
+  "x": 1324,
+  "y": 360,
+  "w": 580,
+  "h": 66,
+  "stroke": "#047857",
+  "fill": "#a7f3d0"
+ },
+ {
+  "type": "text",
+  "id": "o2t",
+  "x": 1614,
+  "y": 368,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "output/pash/cut.json\n6 flags + 5 options: PaSh's own table minus -M",
+  "align": "center"
+ },
+ {
+  "type": "rectangle",
+  "id": "o3",
+  "x": 1324,
+  "y": 560,
+  "w": 580,
+  "h": 66,
+  "stroke": "#047857",
+  "fill": "#a7f3d0"
+ },
+ {
+  "type": "text",
+  "id": "o3t",
+  "x": 1614,
+  "y": 568,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "InputOutputInfoGeneratorCut.py\nPaSh's own three calls, in another order",
+  "align": "center"
+ },
+ {
+  "type": "rectangle",
+  "id": "o4",
+  "x": 1324,
+  "y": 760,
+  "w": 580,
+  "h": 66,
+  "stroke": "#047857",
+  "fill": "#a7f3d0"
+ },
+ {
+  "type": "text",
+  "id": "o4t",
+  "x": 1614,
+  "y": 768,
+  "fs": 17,
+  "stroke": "#374151",
+  "text": "ParallelizabilityInfoGeneratorCut.py\nPaSh's two splits, but none under -z",
+  "align": "center"
+ },
+ {
+  "type": "text",
+  "id": "o1n",
+  "x": 1324,
+  "y": 236,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "keeps uniq's '=' on short options, so v1's generator\nwrites 'cut -b=1' and 'cut -d=a' (cut rejects both); lets\n-d and -s appear with -b and -c (cut rejects both)"
+ },
+ {
+  "type": "text",
+  "id": "o4n",
+  "x": 1324,
+  "y": 836,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "PaSh's own class parallelizes under -z too; the session\nleft -z out because PaSh splits on newlines"
+ },
+ {
+  "type": "arrow",
+  "id": "a1",
+  "x": 600,
+  "y": 160,
+  "sw": 3,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    30
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a1b",
+  "x": 600,
+  "y": 164,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    224
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a2",
+  "x": 600,
+  "y": 318,
+  "sw": 2,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    -120
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a2b",
+  "x": 600,
+  "y": 322,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    264
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a2c",
+  "x": 600,
+  "y": 326,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    456
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a3",
+  "x": 600,
+  "y": 478,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    -284
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a3b",
+  "x": 600,
+  "y": 482,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    108
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a3c",
+  "x": 600,
+  "y": 486,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    300
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a4",
+  "x": 600,
+  "y": 636,
+  "sw": 3,
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    -446
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a4b",
+  "x": 600,
+  "y": 640,
+  "sw": 1,
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    -50
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a5",
+  "x": 600,
+  "y": 796,
+  "sw": 2,
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    722,
+    -2
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 1040,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "Thick arrows mark the main contribution to a file; thin arrows mark a single fact or convention. The table and both classes match PaSh's own cut files closely though the session\nnever saw them; whether that came from the manual or from the model's memory cannot be told from the log (the order follows the manual's own order)."
+ }
+]

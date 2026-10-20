@@ -1,0 +1,364 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "fs": 24,
+  "stroke": "#1e40af",
+  "text": "Session workflow: rm, PROMPT_v1, 2026-10-20 12:19  (Claude Code 2.1.296, model claude-fable-5-1 at medium effort, 5 tool calls, 60 s)"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 62,
+  "fs": 16,
+  "stroke": "#64748b",
+  "text": "Four phases on one timeline, left to right. Segment widths are not to scale; durations are written under each phase. Times are local (UTC-4). Web tools off; no network use."
+ },
+ {
+  "type": "line",
+  "id": "spine",
+  "x": 80,
+  "y": 380,
+  "sw": 3,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    1180,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "line",
+  "id": "ghost",
+  "x": 1260,
+  "y": 380,
+  "sw": 3,
+  "style": "dashed",
+  "stroke": "#dc2626",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    300,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "line",
+  "id": "spine2",
+  "x": 1560,
+  "y": 380,
+  "sw": 3,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    260,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "ellipse",
+  "id": "d1",
+  "x": 74,
+  "y": 374,
+  "w": 12,
+  "h": 12,
+  "stroke": "#3b82f6",
+  "fill": "#3b82f6",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d2",
+  "x": 520,
+  "y": 372,
+  "w": 16,
+  "h": 16,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa",
+  "sw": 2
+ },
+ {
+  "type": "ellipse",
+  "id": "d3",
+  "x": 952,
+  "y": 372,
+  "w": 16,
+  "h": 16,
+  "stroke": "#c2410c",
+  "fill": "#c2410c",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "dg",
+  "x": 1402,
+  "y": 372,
+  "w": 16,
+  "h": 16,
+  "stroke": "#dc2626",
+  "fill": "#fee2e2",
+  "sw": 2,
+  "style": "solid"
+ },
+ {
+  "type": "ellipse",
+  "id": "d4",
+  "x": 1554,
+  "y": 374,
+  "w": 12,
+  "h": 12,
+  "stroke": "#3b82f6",
+  "fill": "#3b82f6",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "dend",
+  "x": 1814,
+  "y": 374,
+  "w": 12,
+  "h": 12,
+  "stroke": "#047857",
+  "fill": "#047857",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "t_start",
+  "x": 74,
+  "y": 296,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "12:19:41"
+ },
+ {
+  "type": "text",
+  "id": "t_end",
+  "x": 1826,
+  "y": 296,
+  "fs": 14,
+  "stroke": "#64748b",
+  "align": "right",
+  "text": "12:20:38"
+ },
+ {
+  "type": "text",
+  "id": "p1",
+  "x": 86,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "1 Read everything"
+ },
+ {
+  "type": "text",
+  "id": "p2",
+  "x": 536,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "2 Probe rm (27 runs)"
+ },
+ {
+  "type": "text",
+  "id": "p3",
+  "x": 968,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "3 Write all 4 files"
+ },
+ {
+  "type": "text",
+  "id": "pg",
+  "x": 1410,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#dc2626",
+  "align": "center",
+  "text": "test the written files"
+ },
+ {
+  "type": "text",
+  "id": "p4",
+  "x": 1566,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "4 Clean up, report"
+ },
+ {
+  "type": "text",
+  "id": "c1",
+  "x": 86,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "calls 1-2 \u00b7 16 s"
+ },
+ {
+  "type": "text",
+  "id": "c1d",
+  "x": 86,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "folder \u00b7 both formats \u00b7 the whole rm sample\n(v1's reference syntax + PaSh's files)\nuniq's syntax + parallelizability class\ngrep's parallelizability class\nthe full manual page \u00b7 --version \u00b7 --help"
+ },
+ {
+  "type": "text",
+  "id": "c2",
+  "x": 536,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "call 3 \u00b7 27 s"
+ },
+ {
+  "type": "text",
+  "id": "c2d",
+  "x": 536,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "cd $(mktemp -d), then makes its own\nfiles and folders there; 27 rm runs,\nstdin from /dev/null, exit codes printed;\nevery option spelling at least once"
+ },
+ {
+  "type": "text",
+  "id": "c3",
+  "x": 968,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "call 4 \u00b7 2 s"
+ },
+ {
+  "type": "text",
+  "id": "c3d",
+  "x": 968,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "one shell call writes all four;\nchecks only that the JSON loads\nand the Python compiles"
+ },
+ {
+  "type": "text",
+  "id": "cg",
+  "x": 1410,
+  "y": 404,
+  "fs": 14,
+  "stroke": "#dc2626",
+  "align": "center",
+  "text": "never happened: no run of the\nbinary against the written spec,\nthough its first message said it\nwould ('write the spec, and test it')\nand the prompt asks for it"
+ },
+ {
+  "type": "text",
+  "id": "c4",
+  "x": 1566,
+  "y": 472,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "call 5 \u00b7 12 s"
+ },
+ {
+  "type": "text",
+  "id": "c4d",
+  "x": 1566,
+  "y": 496,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "deletes __pycache__ in output/\nreport at 12:20:38"
+ },
+ {
+  "type": "line",
+  "id": "fw_line",
+  "x": 960,
+  "y": 124,
+  "sw": 2,
+  "style": "dashed",
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    470
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "fw_label",
+  "x": 960,
+  "y": 100,
+  "fs": 16,
+  "stroke": "#c2410c",
+  "align": "center",
+  "text": "FILES WRITTEN 12:20:24, 47 s in (call 4: all four at once)"
+ },
+ {
+  "type": "text",
+  "id": "fw_before",
+  "x": 950,
+  "y": 610,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "align": "right",
+  "text": "binary run before this point: call 2 (--version, --help)\nand call 3 (27 runs on its own scratch files)"
+ },
+ {
+  "type": "text",
+  "id": "fw_after",
+  "x": 972,
+  "y": 610,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "text": "after this point: rm runs once more, on output/__pycache__\nthe binary is never run against the specification"
+ },
+ {
+  "type": "text",
+  "id": "iso",
+  "x": 80,
+  "y": 156,
+  "fs": 14,
+  "stroke": "#b45309",
+  "text": "isolation: one fresh scratch folder, nothing more. The guard is\n'cd $(mktemp -d) && ...' and each probe runs on its own line: had\nmktemp printed nothing, a bare 'cd' would go home, and the\nprobes would have run there"
+ },
+ {
+  "type": "text",
+  "id": "think",
+  "x": 1060,
+  "y": 226,
+  "fs": 14,
+  "stroke": "#6d28d9",
+  "text": "time between calls is the model composing:\n12 s before call 3 (the probe batch),\n27 s before call 4 (the four files)"
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 690,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "Phase boundaries are tool-call numbers from stream.actions.log; a phase's duration runs from its first call to the next phase's first call, the last to the report.\nThe session started at 12:19:37; its first call came 4 s later. The red dashed segment is a step the session announced and the prompt asks for, drawn where it would have gone."
+ }
+]

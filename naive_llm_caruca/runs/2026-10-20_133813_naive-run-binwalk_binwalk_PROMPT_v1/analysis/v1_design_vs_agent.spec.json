@@ -1,0 +1,563 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "text": "binwalk, five jobs, two designs: the Caruca paper's v1 (binwalk is not one of its commands) and the agent in run 6",
+  "fs": 26,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 64,
+  "text": "purple = done by a language model \u00b7 blue = done by hand-written code \u00b7 red text = where the two designs differ most. Section numbers refer to the Caruca paper (arXiv:2510.14279).",
+  "fs": 16,
+  "stroke": "#64748b"
+ },
+ {
+  "type": "text",
+  "id": "lane1",
+  "x": 40,
+  "y": 150,
+  "text": "v1, as the\npaper designs it",
+  "fs": 18,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "lane1d",
+  "x": 40,
+  "y": 204,
+  "text": "a fixed pipeline:\none model step,\nthen code",
+  "fs": 14,
+  "stroke": "#64748b"
+ },
+ {
+  "type": "rectangle",
+  "id": "v0",
+  "x": 240,
+  "y": 140,
+  "w": 320,
+  "h": 170,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "v0t",
+  "x": 256,
+  "y": 152,
+  "text": "1 Syntax: a model writes it",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "v0b",
+  "x": 256,
+  "y": 180,
+  "text": "GPT-4o reads a bundled copy\nof the manual (none exists for\nbinwalk), never --help, the\nbinary or its source; this\nmanual lacks -0 and -1\n(section 3)",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "d0",
+  "x": 256,
+  "y": 328,
+  "text": "v1 has no manual copy and no\nreference grammar for binwalk,\nso there is nothing to score\nthe agent's file against",
+  "fs": 14,
+  "stroke": "#b91c1c"
+ },
+ {
+  "type": "rectangle",
+  "id": "g0",
+  "x": 240,
+  "y": 460,
+  "w": 320,
+  "h": 170,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g0t",
+  "x": 256,
+  "y": 472,
+  "text": "1 Syntax: the model",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "g0b",
+  "x": 256,
+  "y": 500,
+  "text": "reads binwalk's own Python\nsource and runs its option\ncode: 51 options with types;\ncompares the manual (49)\nand --help (51)",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "arrow",
+  "id": "va0",
+  "x": 560,
+  "y": 225,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "arrow",
+  "id": "ga0",
+  "x": 560,
+  "y": 545,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ],
+  "stroke": "#6d28d9",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "v1",
+  "x": 600,
+  "y": 140,
+  "w": 320,
+  "h": 170,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v1t",
+  "x": 616,
+  "y": 152,
+  "text": "2 Choose what to run: code",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "v1b",
+  "x": 616,
+  "y": 180,
+  "text": "every combination of up to 4\noptions; integers -1, 0, 1\nunless the grammar gives a\nrange, then every value in\nit; paths from a file-system\nmodel (section 4)",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "d1",
+  "x": 616,
+  "y": 328,
+  "text": "on the agent's grammar, v1's\ngenerator makes 122 cases at\n1 option, 7,282 at 2; with its\n-s range 0-65535, 65,659 at 1",
+  "fs": 14,
+  "stroke": "#b91c1c"
+ },
+ {
+  "type": "rectangle",
+  "id": "g1",
+  "x": 600,
+  "y": 460,
+  "w": 320,
+  "h": 170,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g1t",
+  "x": 616,
+  "y": 472,
+  "text": "2 Choose what to run: model",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "g1b",
+  "x": 616,
+  "y": 500,
+  "text": "30 runs before writing, 4\nafter, on a gzip+tar file it\nbuilt; 16 of 51 options run;\n-D, -r, -M, -0, -1 never run",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "arrow",
+  "id": "va1",
+  "x": 920,
+  "y": 225,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "arrow",
+  "id": "ga1",
+  "x": 920,
+  "y": 545,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ],
+  "stroke": "#6d28d9",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "v2",
+  "x": 960,
+  "y": 140,
+  "w": 320,
+  "h": 170,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v2t",
+  "x": 976,
+  "y": 152,
+  "text": "3 Run and observe: code",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "v2b",
+  "x": 976,
+  "y": 180,
+  "text": "each case in its own layer,\nnamespace and chroot, under\nstrace; files filled from a\nfixed pool: text, maths, JSON,\nimages (code: one JPEG)\n(sections 4.3, 5)",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "d2",
+  "x": 976,
+  "y": 328,
+  "text": "binwalk only finds things in\nfiles whose bytes carry a\nformat signature: of v1's\npool, only the image does",
+  "fs": 14,
+  "stroke": "#b91c1c"
+ },
+ {
+  "type": "rectangle",
+  "id": "g2",
+  "x": 960,
+  "y": 460,
+  "w": 320,
+  "h": 170,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g2t",
+  "x": 976,
+  "y": 472,
+  "text": "3 Run and observe: model",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "g2b",
+  "x": 976,
+  "y": 500,
+  "text": "one mktemp folder (fails\nopen); sees printed output,\nexit codes, files made; no\nstrace; -E -J wrote a cache\nin the home folder",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "arrow",
+  "id": "va2",
+  "x": 1280,
+  "y": 225,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "arrow",
+  "id": "ga2",
+  "x": 1280,
+  "y": 545,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ],
+  "stroke": "#6d28d9",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "v3",
+  "x": 1320,
+  "y": 140,
+  "w": 320,
+  "h": 170,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v3t",
+  "x": 1336,
+  "y": 152,
+  "text": "4 Decide behaviour: rules",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "v3b",
+  "x": 1336,
+  "y": 180,
+  "text": "rules over recorded reads and\nwrites; coverage assumes\nbehaviour depends on the kind\nof path (file, directory),\nnot what is inside it\n(sections 6.3, 7.3)",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "d3",
+  "x": 1336,
+  "y": 328,
+  "text": "-D type:ext:cmd runs a command\nper match: the kind of command\nthe paper says its coverage\nmeasure does not fit (xargs)",
+  "fs": 14,
+  "stroke": "#b91c1c"
+ },
+ {
+  "type": "rectangle",
+  "id": "g3",
+  "x": 1320,
+  "y": 460,
+  "w": 320,
+  "h": 170,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g3t",
+  "x": 1336,
+  "y": 472,
+  "text": "4 Decide behaviour: model",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "g3b",
+  "x": 1336,
+  "y": 500,
+  "text": "reasons from the runs: no\nstdin, pipes fail, per-file\nheaders, so nothing to\nsplit; extraction outputs\nonly in comments",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "arrow",
+  "id": "va3",
+  "x": 1640,
+  "y": 225,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "arrow",
+  "id": "ga3",
+  "x": 1640,
+  "y": 545,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    38,
+    0
+   ]
+  ],
+  "stroke": "#6d28d9",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "v4",
+  "x": 1680,
+  "y": 140,
+  "w": 320,
+  "h": 170,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "v4t",
+  "x": 1696,
+  "y": 152,
+  "text": "5 Write per consumer: code",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "v4b",
+  "x": 1696,
+  "y": 180,
+  "text": "adapters translate one\ninternal result into PaSh and\nShseer JSON, POSH YAML and\nShellCheck Haskell\n(section 6.4)",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "d4",
+  "x": 1696,
+  "y": 328,
+  "text": "PaSh's class has no call for\n-e's extraction folders; no v1\nPaSh annotation for binwalk\nexists to compare",
+  "fs": 14,
+  "stroke": "#b91c1c"
+ },
+ {
+  "type": "rectangle",
+  "id": "g4",
+  "x": 1680,
+  "y": 460,
+  "w": 320,
+  "h": 170,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe"
+ },
+ {
+  "type": "text",
+  "id": "g4t",
+  "x": 1696,
+  "y": 472,
+  "text": "5 Write PaSh's form: model",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "g4b",
+  "x": 1696,
+  "y": 500,
+  "text": "all four files in one call;\nchecked against the option\ntable they came from; one\nfix after a probe, checked\nonly by compiling",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "rectangle",
+  "id": "agentbox",
+  "x": 220,
+  "y": 418,
+  "w": 1800,
+  "h": 232,
+  "stroke": "#6d28d9",
+  "fill": "transparent",
+  "style": "dashed"
+ },
+ {
+  "type": "text",
+  "id": "agentboxl",
+  "x": 236,
+  "y": 428,
+  "text": "one Claude Code session, claude-fable-5-1 at medium effort: every step below is the model's own choice, in 18 shell calls and 193 seconds",
+  "fs": 15,
+  "stroke": "#6d28d9"
+ },
+ {
+  "type": "text",
+  "id": "lane2",
+  "x": 40,
+  "y": 480,
+  "text": "run 6:\nthe agent",
+  "fs": 18,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "lane2d",
+  "x": 40,
+  "y": 534,
+  "text": "no pipeline:\none model does\nevery job",
+  "fs": 14,
+  "stroke": "#64748b"
+ },
+ {
+  "type": "text",
+  "id": "scale",
+  "x": 40,
+  "y": 676,
+  "text": "What changes with a command like binwalk. Its behaviour depends on what is inside its input files, it can run other programs (-D, and -e's extraction tools), and it ships as\nreadable source. v1's design treats commands as opaque, varies paths more than contents, and was evaluated on 120 commands that do not include binwalk.",
+  "fs": 15,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 736,
+  "text": "v1 is shown as the paper designs it (sections 2-6), not run end to end for this comparison; the generator counts come from v1's own code fed the agent's grammar. Method, not quality, is compared here.",
+  "fs": 14,
+  "stroke": "#64748b"
+ }
+]

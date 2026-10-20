@@ -1,0 +1,538 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "fs": 26,
+  "stroke": "#1e40af",
+  "text": "Information flow: what the session read or ran, and which output file each source fed"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 64,
+  "fs": 16,
+  "stroke": "#64748b",
+  "text": "blue = given in the VM \u00b7 orange = the binary itself \u00b7 red dashed = the network (nothing used) \u00b7 green = deliverables \u00b7 dashed blue = the session's own test, not a deliverable. Call numbers refer to stream.actions.log."
+ },
+ {
+  "type": "rectangle",
+  "id": "s1",
+  "x": 40,
+  "y": 130,
+  "w": 560,
+  "h": 56,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd"
+ },
+ {
+  "type": "text",
+  "id": "s1t",
+  "x": 320,
+  "y": 148,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "Manual page /usr/share/man/man1/grep.1.gz"
+ },
+ {
+  "type": "text",
+  "id": "s1d",
+  "x": 40,
+  "y": 196,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "header read for the version, 'GNU grep 3.11' (call 3); then rendered\nwith man -l and its 47 option lines pulled out, plus passages on\nstandard input and -NUM (calls 5-6); saved as /tmp/grep.man for the test"
+ },
+ {
+  "type": "rectangle",
+  "id": "s2",
+  "x": 40,
+  "y": 290,
+  "w": 560,
+  "h": 56,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa"
+ },
+ {
+  "type": "text",
+  "id": "s2t",
+  "x": 320,
+  "y": 308,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "/usr/bin/grep --help  (call 4)"
+ },
+ {
+  "type": "text",
+  "id": "s2d",
+  "x": 40,
+  "y": 356,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "read beside the manual, not instead of it; the test compares\nthe syntax file's spellings with both lists"
+ },
+ {
+  "type": "rectangle",
+  "id": "s3",
+  "x": 40,
+  "y": 430,
+  "w": 560,
+  "h": 56,
+  "stroke": "#1e3a5f",
+  "fill": "#60a5fa"
+ },
+ {
+  "type": "text",
+  "id": "s3t",
+  "x": 320,
+  "y": 448,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "samples/grep/  (grep's own finished answer)"
+ },
+ {
+  "type": "text",
+  "id": "s3d",
+  "x": 40,
+  "y": 496,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "read in full (calls 2 and 4). grep.json keeps its 32 flag entries and\n24 options exactly; grep.py keeps its constructors, in a new layout;\nclasses reworked, keeping its placeholder names; -L split from -l"
+ },
+ {
+  "type": "rectangle",
+  "id": "s4",
+  "x": 40,
+  "y": 590,
+  "w": 560,
+  "h": 56,
+  "stroke": "#1e3a5f",
+  "fill": "#60a5fa"
+ },
+ {
+  "type": "text",
+  "id": "s4t",
+  "x": 320,
+  "y": 608,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "prompt + the two format documents"
+ },
+ {
+  "type": "text",
+  "id": "s4d",
+  "x": 40,
+  "y": 656,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "read in calls 1-4: the file shapes, constructor names and the PaSh\nclass interface (which the test's stand-ins imitate); also tee's\nthree sample files and uniq's parallelizability class, for conventions"
+ },
+ {
+  "type": "rectangle",
+  "id": "s5",
+  "x": 40,
+  "y": 740,
+  "w": 560,
+  "h": 56,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa"
+ },
+ {
+  "type": "text",
+  "id": "s5t",
+  "x": 320,
+  "y": 758,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "probes: 72 runs of /usr/bin/grep"
+ },
+ {
+  "type": "text",
+  "id": "s5d",
+  "x": 40,
+  "y": 806,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "calls 5-6, small files in /tmp, no sandbox. Found: -y and -u accepted;\n-m -1 accepted, -A -1 rejected; bare --color takes no word; -r and\n-d recurse with no file read '.'; after -e every operand is a file"
+ },
+ {
+  "type": "rectangle",
+  "id": "s6",
+  "x": 40,
+  "y": 900,
+  "w": 560,
+  "h": 56,
+  "stroke": "#b91c1c",
+  "fill": "#fee2e2",
+  "style": "dashed"
+ },
+ {
+  "type": "text",
+  "id": "s6t",
+  "x": 320,
+  "y": 918,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "the network: nothing"
+ },
+ {
+  "type": "text",
+  "id": "s6d",
+  "x": 40,
+  "y": 966,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "0 URLs in any command. caruca and pash_annotations were looked for\nby import, pip list and find / (calls 5-6), not found, not fetched"
+ },
+ {
+  "type": "rectangle",
+  "id": "o1",
+  "x": 1324,
+  "y": 180,
+  "w": 580,
+  "h": 66,
+  "stroke": "#047857",
+  "fill": "#a7f3d0"
+ },
+ {
+  "type": "text",
+  "id": "o1t",
+  "x": 1614,
+  "y": 188,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "output/grep.py\n100 lines, 2 syntaxes (sample: 66 lines, 1 syntax)"
+ },
+ {
+  "type": "rectangle",
+  "id": "o2",
+  "x": 1324,
+  "y": 380,
+  "w": 580,
+  "h": 66,
+  "stroke": "#047857",
+  "fill": "#a7f3d0"
+ },
+ {
+  "type": "text",
+  "id": "o2t",
+  "x": 1614,
+  "y": 388,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "output/pash/grep.json\n32 flag entries + 24 options: the sample's exact set"
+ },
+ {
+  "type": "text",
+  "id": "o2note",
+  "x": 1324,
+  "y": 456,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "text": "keeps the sample's '--color WHEN' (value as a separate word),\nthough probes showed bare --color takes no word and grep.py\nsays --color=WHEN only: the two files disagree"
+ },
+ {
+  "type": "rectangle",
+  "id": "o3",
+  "x": 1324,
+  "y": 580,
+  "w": 580,
+  "h": 84,
+  "stroke": "#047857",
+  "fill": "#a7f3d0"
+ },
+ {
+  "type": "text",
+  "id": "o3t",
+  "x": 1614,
+  "y": 588,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "output/pash/ InputOutputInfoGeneratorGrep.py (43 lines)\nParallelizabilityInfoGeneratorGrep.py (90 lines)\nfirst rewritten, second restructured from the sample"
+ },
+ {
+  "type": "rectangle",
+  "id": "o4",
+  "x": 1324,
+  "y": 860,
+  "w": 580,
+  "h": 66,
+  "stroke": "#1e40af",
+  "fill": "#dbeafe",
+  "style": "dashed"
+ },
+ {
+  "type": "text",
+  "id": "o4t",
+  "x": 1614,
+  "y": 868,
+  "fs": 17,
+  "stroke": "#374151",
+  "align": "center",
+  "text": "/tmp/grepspec_test/run_tests.py + stand-in modules\n(written by the session; not a deliverable)"
+ },
+ {
+  "type": "arrow",
+  "id": "a_s1_o1",
+  "x": 600,
+  "y": 158,
+  "sw": 3,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    55
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s1_o2",
+  "x": 600,
+  "y": 162,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    251
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s1_o4",
+  "x": 600,
+  "y": 166,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    712
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s2_o4",
+  "x": 600,
+  "y": 318,
+  "sw": 1,
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    560
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s3_o2",
+  "x": 600,
+  "y": 458,
+  "sw": 3,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    -45
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s3_o1",
+  "x": 600,
+  "y": 454,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    -234
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s3_o3",
+  "x": 600,
+  "y": 462,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    152
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s4_o1",
+  "x": 600,
+  "y": 614,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    -384
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s4_o3",
+  "x": 600,
+  "y": 620,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    8
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s4_o4",
+  "x": 600,
+  "y": 626,
+  "sw": 1,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    272
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s5_o1",
+  "x": 600,
+  "y": 764,
+  "sw": 3,
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    -542
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_s5_o3",
+  "x": 600,
+  "y": 770,
+  "sw": 3,
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    718,
+    -140
+   ]
+  ]
+ },
+ {
+  "type": "arrow",
+  "id": "a_test",
+  "x": 1614,
+  "y": 664,
+  "sw": 2,
+  "style": "dashed",
+  "stroke": "#6d28d9",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    194
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "testnote",
+  "x": 1634,
+  "y": 700,
+  "fs": 14,
+  "stroke": "#6d28d9",
+  "text": "the files go into the test (call 8): 154 binary\nruns, 18 cases through both classes, against\nstand-ins, not PaSh. Nothing came back:\nno file was edited after it was written"
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 1040,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "Not consulted: grep's info manual, the web, PaSh's real code. Thick arrows mark the main contribution to a file; thin arrows mark structure or conventions.\nNo arrow reaches grep.json from the probes: its option set is the sample's, unchanged."
+ }
+]

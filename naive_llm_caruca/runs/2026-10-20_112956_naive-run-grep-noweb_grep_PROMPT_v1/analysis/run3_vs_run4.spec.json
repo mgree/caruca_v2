@@ -1,0 +1,666 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "fs": 26,
+  "stroke": "#1e40af",
+  "text": "Run 3 and run 4 on one time scale: same command (grep), same prompt (version 1), different model and web rule"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 64,
+  "fs": 16,
+  "stroke": "#64748b",
+  "text": "Bars are drawn to scale: 2 pixels per second from the session's start. Each bar is a phase; colour = what the phase did (legend below). Ticks mark when the first deliverable was written."
+ },
+ {
+  "type": "text",
+  "id": "r3name",
+  "x": 40,
+  "y": 150,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "Run 3\n2026-10-13\nHaiku 5.5\nweb open"
+ },
+ {
+  "type": "rectangle",
+  "id": "r3p1",
+  "x": 206,
+  "y": 160,
+  "w": 8,
+  "h": 44,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r3p2",
+  "x": 214,
+  "y": 160,
+  "w": 24,
+  "h": 44,
+  "stroke": "#1e3a5f",
+  "fill": "#60a5fa",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r3p3",
+  "x": 238,
+  "y": 160,
+  "w": 206,
+  "h": 44,
+  "stroke": "#b91c1c",
+  "fill": "#fecaca",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r3p4",
+  "x": 444,
+  "y": 160,
+  "w": 606,
+  "h": 44,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r3p5",
+  "x": 1050,
+  "y": 160,
+  "w": 126,
+  "h": 44,
+  "stroke": "#047857",
+  "fill": "#a7f3d0",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r3p6",
+  "x": 1176,
+  "y": 160,
+  "w": 392,
+  "h": 44,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r3p7",
+  "x": 1568,
+  "y": 160,
+  "w": 62,
+  "h": 44,
+  "stroke": "#b45309",
+  "fill": "#fef3c7",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r3p8",
+  "x": 1630,
+  "y": 160,
+  "w": 50,
+  "h": 44,
+  "stroke": "#1e40af",
+  "fill": "#dbeafe",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "r3l3",
+  "x": 341,
+  "y": 172,
+  "fs": 14,
+  "stroke": "#b91c1c",
+  "align": "center",
+  "text": "PyPI + GitHub"
+ },
+ {
+  "type": "text",
+  "id": "r3l4",
+  "x": 747,
+  "y": 172,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "align": "center",
+  "text": "85 probe runs (incl. a 120 s hang)"
+ },
+ {
+  "type": "text",
+  "id": "r3l6",
+  "x": 1372,
+  "y": 172,
+  "fs": 14,
+  "stroke": "#6d28d9",
+  "align": "center",
+  "text": "3 check scripts, real PaSh code"
+ },
+ {
+  "type": "line",
+  "id": "r3fw",
+  "x": 1050,
+  "y": 136,
+  "sw": 2,
+  "style": "dashed",
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    92
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "r3fwl",
+  "x": 1056,
+  "y": 118,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "text": "first write 425 s (call 28)"
+ },
+ {
+  "type": "text",
+  "id": "r3end",
+  "x": 1690,
+  "y": 172,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "740 s"
+ },
+ {
+  "type": "text",
+  "id": "r4name",
+  "x": 40,
+  "y": 300,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "Run 4\n2026-10-20\nFable 5.1\nno web"
+ },
+ {
+  "type": "rectangle",
+  "id": "r4p1",
+  "x": 218,
+  "y": 310,
+  "w": 40,
+  "h": 44,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r4p2",
+  "x": 258,
+  "y": 310,
+  "w": 88,
+  "h": 44,
+  "stroke": "#1e3a5f",
+  "fill": "#60a5fa",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r4p3",
+  "x": 346,
+  "y": 310,
+  "w": 320,
+  "h": 44,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r4p4",
+  "x": 666,
+  "y": 310,
+  "w": 114,
+  "h": 44,
+  "stroke": "#047857",
+  "fill": "#a7f3d0",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r4p5",
+  "x": 780,
+  "y": 310,
+  "w": 16,
+  "h": 44,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r4p6",
+  "x": 796,
+  "y": 310,
+  "w": 8,
+  "h": 44,
+  "stroke": "#b45309",
+  "fill": "#fef3c7",
+  "sw": 1
+ },
+ {
+  "type": "rectangle",
+  "id": "r4p7",
+  "x": 804,
+  "y": 310,
+  "w": 40,
+  "h": 44,
+  "stroke": "#1e40af",
+  "fill": "#dbeafe",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "r4l3",
+  "x": 506,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "align": "center",
+  "text": "72 probe runs"
+ },
+ {
+  "type": "line",
+  "id": "r4fw",
+  "x": 666,
+  "y": 286,
+  "sw": 2,
+  "style": "dashed",
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    92
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "r4fwl",
+  "x": 672,
+  "y": 268,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "text": "first write 233 s (call 7)"
+ },
+ {
+  "type": "text",
+  "id": "r4end",
+  "x": 854,
+  "y": 322,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "322 s"
+ },
+ {
+  "type": "text",
+  "id": "r4test",
+  "x": 780,
+  "y": 366,
+  "fs": 14,
+  "stroke": "#6d28d9",
+  "text": "one test run against stand-ins (8 s), one check of its\nfailure (4 s); nothing revised. Run 3 spent 196 s testing\nand 31 s revising after a test finding"
+ },
+ {
+  "type": "line",
+  "id": "axis",
+  "x": 200,
+  "y": 440,
+  "sw": 1,
+  "stroke": "#64748b",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    1480,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "ax0",
+  "x": 200,
+  "y": 448,
+  "fs": 14,
+  "stroke": "#64748b",
+  "align": "center",
+  "text": "0 s"
+ },
+ {
+  "type": "text",
+  "id": "ax1",
+  "x": 400,
+  "y": 448,
+  "fs": 14,
+  "stroke": "#64748b",
+  "align": "center",
+  "text": "100 s"
+ },
+ {
+  "type": "text",
+  "id": "ax2",
+  "x": 600,
+  "y": 448,
+  "fs": 14,
+  "stroke": "#64748b",
+  "align": "center",
+  "text": "200 s"
+ },
+ {
+  "type": "text",
+  "id": "ax3",
+  "x": 800,
+  "y": 448,
+  "fs": 14,
+  "stroke": "#64748b",
+  "align": "center",
+  "text": "300 s"
+ },
+ {
+  "type": "text",
+  "id": "ax4",
+  "x": 1000,
+  "y": 448,
+  "fs": 14,
+  "stroke": "#64748b",
+  "align": "center",
+  "text": "400 s"
+ },
+ {
+  "type": "text",
+  "id": "ax5",
+  "x": 1200,
+  "y": 448,
+  "fs": 14,
+  "stroke": "#64748b",
+  "align": "center",
+  "text": "500 s"
+ },
+ {
+  "type": "text",
+  "id": "ax6",
+  "x": 1400,
+  "y": 448,
+  "fs": 14,
+  "stroke": "#64748b",
+  "align": "center",
+  "text": "600 s"
+ },
+ {
+  "type": "text",
+  "id": "ax7",
+  "x": 1600,
+  "y": 448,
+  "fs": 14,
+  "stroke": "#64748b",
+  "align": "center",
+  "text": "700 s"
+ },
+ {
+  "type": "rectangle",
+  "id": "lg1",
+  "x": 200,
+  "y": 500,
+  "w": 18,
+  "h": 18,
+  "stroke": "#1e3a5f",
+  "fill": "#93c5fd",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "lg1t",
+  "x": 226,
+  "y": 500,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "orientation"
+ },
+ {
+  "type": "rectangle",
+  "id": "lg2",
+  "x": 350,
+  "y": 500,
+  "w": 18,
+  "h": 18,
+  "stroke": "#1e3a5f",
+  "fill": "#60a5fa",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "lg2t",
+  "x": 376,
+  "y": 500,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "binary + manual"
+ },
+ {
+  "type": "rectangle",
+  "id": "lg3",
+  "x": 540,
+  "y": 500,
+  "w": 18,
+  "h": 18,
+  "stroke": "#b91c1c",
+  "fill": "#fecaca",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "lg3t",
+  "x": 566,
+  "y": 500,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "tooling search (network)"
+ },
+ {
+  "type": "rectangle",
+  "id": "lg4",
+  "x": 800,
+  "y": 500,
+  "w": 18,
+  "h": 18,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "lg4t",
+  "x": 826,
+  "y": 500,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "probing the binary"
+ },
+ {
+  "type": "rectangle",
+  "id": "lg5",
+  "x": 1010,
+  "y": 500,
+  "w": 18,
+  "h": 18,
+  "stroke": "#047857",
+  "fill": "#a7f3d0",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "lg5t",
+  "x": 1036,
+  "y": 500,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "writing"
+ },
+ {
+  "type": "rectangle",
+  "id": "lg6",
+  "x": 1130,
+  "y": 500,
+  "w": 18,
+  "h": 18,
+  "stroke": "#6d28d9",
+  "fill": "#ddd6fe",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "lg6t",
+  "x": 1156,
+  "y": 500,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "testing"
+ },
+ {
+  "type": "rectangle",
+  "id": "lg7",
+  "x": 1250,
+  "y": 500,
+  "w": 18,
+  "h": 18,
+  "stroke": "#b45309",
+  "fill": "#fef3c7",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "lg7t",
+  "x": 1276,
+  "y": 500,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "revising / checking"
+ },
+ {
+  "type": "rectangle",
+  "id": "lg8",
+  "x": 1460,
+  "y": 500,
+  "w": 18,
+  "h": 18,
+  "stroke": "#1e40af",
+  "fill": "#dbeafe",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "lg8t",
+  "x": 1486,
+  "y": 500,
+  "fs": 14,
+  "stroke": "#374151",
+  "text": "wrap up, report"
+ },
+ {
+  "type": "line",
+  "id": "tdiv",
+  "x": 40,
+  "y": 556,
+  "sw": 1,
+  "style": "dashed",
+  "stroke": "#64748b",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    1680,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "th0",
+  "x": 40,
+  "y": 574,
+  "fs": 17,
+  "stroke": "#1e40af",
+  "text": "measure"
+ },
+ {
+  "type": "text",
+  "id": "th3",
+  "x": 600,
+  "y": 574,
+  "fs": 17,
+  "stroke": "#1e40af",
+  "text": "run 3"
+ },
+ {
+  "type": "text",
+  "id": "th4",
+  "x": 1160,
+  "y": 574,
+  "fs": 17,
+  "stroke": "#1e40af",
+  "text": "run 4"
+ },
+ {
+  "type": "text",
+  "id": "tc0",
+  "x": 40,
+  "y": 608,
+  "fs": 15,
+  "stroke": "#64748b",
+  "text": "turns \u00b7 tool calls\noutput tokens (of which thinking)\ncost at list price\nnetwork\nruns of the binary before the first write\nruns of the binary in its tests\ntested its PaSh classes against\nfiles edited after testing\ngrep.json versus the sample's table\ngrep.py syntaxes (sample: 1)\nversion named in the output files"
+ },
+ {
+  "type": "text",
+  "id": "tc3",
+  "x": 600,
+  "y": 608,
+  "fs": 15,
+  "stroke": "#374151",
+  "text": "73 \u00b7 72 (43 Bash, 15 Edit, 9 Write, 4 Read, 1 other)\n123,918 (82,852)\n$0.96\n9 calls: PyPI wheel, GitHub search, 3 of our notes\n85\n129 per syntax-check run, plus split checks\nPaSh's real parser and classes (downloaded)\nyes: a guard added to both classes\nsample + 30 entries - 2\n4\nnone"
+ },
+ {
+  "type": "text",
+  "id": "tc4",
+  "x": 1160,
+  "y": 608,
+  "fs": 15,
+  "stroke": "#374151",
+  "text": "11 \u00b7 10 (all Bash)\n24,495 (6,663)\n$2.54\nnone: 0 URLs\n72\n154 in one run\nstand-in modules it wrote itself\nnone\nidentical option set\n2\nGNU grep 3.11, in 3 of the 4 files"
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 860,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "Run 3's phases and counts are from its own analysis (runs/2026-10-13_193448_.../analysis/analysis.md); run 4's are from stream.actions.log. Both ran in fresh clones of the same image,\nClaude Code 2.1.296, watch mode, permissions bypassed. Costs are list prices reported by Claude Code; both runs were billed to the Max subscription."
+ }
+]

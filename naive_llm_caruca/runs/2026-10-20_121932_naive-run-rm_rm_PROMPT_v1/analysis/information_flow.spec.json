@@ -1,0 +1,52 @@
+[
+ {"type":"text","id":"title","x":40,"y":24,"fs":26,"stroke":"#1e40af","text":"Information flow: what the session read or ran for rm, and which output file each source fed"},
+ {"type":"text","id":"subtitle","x":40,"y":64,"fs":16,"stroke":"#64748b","text":"blue = given in the VM · orange = the binary itself · red dashed = absent (network; a test of the written files) · green = deliverables. Call numbers refer to stream.actions.log."},
+
+ {"type":"rectangle","id":"s1","x":40,"y":130,"w":560,"h":56,"stroke":"#1e3a5f","fill":"#93c5fd"},
+ {"type":"text","id":"s1t","x":320,"y":148,"fs":17,"stroke":"#374151","align":"center","text":"Manual page /usr/share/man/man1/rm.1.gz"},
+ {"type":"text","id":"s1d","x":40,"y":196,"fs":14,"stroke":"#64748b","text":"read in full in call 2 (rendered with man -l and col -b): synopsis\nrm [OPTION]... [FILE]..., every option, and 'without WHEN, prompt always'"},
+
+ {"type":"rectangle","id":"s2","x":40,"y":290,"w":560,"h":56,"stroke":"#c2410c","fill":"#fed7aa"},
+ {"type":"text","id":"s2t","x":320,"y":308,"fs":17,"stroke":"#374151","align":"center","text":"rm --version and rm --help  (call 2)"},
+ {"type":"text","id":"s2d","x":40,"y":356,"fs":14,"stroke":"#64748b","text":"GNU coreutils 9.4, named in the syntax file's header;\nthe help text repeats the manual's option list"},
+
+ {"type":"rectangle","id":"s3","x":40,"y":430,"w":560,"h":56,"stroke":"#1e3a5f","fill":"#60a5fa"},
+ {"type":"text","id":"s3t","x":320,"y":448,"fs":17,"stroke":"#374151","align":"center","text":"samples/rm/  (rm's own finished answer)"},
+ {"type":"text","id":"s3d","x":40,"y":496,"fs":14,"stroke":"#64748b","text":"read in full (call 2). rm.py is v1's curated reference file\n(syntax_specs/rm.py, byte for byte); pash/ holds PaSh's table and\ninput/output class. No parallelizability class exists for rm"},
+
+ {"type":"rectangle","id":"s4","x":40,"y":590,"w":560,"h":56,"stroke":"#1e3a5f","fill":"#60a5fa"},
+ {"type":"text","id":"s4t","x":320,"y":608,"fs":17,"stroke":"#374151","align":"center","text":"prompt, both formats, other samples"},
+ {"type":"text","id":"s4d","x":40,"y":656,"fs":14,"stroke":"#64748b","text":"calls 1-2: file shapes; 'absent means not parallelisable';\nuniq's syntax and parallelizability class, grep's parallelizability class"},
+
+ {"type":"rectangle","id":"s5","x":40,"y":740,"w":560,"h":56,"stroke":"#c2410c","fill":"#fed7aa"},
+ {"type":"text","id":"s5t","x":320,"y":758,"fs":17,"stroke":"#374151","align":"center","text":"probes: 27 runs of rm in a mktemp folder"},
+ {"type":"text","id":"s5d","x":40,"y":806,"fs":14,"stroke":"#64748b","text":"call 3. Found: --interactive takes a value only after '=' (six accepted,\nfrom its error message); 'rm -f' with no file exits 0; --preserve-root\ntakes nothing or =all; -rfv, -fd, '-- -foo' and --inter=never all work"},
+
+ {"type":"rectangle","id":"s6","x":40,"y":900,"w":560,"h":56,"stroke":"#b91c1c","fill":"#fee2e2","style":"dashed"},
+ {"type":"text","id":"s6t","x":320,"y":918,"fs":17,"stroke":"#374151","align":"center","text":"the network: nothing"},
+ {"type":"text","id":"s6d","x":40,"y":966,"fs":14,"stroke":"#64748b","text":"0 URLs in any command; no package was looked for this time"},
+
+ {"type":"rectangle","id":"o1","x":1324,"y":180,"w":580,"h":66,"stroke":"#047857","fill":"#a7f3d0"},
+ {"type":"text","id":"o1t","x":1614,"y":188,"fs":17,"stroke":"#374151","align":"center","text":"output/rm.py, 46 lines (sample: 35)\nthe sample + 6 values + zero-or-more files + header"},
+ {"type":"rectangle","id":"o2","x":1324,"y":380,"w":580,"h":66,"stroke":"#047857","fill":"#a7f3d0"},
+ {"type":"text","id":"o2t","x":1614,"y":388,"fs":17,"stroke":"#374151","align":"center","text":"output/pash/rm.json\n10 flag entries + 2 options: the sample's, unchanged"},
+ {"type":"text","id":"o2note","x":1324,"y":456,"fs":14,"stroke":"#b91c1c","text":"the table lets --interactive and --preserve-root take the next\nword as their value; the probes showed both take one only after\n'=' and the report says so, but the table was kept as it was"},
+ {"type":"rectangle","id":"o3","x":1324,"y":560,"w":580,"h":66,"stroke":"#047857","fill":"#a7f3d0"},
+ {"type":"text","id":"o3t","x":1614,"y":568,"fs":17,"stroke":"#374151","align":"center","text":"InputOutputInfoGeneratorRm.py, 19 lines (sample: 6)\nthe sample's line + stdout under -v, --help, --version"},
+ {"type":"rectangle","id":"o4","x":1324,"y":700,"w":580,"h":66,"stroke":"#047857","fill":"#a7f3d0"},
+ {"type":"text","id":"o4t","x":1614,"y":708,"fs":17,"stroke":"#374151","align":"center","text":"ParallelizabilityInfoGeneratorRm.py, 12 lines\nnew (the sample has none); adds no way to split"},
+ {"type":"rectangle","id":"o5","x":1324,"y":860,"w":580,"h":66,"stroke":"#dc2626","fill":"#fee2e2","style":"dashed"},
+ {"type":"text","id":"o5t","x":1614,"y":868,"fs":17,"stroke":"#374151","align":"center","text":"a test of the written files against rm: none\n(only: the JSON loads, the Python compiles)"},
+
+ {"type":"arrow","id":"a_s1_o1","x":600,"y":160,"sw":1,"stroke":"#1e3a5f","points":[[0,0],[722,53]]},
+ {"type":"arrow","id":"a_s1_o3","x":600,"y":166,"sw":1,"stroke":"#1e3a5f","points":[[0,0],[722,427]]},
+ {"type":"arrow","id":"a_s2_o1","x":600,"y":318,"sw":1,"stroke":"#c2410c","points":[[0,0],[722,-100]]},
+ {"type":"arrow","id":"a_s3_o1","x":600,"y":452,"sw":3,"stroke":"#1e3a5f","points":[[0,0],[722,-238]]},
+ {"type":"arrow","id":"a_s3_o2","x":600,"y":458,"sw":3,"stroke":"#1e3a5f","points":[[0,0],[722,-45]]},
+ {"type":"arrow","id":"a_s3_o3","x":600,"y":464,"sw":3,"stroke":"#1e3a5f","points":[[0,0],[722,129]]},
+ {"type":"arrow","id":"a_s4_o4","x":600,"y":618,"sw":2,"stroke":"#1e3a5f","points":[[0,0],[722,115]]},
+ {"type":"arrow","id":"a_s5_o1","x":600,"y":762,"sw":3,"stroke":"#c2410c","points":[[0,0],[722,-544]]},
+ {"type":"arrow","id":"a_s5_o3","x":600,"y":770,"sw":1,"stroke":"#c2410c","points":[[0,0],[722,-170]]},
+
+ {"type":"text","id":"footer","x":40,"y":1030,"fs":14,"stroke":"#64748b","text":"Not consulted: rm's info manual, the web, PaSh's code. Thick arrows mark the main contribution to a file; thin arrows mark a single fact or convention.\nNo arrow reaches rm.json from the probes: its content is the sample's. The same 27 probes are the only runs of rm; nothing checks the files after they were written."}
+]

@@ -1,0 +1,333 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "fs": 24,
+  "stroke": "#1e40af",
+  "text": "Session workflow: cut, PROMPT_v1, 2026-10-20 13:52  (Claude Code 2.1.296, model claude-fable-5-1 at medium effort, 17 tool calls, 104 s)"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 62,
+  "fs": 16,
+  "stroke": "#64748b",
+  "text": "Five phases on one timeline, left to right. Segment widths are not to scale; durations are written under each phase. Times are local (UTC-4). Web tools off; no network use."
+ },
+ {
+  "type": "line",
+  "id": "spine",
+  "x": 80,
+  "y": 380,
+  "sw": 3,
+  "stroke": "#1e3a5f",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    1740,
+    0
+   ]
+  ]
+ },
+ {
+  "type": "ellipse",
+  "id": "d0",
+  "x": 73,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#3b82f6",
+  "fill": "#3b82f6",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d1",
+  "x": 433,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#3b82f6",
+  "fill": "#3b82f6",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d2",
+  "x": 753,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#c2410c",
+  "fill": "#fed7aa",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d3",
+  "x": 1113,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#c2410c",
+  "fill": "#c2410c",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d4",
+  "x": 1393,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#047857",
+  "fill": "#a7f3d0",
+  "sw": 1
+ },
+ {
+  "type": "ellipse",
+  "id": "d5",
+  "x": 1813,
+  "y": 373,
+  "w": 14,
+  "h": 14,
+  "stroke": "#047857",
+  "fill": "#047857",
+  "sw": 1
+ },
+ {
+  "type": "text",
+  "id": "t_start",
+  "x": 74,
+  "y": 296,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "13:52:58"
+ },
+ {
+  "type": "text",
+  "id": "t_end",
+  "x": 1826,
+  "y": 296,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "13:54:39",
+  "align": "right"
+ },
+ {
+  "type": "text",
+  "id": "p0",
+  "x": 92,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "1 Read formats + samples"
+ },
+ {
+  "type": "text",
+  "id": "c0",
+  "x": 92,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "calls 1-11 \u00b7 12 s"
+ },
+ {
+  "type": "text",
+  "id": "cd0",
+  "x": 92,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "folder \u00b7 syntax format (call 1);\ncall 2 batch: PaSh format, uniq/grep/tee\nsamples, man page, --version, --help:\noutput too large, saved to a file;\ncall 3 cat of that file: too large again;\ncalls 4-11: the Read tool, file by file\n(rm's sample never opened)"
+ },
+ {
+  "type": "text",
+  "id": "p1",
+  "x": 452,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "2 Manual + --help"
+ },
+ {
+  "type": "text",
+  "id": "c1",
+  "x": 452,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "call 12 \u00b7 12 s"
+ },
+ {
+  "type": "text",
+  "id": "cd1",
+  "x": 452,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "man cut, --help, --version again\n(call 2's copy was lost to the\nsize limit); GNU coreutils 9.4"
+ },
+ {
+  "type": "text",
+  "id": "p2",
+  "x": 772,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "3 Probe cut (21 runs)"
+ },
+ {
+  "type": "text",
+  "id": "c2",
+  "x": 772,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "call 13 \u00b7 33 s"
+ },
+ {
+  "type": "text",
+  "id": "cd2",
+  "x": 772,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "in /tmp, on a 3-line file:\nselectors, ranges, -d/-s/--complement,\n-z, '-' as stdin, errors (2-char -d,\ntwo selectors, no selector, -b0);\nnever -d or -s with -b/-c"
+ },
+ {
+  "type": "text",
+  "id": "p3",
+  "x": 1132,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "4 Write all 4"
+ },
+ {
+  "type": "text",
+  "id": "c3",
+  "x": 1132,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "call 14 \u00b7 8 s"
+ },
+ {
+  "type": "text",
+  "id": "cd3",
+  "x": 1132,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "one shell call writes all four;\nJSON loads, Python compiles"
+ },
+ {
+  "type": "text",
+  "id": "p4",
+  "x": 1412,
+  "y": 334,
+  "fs": 18,
+  "stroke": "#1e40af",
+  "text": "5 Test what it wrote"
+ },
+ {
+  "type": "text",
+  "id": "c4",
+  "x": 1412,
+  "y": 404,
+  "fs": 16,
+  "stroke": "#374151",
+  "text": "calls 15-17 \u00b7 36 s"
+ },
+ {
+  "type": "text",
+  "id": "cd4",
+  "x": 1412,
+  "y": 428,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "caruca / pash_annotations absent;\nsplit-and-join test: 45 cut runs\non 5,000 lines, 5 option sets;\nstand-in modules accept any\nkeyword; classes run on 3 cases"
+ },
+ {
+  "type": "line",
+  "id": "fw",
+  "x": 1120,
+  "y": 124,
+  "sw": 2,
+  "style": "dashed",
+  "stroke": "#c2410c",
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    470
+   ]
+  ]
+ },
+ {
+  "type": "text",
+  "id": "fwl",
+  "x": 1120,
+  "y": 100,
+  "fs": 16,
+  "stroke": "#c2410c",
+  "text": "FILES WRITTEN 13:53:55, 60 s in (call 14: all four at once)",
+  "align": "center"
+ },
+ {
+  "type": "text",
+  "id": "fwb",
+  "x": 1110,
+  "y": 610,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "text": "binary run before this point: --version and --help\n(calls 2, 12) and 21 probes (call 13)",
+  "align": "right"
+ },
+ {
+  "type": "text",
+  "id": "fwa",
+  "x": 1132,
+  "y": 610,
+  "fs": 14,
+  "stroke": "#c2410c",
+  "text": "after this point: 45 runs that test the claim 'splitting\nthe input and joining the outputs gives the same result'"
+ },
+ {
+  "type": "text",
+  "id": "loop",
+  "x": 1400,
+  "y": 170,
+  "fs": 14,
+  "stroke": "#b45309",
+  "text": "the post-write test checks the parallelizability\nclaim against the binary; the syntax file is\nchecked only by a stand-in that accepts anything,\nso '-b=1' and '-b1 -d:' (both rejected by cut)\npass unnoticed"
+ },
+ {
+  "type": "text",
+  "id": "iso",
+  "x": 80,
+  "y": 156,
+  "fs": 14,
+  "stroke": "#b45309",
+  "text": "isolation: none needed and none used: cut only reads. Work\nfiles in /tmp (t.txt, big.txt, chunks); stand-in\nmodules in /tmp/stubs"
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 690,
+  "fs": 14,
+  "stroke": "#64748b",
+  "text": "Phase boundaries are tool-call numbers from stream.actions.log; a phase's duration runs from its first call to the next phase's first call, the last to the report (13:54:39).\nThe session started at 13:52:55; its first call came 3 s later. 'Too large' is Claude Code's own limit: call 2's 34.5 KB output was saved to a file and the model was shown a 2 KB preview."
+ }
+]

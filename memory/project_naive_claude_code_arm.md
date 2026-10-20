@@ -196,3 +196,29 @@ configurations (section 2.2). **Caveat found after the analysis:** `rm` is one o
 teaches" section (Tiran asked for the insights, not verbose or technical), the v1 claims and diagram now
 carry the caveat, and the PDF was regenerated (17 pages). Runs 1 and 2 have no run folder any more (run 1
 deleted by Tiran; run 2's folder is absent from `runs/`), so only runs 3-5 can be re-read from logs.
+
+**Real-world weight of the binary-only syntax facts (measured 2026-10-20 on v1's corpus
+`eval/user-scripts/invocations.txt`, 665,628 lines).** `rm`: 24,260 top-level lines; **0** use `--interactive`
+in any form, and the only lines with no file operand are 2 × `rm --help`, so run 5's two binary-backed
+corrections touch 0 of 24,260 real lines. The corpus file has **no top-level `grep` lines** (the paper's
+section 7.3 names grep among covered commands; not explained). Among 1,833 `grep` commands embedded in other
+lines (pipelines, `$(...)`), **63 (3.4%) use `-e`/`-f`** (strict count: `-e`/`-f`/`--regexp`/`--file`, or a
+flag group ending in e/f), 51 of them with a file operand; 0 use `-y`, `-u`, any `--color`, or negative context.
+So of the manual-vs-binary differences, only grep's `-e`/`-f` form shows up in real use. Embedded commands
+are a biased sample; not a coverage rate.
+
+**Run 6 (2026-10-20, collected, analysed + PDF): binwalk, first command outside the core utilities.**
+Ubuntu package `binwalk 2.3.4+dfsg1-5` (Tiran added it to `naive-golden` with apt); the binary reports
+v2.3.3, its manual says 2.3.2 (49 options vs `--help`'s 51; lacks `-0`, `-1`). Not a sample, not in v1's
+120 commands: no v1 manual copy, reference grammar or committed annotation, so it cannot be scored. PROMPT_v1,
+watch mode, Fable 5.1 medium, no web; 193 s, 18 Bash calls, $2.12 list, 0 URLs. **`/usr/bin/binwalk` is a
+4-line Python script; the session read binwalk's installed source and in call 9 ran its module registry to
+print the internal option table; syntax file + table follow that table 1:1.** 30 binary runs before writing
+(one `mktemp` folder, guard joined by `;` so it fails open), 4 after; 16 of 51 options ever run (not `-D`,
+`-r`, `-M`, `-0`, `-1`); main test compares the files with the same table (circular). Missed: `-D
+type:ext:cmd` runs a command per match (verified in the clone afterwards); `-e`'s extraction folders cannot
+be declared in PaSh's input/output class, so they are only in comments. The `-E -J` probe wrote
+`~/.cache/matplotlib` outside the scratch folder. Folder
+`naive_llm_caruca/runs/2026-10-20_133813_naive-run-binwalk_binwalk_PROMPT_v1/`; README "Observed, run 6".
+Open questions it raised: whether installed source code is allowed (PROMPT_v1 bans only *online*
+repositories), and choosing test commands by packaging (script vs compiled). See [[caruca-v1-value-generation]].

@@ -40,6 +40,7 @@ vm/naive-run                   the in-VM helper: fills the placeholders and runs
 vm/naive-watch.py              the live renderer for watch mode: prints each tool call, input and result; keeps raw + text logs
 vm/bashrc-welcome.sh           the welcome printed on every interactive shell in a clone; lands you in ~/naive-arm
 tool_log.py <log>              list every tool call (and -r: result) in a run's stream-json log or session transcript
+excalidraw_fill.py <spec> <out> build an analysis diagram from a hand-placed spec (runs/*/analysis/*.spec.json are examples)
 ```
 
 `tee`, `uniq`, `grep` and `rm` are the samples. They can still be run, but the session then has a
@@ -264,6 +265,41 @@ manual, not a probe. Against the paper's design, whose running example is `rm` (
 configurations, each in its own traced layer, yielding pre- and post-conditions), the session ran 27
 cases in one shared folder and stated no pre- or post-conditions; the prompt does not ask for them.
 
+**Observed, run 6 (binwalk, the first command outside the core utilities).** *2026-10-20 13:38, `binwalk`
+(Ubuntu package `binwalk 2.3.4+dfsg1-5`, installed in the golden image by Tiran the same day), watch mode,
+clone `naive-run-binwalk`, run 1 in that clone, `claude-fable-5-1` at medium effort, web tools and MCP
+servers off. Same setup as runs 4 and 5. binwalk is not a sample and not one of v1's 120 commands, so the
+session had no finished answer and there is no v1 reference to score against. Collected to
+`runs/2026-10-20_133813_naive-run-binwalk_binwalk_PROMPT_v1/`; analysed in
+[its `analysis/analysis.md`](runs/2026-10-20_133813_naive-run-binwalk_binwalk_PROMPT_v1/analysis/analysis.md)
+(PDF beside it) with three diagrams. Not scored.* 193 seconds, 19 turns, 18 tool calls (all Bash); $2.12 at
+list price; 15,769 output tokens of which 3,120 thinking. No URL in any command. **`/usr/bin/binwalk` is a
+Python script, and the session used binwalk's installed source as its main evidence:** it read the option
+parser (calls 6 to 8) and in call 9 ran binwalk's own module code to print the program's internal option
+table (51 options with types); the syntax file and parser table follow that table one for one. It compared
+the manual (49 options, says 2.3.2) with `--help` (51, says v2.3.3) and found the manual lacks `-0` and `-1`;
+it never queried the package version. It then ran the binary 30 times in one `mktemp` folder on a
+gzip-plus-tar file it built (no stdin by default, pipes fail, `-f` appends, `-e` and `-J` create files, two
+files add per-file headers), wrote all four files in one call at 13:40:30, and tested them mainly by
+comparing them with the same internal table (circular), plus 4 more runs; one probe (`-h -q` still prints)
+led to a fix. 16 of the 51 options were ever run; `-D`, `-r`, `-M`, `-0`, `-1` were not. Output: syntax file
+87 lines (51 options, files zero or more), parser table 30 flags and 21 options, input/output class
+(operands are non-streaming inputs; standard output unless `-q`, or with `-h`), parallelizability class that
+adds nothing.
+
+*From the analysis (2026-10-20).* Not in any file: `-D type:ext:cmd` runs a command per match (checked
+afterwards in the clone), and the extraction folders `-e` creates cannot be declared in PaSh's input/output
+class, so they appear only in comments. The report's "Stdin is never read" is contradicted by its own call
+10 (`binwalk /dev/stdin < file` works), and of the five options it says accumulate when repeated only `-y`
+was run repeated. The `mktemp` guard fails open again (`;` not `&&`), and the `-E -J` probe wrote
+matplotlib's cache to `~/.cache`, outside the scratch folder. Against v1's design: v1's generator, fed the
+agent's grammar, makes 122 invocations at one option and 7,282 at two, but the grammar's
+`Integer(flag="-s", min=0, max=65535)` alone adds 65,536, because v1 tries every value in a range; and
+binwalk finds nothing in seven of v1's eight content files and only the image header in the eighth, so at
+v1's default text-only content every v1 run would print an empty table. This run also shows that packaged
+commands are often readable scripts: prompt version 1 forbids online repositories but says nothing about
+code installed on the machine.
+
 ### PROMPT_v2 — execution is the standard
 
 **What it adds.** One section with three points, placed between the samples and the closing scope
@@ -325,6 +361,7 @@ Built 2026-10-13 with the steps below.
 | Stock tools present | `strace`, `unshare`, `man`, `python3` (all in the stock cloud image); no `docker` |
 | Stock restriction left in place | `kernel.apparmor_restrict_unprivileged_userns = 1`, so unprivileged user namespaces are blocked as on any stock Ubuntu 24.04; a session that wants a sandbox has to deal with that itself |
 | Nothing from this project | no `CLAUDE.md` anywhere above `~/naive-arm`, no v1, no repo |
+| Added 2026-10-20 | `binwalk` (`apt install`, package 2.3.4+dfsg1-5, with `python3-binwalk`; its manual says 2.3.2), installed by Tiran for run 6. `~/.config/binwalk/` (empty configuration files) was created in the image at 13:37 the same day by the analyst's `binwalk --help` check before cloning; binwalk creates it on its first run anyway |
 
 ### Building the golden image (from scratch, on the Mac)
 
@@ -413,7 +450,9 @@ Then fill in the "Observed" part of the prompt version's entry above and add the
 `naive-run` accepts any installed command. A command outside the project's core nine (cat, grep, pwd,
 rm, tac, tail, tee, uniq, wc, the commands every other arm was measured on) gets a warning and a
 yes/no confirmation; one of the four samples (tee, uniq, grep, rm) gets a note that the session can
-see a finished answer, and runs. It refuses a command with no binary
+see a finished answer, and runs. To run a non-core command without an interactive shell (as for run 6),
+answer the question through a pseudo-terminal: `limactl shell <clone> -- bash -lc 'cd ~/naive-arm && echo y |
+script -qec "naive-run <cmd> PROMPT_v1.md" /dev/null'`. It refuses a command with no binary
 or no manual page in the VM, an unknown prompt file, and a clone whose `output/` is not empty (one run
 per clone).
 It records the command, prompt version, binary path, manual-page path, mode, timestamps, Claude Code

@@ -1,0 +1,762 @@
+[
+ {
+  "type": "text",
+  "id": "title",
+  "x": 40,
+  "y": 24,
+  "text": "Session workflow: binwalk, PROMPT_v1, 2026-10-20 13:38 (claude-fable-5-1, medium effort, 18 tool calls, 193 s)",
+  "fs": 24,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "subtitle",
+  "x": 40,
+  "y": 62,
+  "text": "Eight phases, left to right; boxes are not to scale. Times are local (UTC-4). Orange line under a box: runs of the binwalk binary in that phase. Web tools off; no network use.",
+  "fs": 15,
+  "stroke": "#64748b"
+ },
+ {
+  "type": "rectangle",
+  "id": "b0",
+  "x": 40,
+  "y": 190,
+  "w": 210,
+  "h": 236,
+  "stroke": "#1e3a5f",
+  "fill": "#60a5fa",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "bt0",
+  "x": 50,
+  "y": 200,
+  "text": "1 Read formats\n   and samples",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "bc0",
+  "x": 50,
+  "y": 246,
+  "text": "calls 1-4 \u00b7 10 s",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "bd0",
+  "x": 50,
+  "y": 274,
+  "text": "both format documents\nand all four samples\n(grep, tee, rm, uniq)\nin full",
+  "fs": 13,
+  "stroke": "#374151"
+ },
+ {
+  "type": "line",
+  "id": "rl0",
+  "x": 40,
+  "y": 442,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    210,
+    0
+   ]
+  ],
+  "stroke": "#cbd5e1",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "rt0",
+  "x": 40,
+  "y": 454,
+  "text": "0 runs",
+  "fs": 14,
+  "stroke": "#64748b"
+ },
+ {
+  "type": "arrow",
+  "id": "ar0",
+  "x": 250,
+  "y": 340,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    20,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "b1",
+  "x": 272,
+  "y": 190,
+  "w": 210,
+  "h": 236,
+  "stroke": "#1e3a5f",
+  "fill": "#fed7aa",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "bt1",
+  "x": 282,
+  "y": 200,
+  "text": "2 --help and\n   the manual",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "bc1",
+  "x": 282,
+  "y": 246,
+  "text": "call 5 \u00b7 6 s",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "bd1",
+  "x": 282,
+  "y": 274,
+  "text": "--help says v2.3.3;\nthe manual says 2.3.2\nand lacks -0 and -1",
+  "fs": 13,
+  "stroke": "#374151"
+ },
+ {
+  "type": "line",
+  "id": "rl1",
+  "x": 272,
+  "y": 442,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    210,
+    0
+   ]
+  ],
+  "stroke": "#c2410c",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "rt1",
+  "x": 272,
+  "y": 454,
+  "text": "1 run (--help)",
+  "fs": 14,
+  "stroke": "#c2410c"
+ },
+ {
+  "type": "arrow",
+  "id": "ar1",
+  "x": 482,
+  "y": 340,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    20,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "b2",
+  "x": 504,
+  "y": 190,
+  "w": 210,
+  "h": 236,
+  "stroke": "#b45309",
+  "fill": "#fef3c7",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "bt2",
+  "x": 514,
+  "y": 200,
+  "text": "3 Read binwalk's\n   own source",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "bc2",
+  "x": 514,
+  "y": 246,
+  "text": "calls 6-9 \u00b7 35 s",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "bd2",
+  "x": 514,
+  "y": 274,
+  "text": "the binary is a Python\nscript; it reads the\noption parser, then\nruns binwalk's code to\nprint its internal\ntable: 51 options,\neach with its type",
+  "fs": 13,
+  "stroke": "#374151"
+ },
+ {
+  "type": "line",
+  "id": "rl2",
+  "x": 504,
+  "y": 442,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    210,
+    0
+   ]
+  ],
+  "stroke": "#cbd5e1",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "rt2",
+  "x": 504,
+  "y": 454,
+  "text": "0 runs; its Python\ncode imported",
+  "fs": 14,
+  "stroke": "#64748b"
+ },
+ {
+  "type": "arrow",
+  "id": "ar2",
+  "x": 714,
+  "y": 340,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    20,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "b3",
+  "x": 736,
+  "y": 190,
+  "w": 210,
+  "h": 236,
+  "stroke": "#1e3a5f",
+  "fill": "#fed7aa",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "bt3",
+  "x": 746,
+  "y": 200,
+  "text": "4 Probe the\n   binary",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "bc3",
+  "x": 746,
+  "y": 246,
+  "text": "calls 10-11 \u00b7 32 s",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "bd3",
+  "x": 746,
+  "y": 274,
+  "text": "29 runs in one mktemp\nfolder, on a gzip+tar\nfile it built: stdin,\npipes, '-', two files,\nvalue forms, -f, -e,\n-J, -W, -m, -x, -y",
+  "fs": 13,
+  "stroke": "#374151"
+ },
+ {
+  "type": "line",
+  "id": "rl3",
+  "x": 736,
+  "y": 442,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    210,
+    0
+   ]
+  ],
+  "stroke": "#c2410c",
+  "sw": 4
+ },
+ {
+  "type": "text",
+  "id": "rt3",
+  "x": 736,
+  "y": 454,
+  "text": "29 runs",
+  "fs": 14,
+  "stroke": "#c2410c"
+ },
+ {
+  "type": "arrow",
+  "id": "ar3",
+  "x": 946,
+  "y": 340,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    20,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "b4",
+  "x": 968,
+  "y": 190,
+  "w": 210,
+  "h": 236,
+  "stroke": "#b45309",
+  "fill": "#fef3c7",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "bt4",
+  "x": 978,
+  "y": 200,
+  "text": "5 Packages and\n   more source",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "bc4",
+  "x": 978,
+  "y": 246,
+  "text": "calls 12-13 \u00b7 46 s",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "bd4",
+  "x": 978,
+  "y": 274,
+  "text": "caruca and PaSh's\npackage: not installed;\nsource shows -x/-y are\nregexes and where -J\nwrites its picture",
+  "fs": 13,
+  "stroke": "#374151"
+ },
+ {
+  "type": "line",
+  "id": "rl4",
+  "x": 968,
+  "y": 442,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    210,
+    0
+   ]
+  ],
+  "stroke": "#cbd5e1",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "rt4",
+  "x": 968,
+  "y": 454,
+  "text": "0 runs",
+  "fs": 14,
+  "stroke": "#64748b"
+ },
+ {
+  "type": "arrow",
+  "id": "ar4",
+  "x": 1178,
+  "y": 340,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    20,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "b5",
+  "x": 1200,
+  "y": 190,
+  "w": 210,
+  "h": 236,
+  "stroke": "#1e3a5f",
+  "fill": "#a7f3d0",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "bt5",
+  "x": 1210,
+  "y": 200,
+  "text": "6 Write all\n   four files",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "bc5",
+  "x": 1210,
+  "y": 246,
+  "text": "call 14 \u00b7 20 s",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "bd5",
+  "x": 1210,
+  "y": 274,
+  "text": "one shell call; the\nsyntax file and table\nfollow the option table;\nJSON loads: 30 flags,\n21 options",
+  "fs": 13,
+  "stroke": "#374151"
+ },
+ {
+  "type": "line",
+  "id": "rl5",
+  "x": 1200,
+  "y": 442,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    210,
+    0
+   ]
+  ],
+  "stroke": "#cbd5e1",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "rt5",
+  "x": 1200,
+  "y": 454,
+  "text": "0 runs",
+  "fs": 14,
+  "stroke": "#64748b"
+ },
+ {
+  "type": "arrow",
+  "id": "ar5",
+  "x": 1410,
+  "y": 340,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    20,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "b6",
+  "x": 1432,
+  "y": 190,
+  "w": 210,
+  "h": 236,
+  "stroke": "#1e3a5f",
+  "fill": "#a7f3d0",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "bt6",
+  "x": 1442,
+  "y": 200,
+  "text": "7 Test",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "bc6",
+  "x": 1442,
+  "y": 246,
+  "text": "calls 15-17 \u00b7 26 s",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "bd6",
+  "x": 1442,
+  "y": 274,
+  "text": "15: its harness fails\n(name clash)\n16: files vs the same\noption table: OK\n17: 4 runs, compile,\ndelete scratch",
+  "fs": 13,
+  "stroke": "#374151"
+ },
+ {
+  "type": "line",
+  "id": "rl6",
+  "x": 1432,
+  "y": 442,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    210,
+    0
+   ]
+  ],
+  "stroke": "#c2410c",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "rt6",
+  "x": 1432,
+  "y": 454,
+  "text": "4 runs",
+  "fs": 14,
+  "stroke": "#c2410c"
+ },
+ {
+  "type": "arrow",
+  "id": "ar6",
+  "x": 1642,
+  "y": 340,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    20,
+    0
+   ]
+  ],
+  "stroke": "#1e3a5f",
+  "sw": 2
+ },
+ {
+  "type": "rectangle",
+  "id": "b7",
+  "x": 1664,
+  "y": 190,
+  "w": 210,
+  "h": 236,
+  "stroke": "#1e3a5f",
+  "fill": "#a7f3d0",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "bt7",
+  "x": 1674,
+  "y": 200,
+  "text": "8 Fix, report",
+  "fs": 16,
+  "stroke": "#1e40af"
+ },
+ {
+  "type": "text",
+  "id": "bc7",
+  "x": 1674,
+  "y": 246,
+  "text": "call 18 \u00b7 14 s",
+  "fs": 14,
+  "stroke": "#374151"
+ },
+ {
+  "type": "text",
+  "id": "bd7",
+  "x": 1674,
+  "y": 274,
+  "text": "-h prints help even\nwith -q: edits the\ninput/output class;\nchecked only by\ncompiling; report\nat 13:41:30",
+  "fs": 13,
+  "stroke": "#374151"
+ },
+ {
+  "type": "line",
+  "id": "rl7",
+  "x": 1664,
+  "y": 442,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    210,
+    0
+   ]
+  ],
+  "stroke": "#cbd5e1",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "rt7",
+  "x": 1664,
+  "y": 454,
+  "text": "0 runs",
+  "fs": 14,
+  "stroke": "#64748b"
+ },
+ {
+  "type": "line",
+  "id": "fw",
+  "x": 1189.0,
+  "y": 120,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    0,
+    400
+   ]
+  ],
+  "stroke": "#c2410c",
+  "sw": 2,
+  "style": "dashed"
+ },
+ {
+  "type": "text",
+  "id": "fwl",
+  "x": 1189.0,
+  "y": 96,
+  "text": "FILES WRITTEN 13:40:30, 2 min 12 s in: 30 runs of the binary before this line, 4 after",
+  "fs": 15,
+  "stroke": "#c2410c",
+  "align": "center"
+ },
+ {
+  "type": "arrow",
+  "id": "loop",
+  "x": 1769.0,
+  "y": 190,
+  "points": [
+   [
+    0,
+    0
+   ],
+   [
+    -232,
+    -36
+   ],
+   [
+    -464,
+    0
+   ]
+  ],
+  "stroke": "#047857",
+  "sw": 2
+ },
+ {
+  "type": "text",
+  "id": "loopl",
+  "x": 1452,
+  "y": 130,
+  "text": "test, then fix",
+  "fs": 14,
+  "stroke": "#047857"
+ },
+ {
+  "type": "text",
+  "id": "circ",
+  "x": 1200,
+  "y": 520,
+  "text": "The main test (call 16) compares the written files with the option table they were\nwritten from. It confirms the copy, not the options: 35 of the 51 options were never run,\namong them -D (runs a command per match), -r (deletes files) and -M (extracts recursively).",
+  "fs": 14,
+  "stroke": "#b91c1c"
+ },
+ {
+  "type": "text",
+  "id": "iso",
+  "x": 40,
+  "y": 520,
+  "text": "Isolation: one folder, T=$(mktemp -d /tmp/bwtest.XXXX); cd $T; - with ';', so a failed\nmktemp would have sent the probes to the home folder (as in run 5). The -E -J probe also\nwrote matplotlib's font cache to ~/.cache, outside that folder. Scratch deleted in call 17.",
+  "fs": 14,
+  "stroke": "#b45309"
+ },
+ {
+  "type": "text",
+  "id": "source",
+  "x": 504,
+  "y": 150,
+  "text": "source code was a main input: the 'opaque binary' is readable Python",
+  "fs": 14,
+  "stroke": "#b45309"
+ },
+ {
+  "type": "text",
+  "id": "footer",
+  "x": 40,
+  "y": 604,
+  "text": "Phase boundaries are tool-call numbers; a phase lasts from its first call to the next phase's first call, the last to the report. The session started 13:38:18; its first call came 3 s later.\nTime between calls is the model composing: the longest gaps are 41 s before call 14 (all four files) and 22 s before call 10 (the first probe batch).",
+  "fs": 14,
+  "stroke": "#64748b"
+ }
+]
