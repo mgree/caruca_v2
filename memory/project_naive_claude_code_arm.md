@@ -186,4 +186,11 @@ sandbox; nothing outside the scratch dir deleted except `output/__pycache__`. **
 files after writing** (only JSON load + py_compile). Parser table identical to the `rm` sample; syntax
 file = sample + 6 `--interactive` values, zero-or-more operands, coreutils 9.4 header. Folder
 `naive_llm_caruca/runs/2026-10-20_121932_naive-run-rm_rm_PROMPT_v1/`; README "Observed, run 5". Not
-scored, not analysed.
+scored. **Analysed + PDF 2026-10-20.** Verified there: `samples/rm/rm.py` == v1 `syntax_specs/rm.py` (the
+curated reference) byte for byte, and v1's `outputs/llm-dsl-generation/rm.py` matches it apart from
+formatting (tuple vs list, trailing newline); v1's committed `caruca/save/rm.json` (2024-12-08) has 2
+cases, both side-effectful, path as input and output. The paper's rm figure: 8,749,056 invocation
+configurations (section 2.2). **Caveat found after the analysis:** `rm` is one of v1's own few-shot examples
+(`llm.py:116`), so v1's model had rm's reference answer in its prompt, just as the agent had it in
+`samples/`. The run-5 analysis and its v1 diagram say "v1's model matched its reference for rm" without
+this caveat; correct them before the PDF circulates.

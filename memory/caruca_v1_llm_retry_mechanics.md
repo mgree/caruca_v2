@@ -104,3 +104,17 @@ zero SDK calls.
 of the virtualenv used. Results produced through `.venv-llm` as it stood on 2026-10-05 come from a v1 whose
 retry sends no feedback. Re-check the installed version before repeating that claim; it is a point-in-time
 observation.
+
+**What documentation v1's model step reads (verified 2026-10-20 in `llm.py` at `d80324073`).** Only the
+bundled man page text `src/caruca/doc_sources/man/<cmd>.txt` (120 files, `_doc_for`, `llm.py:158`). It
+never runs `--help` and never runs the binary. `doc_sources/` also holds `helpfiles/` (109 `.help` files)
+and `versions/`, but no `.py` or `.sh` file in v1 references `helpfiles` (grep, 2026-10-20). So the
+paper's "man or `--help` pages" (section 3.2) and its `uglifyjs --help | caruca` usage line describe
+more than the code does. The bundled man pages are fixed snapshots, not the installed binary's: `rm.txt`
+is GNU coreutils 8.32 (February 2022); its option list matches coreutils 9.4's. The prompt says "Dont
+add extra choices that are not mentioned in the manpage", so values that only the binary reveals (for
+example `rm --interactive=no|none|yes`) are excluded by instruction. **The worked examples are the
+bundled man page plus v1's curated reference `syntax_specs/<c>.py` for `touch`, `rm`, `mv`, `ls`
+(`llm.py:116`), so for any of those four commands the target's own reference answer is in the prompt.**
+v1's shipped LLM output for `rm` matching the reference is therefore not an independent result. The
+paper names three examples (`rm`, `mv`, `touch`); the code has four.

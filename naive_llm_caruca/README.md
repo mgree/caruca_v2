@@ -228,8 +228,9 @@ empty (fixed in `naive-run` straight after; `bash_urls=0` in `run.env` is correc
 **Observed, run 5 (rm, the first destructive command).** *2026-10-20 12:19, `rm`, watch mode, clone
 `naive-run-rm`, run 1 in that clone, `claude-fable-5-1` at medium effort (trial call succeeded), web tools
 and MCP servers off, the no-web prompt section in place. Same setup as run 4, so `rm` is the only
-change. `rm` is a sample. Collected to `runs/2026-10-20_121932_naive-run-rm_rm_PROMPT_v1/`. Not scored,
-not yet analysed with diagrams.* 60 seconds, 6 turns, 5 tool calls (all Bash); $0.80 at list price;
+change. `rm` is a sample. Collected to `runs/2026-10-20_121932_naive-run-rm_rm_PROMPT_v1/`; analysed in
+[its `analysis/analysis.md`](runs/2026-10-20_121932_naive-run-rm_rm_PROMPT_v1/analysis/analysis.md) (PDF
+beside it) with three diagrams. Not scored.* 60 seconds, 6 turns, 5 tool calls (all Bash); $0.80 at list price;
 4,623 output tokens of which 937 thinking. No URL in any command. **Isolation:** its only precaution was a
 fresh scratch directory: call 3 begins `cd $(mktemp -d)`, creates its own files and directories there
 (`a`…`h`, `dir/sub/x`, `empty`, a file named `-foo`), and runs `rm` 27 times on them through a small
@@ -252,6 +253,16 @@ plus standard output under `-v`, `--help` or `--version`; a parallelizability cl
 PaSh's table makes `--interactive` and `--preserve-root` consume the next word, which the probes show
 is wrong for both (`rm --interactive never d` treated `never` as a file), and that it kept the sample's
 shape anyway.
+
+*From the analysis (2026-10-20).* The sample's `rm.py` is byte for byte v1's curated reference file
+(`syntax_specs/rm.py`), and v1's own model output for `rm` matches it apart from formatting; the session's
+two changes are supported by the binary, so a score against the reference would count them as errors.
+The `mktemp` guard fails open (`cd $(mktemp -d) && t(){…}` with every probe on its own line: an empty
+`mktemp` would send the batch to the home folder). Five probes reused a file an earlier probe had deleted,
+so they show acceptance, not effect. The report's "a bare `--interactive` means always" is from the
+manual, not a probe. Against the paper's design, whose running example is `rm` (8,749,056 invocation
+configurations, each in its own traced layer, yielding pre- and post-conditions), the session ran 27
+cases in one shared folder and stated no pre- or post-conditions; the prompt does not ask for them.
 
 ### PROMPT_v2 — execution is the standard
 

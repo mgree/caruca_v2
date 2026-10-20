@@ -213,6 +213,7 @@ questions) and a line in the ledger below.
 | 2026-10-20 | Run 4: grep, v1, Fable 5.1 medium, no web. 322 s, 10 tool calls, $2.54; no URLs; 72 binary runs before writing; parser table = sample's option set; not scored | README PROMPT_v1 "Observed, run 4"; `runs/2026-10-20_112956_…` |
 | 2026-10-20 | Run 4 analysed with the README's prompt: four diagrams (session workflow, information flow, run 3 versus run 4 on one time scale, v1's design in the paper versus the agent's approach); "Everything passed" not supported (harness ended with 1 failure, not rerun); `--color` disagreement between its two files | `runs/2026-10-20_112956_…/analysis/analysis.md`, README "Observed, run 4" |
 | 2026-10-20 | Run 5: rm (first destructive command), v1, Fable 5.1 medium, no web. 60 s, 5 tool calls, $0.80; 0 URLs; isolation = one `mktemp -d` scratch directory, 27 rm runs on its own files; no test after writing; parser table = sample's | README PROMPT_v1 "Observed, run 5"; `runs/2026-10-20_121932_…` |
+| 2026-10-20 | Run 5 analysed (README prompt + comparison with v1's design in the paper, whose running example is rm) and converted to PDF; three diagrams | `runs/2026-10-20_121932_…/analysis/analysis.{md,pdf}` |
 
 Settled 2026-10-20: the session's network access. Tiran kept the network open for programs that
 need it and forbade web searching and browsing (section 10). Still open: whether to add a `.gitignore` rule for transcripts if `runs/` grows large.
