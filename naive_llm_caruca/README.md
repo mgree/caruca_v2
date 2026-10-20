@@ -81,6 +81,39 @@ what was added, why, what we expect to change, and what the runs actually showed
 | `PROMPT_v1.md` | the objective, the deliverable, the formats, the samples, the binary and manual-page paths, and one instruction: test the binary against the specification | how to find out what the command accepts, isolation, versioning, reproducibility |
 | `PROMPT_v2.md` | a section "How the description must be established": execution not recall, probing as an experiment, OS and command version | documentation, isolation, tracing, how to decide the behaviour class |
 
+### In every version since 2026-10-20: no web lookups, and a fixed model
+
+**What was added.** Both prompt files were edited in place (not given new version numbers, because
+this is a standing rule for every run rather than a new variable to compare) with a section placed
+just before "Scope":
+
+> **What you may not use.** Do not search the web or read anything online: no search engines, no
+> websites, no code repositories. Work from what is on this machine. Programs that need the network
+> to do their job, such as a package installer, may still use it.
+
+At the same time `naive-run` began removing three tools from every session (WebSearch, WebFetch, and
+RemoteTrigger, which starts cloud agents that can browse) and loading no MCP servers. It also began
+fixing the model (see "Running a command with Claude"). The VM's network itself stays open. Each
+run's `prompt.md` holds the exact text that was sent, so runs from before and after the change can
+still be told apart.
+
+**Why.** In run 3 (grep, below) the session used `curl` to search the GitHub API for "caruca", found
+this public repository and read three of our memory notes, which shaped its answer. It did this from
+the shell, not with the web tools, so removing the tools alone would not have stopped it; only the
+prompt covers the shell. Tiran's call (2026-10-20): the agent must not search or browse, because
+that can taint the result. Programs that need the network to do their job keep their access, so the
+VM is not firewalled. Run 3 also ran on `claude-haiku-5-5`, the account's default, because no model was
+set.
+
+**What we expect.** No search or browsing: no requests to GitHub or to any website in the
+session's shell commands. A session may still install a package (as run 3 fetched `pash-annotations`
+from PyPI), and that request will show up in `bash_urls.txt`; whoever analyses the run decides which
+URLs were installs and which were lookups. The withheld-word check passes on the new wording (it
+avoids "documentation").
+
+**Observed.** Run 4 (grep, v1, 2026-10-20; entry under PROMPT_v1): no URL in any shell command and no
+attempt to reach PyPI or GitHub; the trial call chose Fable at medium effort. One run so far.
+
 ### PROMPT_v1 — the bare task
 
 **What it contains.** The objective (describe the command's argument syntax and behaviour so programs
@@ -149,6 +182,76 @@ a `grep` function that runs its bundled ugrep, so the first `grep --version` rep
 public repository and read three of our memory notes about grep, which shaped the four-syntax
 structure; and no output file states the grep version. One claim in its report is wrong: the
 sample's table already had `-y` and `-u`.
+
+**Observed, run 4.** *2026-10-20 11:30, `grep`, watch mode, clone `naive-run-grep-noweb`, run 1 in
+that clone, model `claude-fable-5-1` at medium effort (trial call succeeded), web tools and MCP
+servers off, prompt carrying the no-web section. The same command and prompt version as run 3, so the
+differences are the model and the no-web rule. Collected to
+`runs/2026-10-20_112956_naive-run-grep-noweb_grep_PROMPT_v1/`; analysed in
+[its `analysis/analysis.md`](runs/2026-10-20_112956_naive-run-grep-noweb_grep_PROMPT_v1/analysis/analysis.md)
+with four diagrams. Not scored.* 322 seconds, 11 turns, 10 tool calls (all Bash); $2.54 at list price (billed to the
+subscription), 24,495 output tokens of which 6,663 thinking. **No network use:** no URL in any
+command (`bash_urls=0`). Its only search for the two packages was local: an import attempt, `pip
+list`, and a `find` over the disk. It did not try PyPI. Order of work: listed the folder and read
+both format documents and all four grep sample files (calls 1 to 4); checked the binary
+(`/usr/bin/grep --version`, `type grep`, noticing again that the shell's `grep` is a function
+running ugrep); rendered the manual page and pulled its option lines; then ran the binary 72 times
+by path in calls 5 and 6, on small files under `/tmp` with no other isolation, before writing all
+four files in one call at 11:33:54 (four minutes in). It then built a test harness with stand-in
+`caruca` and `pash_annotations` modules that it wrote itself (no real PaSh, unlike run 3), checked the
+option set against `--help` and the manual page, ran every option spelling through the binary,
+and exercised both classes on 18 invocations. One reported failure (`-p`) was noise from its own
+pattern-matching of the manual page, which it confirmed by running `grep -p` (rejected). Output: syntax
+file 100 lines, two syntaxes (pattern operand; `-e`/`-f` with all operands files), against the
+sample's one; parser table with **exactly the sample's flags and options** (formatting differs);
+input/output class 43 lines (rewritten), parallelizability class 90 (sample 71; restructured from the
+sample, keeping its placeholder names). Unlike run 3, three of the four files name GNU grep 3.11 (a
+first version of this entry said none did; corrected after the analysis). It
+lists five uncertainties (no way to express `-NUM`; bare `--color`; `-d recurse` reading the working
+directory; include/exclude filters over-approximated; classes tested only against its stand-ins).
+Compared with run 3: under half the time, a seventh of the tool calls, 2.6 times the cost; it ran the
+binary about as often before writing; it did not fetch PaSh, so its classes were never run against
+PaSh's real code.
+
+*From the analysis (2026-10-20).* The closing report's "Everything passed" is not supported: the
+harness's only run ended `TOTAL FAILURES: 1` (a `-p` the session's own pattern read out of the
+manual), which the session explained away with a search that could not have found the source, and
+did not rerun. The parser table and the syntax file disagree on `--color` (separate word versus
+`=WHEN`; the probe in call 6 supports `=WHEN`). Like run 3, its first `grep --version` (call 2) reached
+ugrep through Claude Code's shell function, and it switched to `/usr/bin/grep` within two calls.
+Against the design in the Caruca paper, the session did all five of v1's jobs inside the model, chose
+72 targeted probes where v1 generates a bounded space (122 invocations for grep at one flag),
+observed printed output instead of system calls, and decided parallelizability by reasoning where v1
+runs a split-input test. Tooling note: this run's `bash_urls.txt` holds one empty line instead of being
+empty (fixed in `naive-run` straight after; `bash_urls=0` in `run.env` is correct).
+
+**Observed, run 5 (rm, the first destructive command).** *2026-10-20 12:19, `rm`, watch mode, clone
+`naive-run-rm`, run 1 in that clone, `claude-fable-5-1` at medium effort (trial call succeeded), web tools
+and MCP servers off, the no-web prompt section in place. Same setup as run 4, so `rm` is the only
+change. `rm` is a sample. Collected to `runs/2026-10-20_121932_naive-run-rm_rm_PROMPT_v1/`. Not scored,
+not yet analysed with diagrams.* 60 seconds, 6 turns, 5 tool calls (all Bash); $0.80 at list price;
+4,623 output tokens of which 937 thinking. No URL in any command. **Isolation:** its only precaution was a
+fresh scratch directory: call 3 begins `cd $(mktemp -d)`, creates its own files and directories there
+(`a`…`h`, `dir/sub/x`, `empty`, a file named `-foo`), and runs `rm` 27 times on them through a small
+wrapper that feeds `/dev/null` to standard input (so `-i` cannot wait for an answer) and prints each exit
+code. No namespace, container or copy-on-write layer, and nothing aimed at protected paths
+(`--preserve-root` was tried only on a scratch file). Its only other deletion was `rm -rf` of
+`__pycache__` in `output/`. Order of work: listed the folder and read the syntax format (call 1);
+read PaSh's format, the whole `rm` sample, `uniq`'s syntax and parallelizability files and `grep`'s
+parallelizability class, then rendered the full manual page and ran `rm --version` and `--help`
+(call 2); probed (call 3); wrote all four files in one call and checked they parse (call 4); removed
+caches (call 5). **It did not test the files after writing them:** the only post-write check was that the
+JSON loads and the Python compiles; the prompt's "be certain to test the binary against the specification
+you generate" was met only by the probes that came before the specification. Output: parser table
+**identical to the sample's** (same 10 flag entries and 2 options); syntax file = the sample plus three
+changes the probes support (six `--interactive` values from the binary's own error message instead of
+three; operands zero-or-more instead of at-least-one, because `rm -f` with no operand exits 0; a header
+naming GNU coreutils 9.4 and listing the probe findings); input/output class = the sample's single line
+plus standard output under `-v`, `--help` or `--version`; a parallelizability class that adds nothing
+(the sample has none; absent means "not parallelizable", which the session said). Its report flags that
+PaSh's table makes `--interactive` and `--preserve-root` consume the next word, which the probes show
+is wrong for both (`rm --interactive never d` treated `never` as a file), and that it kept the sample's
+shape anyway.
 
 ### PROMPT_v2 — execution is the standard
 
@@ -262,6 +365,18 @@ naive-run sed PROMPT_v2.md              # watch mode: runs unattended, every too
 naive-run -i sed PROMPT_v2.md           # or Claude Code's own interactive screen (press Enter to send the prompt)
 exit
 ```
+
+**Model and restrictions, both modes.** Before the run starts, `naive-run` makes a one-line trial
+call to `claude-fable-5-1` (about $0.02 at list price; it replaces the system prompt and loads no
+tools, because a trial call with the full system prompt was measured at $3.02 on the Mac). If the
+account can use Fable, the run uses `claude-fable-5-1` at medium effort; if not, it uses
+`claude-opus-5-5` at high effort, and the refusal is written to `run.env` as `model_choice=fallback
+(<reason>)`. No mid-run fallback: effort is set once per session, so a mid-run switch to Opus would
+run it at medium effort and mix two models in one run. Every session is started with
+`--disallowedTools WebSearch WebFetch RemoteTrigger --strict-mcp-config` (no MCP servers, so no
+plugin servers and no claude.ai connectors, some of which can search). After the run, every
+`http(s)://` URL in the session's Bash commands is written to the run folder's `bash_urls.txt`, its
+count goes into `run.env` as `bash_urls=`, and the list is printed.
 
 **Watch mode** is the default and the one to use for the record. The session runs non-interactively
 (`claude -p`) with permissions bypassed, which is safe in a throwaway VM and the only way a
@@ -454,7 +569,8 @@ goes through task 016's revision log. Do not copy anything into a VM.
 ## What to record per run
 
 - command under test; prompt version; date; the clone's name and that it came from `naive-golden` (Ubuntu 24.04, arm64); `claude --version`
-- model id and permission mode used
+- model id, effort and permission mode used, and whether the Fable trial call failed and Opus was used instead (`run.env`: `model`, `effort`, `model_choice`)
+- the URLs in the session's Bash commands (`bash_urls.txt`): which were package installs and which, if any, were lookups the prompt forbids
 - wall-clock, input/output tokens, cost (from the `result` event)
 - the run folder, collected with `collect_run.sh`
 - observations, in these terms:

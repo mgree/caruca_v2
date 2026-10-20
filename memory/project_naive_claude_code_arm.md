@@ -135,3 +135,55 @@ Run 2 (19:05) is still unanalysed.
 2026-10-13) is the comprehensive write-up of how the arm was built, for the advisors; deliverable
 `ai_docs/docs/naive_claude_code_arm_how_it_was_built.md`, not started. Related: [[caruca_v2_baseline_scope]] (the naive
 single-prompt control, task 001) and task 007 (agentic SDK arm) are the other two LLM arms.
+
+**No web lookups + fixed model (Tiran, 2026-10-20).** Prompted by run 3 (grep), which used `curl` from
+Bash (not the WebSearch tool) to search the GitHub API for "caruca", found this public repo and read
+three memory notes. Tiran's call: the agent may not search or browse, but **programs that need the
+network keep it** (pip/apt), so **the VM is not firewalled** (he rejected a firewall). Enforced by:
+both prompts edited in place with a "What you may not use" section (wording avoids the withheld word
+"documentation"); `vm/naive-run` passes `--disallowedTools WebSearch WebFetch RemoteTrigger
+--strict-mcp-config` in both modes; a post-run audit writes every http(s) URL in Bash commands to
+`bash_urls.txt` (the shell is covered only by the prompt). Model: Fable 5.1 medium, else Opus 5.5 high,
+chosen by a trial call before the run; no `--fallback-model` (effort is per session, so a mid-run switch
+would run Opus at medium). Observed 2026-10-20:
+- a trial `claude -p` with the full default system prompt cost **$3.02 list** on the Mac (151K cached
+  tokens from plugins and skills), even with `--tools ""`; with `--system-prompt` replaced it cost **$0.02**.
+- a refused model gives exit 1, `is_error: true`, `terminal_reason: api_error`.
+- in a fresh clone of `naive-golden` (Claude Code 2.1.296), the account **can** use `claude-fable-5-1`;
+  with the flags, the init event had no WebSearch, WebFetch or RemoteTrigger and `mcp_servers: []`.
+  Run 3's init had listed WebSearch, WebFetch and a supabase plugin MCP server.
+- run 3 ran on `claude-haiku-5-5` (the account default; no model was set).
+
+**Sign-in lost in clones (observed 2026-10-20).** The check clone `naive-run-check` worked at 11:20
+(signed in, inherited from `naive-golden`). The next clone, made at 11:23, reported `loggedIn: false`, and its
+run failed at once with "OAuth session expired and could not be refreshed" (0 turns; clone deleted).
+*Not established:* the cause. The likely one is that the check clone's token refresh rotated the
+refresh token every clone inherits from the golden image. Candidate fix: `claude setup-token`
+(long-lived token; it exists in 2.1.293's help). Not tested in the VM. Since then `naive-run` stops (exit 4)
+if `claude auth status` is not logged in, or if the trial call's error mentions sign-in, instead of
+mislabelling it as a Fable refusal and falling back to Opus.
+
+**Run 4 (2026-10-20, collected).** Tiran signed in to `naive-golden` again with `/login` at about 11:28
+(not `setup-token`), and the next clone worked. Run 4 = grep, PROMPT_v1, watch mode, Fable 5.1 medium,
+no web tools: 322 s, 10 Bash calls, $2.54 list, **0 URLs**, 72 direct binary runs before writing,
+parser table has the sample's exact option set, classes tested only against stand-ins it wrote itself
+(no PyPI attempt). Folder `naive_llm_caruca/runs/2026-10-20_112956_naive-run-grep-noweb_grep_PROMPT_v1/`;
+README "Observed, run 4". Not scored. **Analysed 2026-10-20** (`analysis/analysis.md` in the run folder,
+four diagrams incl. run 3 vs run 4 and v1's paper design vs the agent). Facts established there: call 2's
+unqualified `grep --version` hit ugrep (same as run 3; recovered by call 4); the harness's only run ended
+`TOTAL FAILURES: 1` yet the report says "Everything passed"; `grep.json` keeps the sample's `--color WHEN`
+while `grep.py` says `=WHEN` (probe supports `=WHEN`); 3 of 4 files name GNU grep 3.11; the harness runs
+the binary 154 times (counted by replaying it on the Mac with a counting stand-in binary); `grep.py`
+imports under v1's real DSL (2 syntaxes, 46/48 option nodes). Diagram helper used for the four diagrams
+(fills Excalidraw boilerplate only) lived in the session scratchpad, not the repo.
+Whether a later clone will lose the sign-in again is not yet known.
+
+**Run 5 (2026-10-20, collected): rm, the first destructive command.** PROMPT_v1, watch mode, Fable 5.1
+medium, no web; sign-in in the clone worked again with no re-login (so the 11:23 sign-in loss has not
+recurred across two later clones). 60 s, 5 Bash calls, $0.80 list, 0 URLs. Isolation was only
+`cd $(mktemp -d)` with files it created, 27 `rm` runs with stdin from `/dev/null`; no namespace or
+sandbox; nothing outside the scratch dir deleted except `output/__pycache__`. **No test of its own
+files after writing** (only JSON load + py_compile). Parser table identical to the `rm` sample; syntax
+file = sample + 6 `--interactive` values, zero-or-more operands, coreutils 9.4 header. Folder
+`naive_llm_caruca/runs/2026-10-20_121932_naive-run-rm_rm_PROMPT_v1/`; README "Observed, run 5". Not
+scored, not analysed.

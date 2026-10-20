@@ -187,7 +187,10 @@ questions) and a line in the ledger below.
 - It will not tune the prompt toward a better score. Any change to the package is a change to the
   experiment and goes in the revision log with its reason.
 - It will not add method hints, guardrails, or tool restrictions. If Tiran later wants a guarded
-  variant, that is a new arm, not a revision of this one.
+  variant, that is a new arm, not a revision of this one. One exception, by Tiran's direction of
+  2026-10-20: the session may not search or browse the web (web tools and MCP servers removed, one
+  prompt section saying so), because a lookup can bring this project's own notes into the answer, as
+  run 3 showed. That protects the experiment from contamination; it is not a hint about method.
 
 ## 8. Progress ledger
 
@@ -206,10 +209,13 @@ questions) and a line in the ledger below.
 | — | First analysis produced with that prompt | not yet |
 | — | Scoring: syntax file through `caruca-v2 score`; PaSh classes imported and exercised under `pash_annotations` in the pash VM | not yet; no scorer exists for the PaSh classes |
 | — | Second prompt version run on the same command, and the comparison written into the README | not yet |
+| 2026-10-20 | No web lookups (prompt section, tools removed, no MCP servers, URL audit) and model choice (Fable 5.1 medium, else Opus 5.5 high) | section 10, README "In every version since 2026-10-20" |
+| 2026-10-20 | Run 4: grep, v1, Fable 5.1 medium, no web. 322 s, 10 tool calls, $2.54; no URLs; 72 binary runs before writing; parser table = sample's option set; not scored | README PROMPT_v1 "Observed, run 4"; `runs/2026-10-20_112956_…` |
+| 2026-10-20 | Run 4 analysed with the README's prompt: four diagrams (session workflow, information flow, run 3 versus run 4 on one time scale, v1's design in the paper versus the agent's approach); "Everything passed" not supported (harness ended with 1 failure, not rerun); `--color` disagreement between its two files | `runs/2026-10-20_112956_…/analysis/analysis.md`, README "Observed, run 4" |
+| 2026-10-20 | Run 5: rm (first destructive command), v1, Fable 5.1 medium, no web. 60 s, 5 tool calls, $0.80; 0 URLs; isolation = one `mktemp -d` scratch directory, 27 rm runs on its own files; no test after writing; parser table = sample's | README PROMPT_v1 "Observed, run 5"; `runs/2026-10-20_121932_…` |
 
-Still open: what to do about the session's network access (run 1 queried GitHub; a clone with no
-network would answer "what does it do from the man page and the binary alone", but is a different
-experiment); whether to add a `.gitignore` rule for transcripts if `runs/` grows large.
+Settled 2026-10-20: the session's network access. Tiran kept the network open for programs that
+need it and forbade web searching and browsing (section 10). Still open: whether to add a `.gitignore` rule for transcripts if `runs/` grows large.
 
 ## 9. Implementation details
 
@@ -309,6 +315,7 @@ environment the session runs in, so it is not used.
 
 | Date | Change | Reason |
 |---|---|---|
+| 2026-10-20 | No web lookups and a fixed model. Both prompts gained a "What you may not use" section (no search engines, websites or code repositories; programs that need the network may use it), edited in place. `naive-run` removes WebSearch, WebFetch and RemoteTrigger and loads no MCP servers (`--strict-mcp-config`) in both modes. It picks the model with a $0.02 trial call: `claude-fable-5-1` at medium effort, or `claude-opus-5-5` at high effort if Fable is refused, with no mid-run fallback. After each run it lists every URL in the session's Bash commands in `bash_urls.txt`. The VM network is left open. Recorded in `run.env` and in the README entry "In every version since 2026-10-20". | Run 3 used `curl` to search GitHub, found this repo and read three memory notes; it also ran on Haiku by default. Tiran 2026-10-20: "no web access is allowed", with core network tools still allowed; Fable 5.1 medium, Opus 5.5 high as fallback. |
 | 2026-10-13 | Package created: prompt, two format documents, four sample pairs, operator notes. | Tiran's direction above. |
 | 2026-10-13 | Claude Code 2.1.296 installed inside the Lima VM `caruca` (native installer, guest home); package staged at `~/naive-arm` by the new `sync_to_vm.sh`; README gained an environment section. Tiran signed in the same day with the claude.ai account (Max subscription). | Tiran: run the prompts "from within the environment and not have to escape out of it or control it from above", so the session is as naive as the VM is. |
 | 2026-10-13 | Inherited sessions removed: the golden image's `~/.claude/projects` emptied (sign-in kept), `new_run_vm.sh` empties it in each clone, so `_other-sessions` folders stop recurring; the redundant one from the 19:47 collection deleted. | Tiran 2026-10-13: a second folder appeared on every collection; "is that necessary?" |

@@ -18,6 +18,14 @@
 # Default prompt version: PROMPT_v1.md. Any installed command is allowed. A command outside the
 # project's core nine (cat grep pwd rm tac tail tee uniq wc) asks for confirmation first; one of the
 # four samples (tee uniq grep rm) gets a note, since the session has its finished answer in samples/.
+#
+# Model: a one-line trial call checks whether this account can use claude-fable-5-1; if it can, the run
+# uses it at medium effort, otherwise claude-opus-5-5 at high effort. No --fallback-model: effort is set
+# once per session, so a mid-run switch would run Opus at medium and mix two models in one run.
+# No web lookups (Tiran, 2026-10-20): WebSearch, WebFetch and RemoteTrigger (cloud agents) are removed and
+# no MCP servers are loaded (--strict-mcp-config), in both modes. The network itself is left open so
+# programs that need it (a package installer) still work; the prompt tells the session not to read
+# anything online, and after the run every http(s) URL in its Bash commands is listed in bash_urls.txt.
 set -euo pipefail
 cd ~/naive-arm
 MODE=watch
@@ -41,6 +49,8 @@ BIN="$(command -v "$CMD" || true)"; MAN="$(man -w "$CMD" 2>/dev/null || true)"
 [ -n "$BIN" ] || { echo "error: $CMD is not installed in this VM" >&2; exit 2; }
 [ -n "$MAN" ] || { echo "error: no manual page for $CMD in this VM" >&2; exit 2; }
 
+# a signed-out clone must stop here: otherwise the model trial call fails and looks like "no Fable access"
+claude auth status 2>/dev/null | grep -q '"loggedIn": true' || { echo "error: Claude Code is not signed in in this VM (claude auth status); sign in (claude, then /login) and rerun" >&2; exit 4; }
 VM="$(hostname | sed 's/^lima-//')"
 PVER="$(basename "${P%.md}")"
 STAMP="$(date +%Y-%m-%d_%H%M%S)"
@@ -54,25 +64,46 @@ if [ -n "$(ls -A output 2>/dev/null)" ]; then
 fi
 PROMPT="$(sed -e "s|{{COMMAND}}|$CMD|g" -e "s|{{PATH}}|$BIN|g" -e "s|{{MANPAGE_PATH}}|$MAN|g" "$P")"
 printf '%s\n' "$PROMPT" > "$RUN/prompt.md"
+# choose the model before the start mark, so the trial call's session is not copied as a run transcript
+PROBE="$(claude -p "Reply with the single word OK." --model claude-fable-5-1 --effort medium --tools "" \
+  --system-prompt "You reply with the single word OK." --strict-mcp-config --disable-slash-commands \
+  --output-format json --no-session-persistence 2>&1 || true)"
+if WHY="$(printf '%s' "$PROBE" | python3 -c '
+import json, sys
+try: d = json.loads(sys.stdin.read().strip().splitlines()[-1])
+except Exception as e: print(f"unreadable trial reply: {e}"); sys.exit(1)
+if d.get("is_error") or "claude-fable-5-1" not in d.get("modelUsage", {}): print(str(d.get("result", "")).replace("\n", " ")[:200]); sys.exit(1)
+')"; then
+  MODEL=claude-fable-5-1; EFFORT=medium; CHOICE="fable-ok"
+else
+  case "$WHY" in *[Aa]uthenticat*|*OAuth*|*[Ll]og\ in*|*/login*)
+    echo "error: the model trial call failed on sign-in, not on model access: $WHY" >&2; rm -rf "$RUN"; exit 4;; esac
+  MODEL=claude-opus-5-5; EFFORT=high; CHOICE="fallback ($WHY)"
+fi
+NO_WEB=(--disallowedTools WebSearch WebFetch RemoteTrigger --strict-mcp-config)
 START_MARK="$RUN/.start"; touch "$START_MARK"
 {
   echo "command=$CMD"; echo "prompt_version=$PVER"; echo "prompt_file=$P"; echo "binary=$BIN"; echo "manpage=$MAN"
   echo "mode=$MODE"; echo "vm=$VM"; echo "run_number_in_this_clone=$N"
   echo "started=$(date -Is)"; echo "claude=$(claude --version)"; echo "os=$(lsb_release -ds) $(uname -m)"
+  echo "model=$MODEL"; echo "effort=$EFFORT"; echo "model_choice=$CHOICE"
+  echo "disallowed_tools=WebSearch WebFetch RemoteTrigger"; echo "mcp=none (strict)"
 } > "$RUN/run.env"
 [ "$N" -gt 1 ] && echo "note: run #$N in this clone; the environment is not fresh (earlier runs: $(ls ~/runs | grep -v "^$(basename "$RUN")$" | tr '\n' ' '))" >&2
 
 echo "== run folder: $RUN"
 echo "== $MODE run of $CMD with $PVER (binary $BIN, man $MAN)"
+echo "== model $MODEL, effort $EFFORT ($CHOICE); web tools and MCP servers off"
 if [ "$MODE" = watch ]; then
   echo "permission_mode=bypassPermissions" >> "$RUN/run.env"
   echo "== permissions are bypassed (throwaway VM); every action is shown below as it happens"
-  claude -p "$PROMPT" --output-format stream-json --verbose --permission-mode bypassPermissions \
+  claude -p "$PROMPT" --model "$MODEL" --effort "$EFFORT" "${NO_WEB[@]}" \
+    --output-format stream-json --verbose --permission-mode bypassPermissions \
     | python3 ~/bin/naive-watch.py "$RUN/stream.jsonl" || echo "exit_status=$?" >> "$RUN/run.env"
 else
   echo "permission_mode=interactive" >> "$RUN/run.env"
   echo "== interactive. The prompt is placed in the input box: press Enter to send it. Exit with /exit."
-  claude "$PROMPT" || echo "exit_status=$?" >> "$RUN/run.env"
+  claude "$PROMPT" --model "$MODEL" --effort "$EFFORT" "${NO_WEB[@]}" || echo "exit_status=$?" >> "$RUN/run.env"
 fi
 echo "finished=$(date -Is)" >> "$RUN/run.env"
 
@@ -84,4 +115,24 @@ find ~/.claude/projects -name '*.jsonl' -newer "$START_MARK" 2>/dev/null | while
   cp "$T" "$RUN/transcript_$(basename "$T")"; echo "transcript=$T" >> "$RUN/run.env"
 done
 rm -f "$START_MARK"
+# every http(s) URL in the session's Bash commands, from the raw stream (watch) or the transcript(s) (interactive)
+python3 - "$RUN" > "$RUN/bash_urls.txt" <<'PY'
+import glob, json, os, re, sys
+run = sys.argv[1]
+files = [os.path.join(run, "stream.jsonl")] + sorted(glob.glob(os.path.join(run, "transcript_*.jsonl")))
+src = next((f for f in files if os.path.exists(f)), None)
+seen = []
+for line in open(src, encoding="utf-8") if src else []:
+    try: r = json.loads(line)
+    except json.JSONDecodeError: continue
+    m = r.get("message") if isinstance(r.get("message"), dict) else {}
+    for b in m.get("content") or []:
+        if isinstance(b, dict) and b.get("type") == "tool_use" and b.get("name") == "Bash":
+            for u in re.findall(r"https?://[^\s\"'`)>|;]+", str((b.get("input") or {}).get("command", ""))):
+                if u not in seen: seen.append(u)
+if seen: print("\n".join(seen))
+PY
+echo "bash_urls=$(grep -c . "$RUN/bash_urls.txt" || true)" >> "$RUN/run.env"
+if [ -s "$RUN/bash_urls.txt" ]; then echo "== URLs in the session's Bash commands (bash_urls.txt):"; sed 's/^/   /' "$RUN/bash_urls.txt"
+else echo "== no URLs in the session's Bash commands"; fi
 echo "== done. Run folder contents:"; find "$RUN" -type f | sort | sed "s|$HOME/||"

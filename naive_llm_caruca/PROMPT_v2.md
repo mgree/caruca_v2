@@ -50,6 +50,12 @@ The `samples/` directory holds the complete set for four other commands:
   between Unix flavours and between versions, so establish which one is in front of you and state it
   in your report alongside the files.
 
+## What you may not use
+
+Do not search the web or read anything online: no search engines, no websites, no code repositories.
+Work from what is on this machine. Programs that need the network to do their job, such as a package
+installer, may still use it.
+
 ## Scope
 
 The command to describe in this session is `{{COMMAND}}`. Please generate a correct specification

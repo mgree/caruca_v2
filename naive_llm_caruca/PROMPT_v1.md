@@ -39,6 +39,12 @@ The `samples/` directory holds the complete set for four other commands:
 | `grep` | [samples/grep/grep.py](samples/grep/grep.py) | [samples/grep/pash/](samples/grep/pash/) |
 | `rm`   | [samples/rm/rm.py](samples/rm/rm.py)         | [samples/rm/pash/](samples/rm/pash/)     |
 
+## What you may not use
+
+Do not search the web or read anything online: no search engines, no websites, no code repositories.
+Work from what is on this machine. Programs that need the network to do their job, such as a package
+installer, may still use it.
+
 ## Scope
 
 The command to describe in this session is `{{COMMAND}}`. Please generate a correct specification
