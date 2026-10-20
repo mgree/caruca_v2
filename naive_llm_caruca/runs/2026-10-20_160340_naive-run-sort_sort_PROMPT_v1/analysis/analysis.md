@@ -1,10 +1,12 @@
-# Analysis of one run: `sort`, prompt version 1, 2026-10-20 16:03 (run 7)
+# Analysis of one run: `sort`, prompt version 1, 2026-10-20 16:03 (run 9)
 
 **Run folder:** `naive_llm_caruca/runs/2026-10-20_160340_naive-run-sort_sort_PROMPT_v1/`
 **Written:** 2026-10-20, from `stream.jsonl`, `stream.actions.log`, the session transcript, `run.env`,
 `environment.txt` and the four output files. Call numbers below are the tool-call numbers printed in
-`stream.actions.log` (1 to 23); times are local (UTC−4). Same setup as runs 4 to 6 (image, prompt,
-model, effort); run 6 (`cut`, analysed beside this one) was made 11 minutes earlier. **`sort` is not one
+`stream.actions.log` (1 to 23); times are local (UTC−4). Same setup as runs 4 to 8 (prompt, model,
+effort, golden image, which has carried the `binwalk` package since run 6); run 7 (`cut`, analysed beside
+this one) started 2 hours 11 minutes earlier. Runs 6 and 8 (`binwalk`, `convert`) were made and analysed
+in another session and are not compared here. **`sort` is not one
 of the four samples.** Checks marked "measured here" were run during this analysis, not by the session:
 v1's real syntax module and generator on the Mac, and GNU coreutils 9.4 and PaSh's real annotation
 code (`pash_annotations` 0.2.4) in the `pash` virtual machine.
@@ -15,7 +17,7 @@ A fresh Claude Code session (version 2.1.296, model `claude-fable-5-1` at medium
 bypassed, web tools and MCP servers removed) in a throwaway Ubuntu 24.04 virtual machine was given
 prompt version 1 for `sort`. In 304 seconds, 24 turns and 23 tool calls (12 shell, 11 file reads) it
 produced all four files at a list-price cost of $2.46, with no network use. This is the most thorough
-of the runs so far. It ran `sort` 88 times before writing anything. After writing, it built two test
+of runs 4, 5, 7 and 9. It ran `sort` 88 times before writing anything. After writing, it built two test
 scripts that ran `sort` about 960 more times: every option spelling in its syntax file, then 20 option
 sets each split into 2, 3 and 5 parts, sorted part by part, merged with the command its class
 generates, and compared with one sort of the whole. All of that passed. Its parser table matches PaSh's
@@ -30,10 +32,10 @@ the rule either.
 
 ## What this run teaches
 
-In plain terms, the most useful things run 7 shows. One run, so these are observations to test, not
+In plain terms, the most useful things run 9 shows. One run, so these are observations to test, not
 conclusions.
 
-- **Given a harder command, the agent worked much harder, unprompted.** Three times run 6's time and
+- **Given a harder command, the agent worked much harder, unprompted.** Three times run 7's time and
   four times its runs before writing. It found real rules of `sort` that are easy to miss: `-o` may
   appear only once; check mode refuses `-o` and a second file; a bare `--check` takes no value; `-u`
   also implies "stable"; `--batch-size` must be at least 2. It also knew that sorted pieces must be
@@ -48,7 +50,7 @@ conclusions.
   yet available. The agent copied a pattern the example showed.
 - **It again matched PaSh's hand-written table without seeing it,** down to the access kind of each
   file argument: `--random-source` is read as configuration, `--files0-from` names the input files, `-o`
-  is the output, and `-T` is a scratch folder. Like `cut` in run 6, this could come from the manual or
+  is the output, and `-T` is a scratch folder. Like `cut` in run 7, this could come from the manual or
   from the model having seen PaSh's public files in training; the log cannot tell which.
 - **Its report again says more than its tests showed.** Its first test script ended "BAD = 8" and the
   report says every option "worked". Six of the eight were expected: a bare `--check` correctly takes no
@@ -158,7 +160,7 @@ returns a tuple and enforces nothing.
 - **Recorded during the run:** `sort --version` (GNU coreutils 9.4). The OS was not queried; `run.env`
   records Ubuntu 24.04.4 LTS, aarch64.
 - **In the output:** the syntax file's header names GNU coreutils 9.4 and lists what was verified; the
-  table and classes do not (1 of 4 files, as in runs 5 and 6).
+  table and classes do not (1 of 4 files, as in runs 5 and 7).
 - **Repeatability:** each probe ran once; the merge test was deterministic (fixed random seed for its
   test data).
 
@@ -195,7 +197,7 @@ implemented.
 
 ### How v1's generator reads the three syntax files (measured here)
 
-As for `cut` in run 6: each syntax file was fed to v1's own generator, and every distinct command line
+As for `cut` in run 7: each syntax file was fed to v1's own generator, and every distinct command line
 was run once on GNU coreutils 9.4 with a three-line input. Lines whose printed form a shell cannot
 re-read, or that use v1's path placeholders or an empty file list, are left out. At the shipped limit
 of 4 options per line v1's reference grammar alone yields 307,023 distinct lines (1,972,046 in all), so
@@ -205,7 +207,7 @@ the run was made at 1 and 2.
 |---|---|---|---|
 | v1's curated reference | 53 · 45 (85%) · 43 | 1,275 · 894 (70%) · 803 | `--batch-size` and `--parallel` given −1, 0 or a word; `-S=` values |
 | v1's model output | 44 · 42 (95%) · 40 | 903 · 771 (85%) · 686 | `--parallel` −1 or 0; incompatible ordering flags (`-gV` …) |
-| the agent's (run 7) | 52 · 39 (75%) · 37 | 1,200 · 636 (53%) · 551 | `-t=:` (a two-character separator), `-S=1k`, `-k=…`, `--check=` (empty) |
+| the agent's (run 9) | 52 · 39 (75%) · 37 | 1,200 · 636 (53%) · 551 | `-t=:` (a two-character separator), `-S=1k`, `-k=…`, `--check=` (empty) |
 
 "Real work" means accepted and not carrying `--help` or `--version`. Unlike `cut`, every file here yields
 plenty of usable lines, because `sort` needs no option at all. The agent's file loses most where it puts
@@ -235,11 +237,12 @@ Not included: the launcher's $0.02 trial call that chose the model.
 
 ## 2.8 Behaviour worth recording
 
-- **The output-size limit cost it a turn again** (calls 2 and 3), as in run 6; it then read file by file.
-- **It searched the whole disk for the two packages** (call 16), then wrote stand-ins, as in run 6. It
+- **The output-size limit cost it a turn again** (calls 2 and 3), as in run 7; it then read file by file.
+- **It searched the whole disk for the two packages** (call 16), then wrote stand-ins, as in run 7. It
   did not try to install them; run 3 (a different model) did.
-- **It wrote its own negative test** to justify a restriction (round robin with `-s`/`-u`), the first
-  time a run has tested a "no" as well as a "yes".
+- **It tested one of its own restrictions.** It wrote a test to show that round robin really does
+  break `-s` and `-u` before keeping its class's exclusion of them, rather than only testing the cases
+  it allows.
 - **It reused a sample's device in a new place.** It modelled `--check`'s bare spelling the way the `rm`
   sample models `--preserve-root` (an empty choice) and said so in a comment. Under v1's generator that
   produces `sort --check=`, which `sort` rejects.
@@ -249,7 +252,7 @@ Not included: the launcher's $0.02 trial call that chose the model.
 
 ![v1's design versus the agent's approach, for sort](v1_design_vs_agent.png)
 
-| Job | v1, as the paper designs it | Run 7's agent |
+| Job | v1, as the paper designs it | Run 9's agent |
 |---|---|---|
 | 1. Learn the argument syntax | A model reads a bundled man page with worked examples (`touch`, `rm`, `mv`, `ls`) (section 3). v1's model output for `sort` has 28 options; v1's curated reference 31 | Manual, `--help` and 88 probes; 33 options with value bounds and the `--check` values |
 | 2. Choose what to run | Code enumerates option combinations up to 4 with typed values (section 4): for `sort`, 1,972,046 command lines, 307,023 distinct (measured here) | 88 hand-chosen probes, then test scripts (about 960 runs) |
@@ -269,14 +272,14 @@ runs, so small or already-ordered test inputs could produce it. Not checked agai
 `sort` that it checked against `sort` holds. The one that fails is a claim about PaSh that it could only
 check against its own imitation of PaSh.
 
-**Cost.** The paper reports CPU time per command (section 7.4), not the cost of its model step. Run 7
+**Cost.** The paper reports CPU time per command (section 7.4), not the cost of its model step. Run 9
 took 304 seconds and $2.46 at list price.
 
-## Run 7 compared with runs 4 to 6
+## Run 9 compared with runs 4, 5 and 7
 
 Same model, effort, prompt, image and day; different command.
 
-| Measure | Run 4 (`grep`, sample) | Run 5 (`rm`, sample) | Run 6 (`cut`) | Run 7 (`sort`) |
+| Measure | Run 4 (`grep`, sample) | Run 5 (`rm`, sample) | Run 7 (`cut`) | Run 9 (`sort`) |
 |---|---|---|---|---|
 | Wall clock · turns · tool calls | 322 s · 11 · 10 | 60 s · 6 · 5 | 104 s · 18 · 17 | 304 s · 24 · 23 |
 | Output tokens (thinking) · cost | 24,495 (6,663) · $2.54 | 4,623 (937) · $0.80 | 9,117 (1,464) · $1.25 | 23,977 (6,381) · $2.46 |
@@ -295,7 +298,7 @@ Same model, effort, prompt, image and day; different command.
 2. **Load every run's classes in the pash VM as a standard step** of the analysis. Runs 4 and 5 were
    never checked this way.
 3. **Score syntax files as generator input too** (share of generated lines the binary accepts), as
-   for runs 6 and 7.
+   the analyses of runs 6, 7 and 9 did.
 4. **Look at v1's `stateless` label for `sort`** in its traces before citing it in any comparison.
 
 ## Diagram tooling
@@ -305,5 +308,5 @@ The three diagrams were drawn with the Excalidraw diagram skill
 skill's repository declares no licence**; it is listed as third-party, unlicensed material in
 `LICENSE-TEMPLATES.md`, and is kept in the repository by Tiran's decision of 2026-10-13. Elements were
 placed by hand in the `*.spec.json` files beside each diagram and expanded with
-`naive_llm_caruca/excalidraw_fill.py`; the v1-versus-agent layout is run 6's with run 7's content. Each
+`naive_llm_caruca/excalidraw_fill.py`; the v1-versus-agent layout is run 7's with run 9's content. Each
 was rendered with `uv run python render_excalidraw.py <file>`, inspected, and corrected.

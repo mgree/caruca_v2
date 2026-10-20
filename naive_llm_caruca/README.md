@@ -300,6 +300,103 @@ v1's default text-only content every v1 run would print an empty table. This run
 commands are often readable scripts: prompt version 1 forbids online repositories but says nothing about
 code installed on the machine.
 
+**Observed, run 7 (cut, the first non-sample core utility).** *2026-10-20 13:52, `cut` (GNU coreutils
+9.4), watch mode, clone `naive-run-cut`, run 1 in that clone, `claude-fable-5-1` at medium effort, web tools
+and MCP servers off. Same setup as runs 4 to 6 (the golden image already carried run 6's `binwalk`
+package). `cut` is not a sample. Collected to `runs/2026-10-20_135253_naive-run-cut_cut_PROMPT_v1/`;
+analysed in [its `analysis/analysis.md`](runs/2026-10-20_135253_naive-run-cut_cut_PROMPT_v1/analysis/analysis.md)
+(PDF beside it) with three diagrams. Not scored.* 104 seconds, 18 turns, 17 tool calls (9 Bash, 8 Read; it
+turned to the Read tool after Claude Code's output limit cut its batch read down to a 2 KB preview
+twice); $1.25 at list price; 9,117 output tokens of which 1,464 thinking. No URL in any command. It read
+the formats and the `uniq`, `grep` and `tee` samples (never `rm`), the manual and `--help`, ran `cut` 21
+times in `/tmp`, wrote all four files in one call at 13:53:55, then tested: 45 runs splitting a 5,000-line
+file into chunks and comparing joined output with one run (the same idea as v1's `stateless` test,
+unprompted), and its files against stand-in modules it wrote itself. Output: syntax file with **three
+syntaxes, one per selector**, from the manual's "use one, and only one of -b, -c or -f" (v1's reference
+and v1's model output leave all three optional); parser table = **PaSh's own `cut` table minus `-M`**
+(never seen; GNU `cut` rejects `-M`); input/output class = PaSh's three calls; parallelizability class =
+PaSh's, except no split under `-z`.
+
+*From the analysis (2026-10-20).* Inside PaSh's real code (a copy of `pash_annotations` 0.2.4 in the pash
+VM with the agent's files laid over it) the classes give PaSh's own answers except under `-z`, and the
+session's claim that PaSh's parser leaves `-d:` among the files is true. The syntax file allows `-d` and
+`-s` with `-b`/`-c`, which `cut` rejects (never probed), and copies the `uniq` sample's `=` marker onto
+short options. Fed to v1's own generator at its shipped limit of 4 options, **none of the agent's 12,555
+judged command lines does real work** (every accepted one carries `--help` or `--version`; the rest are
+`cut -b=1`, `-d=a` and the like); v1's model output also gives 0, v1's curated reference 360 of 9,856. The
+report's "every option … everything matched" is not supported (4 of 17 spellings never run), and its
+"empty `--output-delimiter` gives a space, a quirk" is wrong: it is a NUL byte.
+
+**Observed, run 8 (convert, the paper's costliest command).** *2026-10-20 13:58, `convert` (ImageMagick
+6.9.12-98, Ubuntu package `imagemagick 8:6.9.12.98+dfsg1-5.2build2`, already in the golden image; the
+exact version is in the run folder's `package_version.txt`), watch mode, clone `naive-run-convert`, run 1
+in that clone, `claude-fable-5-1` at medium effort, web tools and MCP servers off. Same setup as runs 4 to
+7. Not a sample and not one of v1's worked examples. Launched unattended with `printf 'y\n' | script -qec
+"naive-run convert PROMPT_v1.md" /dev/null` (non-core command). Collected with `--keep`, clone deleted after
+the analysis; `runs/2026-10-20_135842_naive-run-convert_convert_PROMPT_v1/`; analysed in
+[its `analysis/analysis.md`](runs/2026-10-20_135842_naive-run-convert_convert_PROMPT_v1/analysis/analysis.md)
+(PDF beside it) with three diagrams. Not scored.* 1,291 seconds of session time by Claude Code's measure,
+but 2 h 14 min on the clock: the Mac's lid was closed on battery, so the Mac slept and froze the VM three
+times; the session resumed correctly each time. 34 turns, 33 tool calls (31 Bash, 1 ToolSearch, 1
+TaskStop); **$6.04** at list price; 46,065 output tokens of which 20,780 thinking. No URL in any command.
+It read both formats, all four samples and the whole manual, compared the manual's 248 option names with
+`-help`'s 250, then tried 352 words from ImageMagick's library as option names: **261 accepted**, 10 of them
+in neither the manual nor `-help`, and the manual's `-connected-component` rejected. It measured how many
+words each `-` and `+` form consumes (11 `-` and 3 `+` forms take two) and took 38 of its 40 value lists
+from `convert -list`. About 3,700 runs of `convert` before writing, in a plain `/tmp/cvt` folder: one loop
+hung on `-distribute-cache` until Claude Code moved it to the background, and a `pkill` matched its own
+command line and ended its own shell. A generator script wrote the syntax file (426 option nodes, 522
+spellings, inputs then one output) and the table (219 flags, 207 options); the classes were written by
+hand (all operands but the last read, the last written; standard streams for `-`, `fmt:-`, `-identify`,
+`-print`, `-write png:-`; not parallelisable). Its own harness then ran about 3,100 more binary runs
+against stand-in modules.
+
+*From the analysis (2026-10-20).* The report's "All 522 spellings passed" is not supported: 509 were run
+and the last pass still flagged one (`+define`, a test artefact). Its "eleven undocumented options"
+includes `-metric`, which the manual lists. Against v1: v1's curated reference and v1's model output both
+hold exactly the manual's 248 names, the rejected `-connected-component` included, no `+` forms, and
+`-view` as a flag (the binary gives it a value, checked in the clone). v1's committed `convert`
+annotation has had no cases since 2024-12-04 (the 2024-11-28 version: "Found no successful runs.
+Defaulting to side-effectful"), and v1 would generate 917,154 command lines at two options; the paper
+projects 98.72 hours for those. **Inside PaSh's real code** (a copy of `pash_annotations` 0.2.4 in the pash
+VM) both classes load and run, but PaSh's parser stops at the first file name, so in the usual
+`convert in.png -resize 50% out.jpg` order `-resize` and `50%` are marked as input files, and
+`-write side.png` after the input is marked as an input. **Through v1's own generator** (one option per
+line, v1's defaults) the agent's grammar gives 2,422 distinct lines, and only the 4 without an option
+have both an input and an output file: every option line has one file, which `convert` rejects ("no
+images defined", checked in a throwaway clone on v1's `usenix.jpg`). v1's curated reference gives 0 such
+lines and v1's model output (two single files) gives all 2,272. The syntax format allows more than two
+positions (v1's own grammar for its PaSh tests is input, `-resize`, output), but every sample uses two and
+the agent kept two; PaSh's table cannot express options after files or two-word options at all.
+
+**Observed, run 9 (sort).** *2026-10-20 16:03, `sort` (GNU coreutils 9.4), watch mode, clone
+`naive-run-sort`, run 1 in that clone, `claude-fable-5-1` at medium effort, web tools and MCP servers off.
+Same setup as run 7. `sort` is not a sample. Collected to
+`runs/2026-10-20_160340_naive-run-sort_sort_PROMPT_v1/`; analysed in
+[its `analysis/analysis.md`](runs/2026-10-20_160340_naive-run-sort_sort_PROMPT_v1/analysis/analysis.md)
+(PDF beside it) with three diagrams. Not scored.* 304 seconds, 24 turns, 23 tool calls (12 Bash, 11 Read);
+$2.46 at list price; 23,977 output tokens of which 6,381 thinking. No URL in any command; a `find` over `/`
+for `caruca` and `pash_annotations` found nothing. It ran `sort` 88 times before writing (all four files in
+one call at 16:07:09), then about 960 times from two test scripts against stand-in modules: every option
+spelling (the script ended `BAD = 8`, never mentioned), and 20 option sets split into 2, 3 and 5 parts,
+sorted, merged with the command its class builds (`sort -m` plus the ordering options) and compared with
+one sort (0 failures), plus a test showing round robin breaks `-s` and `-u`. Output: syntax file with 33
+options (adds `-y` and the `--check` values); parser table = **PaSh's own `sort` table, argument access
+kinds included, plus `-y` and `--check`** (never seen); input/output class = PaSh's logic plus no standard
+output in check mode; parallelizability class: consecutive pieces and round robin merged by `sort -m …`,
+round robin dropped under `-s`/`-u`.
+
+*From the analysis (2026-10-20).* **Inside PaSh's real code the parallelizability class gives no answer
+for any ordinary `sort`** (only `-s`/`-u` work): PaSh asserts that round robin may be paired only with
+concatenation or an adjacent-lines aggregator, and catches the failure silently. The rule is not in
+`formats/pash_annotation.md`, and PaSh's own `grep` sample builds the same pairing in a branch that never
+runs; the session's stand-ins could not catch it. Its two stated doubts check out as follows: the option
+accessors work; listing `--check` as an option does make PaSh take the next word as its value. Fed to v1's
+generator at 2 options per line, 53% of the agent's judged lines are accepted (v1's reference 70%, v1's
+model output 85%), the losses again from `=` after short options (`-t=:`, `-S=1k`). v1's committed `sort`
+annotation calls all 6 of its cases `stateless`, which is false for `sort` in general; why was not
+established.
+
 ### PROMPT_v2 — execution is the standard
 
 **What it adds.** One section with three points, placed between the samples and the closing scope

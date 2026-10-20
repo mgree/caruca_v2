@@ -54,6 +54,22 @@ before the run can finish (run 5 ended in 60 s, before the monitor attached). ma
 - v1 has reference grammars (`syntax_specs/`) for some non-coreutils: awk, bc, sed, unzip, iconv, pandoc,
   convert, mogrify, uglifyjs. Anything outside v1's list has no reference to score against.
 
+### Long runs: keep the Mac awake, and guard the cost (run 8, convert, 2026-10-20)
+
+- **A sleeping Mac freezes the VM.** Run 8 ran with the lid closed on battery: the Mac slept three times and
+  the session lost ~1 h 50 min (resumed correctly each time). `caffeinate -ims` does NOT hold system sleep on
+  battery (`-s` is AC-only); check `pmset -g batt` and the lid (`ioreg -r -k AppleClamshellState -d 1`) before
+  a long run and ask Tiran to plug in. Claude Code's `duration_ms` excludes suspended time (1,291 s vs 2 h 14
+  min on the clock); report both. A Claude Code Bash call that runs past 300 s is moved to the background.
+- **Cost guard:** `naive-run` has no spend cap. Run 8 used a Mac-side Monitor polling `stream.jsonl` via
+  `limactl shell <clone> -- cat` every 2 min, summing each assistant message's usage (dedupe by message id)
+  at Fable 5.1 rates that slightly overestimate list cost (~4% on runs 4 and 5): $11/M input, $55/M output,
+  $1.10/M cache read, $13.75/M cache write. It printed a line every 10 min and on thresholds.
+- **In a clone after sleeps, time-based searches fail:** `find -newer <run's prompt.md>` returned untouched
+  system files (cause not established); list the agent's folders directly instead.
+- `collect_run.sh <clone> --keep` then probe claims in the clone (no ImageMagick on the Mac or in the pash
+  VM); a throwaway `limactl clone naive-golden <name>` + `limactl delete -f` works for later checks.
+
 ## 3. Collect and record (same turn)
 
 - `./collect_run.sh <name>` copies `~/runs/<stamp>_<vm>_<cmd>_<ver>/` into `naive_llm_caruca/runs/` and
@@ -87,6 +103,19 @@ before the run can finish (run 5 ended in 60 s, before the monitor attached). ma
    v1's committed PaSh annotation is `caruca/save/<cmd>.json`. Frame neutrally (v2 extends v1).
 7. Tiran also wants a short plain-language "What this run teaches" section near the top (not verbose,
    not technical).
+8. **Load the agent's PaSh files into PaSh's real code** (first done for runs 7 and 9, 2026-10-20; it
+   found run 9's class silently broken): copy of `pash_annotations` 0.2.4 in the pash VM with the agent's
+   files laid over it; recipe and PaSh's run-time rules in [[reference-pash-annotations-runtime]]. Compare
+   against the same invocations with PaSh's own files.
+9. **Feed the agent's syntax file to v1's generator and run every distinct line on the binary** (runs 7, 9):
+   `PYTHONPATH=<scratch> caruca generate <cmd> --path <pkg> --max-count N | sort -u`, then run each line in
+   the pash VM (GNU coreutils 9.4) on a small stdin, classify exit codes by error message, exclude lines a
+   shell cannot re-read and v1's `relpath_1`/`abspath_1` placeholders, and count "real work" = accepted
+   and no `--help`/`--version`. Do the same for v1's reference and v1's model output
+   (`outputs/llm-dsl-generation/<cmd>.py`) for comparison. See [[caruca-v1-value-generation]].
+10. **Several sessions may run and analyse naive runs at once.** Run numbers follow start time across all
+   sessions; check `naive_llm_caruca/runs/`, task 016's ledger and `ListAgents` before numbering, and
+   re-read the README and task 016 right before editing them.
 
 ## 5. Diagrams (Excalidraw skill, `.claude/skills/excalidraw-diagram/`)
 
@@ -103,6 +132,8 @@ everything; text placed over the first-write dashed line collides; arrows must e
 
 `npm run convert -- <analysis.md> --title ... --subtitle ...` from the repo root. It downscales relative
 images to 1,600 px, so: back up the .md, rewrite `](x.png)` to absolute paths, convert, restore, `cmp`.
+The rewrite pattern must allow digits (`[a-z0-9_]*\.png`): `v1_design_vs_agent.png` slipped through a
+letters-only pattern on 2026-10-20 and was downscaled.
 Check `pdfimages -list` shows full-size images (~1,100 ppi). zsh: never start a word with `=` (`echo =====`
 fails).
 

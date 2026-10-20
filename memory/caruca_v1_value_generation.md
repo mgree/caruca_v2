@@ -20,6 +20,30 @@ running it on the Mac (v1 `.venv`, Python 3.12.9). Related: [[project-naive-clau
   4.3) says images are "a set of PNG images ranging from 2kb to 4MB"; the code ships one JPEG.
 - **binwalk on that pool** (binwalk 2.3.3 in the naive-run clone, 2026-10-20): 0 results in all 7 text /
   math / time / JSON files; 1 in `usenix.jpg` (its own JFIF header at offset 0).
+- **`flag_followed_by_equals=True` puts `=` after whatever spelling is generated, short ones included**
+  (observed 2026-10-20 in `caruca generate` output, naive runs 7 and 9): `Range(flag="-b", alias=["--bytes"],
+  flag_followed_by_equals=True)` yields `cut -b=1`, which GNU cut 9.4 rejects (value read as `=1`). **Aliases
+  are never generated**: 0 of the distinct `cut` lines at `--max-count 4` (v1's reference and run 7's
+  grammar) and 0 of the `sort` lines at 2 use an `alias=` spelling, so a grammar whose `flag` is the short
+  form never yields the `--long=value` form the `=` was meant for. v1's own curated grammars do this too:
+  `syntax_specs/uniq.py` on `-f`/`-s`/`-w` (`uniq -f=1` → "invalid number of fields to skip", run in the
+  pash VM) and `syntax_specs/sort.py` on `-S`. The naive arm's format document describes the flag as "the
+  value is attached with `=`, as in `--interactive=always`", with no warning. Measured effect on `cut` at
+  `--max-count 4`, every distinct line run on coreutils 9.4: v1's reference 360 lines doing real work (of
+  9,856 judged), v1's model output 0, run 7's agent grammar 0. Also: v1's reference `cut` has a
+  FreeBSD-only `-w` (992 rejected lines) and all three selectors optional (6,450 lines with two
+  selectors, 141 with none); `sort` at 4 = 1,972,046 lines (307,023 distinct).
+- **Operands share the option budget, and a repeatable operand gets at most one file** (`--max-arity`
+  default 1, `cli/__init__.py`). Observed 2026-10-20 on `convert` at `--max-count 1`: with the naive run 8
+  grammar (`Path(ZERO_OR_MORE)` inputs + `Path(EXACTLY_ONE)` output) every line that carries an option has
+  one file (the output); only the 4 option-free lines (`convert X Y`) have two. v1's curated reference
+  (`Path(ONE_OR_MORE)`) gives 0 lines with two files; v1's model output (two `EXACTLY_ONE` paths) gives
+  2,272/2,272. Checked on ImageMagick 6.9.12-98 with `usenix.jpg`: an option plus one file fails ("no
+  images defined"), one file alone prints the version. Distinct lines: agent 2,422 (63,048 total), reference
+  1,052 (7,308), model output 2,272 (14,616). v1's PaSh tracing does not use any of these: `run.sh` traces
+  `pash_syntax_specs/convert.py` (input, optional `-resize`, output: three positions).
+- **The CLI accepts an outside grammar directly:** `PYTHONPATH=<scratch> caruca generate <cmd> --path <pkg>`
+  where `<scratch>/<pkg>/__init__.py` and `<scratch>/<pkg>/<cmd>.py` exist (used for runs 7 and 9).
 - **Running v1's generator on an outside grammar without touching v1:** put the file in a scratch package
   (`bwspec/__init__.py`, `bwspec/<cmd>.py`), then from that folder call
   `caruca.cli.generate.string_invocations("<cmd>", "bwspec", skip, 1, False, max_count)` with v1's

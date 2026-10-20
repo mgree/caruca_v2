@@ -222,3 +222,47 @@ be declared in PaSh's input/output class, so they are only in comments. The `-E 
 `naive_llm_caruca/runs/2026-10-20_133813_naive-run-binwalk_binwalk_PROMPT_v1/`; README "Observed, run 6".
 Open questions it raised: whether installed source code is allowed (PROMPT_v1 bans only *online*
 repositories), and choosing test commands by packaging (script vs compiled). See [[caruca-v1-value-generation]].
+**2026-10-20: written up as section 2 of `ai_docs/analysis/white_paper_addendum_naive_llm.md` (version 0.2), PDF
+regenerated; analysis index entry updated.** Run numbering agreed with the parallel session: binwalk = 6,
+cut = 7 (13:52), convert = 8 (13:58), sort = 9 (16:03), by start time.
+
+**Runs 7 (cut, 13:52) and 9 (sort, 16:03), 2026-10-20: collected, analysed + PDF** (folders
+`naive_llm_caruca/runs/2026-10-20_135253_…cut…` and `…160340_…sort…`; README "Observed, run 7/9"; task 016
+ledger). First non-sample core utilities. Launched with `script -qec "naive-run <cmd>" /dev/null` fed "y"
+(non-core confirmation). Same setup as runs 4-6 (image already had binwalk). Run 7: 104 s, 17 calls (9
+Bash, 8 Read), $1.25, 21 probes then a 45-run split-and-join test (v1's stateless idea, unprompted);
+three syntaxes, one per selector; table = PaSh's own `cut` table minus `-M` (never seen). Run 9: 304 s, 23
+calls, $2.46, 88 probes then ~960 test runs (spelling script ended `BAD = 8`, unreported); table = PaSh's
+own `sort` table incl. access kinds, plus `-y`, `--check`. Both hit Claude Code's tool-output limit on a
+batch read (34.5 / 31.2 KB → 2 KB preview) and fell back to the Read tool. Both tested classes only
+against stand-ins. **Measured in PaSh's real code:** run 7's classes = PaSh's answers except `-z`; run 9's
+parallelizability class returns nothing for ordinary sorts (round robin + custom merge fails PaSh's
+assertion, swallowed) — rule absent from `formats/pash_annotation.md`; candidate repair, not applied,
+Tiran to decide. **Measured through v1's generator** (every distinct line run on coreutils 9.4): run 7's
+grammar and v1's model output give 0 lines doing real work at max-count 4, v1's reference 360 (cause:
+`=` on short options, copied from the uniq sample = v1's reference). v1's committed `save/sort.json` calls
+all 6 cases `stateless` (false in general; cause not established). Details:
+[[reference-pash-annotations-runtime]], [[caruca-v1-value-generation]]. Convert (run 8) was run and written up by
+another session; see the run 8 paragraph below.
+
+**Run 8 (convert, 13:58, 2026-10-20): collected, analysed + PDF** (folder
+`naive_llm_caruca/runs/2026-10-20_135842_naive-run-convert_convert_PROMPT_v1/`; README "Observed, run 8";
+task 016 ledger). ImageMagick 6.9.12-98 (`imagemagick 8:6.9.12.98+dfsg1-5.2build2`, already in the golden
+image; recorded by hand in the run folder's `package_version.txt`). Not a sample, not a v1 few-shot example.
+PROMPT_v1, Fable 5.1 medium, no web. 1,291 s session time but 2 h 14 min wall clock (Mac slept, see
+[[reference-naive-run-playbook]]); 33 calls (31 Bash, ToolSearch + TaskStop to stop a hung background
+call); **$6.04**; 0 URLs. Read all 4 samples + whole manual; diffed manual (248 names) vs `-help` (250);
+tried 352 words from `libMagickWand` strings as names → 261 accepted (10 in neither manual nor `-help`;
+manual's `-connected-component` rejected; `-view` takes a value, v1 has it as a flag — both checked in the
+clone). ~3,700 binary runs before writing in plain `/tmp/cvt` (hang on `-distribute-cache`; `pkill -f`
+matched its own command line, exit 144), ~3,100 after in its own harness; generator script wrote syntax
+(426 nodes, 522 spellings, ZERO_OR_MORE inputs + EXACTLY_ONE output) and table (219 flags, 207 options).
+Report's "All 522 spellings passed" false (509 run, 1 flagged). **Measured:** v1's reference and v1's model
+output for convert both = the manual's 248 names exactly, no `+` forms; in PaSh's real code (copy in pash VM)
+classes load, but option words after the first file are typed as input files; **through v1's generator at
+max-count 1 only 4 of the agent's 2,422 distinct lines have input+output** (option lines get one file →
+"no images defined"); reference 0, v1 model output 2,272/2,272. v1's committed `save/convert.json` empty
+since 2024-12-04 (2024-11-28: "Found no successful runs. Defaulting to side-effectful");
+`benchmarks/MILESTONES` lists convert unchecked; v1's `pash_syntax_specs/convert.py` = input, `-resize`,
+output (3 positions: the syntax format can hold options between files, the samples never show it).
+Stock clone image also has `nerdctl` 2.3.5 + rootless containerd (unused by every run so far).
