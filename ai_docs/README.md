@@ -1,6 +1,6 @@
 # The documents — what is where, and which one to open
 
-> **Start here (since 27 October 2026): [`naive_llm_vs_v1/README.md`](naive_llm_vs_v1/README.md).**
+> **Start here (since 27 October 2026): [`naive_llm_caruca/README.md`](../naive_llm_caruca/README.md).**
 > The project's current focus is the naive-LLM approach against Caruca. That page is the single
 > entry point: the short observations document, the scores, every run and diagram, and which older
 > material below is dated. Every finding, dated, newest first: [`analysis/latest_findings.md`](analysis/latest_findings.md).

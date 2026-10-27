@@ -8,7 +8,7 @@
 # Observations: naive LLM vs Caruca
 
 **27 October 2026.** Four commands: `cut`, `sort`, `rm` and `binwalk`. Each has one agent run, scored
-the same day by [task 018](../tasks/018_naive_vs_caruca_syntax_scoring.md). Back to the
+the same day by [task 018](../ai_docs/tasks/018_naive_vs_caruca_syntax_scoring.md). Back to the
 [directory](README.md).
 
 ## The three kinds of syntax file compared
@@ -104,7 +104,7 @@ How these were counted:
   read with GNU's own option rules and the option list from the file.
 - **Caruca's own matcher** counts nearly every line as read whatever the file says, because it lets any
   word stand in for any option that takes a value. Its figures are in the
-  [scores table](../../naive_llm_caruca/scoring/results/summary.md), not here.
+  [scores table](scoring/results/summary.md), not here.
 - **Generated lines:** Caruca's generator at one option per line, each line traced by Caruca's own tracer.
   A line counts as doing real work when the command accepts it and it isn't `--help` or `--version`.
 
@@ -224,13 +224,13 @@ Integer(flag="-l", alias=["--length"]),                     # ← no range: Caru
   misread Caruca's name for "one or more"; it wrote optional values after a space, which GNU never
   accepts; and it counted a refused sample value as a rule between two options. Before the repair, all
   three `rm` files showed 56 of 60. The repairs apply to every file alike. See
-  [task 018](../tasks/018_naive_vs_caruca_syntax_scoring.md).
+  [task 018](../ai_docs/tasks/018_naive_vs_caruca_syntax_scoring.md).
 
 ## Where the details are
 
-- Every count, file by file: [`scoring/results/<cmd>.json`](../../naive_llm_caruca/scoring/results/)
-  and the [scores table](../../naive_llm_caruca/scoring/results/summary.md)
+- Every count, file by file: [`scoring/results/<cmd>.json`](scoring/results/)
+  and the [scores table](scoring/results/summary.md)
 - Every difference between the three syntax files, checked on the program:
-  [Syntax files vs v1](../analysis/naive_llm_syntax_files_vs_v1.md)
+  [Syntax files vs v1](../ai_docs/analysis/naive_llm_syntax_files_vs_v1.md)
 - What each run did: the run table in the [directory](README.md#3-the-runs)
-- The write-up for the paper's co-authors: [Naive LLM addendum](../analysis/white_paper_addendum_naive_llm.md)
+- The write-up for the paper's co-authors: [Naive LLM addendum](../ai_docs/analysis/white_paper_addendum_naive_llm.md)

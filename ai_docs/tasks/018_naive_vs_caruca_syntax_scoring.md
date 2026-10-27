@@ -28,7 +28,7 @@ when copying or adapting this file. See `LICENSE-TEMPLATES.md` for the full term
 > scoring and performance assessment"). All four are **scored**, with a new headline grade,
 > **program-checked accuracy** (section 2.2), requested by Tiran through the session that wrote
 > `ai_docs/analysis/naive_llm_syntax_files_vs_v1.md`. The plain-language result is
-> `ai_docs/naive_llm_vs_v1/observations.md`. The `dd`/`ls` pilot runs and the 20-command main phase
+> `naive_llm_caruca/observations.md`. The `dd`/`ls` pilot runs and the 20-command main phase
 > are not being pursued for now.
 > *Earlier status (2026-10-26):* tools built; pilot 3 of 5 scored (`cut`, `sort`, `dirname`); `dd`
 > and `ls` blocked on a sign-in.
@@ -199,7 +199,7 @@ Headline before → after: `cut` 61/72, 63/76, 68/76 → unchanged; `sort` 172/2
 ## 5. Results for the four commands (2026-10-27)
 
 The plain-language reading, samples and comparison of the approaches are in
-`ai_docs/naive_llm_vs_v1/observations.md`; every count is in `naive_llm_caruca/scoring/results/<cmd>.json`
+`naive_llm_caruca/observations.md`; every count is in `naive_llm_caruca/scoring/results/<cmd>.json`
 and `results/summary.md`.
 
 Probe binaries: GNU coreutils 9.4 (package 9.4-3ubuntu6.2) and binwalk 2.3.4 (reports v2.3.3), in
@@ -255,7 +255,7 @@ From `naive_llm_caruca/scoring/results/summary.md`, 2026-10-26. Probe binaries: 
   in `naive_llm_caruca/scoring/`; checked on `cut`, `sort`, `dirname` (section 4).
 - [x] **Phase 2 (as narrowed 2026-10-27). Score `cut`, `sort`, `rm`, `binwalk`** with the headline and
   every other grade: done 2026-10-27 (section 5). The 2026-10-26 pilot plan (`dd`, `ls`) is set aside.
-- [x] **Phase 2a. Plain-language write-up:** `ai_docs/naive_llm_vs_v1/observations.md`, 2026-10-27.
+- [x] **Phase 2a. Plain-language write-up:** `naive_llm_caruca/observations.md`, 2026-10-27.
 - [ ] **Later, if Tiran wants verdicts:** 2 more agent runs for each of the four commands (8 runs, about
   $13 at list price), so a lead can be judged against the agent's own run-to-run spread; then the
   20-command main phase (section 7) if still wanted.
@@ -316,4 +316,4 @@ pilot commands takes about 30 seconds.
 | Date | Change |
 |---|---|
 | 2026-10-26 | Created; instruments built and checked; pilot 3 of 5 scored; `dd` and `ls` blocked on sign-in |
-| 2026-10-27 | Scope narrowed by Tiran to `cut`, `sort`, `rm`, `binwalk`; headline program-checked accuracy added (section 2.2; `facts.py`, `facts_grammar.py`, `facts_probe.py`); GNU-rules reading reused from the comparisons folder; `binwalk` support (argparse messages in the probe, binwalk installed in the `caruca` VM, v1's skip list for its 65,536-value option); performance from each run's own log; three checker repairs (section 4.4–4.5); all four scored; results in section 5 and `ai_docs/naive_llm_vs_v1/observations.md` |
+| 2026-10-27 | Scope narrowed by Tiran to `cut`, `sort`, `rm`, `binwalk`; headline program-checked accuracy added (section 2.2; `facts.py`, `facts_grammar.py`, `facts_probe.py`); GNU-rules reading reused from the comparisons folder; `binwalk` support (argparse messages in the probe, binwalk installed in the `caruca` VM, v1's skip list for its 65,536-value option); performance from each run's own log; three checker repairs (section 4.4–4.5); all four scored; results in section 5 and `naive_llm_caruca/observations.md` |

@@ -300,4 +300,4 @@ asked for via session caruca-v2-dd). Results: `cut` agent 68/76 (89%) vs referen
 63/76 (83%); `sort` 181/230 (79%) vs 172/220 (78%) vs 157/204 (77%); `rm` 58/60 vs 59/60 vs 59/60;
 `binwalk` agent 326/337 (97%). Generated lines doing real work: agent worst (`cut` 0/240 vs 15/29; `rm` 3/21
 vs 26/32; `sort` 33/56 vs 41/56). One agent run each, so no verdicts. Write-up:
-`ai_docs/naive_llm_vs_v1/observations.md`. Three checker repairs before keeping numbers are in task 018 §4.5.
+`naive_llm_caruca/observations.md`. Three checker repairs before keeping numbers are in task 018 §4.5.

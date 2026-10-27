@@ -46,19 +46,19 @@ to change its number: add a new bullet and mark the old one "corrected on <date>
   - `binwalk`, which has no Caruca file: 326 of 337 (97%).
   - With one agent run per command, these are observations, not verdicts.
 
-  → [Observations, "Scores"](../naive_llm_vs_v1/observations.md#scores) ·
+  → [Observations, "Scores"](../../naive_llm_caruca/observations.md#scores) ·
   [Task 018, "5"](../tasks/018_naive_vs_caruca_syntax_scoring.md#5-results-for-the-four-commands-2026-10-27)
 - **12:24 (scored), not yet committed · Naive LLM · generator use.** The agent's files fit Caruca's own
   test-line generator worst. Generated lines doing real work (answer key / Caruca's GPT-4o / agent):
   `cut` 15 of 29 / 0 of 30 / 0 of 240; `sort` 41 of 56 / 38 of 47 / 33 of 56; `rm` 26 of 32 / 26 of 32 /
   3 of 21. The causes are `=` after short options and, for `rm`, an optional file that Caruca's generator
   leaves out. →
-  [Observations, "Fit with Caruca's current programs"](../naive_llm_vs_v1/observations.md#fit-with-carucas-current-programs)
+  [Observations, "Fit with Caruca's current programs"](../../naive_llm_caruca/observations.md#fit-with-carucas-current-programs)
 - **12:24 (scored), not yet committed · Naive LLM · real-world reach.** Read with GNU's own option rules,
   the agent's files and Caruca's answer key both read every valid real-world line checked: `cut` 5,856,
   `sort` 5,010 and `rm` 24,195. Caruca's GPT-4o file reads 4,179 of the 5,010 `sort` lines, because it has
   no `-k`. →
-  [Observations, "Fit with Caruca's current programs"](../naive_llm_vs_v1/observations.md#fit-with-carucas-current-programs)
+  [Observations, "Fit with Caruca's current programs"](../../naive_llm_caruca/observations.md#fit-with-carucas-current-programs)
 - **12:24 (scored), not yet committed · Caruca (v1) and Naive LLM · accuracy.** None of the syntax files
   states which options cannot be combined.
   - `sort` refuses 39 pairs of the options in the answer key, 40 with the agent's extra `-y` (for example
@@ -68,7 +68,7 @@ to change its number: add a new bullet and mark the old one "corrected on <date>
     encodes 3: only one of `-b`, `-c` and `-f` at a time. It misses that `-d` and `-s` need `-f`.
   - Neither Caruca file says that `-` means standard input for `cut` or `sort`; the agent's files do.
 
-  → [Observations, "Headline"](../naive_llm_vs_v1/observations.md#headline-facts-checked-against-the-real-program)
+  → [Observations, "Headline"](../../naive_llm_caruca/observations.md#headline-facts-checked-against-the-real-program)
 - **12:28 (correction), not yet committed · Caruca (v1).** Caruca's JSON converter (`save/transform.py`)
   keeps the *most conservative* label when it merges cases, not the most permissive. A memory note had
   it backwards; task 012 was right. →

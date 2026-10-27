@@ -1,6 +1,6 @@
 # Analysis Index
 
-> **Start here (since 27 October 2026): [`../naive_llm_vs_v1/README.md`](../naive_llm_vs_v1/README.md)**,
+> **Start here (since 27 October 2026): [`naive_llm_caruca/README.md`](../../naive_llm_caruca/README.md)**,
 > the directory for the current focus (naive LLM vs Caruca), and [`latest_findings.md`](latest_findings.md),
 > every finding dated, newest first. The documents listed below are kept as they are; the directory
 > marks which are current and which belong to the September–October step-by-step rebuild.
