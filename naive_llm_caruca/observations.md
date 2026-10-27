@@ -48,6 +48,9 @@ what it changed, not what it found unaided.
 - **Speed and cost: the agent takes minutes and a few dollars per command.** These four took 60 to 304
   seconds and $0.80 to $2.46 at list price. The answer key averages about 40 minutes of expert time per
   command. Caruca's GPT-4o step is a single model call, but its time and cost were never recorded.
+  Caruca's own testing is another matter: the paper projects up to 123.7 days (`test`) and about 75
+  years (`convert`) at four options per line, because it tries every combination. The agent never
+  does; see [Running time](#running-time-why-carucas-projections-reach-months-and-the-agent-takes-minutes).
 
 ## Scores
 
@@ -130,6 +133,94 @@ rejects.
 | Agent: tool calls | 17 | 23 | 5 | 18 |
 | Answer key | about 40 minutes of expert time per command on average (80 person-hours for 120 commands, the paper) | | | |
 | Caruca's GPT-4o | one model call per command; time and cost not recorded | | | |
+
+## Running time: why Caruca's projections reach months and the agent takes minutes
+
+*Added 27 October 2026.*
+
+**What the paper's Figure 7 shows.** The authors ran Caruca on each of its 120 commands with a five-hour
+limit per command, testing up to four options per command line.
+- **Black bars** are the real times of the commands that finished.
+- **Coloured bars** are projections for the commands that did not finish. Each projection is the number of
+  test runs a full run would need, multiplied by the slow end (95th percentile) of the time one test run
+  took before the five hours ran out. The paper projects for up to 4, 3 and 2 options per line.
+- **At up to four options per line,** 80 commands finish within an hour and 24 would take more than a day.
+  The figure labels them from `numfmt` (7.0 days) through `sort` (16.5), `ls` (19.6) and `pandoc` (83.6)
+  to `test` (123.7 days) and `convert` (27,533.2 days, about 75 years).
+- **At up to two options per line,** every command but `convert` finishes within a day; `convert` is
+  projected at 98.72 hours.
+
+The paper treats `convert` as a special case: many options that barely change what it does, so trying
+every combination overstates its complexity.
+
+**Why the numbers get so large.** Caruca tests by trying everything, and the counts multiply. For each
+command it:
+1. takes every combination of options up to the limit;
+2. gives each option every one of its sample values: −1, 0 and 1 for a number, every listed choice for a
+   list;
+3. sets up, for every file the command line names, five situations, each written as both a relative and
+   an absolute path:
+   - a file with sample text,
+   - an empty folder,
+   - a folder with something in it,
+   - a missing file,
+   - a file inside a missing folder;
+4. runs every resulting case once in an isolated sandbox that records every file and system operation.
+
+Counted with Caruca's own code at its default settings and its answer key, here are the test runs needed:
+
+| Command | Up to 2 options per line | Up to 4 options per line |
+|---|---|---|
+| `rm` | 3,320 | 122,400 |
+| `cut` | 1,063 | 114,004 |
+| `sort` | 7,640 | 7,814,222 |
+| `convert` | 3,765,840 | 229,656,055,750 |
+
+- **Combinations explode with the number of options.** `convert` has about 250 options, and choosing 4
+  of 250 alone gives about 159 million combinations, before any values or file situations.
+- **Repeats are not removed before running.** For `sort` at two options per line, Caruca writes 3,640
+  command lines but only 1,503 different ones.
+- **These counts are from Caruca's current code, not the paper's.** The paper does not say exactly how
+  it counted. These counts show the scale, not the paper's own figures.
+
+**What the agent does instead.** It never lists every combination. It decides what to try: usually each
+option once or a few times, the combinations it suspects matter, and a test of its finished file.
+
+| Run | Command | Times it ran the program | Session time |
+|---|---|---|---|
+| 5 | `rm` | 27 | 60 s |
+| 6 | `binwalk` | 34 | 193 s |
+| 7 | `cut` | 66 (21 before writing, 45 after) | 104 s |
+| 4 | `grep` | 226 (72 before writing, 154 after) | 322 s |
+| 9 | `sort` | about 1,050 (88 before writing, about 960 after) | 304 s |
+| 8 | `convert` | about 6,800 (about 3,700 before writing, about 3,100 after) | 1,291 s of active session (21.5 min); the Mac slept during the run, so it took 2 h 14 min on the clock |
+
+These counts come from each run's own analysis (linked from the [run table](README.md#3-the-runs)); the
+`convert` figures are estimates from the agent's loop output.
+
+**So would the naive approach ever run for 100 days? Not the way Caruca does, for three reasons:**
+1. **It doesn't enumerate.** How many times it runs the program is the agent's choice. That grows with
+   the number of options (about 26 runs per option for `convert`), not with their combinations.
+2. **Each run is cheap.** It is a plain run in a scratch folder, not a sandboxed run that records every
+   file and system operation.
+3. **A session ends.** The agent stops when it judges itself done, and a session has a limited working
+   budget. The longest session so far was `convert`'s 21.5 minutes of active time, for the command Caruca
+   projects at 75 years.
+
+**What that speed costs:**
+- **It tests far less.** Pairs of options are not tried systematically, so rules between options can be
+  missed. The agent's `cut` file does not say that `-d` and `-s` need `-f`, and run 6 ran 16 of `binwalk`'s
+  51 options. Caruca's exhaustive approach is what would reveal such rules.
+- **It does a smaller job.** Caruca's runs record what the command reads and writes in every case; that
+  record is the evidence behind its behaviour descriptions. The agent writes its behaviour description
+  from reasoning plus a few targeted experiments, so the minutes and the months buy different things.
+- **The speed comes from the method, not the file.** Fed the agent's syntax files, Caruca's generator
+  needs as many runs or more. At up to four options per line, `convert` needs about 3.5 trillion runs
+  with the agent's file against about 230 billion with the answer key, because the agent lists 426
+  entries, including every `+option` form. `sort` needs 8.4 million against 7.8 million.
+
+A middle course would let a model choose which combinations Caruca traces, instead of all of them. That
+is an idea, not something tested here.
 
 ## Samples side by side
 

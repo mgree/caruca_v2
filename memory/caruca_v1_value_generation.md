@@ -86,3 +86,21 @@ running it on the Mac (v1 `.venv`, Python 3.12.9). Related: [[project-naive-clau
   `ONE_OR_MORE` is an alias of `AT_LEAST_ONE` and `ZERO_OR_ONE` of `OPTIONAL` (same values), so a loaded
   node's `.arity.name` is always `AT_LEAST_ONE` / `OPTIONAL`; there is also `EXACTLY_TWO`. Code that
   checks for `ONE_OR_MORE` by name never matches (task 018's first pass made exactly that mistake).
+
+**Added 2026-10-27 — how many test runs v1 needs (code-read + exact count, v1 `d80324073`):**
+- Each generated command line becomes (product over its file arguments of the file situations) × (stdin
+  variants) traced runs (`CommandInvocation.to_exec_env`, `ir/string.py`). With plain relations a file
+  argument has 5 situations at `--content simple` (file with sample text, empty folder, non-empty
+  folder, missing file, file in a missing folder; `Path.attach_env`), each as relpath and abspath.
+  `Tracer.run` maps over every invocation with **no dedup** (`tracer/tracer.py`).
+- Exact totals without listing: the generator picks exactly k optional entries (each may be "absent"),
+  so lines = k-th elementary symmetric sum of per-entry variation counts. Script:
+  `naive_llm_caruca/comparisons/2026-10-26_syntax_files_vs_v1/scripts/config_count.py`, matches v1's
+  generator exactly (rm 54/664, cut 41/759, sort 3,640 lines / 7,640 runs at k=2, convert 1,566 / 8,710 at
+  k=1). Reference grammars, traced runs at k=2 / k=4: rm 3,320 / 122,400; cut 1,063 / 114,004; sort 7,640 /
+  7,814,222; convert 3,765,840 / 229,656,055,750. Agent's convert file at k=4: ~3.48 trillion.
+- `wc -l` over `caruca generate` output overcounts when a value contains a newline (v1's `Delimiter`
+  sample `"\n\t"`): cut k=1 shows 43 lines for 41 invocations.
+- **Not established:** how the paper counted for Fig. 7. Its two `convert` figures (98.72 h at ≤2 flags,
+  27,533.2 days at ≤4) imply ~6,700× growth from 2 to 4; v1's current code gives ~61,000×, so the paper's
+  projections are not reproduced by these counts.

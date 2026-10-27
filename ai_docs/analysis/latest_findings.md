@@ -36,6 +36,17 @@ to change its number: add a new bullet and mark the old one "corrected on <date>
 
 ## 2026-10-27
 
+- **13:03, not yet committed · Naive LLM · running time.** Caruca's paper projects runs of up to
+  123.7 days (`test`) and about 75 years (`convert`) at four options per command line, because Caruca
+  traces every combination of options, sample values and file situations, with repeats.
+  - Counted with Caruca's own code and answer key, at up to four options per line: `sort` needs
+    7,814,222 test runs and `convert` 229,656,055,750.
+  - The agent ran each program 27 (`rm`) to about 6,800 (`convert`) times, in sessions of 1 to 21.5
+    minutes of active time. It chooses its tests instead of enumerating them.
+  - The speed is the method's, not the file's: Caruca fed the agent's `convert` file would need about
+    3.5 trillion runs.
+  - The agent also tests far less and records no file activity. →
+  [Observations, "Running time"](../../naive_llm_caruca/observations.md#running-time-why-carucas-projections-reach-months-and-the-agent-takes-minutes)
 - **12:24 (scored), not yet committed · Naive LLM · accuracy.** Checked fact by fact against the real
   program, the agent's syntax files are about level with Caruca's, slightly ahead on `cut`.
   - `cut`: the agent gets 68 of 76 facts right (89%), Caruca's answer key 61 of 72 (85%), Caruca's GPT-4o

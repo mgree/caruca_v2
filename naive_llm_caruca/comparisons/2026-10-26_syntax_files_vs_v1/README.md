@@ -35,6 +35,7 @@ PY=$V1/caruca/.venv/bin/python; C=$V1/eval/user-scripts/invocations.txt
 | `gnuread.py PKG CMD CORPUS` | Reads the corpus with GNU's rules, taking the option list from the grammar (needs `readcheck_lib.py`) | `results/gnu_rules_reading.txt` |
 | `corpus_split.py CORPUS` | Whole corpus, v1's own grammars: how many full matches take a word as an option it is not | `results/corpus_split.json` |
 | `render.py` | Renders every option of every grammar as v1's generator writes it | `results/forms.json` |
+| `config_count.py PKG CMD K...` (added 2026-10-27) | Exact number of command lines and traced test runs v1 would need at up to K options per line, computed from v1's own objects without listing them; checked against v1's generator for `rm`, `cut`, `sort` and `convert` | `results/test_run_counts.txt` |
 | `probe_vm.py forms.json CMDS image OUT` | Runs each rendered option in a minimal valid command line on the real program, in a fresh temporary folder (run inside a VM) | `results/probe_core.jsonl` (pash VM, coreutils 9.4), `results/probe_convert.jsonl` (clone of `naive-golden`, ImageMagick 6.9.12-98) |
 
 `results/scorer_results.txt` holds v1's `eval/cmp_specs.py` run on the real files and on the
