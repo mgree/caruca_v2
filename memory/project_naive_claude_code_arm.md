@@ -280,3 +280,24 @@ re-verified at source for it: v1's split test needs each half's output to keep i
 (2024-12-07/08); the paper (section 6.3) defines stateless as split-run-concatenate equality and (6.1) puts
 aggregator synthesis out of scope, while v1's code never emits `pure` (only S/N/E in `to_annotation`).
 Two sessions editing the addendum at once produced two "section 3"s; merged by agreement.
+
+**Run 10 and task 018 (2026-10-26).** Run 10 = `dirname` (57 s, $0.88, 5 tool calls), the first new run of
+task 018 (`ai_docs/tasks/018_naive_vs_caruca_syntax_scoring.md`): four scores per syntax file (answer key,
+real binary, real-world reach, generator use) for v1's reference, v1's shipped GPT-4o output and the agent;
+tools in `naive_llm_caruca/scoring/`, results in `naive_llm_caruca/scoring/results/`. Pilot 3 of 5 scored
+(cut, sort, dirname); dd and ls blocked on a golden-image sign-in; main phase (55 new runs) awaits Tiran.
+
+**Syntax-file comparison, 2026-10-26.** The agent's `rm`/`cut`/`sort`/`convert` syntax files (runs
+5/7/9/8) were compared with v1's reference and v1's model output, each difference checked on coreutils
+9.4 / ImageMagick 6.9.12-98, and all three fed to v1's matcher, generator, ShellCheck adapter and
+scorer: `ai_docs/analysis/naive_llm_syntax_files_vs_v1.md` (v0.1), scripts and results in
+`naive_llm_caruca/comparisons/2026-10-26_syntax_files_vs_v1/`. Not yet folded into the addendum
+(another session had uncommitted addendum edits that day). See [[caruca-v1-matcher-behaviour]].
+
+**Task 018 narrowed and scored (2026-10-27).** Tiran: score only `cut`, `sort`, `rm`, `binwalk`. Headline =
+program-checked accuracy (facts right / all facts, 8 fact types in `naive_llm_caruca/scoring/facts.py`,
+asked for via session caruca-v2-dd). Results: `cut` agent 68/76 (89%) vs reference 61/72 (85%) vs v1 GPT-4o
+63/76 (83%); `sort` 181/230 (79%) vs 172/220 (78%) vs 157/204 (77%); `rm` 58/60 vs 59/60 vs 59/60;
+`binwalk` agent 326/337 (97%). Generated lines doing real work: agent worst (`cut` 0/240 vs 15/29; `rm` 3/21
+vs 26/32; `sort` 33/56 vs 41/56). One agent run each, so no verdicts. Write-up:
+`ai_docs/naive_llm_vs_v1/observations.md`. Three checker repairs before keeping numbers are in task 018 §4.5.

@@ -1,0 +1,9 @@
+g_ref cut {'lines': 5909, 'valid': 5856, 'valid_full_wrong': 5778, 'valid_full_correct': 78, 'unsplittable': 19, 'invalid_for_binary': 34, 'invalid_for_binary_full': 34}
+g_model cut {'lines': 5909, 'valid': 5856, 'valid_not_full': 2637, 'valid_full_wrong': 695, 'valid_full_correct': 2524, 'unsplittable': 19, 'invalid_for_binary': 34, 'invalid_for_binary_full': 0}
+g_agent cut {'lines': 5909, 'valid': 5856, 'valid_not_full': 812, 'valid_full_wrong': 2522, 'valid_full_correct': 2522, 'unsplittable': 19, 'invalid_for_binary': 34, 'invalid_for_binary_full': 0}
+g_ref sort {'lines': 5011, 'valid': 5010, 'valid_full_correct': 2360, 'valid_full_wrong': 2650, 'invalid_for_binary': 1, 'invalid_for_binary_full': 1}
+g_model sort {'lines': 5011, 'valid': 5010, 'valid_full_correct': 2668, 'valid_full_wrong': 2342, 'invalid_for_binary': 1, 'invalid_for_binary_full': 1}
+g_agent sort {'lines': 5011, 'valid': 5010, 'valid_full_correct': 4455, 'valid_not_full': 153, 'valid_full_wrong': 402, 'invalid_for_binary': 1, 'invalid_for_binary_full': 0}
+g_ref rm {'lines': 24260, 'valid': 24195, 'valid_full_correct': 24094, 'valid_not_full': 101, 'invalid_for_binary': 65, 'invalid_for_binary_full': 0}
+g_model rm {'lines': 24260, 'valid': 24195, 'valid_full_correct': 24094, 'valid_not_full': 101, 'invalid_for_binary': 65, 'invalid_for_binary_full': 0}
+g_agent rm {'lines': 24260, 'valid': 24195, 'valid_full_correct': 24094, 'valid_not_full': 101, 'invalid_for_binary': 65, 'invalid_for_binary_full': 0}

@@ -1,0 +1,575 @@
+{
+ "g_ref": {
+  "n_syntaxes": 1,
+  "positions": [
+   2
+  ],
+  "nodes": [
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-f",
+    "alias": [
+     "--force"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-i",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-I",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--interactive",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "never",
+     "once",
+     "always"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--one-file-system",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--no-preserve-root",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--preserve-root",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "",
+     "all"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-r",
+    "alias": [
+     "-R",
+     "--recursive"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-d",
+    "alias": [
+     "--dir"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-v",
+    "alias": [
+     "--verbose"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--help",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--version",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 1,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": null,
+    "alias": [],
+    "equals": false,
+    "arity": "AT_LEAST_ONE",
+    "dash_as_stdin": false
+   }
+  ]
+ },
+ "g_model": {
+  "n_syntaxes": 1,
+  "positions": [
+   2
+  ],
+  "nodes": [
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-f",
+    "alias": [
+     "--force"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-i",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-I",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--interactive",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "never",
+     "once",
+     "always"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--one-file-system",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--no-preserve-root",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--preserve-root",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "",
+     "all"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-r",
+    "alias": [
+     "-R",
+     "--recursive"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-d",
+    "alias": [
+     "--dir"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-v",
+    "alias": [
+     "--verbose"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--help",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--version",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 1,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": null,
+    "alias": [],
+    "equals": false,
+    "arity": "AT_LEAST_ONE",
+    "dash_as_stdin": false
+   }
+  ]
+ },
+ "g_agent": {
+  "n_syntaxes": 1,
+  "positions": [
+   2
+  ],
+  "nodes": [
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-f",
+    "alias": [
+     "--force"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-i",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-I",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--interactive",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "never",
+     "no",
+     "none",
+     "once",
+     "always",
+     "yes"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--one-file-system",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--no-preserve-root",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--preserve-root",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "",
+     "all"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-r",
+    "alias": [
+     "-R",
+     "--recursive"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-d",
+    "alias": [
+     "--dir"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-v",
+    "alias": [
+     "--verbose"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--help",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--version",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 1,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": null,
+    "alias": [],
+    "equals": false,
+    "arity": "ZERO_OR_MORE",
+    "dash_as_stdin": false
+   }
+  ]
+ },
+ "g_pash": {
+  "n_syntaxes": 1,
+  "positions": [
+   1
+  ],
+  "nodes": [
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": null,
+    "alias": [],
+    "equals": false,
+    "arity": "AT_LEAST_ONE",
+    "dash_as_stdin": false
+   }
+  ]
+ }
+}

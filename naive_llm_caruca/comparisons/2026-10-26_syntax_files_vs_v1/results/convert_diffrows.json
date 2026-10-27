@@ -1,0 +1,2015 @@
+[
+[
+"adaptive-blur",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-adaptive-blur",
+"-adaptive-blur string",
+"invalid argument for option `-adaptive-blur': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"adaptive-resize",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-adaptive-resize",
+"-adaptive-resize string",
+"invalid argument for option `-adaptive-resize': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"adaptive-sharpen",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-adaptive-sharpen",
+"-adaptive-sharpen string",
+"invalid argument for option `-adaptive-sharpen': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"attenuate",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-attenuate",
+"-attenuate string",
+"invalid argument for option `-attenuate': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-attenuate",
+"-attenuate string",
+"invalid argument for option `-attenuate': string"
+]
+]
+}
+],
+[
+"bias",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-bias",
+"-bias string",
+"invalid argument for option `-bias': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-bias",
+"-bias string",
+"invalid argument for option `-bias': string"
+]
+]
+}
+],
+[
+"black-threshold",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-black-threshold",
+"-black-threshold string",
+"invalid argument for option `-black-threshold': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-black-threshold",
+"-black-threshold string",
+"invalid argument for option `-black-threshold': string"
+]
+]
+}
+],
+[
+"blue-shift",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-blue-shift",
+"-blue-shift string",
+"invalid argument for option `-blue-shift': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-blue-shift",
+"-blue-shift string",
+"invalid argument for option `-blue-shift': string"
+]
+]
+}
+],
+[
+"blur",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-blur",
+"-blur string",
+"invalid argument for option `-blur': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"border",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-border",
+"-border string",
+"invalid argument for option `-border': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"brightness-contrast",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-brightness-contrast",
+"-brightness-contrast string",
+"invalid argument for option `-brightness-contrast': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"canny",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-canny",
+"-canny string",
+"invalid argument for option `-canny': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"charcoal",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-charcoal",
+"-charcoal string",
+"invalid argument for option `-charcoal': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-charcoal",
+"-charcoal string",
+"invalid argument for option `-charcoal': string"
+]
+]
+}
+],
+[
+"chop",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-chop",
+"-chop string",
+"invalid argument for option `-chop': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"colorize",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-colorize",
+"-colorize string",
+"invalid argument for option `-colorize': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-colorize",
+"-colorize string",
+"invalid argument for option `-colorize': string"
+]
+]
+}
+],
+[
+"contrast-stretch",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-contrast-stretch",
+"-contrast-stretch string",
+"invalid argument for option `-contrast-stretch': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"crop",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-crop",
+"-crop string",
+"invalid argument for option `-crop': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"debug",
+{
+"g_ref": "0/1",
+"g_model": "0/1",
+"g_agent": "20/20"
+},
+{
+"g_ref": [
+[
+"-debug",
+"-debug string",
+"unrecognized event type `string'"
+]
+],
+"g_model": [
+[
+"-debug",
+"-debug string",
+"unrecognized event type `string'"
+]
+],
+"g_agent": []
+}
+],
+[
+"delay",
+{
+"g_ref": "3/3",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [],
+"g_model": [],
+"g_agent": [
+[
+"-delay",
+"-delay string",
+"invalid argument for option `-delay': string"
+]
+]
+}
+],
+[
+"delete",
+{
+"g_ref": "0/1",
+"g_model": "0/1",
+"g_agent": "5/5"
+},
+{
+"g_ref": [
+[
+"-delete",
+"-delete string",
+"invalid argument for option `-delete': string"
+]
+],
+"g_model": [
+[
+"-delete",
+"-delete string",
+"invalid argument for option `-delete': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"density",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-density",
+"-density string",
+"invalid argument for option `-density': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"deskew",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-deskew",
+"-deskew string",
+"invalid argument for option `-deskew': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-deskew",
+"-deskew string",
+"invalid argument for option `-deskew': string"
+]
+]
+}
+],
+[
+"edge",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-edge",
+"-edge string",
+"invalid argument for option `-edge': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-edge",
+"-edge string",
+"invalid argument for option `-edge': string"
+]
+]
+}
+],
+[
+"emboss",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-emboss",
+"-emboss string",
+"invalid argument for option `-emboss': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-emboss",
+"-emboss string",
+"invalid argument for option `-emboss': string"
+]
+]
+}
+],
+[
+"evaluate-sequence",
+{
+"g_ref": "0/1",
+"g_model": "0/1",
+"g_agent": "37/37"
+},
+{
+"g_ref": [
+[
+"-evaluate-sequence",
+"-evaluate-sequence string",
+"unrecognized evaluate operator `string'"
+]
+],
+"g_model": [
+[
+"-evaluate-sequence",
+"-evaluate-sequence string",
+"unrecognized evaluate operator `string'"
+]
+],
+"g_agent": []
+}
+],
+[
+"extent",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-extent",
+"-extent string",
+"invalid argument for option `-extent': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"extract",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-extract",
+"-extract string",
+"invalid argument for option `-extract': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"features",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "3/3"
+},
+{
+"g_ref": [
+[
+"-features",
+"-features string",
+"invalid argument for option `-features': string"
+]
+],
+"g_model": [],
+"g_agent": []
+}
+],
+[
+"filter",
+{
+"g_ref": "14/15",
+"g_model": "15/15",
+"g_agent": "30/30"
+},
+{
+"g_ref": [
+[
+"-filter",
+"-filter Other",
+"unrecognized image filter `Other'"
+]
+],
+"g_model": [],
+"g_agent": []
+}
+],
+[
+"frame",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-frame",
+"-frame string",
+"invalid argument for option `-frame': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"fuzz",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-fuzz",
+"-fuzz string",
+"invalid argument for option `-fuzz': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-fuzz",
+"-fuzz string",
+"invalid argument for option `-fuzz': string"
+]
+]
+}
+],
+[
+"fx",
+{
+"g_ref": "0/1",
+"g_model": "0/1",
+"g_agent": "4/4"
+},
+{
+"g_ref": [
+[
+"-fx",
+"-fx string",
+"undefined variable `string'"
+]
+],
+"g_model": [
+[
+"-fx",
+"-fx string",
+"undefined variable `string'"
+]
+],
+"g_agent": []
+}
+],
+[
+"gamma",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-gamma",
+"-gamma string",
+"invalid argument for option `-gamma': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-gamma",
+"-gamma string",
+"invalid argument for option `-gamma': string"
+]
+]
+}
+],
+[
+"gaussian-blur",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-gaussian-blur",
+"-gaussian-blur string",
+"invalid argument for option `-gaussian-blur': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"geometry",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-geometry",
+"-geometry string",
+"invalid argument for option `-geometry': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"hough-lines",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-hough-lines",
+"-hough-lines string",
+"invalid argument for option `-hough-lines': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"implode",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-implode",
+"-implode string",
+"invalid argument for option `-implode': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-implode",
+"-implode string",
+"invalid argument for option `-implode': string"
+]
+]
+}
+],
+[
+"interline-spacing",
+{
+"g_ref": "3/3",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [],
+"g_model": [],
+"g_agent": [
+[
+"-interline-spacing",
+"-interline-spacing string",
+"invalid argument for option `-interline-spacing': string"
+]
+]
+}
+],
+[
+"interpolative-resize",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-interpolative-resize",
+"-interpolative-resize string",
+"invalid argument for option `-interpolative-resize': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"interword-spacing",
+{
+"g_ref": "3/3",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [],
+"g_model": [],
+"g_agent": [
+[
+"-interword-spacing",
+"-interword-spacing string",
+"invalid argument for option `-interword-spacing': string"
+]
+]
+}
+],
+[
+"kerning",
+{
+"g_ref": "3/3",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [],
+"g_model": [],
+"g_agent": [
+[
+"-kerning",
+"-kerning string",
+"invalid argument for option `-kerning': string"
+]
+]
+}
+],
+[
+"lat",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-lat",
+"-lat string",
+"invalid argument for option `-lat': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"layers",
+{
+"g_ref": "0/1",
+"g_model": "0/1",
+"g_agent": "15/16"
+},
+{
+"g_ref": [
+[
+"-layers",
+"-layers string",
+"UnrecognizedLayerMethod `string'"
+]
+],
+"g_model": [
+[
+"-layers",
+"-layers string",
+"UnrecognizedLayerMethod `string'"
+]
+],
+"g_agent": [
+[
+"-layers",
+"-layers Composite",
+"missing Null Image List Separator layers Composite"
+]
+]
+}
+],
+[
+"level",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-level",
+"-level string",
+"invalid argument for option `-level': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-level",
+"-level string",
+"invalid argument for option `-level': string"
+]
+]
+}
+],
+[
+"linear-stretch",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-linear-stretch",
+"-linear-stretch string",
+"invalid argument for option `-linear-stretch': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"liquid-rescale",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-liquid-rescale",
+"-liquid-rescale string",
+"invalid argument for option `-liquid-rescale': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"list",
+{
+"g_ref": "0/1",
+"g_model": "0/1",
+"g_agent": "74/74"
+},
+{
+"g_ref": [
+[
+"-list",
+"-list string",
+"unrecognized list type `string'"
+]
+],
+"g_model": [
+[
+"-list",
+"-list string",
+"unrecognized list type `string'"
+]
+],
+"g_agent": []
+}
+],
+[
+"mean-shift",
+{
+"g_ref": "1/2",
+"g_model": "0/1",
+"g_agent": "1/2"
+},
+{
+"g_ref": [
+[
+"-mean-shift",
+"-mean-shift 100x100",
+"timeout"
+]
+],
+"g_model": [
+[
+"-mean-shift",
+"-mean-shift string",
+"invalid argument for option `-mean-shift': string"
+]
+],
+"g_agent": [
+[
+"-mean-shift",
+"-mean-shift 100x100",
+"timeout"
+]
+]
+}
+],
+[
+"median",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-median",
+"-median string",
+"invalid argument for option `-median': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"mode",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-mode",
+"-mode string",
+"invalid argument for option `-mode': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"motion-blur",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-motion-blur",
+"-motion-blur string",
+"invalid argument for option `-motion-blur': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"noise",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-noise",
+"-noise string",
+"invalid argument for option `-noise': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"paint",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-paint",
+"-paint string",
+"invalid argument for option `-paint': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-paint",
+"-paint string",
+"invalid argument for option `-paint': string"
+]
+]
+}
+],
+[
+"perceptible",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-perceptible",
+"-perceptible string",
+"invalid argument for option `-perceptible': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-perceptible",
+"-perceptible string",
+"invalid argument for option `-perceptible': string"
+]
+]
+}
+],
+[
+"pointsize",
+{
+"g_ref": "3/3",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [],
+"g_model": [],
+"g_agent": [
+[
+"-pointsize",
+"-pointsize string",
+"invalid argument for option `-pointsize': string"
+]
+]
+}
+],
+[
+"polaroid",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-polaroid",
+"-polaroid string",
+"invalid argument for option `-polaroid': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-polaroid",
+"-polaroid string",
+"invalid argument for option `-polaroid': string"
+]
+]
+}
+],
+[
+"preview",
+{
+"g_ref": "28/29",
+"g_model": "28/29",
+"g_agent": "29/29"
+},
+{
+"g_ref": [
+[
+"-preview",
+"-preview CharcoalDraw",
+"unrecognized preview type `CharcoalDraw'"
+]
+],
+"g_model": [
+[
+"-preview",
+"-preview CharcoalDraw",
+"unrecognized preview type `CharcoalDraw'"
+]
+],
+"g_agent": []
+}
+],
+[
+"radial-blur",
+{
+"g_ref": "0/1",
+"g_model": "2/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-radial-blur",
+"-radial-blur string",
+"invalid argument for option `-radial-blur': string"
+]
+],
+"g_model": [
+[
+"-radial-blur",
+"-radial-blur -1",
+"memory allocation failed `in.jpg'"
+]
+],
+"g_agent": [
+[
+"-radial-blur",
+"-radial-blur string",
+"invalid argument for option `-radial-blur': string"
+]
+]
+}
+],
+[
+"raise",
+{
+"g_ref": "0/1",
+"g_model": "2/3",
+"g_agent": "1/2"
+},
+{
+"g_ref": [
+[
+"-raise",
+"-raise string",
+"invalid argument for option `-raise': string"
+]
+],
+"g_model": [
+[
+"-raise",
+"-raise -1",
+"size must exceed bevel width `in.jpg'"
+]
+],
+"g_agent": [
+[
+"-raise",
+"-raise 50%",
+"size must exceed bevel width `in.jpg'"
+]
+]
+}
+],
+[
+"region",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-region",
+"-region string",
+"invalid argument for option `-region': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"repage",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-repage",
+"-repage string",
+"invalid argument for option `-repage': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"resample",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-resample",
+"-resample string",
+"invalid argument for option `-resample': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"resize",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-resize",
+"-resize string",
+"invalid argument for option `-resize': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"roll",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-roll",
+"-roll string",
+"invalid argument for option `-roll': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"rotate",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-rotate",
+"-rotate string",
+"invalid argument for option `-rotate': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-rotate",
+"-rotate string",
+"invalid argument for option `-rotate': string"
+]
+]
+}
+],
+[
+"sample",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-sample",
+"-sample string",
+"invalid argument for option `-sample': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"sampling-factor",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-sampling-factor",
+"-sampling-factor string",
+"invalid argument for option `-sampling-factor': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"scale",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-scale",
+"-scale string",
+"invalid argument for option `-scale': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"selective-blur",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-selective-blur",
+"-selective-blur string",
+"invalid argument for option `-selective-blur': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"sepia-tone",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-sepia-tone",
+"-sepia-tone string",
+"invalid argument for option `-sepia-tone': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-sepia-tone",
+"-sepia-tone string",
+"invalid argument for option `-sepia-tone': string"
+]
+]
+}
+],
+[
+"shade",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-shade",
+"-shade string",
+"invalid argument for option `-shade': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-shade",
+"-shade string",
+"invalid argument for option `-shade': string"
+]
+]
+}
+],
+[
+"shadow",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-shadow",
+"-shadow string",
+"invalid argument for option `-shadow': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"sharpen",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-sharpen",
+"-sharpen string",
+"invalid argument for option `-sharpen': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"shave",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-shave",
+"-shave string",
+"invalid argument for option `-shave': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"shear",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-shear",
+"-shear string",
+"invalid argument for option `-shear': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"sigmoidal-contrast",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-sigmoidal-contrast",
+"-sigmoidal-contrast string",
+"invalid argument for option `-sigmoidal-contrast': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"size",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-size",
+"-size string",
+"invalid argument for option `-size': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"sketch",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-sketch",
+"-sketch string",
+"invalid argument for option `-sketch': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"smush",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-smush",
+"-smush string",
+"invalid argument for option `-smush': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"solarize",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-solarize",
+"-solarize string",
+"invalid argument for option `-solarize': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-solarize",
+"-solarize string",
+"invalid argument for option `-solarize': string"
+]
+]
+}
+],
+[
+"splice",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-splice",
+"-splice string",
+"invalid argument for option `-splice': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"spread",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-spread",
+"-spread string",
+"missing required argument `-spread'"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-spread",
+"-spread string",
+"missing required argument `-spread'"
+]
+]
+}
+],
+[
+"strokewidth",
+{
+"g_ref": "3/3",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [],
+"g_model": [],
+"g_agent": [
+[
+"-strokewidth",
+"-strokewidth string",
+"invalid argument for option `-strokewidth': string"
+]
+]
+}
+],
+[
+"swirl",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-swirl",
+"-swirl string",
+"invalid argument for option `-swirl': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-swirl",
+"-swirl string",
+"invalid argument for option `-swirl': string"
+]
+]
+}
+],
+[
+"threshold",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-threshold",
+"-threshold string",
+"invalid argument for option `-threshold': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-threshold",
+"-threshold string",
+"invalid argument for option `-threshold': string"
+]
+]
+}
+],
+[
+"thumbnail",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-thumbnail",
+"-thumbnail string",
+"invalid argument for option `-thumbnail': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"tile-offset",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-tile-offset",
+"-tile-offset string",
+"invalid argument for option `-tile-offset': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"tint",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-tint",
+"-tint string",
+"invalid argument for option `-tint': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-tint",
+"-tint string",
+"invalid argument for option `-tint': string"
+]
+]
+}
+],
+[
+"unsharp",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-unsharp",
+"-unsharp string",
+"invalid argument for option `-unsharp': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"view",
+{
+"g_ref": "0/1",
+"g_model": "0/1",
+"g_agent": "1/1"
+},
+{
+"g_ref": [
+[
+"-view",
+"-view",
+" `out.png'"
+]
+],
+"g_model": [
+[
+"-view",
+"-view",
+" `out.png'"
+]
+],
+"g_agent": []
+}
+],
+[
+"vignette",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-vignette",
+"-vignette string",
+"invalid argument for option `-vignette': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"wave",
+{
+"g_ref": "2/2",
+"g_model": "0/1",
+"g_agent": "2/2"
+},
+{
+"g_ref": [],
+"g_model": [
+[
+"-wave",
+"-wave string",
+"invalid argument for option `-wave': string"
+]
+],
+"g_agent": []
+}
+],
+[
+"wavelet-denoise",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-wavelet-denoise",
+"-wavelet-denoise string",
+"invalid argument for option `-wavelet-denoise': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-wavelet-denoise",
+"-wavelet-denoise string",
+"invalid argument for option `-wavelet-denoise': string"
+]
+]
+}
+],
+[
+"white-threshold",
+{
+"g_ref": "0/1",
+"g_model": "3/3",
+"g_agent": "0/1"
+},
+{
+"g_ref": [
+[
+"-white-threshold",
+"-white-threshold string",
+"invalid argument for option `-white-threshold': string"
+]
+],
+"g_model": [],
+"g_agent": [
+[
+"-white-threshold",
+"-white-threshold string",
+"invalid argument for option `-white-threshold': string"
+]
+]
+}
+]
+]

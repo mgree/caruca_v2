@@ -1,0 +1,16 @@
+rm       g_model  Number of different elements: 0 
+rm       g_agent  Number of different elements: 1 
+cut      g_model  - Missing element: -w Number of different elements: 3 
+cut      g_agent  - Missing element: -c - Missing element: -f - Missing element: -w Number of different elements: 4 
+sort     g_model  - Missing element: --batch-size - Missing element: --compress-program - Missing element: -k Number of different elements: 3 
+sort     g_agent  Number of different elements: 4 
+convert  g_model  Number of different elements: 63 
+convert  g_agent  - Missing element: -clip - Missing element: -clip-mask - Missing element: -clip-path - Missing element: -connected-component - Missing element: -flatten Number of different elements: 228 
+A_arity                Number of different elements: 0
+B_alias                Number of different elements: 0
+C_equals               Number of different elements: 0
+D_type_path_to_str     Number of different elements: 1
+G_flag_to_path         Number of different elements: 0
+E_int_to_size          Number of different elements: 0
+F_min                  Number of different elements: 0
+H_int_to_path          Number of different elements: 0

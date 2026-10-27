@@ -36,3 +36,6 @@ working from the Mac (the WSL PC still cannot trace — see [[dev-machine-paths]
   `ai_docs/docs/caruca_v1 pipeline instructions.md` in this repo.
 - 2026-10-13: Claude Code CLI 2.1.296 is installed in this VM (guest home, native installer) for the
   naive Claude Code arm; see [[project_naive_claude_code_arm]].
+
+**2026-10-27:** `binwalk` 2.3.4+dfsg1-5 (with `python3-binwalk`) was apt-installed in the `caruca` VM for
+task 018's tracing, the same package the naive agent's image has.

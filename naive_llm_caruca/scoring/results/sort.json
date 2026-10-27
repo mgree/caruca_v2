@@ -1,0 +1,3089 @@
+{
+ "command": "sort",
+ "scored": "2026-10-27T12:24:26",
+ "caruca_v1_commit": "d8032407346aadc135b14c043618c8c1d4f4e0cf",
+ "probe_vm": "t018-probe",
+ "binary_version": "sort (GNU coreutils) 9.4",
+ "files": {
+  "reference": {
+   "path": "/Users/tirandagan/dev/stevens/caruca/caruca/src/caruca/syntax_specs/sort.py",
+   "real_binary": {
+    "spellings_in_file": 54,
+    "spellings_accepted": 54,
+    "spellings_rejected": [],
+    "value_checked": 54,
+    "value_agree": 54,
+    "value_optional_in_binary": 3,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 53,
+    "real_spellings_in_file": 52,
+    "real_spellings_missing": [
+     "-y"
+    ],
+    "choice_lists": [
+     {
+      "spelling": "--sort",
+      "file": [
+       "general-numeric",
+       "human-numeric",
+       "month",
+       "numeric",
+       "random",
+       "version"
+      ],
+      "binary": [
+       "general-numeric",
+       "human-numeric",
+       "month",
+       "numeric",
+       "random",
+       "version"
+      ],
+      "binary_values_in_file": 6
+     }
+    ]
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 5011,
+     "read": 5011,
+     "read_exactly": 2351,
+     "read_with_a_word_taken_as_another_option": 2651,
+     "top_unread_remainders": []
+    },
+    "strict": {
+     "invocations": 5011,
+     "read": 5010,
+     "unparseable": 0,
+     "top_unrecognised_words": [
+      [
+       "-2",
+       1
+      ]
+     ]
+    },
+    "gnu_rules": {
+     "valid_lines": 5010,
+     "read_correctly": 5010,
+     "read_wrongly": 0,
+     "not_read": 0,
+     "top_unreadable": []
+    }
+   },
+   "generator_use": {
+    "command": "sort",
+    "label": "reference",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 87,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 2,
+    "runs": 127,
+    "runs_accepted": 92,
+    "distinct_lines": 56,
+    "distinct_accepted": 43,
+    "distinct_real_work": 41,
+    "sample_rejected": [
+     [
+      "sort --batch-size=-1",
+      [
+       "sort: invalid --batch-size argument '-1'"
+      ]
+     ],
+     [
+      "sort --batch-size=0",
+      [
+       "sort: invalid --batch-size argument '0'"
+      ]
+     ],
+     [
+      "sort --batch-size=1",
+      [
+       "sort: invalid --batch-size argument '1'"
+      ]
+     ],
+     [
+      "sort --files0-from abspath_1",
+      [
+       "sort: cannot read: '''c'$'\\n''a'$'\\n''r'$'\\n''u'$'\\n''c'$'\\n''a'$'\\n\\n''Hi'$'\\n''Hello'$'\\n\\n''The quick brown fox jumped over the lazy dog.'$'\\n''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'$'\\n''Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'$'\\n\\n''Here'\\''s some punctuation characters like \" or ; or |. How about { or ]!'$'\\n''Here'\\''s even more such as %, ^ and @. Maybe | and ; one more time'$'\\n''b'$'\\n''r'$'\\n''o'$'\\n''w'$'\\n''n'$'\\n\\n''Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '$'\\n''Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'$'\\n''Sentence without the first letter '$'\\n''foo'$'\\n''barbaz'$'\\n''There'\\''s some punctuation characters like \" or '\\'' or |. How about } and [?'$'\\n''There'\\''s even more such as %, ^ and @. Maybe \" and '\\'' one more time'$'\\n': File name too long"
+      ]
+     ],
+     [
+      "sort --files0-from relpath_1",
+      [
+       "sort: cannot read: '''c'$'\\n''a'$'\\n''r'$'\\n''u'$'\\n''c'$'\\n''a'$'\\n\\n''Hi'$'\\n''Hello'$'\\n\\n''The quick brown fox jumped over the lazy dog.'$'\\n''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'$'\\n''Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'$'\\n\\n''Here'\\''s some punctuation characters like \" or ; or |. How about { or ]!'$'\\n''Here'\\''s even more such as %, ^ and @. Maybe | and ; one more time'$'\\n''b'$'\\n''r'$'\\n''o'$'\\n''w'$'\\n''n'$'\\n\\n''Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '$'\\n''Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'$'\\n''Sentence without the first letter '$'\\n''foo'$'\\n''barbaz'$'\\n''There'\\''s some punctuation characters like \" or '\\'' or |. How about } and [?'$'\\n''There'\\''s even more such as %, ^ and @. Maybe \" and '\\'' one more time'$'\\n': File name too long"
+      ]
+     ],
+     [
+      "sort --parallel=-1",
+      [
+       "sort: invalid --parallel argument '-1'"
+      ]
+     ],
+     [
+      "sort --parallel=0",
+      [
+       "sort: number in parallel must be nonzero"
+      ]
+     ],
+     [
+      "sort -C",
+      []
+     ],
+     [
+      "sort -S=-1",
+      [
+       "sort: invalid -S argument '=-1'"
+      ]
+     ],
+     [
+      "sort -S=0",
+      [
+       "sort: invalid -S argument '=0'"
+      ]
+     ],
+     [
+      "sort -S=1",
+      [
+       "sort: invalid -S argument '=1'"
+      ]
+     ],
+     [
+      "sort -c",
+      [
+       "sort: -:2: disorder: a"
+      ]
+     ],
+     [
+      "sort -t '\n\t'",
+      [
+       "sort: multi-character tab '\\n\\t'"
+      ]
+     ]
+    ]
+   },
+   "answer_key": {
+    "note": "is the answer key"
+   },
+   "performance": {
+    "note": "written and corrected by hand (the paper: 80 person-hours for the whole answer key)"
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      52,
+      53
+     ],
+     "b real": [
+      54,
+      54
+     ],
+     "c value": [
+      54,
+      54
+     ],
+     "d kind": [
+      7,
+      11
+     ],
+     "e equals": [
+      1,
+      4
+     ],
+     "f repeat": [
+      0,
+      0
+     ],
+     "g files": [
+      3,
+      4
+     ],
+     "h rules": [
+      1,
+      40
+     ]
+    },
+    "right": 172,
+    "total": 220,
+    "wrong": {
+     "a listed": [
+      "-y"
+     ],
+     "b real": [],
+     "c value": [],
+     "d kind": [
+      "--batch-size",
+      "--parallel",
+      "-S",
+      "-t"
+     ],
+     "e equals": [
+      "--batch-size",
+      "--parallel",
+      "-S"
+     ],
+     "f repeat": [],
+     "g files": [
+      [
+       "'-' is standard input",
+       "file: no",
+       "program: yes"
+      ]
+     ],
+     "h rules": [
+      [
+       "--debug",
+       "-C",
+       "program refuses, file allows: sort: options '-C --debug' are incompatible"
+      ],
+      [
+       "--debug",
+       "-c",
+       "program refuses, file allows: sort: options '-c --debug' are incompatible"
+      ],
+      [
+       "--debug",
+       "-o",
+       "program refuses, file allows: sort: options '-o --debug' are incompatible"
+      ],
+      [
+       "--sort",
+       "-M",
+       "program refuses, file allows: sort: options '-gM' are incompatible"
+      ],
+      [
+       "--sort",
+       "-R",
+       "program refuses, file allows: sort: options '-gR' are incompatible"
+      ],
+      [
+       "--sort",
+       "-V",
+       "program refuses, file allows: sort: options '-gV' are incompatible"
+      ],
+      [
+       "--sort",
+       "-d",
+       "program refuses, file allows: sort: options '-dg' are incompatible"
+      ],
+      [
+       "--sort",
+       "-h",
+       "program refuses, file allows: sort: options '-gh' are incompatible"
+      ],
+      [
+       "--sort",
+       "-i",
+       "program refuses, file allows: sort: options '-gi' are incompatible"
+      ],
+      [
+       "--sort",
+       "-n",
+       "program refuses, file allows: sort: options '-gn' are incompatible"
+      ],
+      [
+       "-C",
+       "-R",
+       "program refuses, file allows: "
+      ],
+      [
+       "-C",
+       "-c",
+       "program refuses, file allows: sort: options '-cC' are incompatible"
+      ],
+      [
+       "-C",
+       "-o",
+       "program refuses, file allows: sort: options '-Co' are incompatible"
+      ],
+      [
+       "-C",
+       "-r",
+       "program refuses, file allows: "
+      ],
+      [
+       "-M",
+       "-R",
+       "program refuses, file allows: sort: options '-MR' are incompatible"
+      ],
+      [
+       "-M",
+       "-V",
+       "program refuses, file allows: sort: options '-MV' are incompatible"
+      ],
+      [
+       "-M",
+       "-d",
+       "program refuses, file allows: sort: options '-dM' are incompatible"
+      ],
+      [
+       "-M",
+       "-g",
+       "program refuses, file allows: sort: options '-gM' are incompatible"
+      ],
+      [
+       "-M",
+       "-h",
+       "program refuses, file allows: sort: options '-hM' are incompatible"
+      ],
+      [
+       "-M",
+       "-i",
+       "program refuses, file allows: sort: options '-iM' are incompatible"
+      ],
+      [
+       "-M",
+       "-n",
+       "program refuses, file allows: sort: options '-Mn' are incompatible"
+      ],
+      [
+       "-R",
+       "-c",
+       "program refuses, file allows: sort: in.txt:2: disorder: b"
+      ],
+      [
+       "-R",
+       "-g",
+       "program refuses, file allows: sort: options '-gR' are incompatible"
+      ],
+      [
+       "-R",
+       "-h",
+       "program refuses, file allows: sort: options '-hR' are incompatible"
+      ],
+      [
+       "-R",
+       "-n",
+       "program refuses, file allows: sort: options '-nR' are incompatible"
+      ],
+      [
+       "-V",
+       "-g",
+       "program refuses, file allows: sort: options '-gV' are incompatible"
+      ],
+      [
+       "-V",
+       "-h",
+       "program refuses, file allows: sort: options '-hV' are incompatible"
+      ],
+      [
+       "-V",
+       "-n",
+       "program refuses, file allows: sort: options '-nV' are incompatible"
+      ],
+      [
+       "-c",
+       "-o",
+       "program refuses, file allows: sort: options '-co' are incompatible"
+      ],
+      [
+       "-c",
+       "-r",
+       "program refuses, file allows: sort: in.txt:2: disorder: b"
+      ],
+      [
+       "-d",
+       "-g",
+       "program refuses, file allows: sort: options '-dg' are incompatible"
+      ],
+      [
+       "-d",
+       "-h",
+       "program refuses, file allows: sort: options '-dh' are incompatible"
+      ],
+      [
+       "-d",
+       "-n",
+       "program refuses, file allows: sort: options '-dn' are incompatible"
+      ],
+      [
+       "-g",
+       "-h",
+       "program refuses, file allows: sort: options '-gh' are incompatible"
+      ],
+      [
+       "-g",
+       "-i",
+       "program refuses, file allows: sort: options '-gi' are incompatible"
+      ],
+      [
+       "-g",
+       "-n",
+       "program refuses, file allows: sort: options '-gn' are incompatible"
+      ],
+      [
+       "-h",
+       "-i",
+       "program refuses, file allows: sort: options '-hi' are incompatible"
+      ],
+      [
+       "-h",
+       "-n",
+       "program refuses, file allows: sort: options '-hn' are incompatible"
+      ],
+      [
+       "-i",
+       "-n",
+       "program refuses, file allows: sort: options '-in' are incompatible"
+      ]
+     ]
+    }
+   }
+  },
+  "gpt-4o (shipped)": {
+   "path": "/Users/tirandagan/dev/stevens/caruca/outputs/llm-dsl-generation/sort.py",
+   "real_binary": {
+    "spellings_in_file": 49,
+    "spellings_accepted": 49,
+    "spellings_rejected": [],
+    "value_checked": 49,
+    "value_agree": 49,
+    "value_optional_in_binary": 2,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 53,
+    "real_spellings_in_file": 48,
+    "real_spellings_missing": [
+     "--batch-size",
+     "--compress-program",
+     "--key",
+     "-k",
+     "-y"
+    ],
+    "choice_lists": [
+     {
+      "spelling": "--sort",
+      "file": [
+       "general-numeric",
+       "human-numeric",
+       "month",
+       "numeric",
+       "random",
+       "version"
+      ],
+      "binary": [
+       "general-numeric",
+       "human-numeric",
+       "month",
+       "numeric",
+       "random",
+       "version"
+      ],
+      "binary_values_in_file": 6
+     }
+    ]
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 5011,
+     "read": 5011,
+     "read_exactly": 2530,
+     "read_with_a_word_taken_as_another_option": 2343,
+     "top_unread_remainders": []
+    },
+    "strict": {
+     "invocations": 5011,
+     "read": 4179,
+     "unparseable": 0,
+     "top_unrecognised_words": [
+      [
+       "-k",
+       478
+      ],
+      [
+       "-k2",
+       104
+      ],
+      [
+       "-k1",
+       103
+      ],
+      [
+       "-k1,1",
+       37
+      ],
+      [
+       "-k4",
+       21
+      ],
+      [
+       "-k3",
+       12
+      ],
+      [
+       "-nk1",
+       11
+      ],
+      [
+       "-k3n",
+       6
+      ],
+      [
+       "-k2n",
+       5
+      ],
+      [
+       "-nk",
+       5
+      ]
+     ]
+    },
+    "gnu_rules": {
+     "valid_lines": 5010,
+     "read_correctly": 4179,
+     "read_wrongly": 0,
+     "not_read": 831,
+     "top_unreadable": [
+      [
+       "-k",
+       825
+      ],
+      [
+       "--key",
+       4
+      ],
+      [
+       "--key=1,1nr",
+       1
+      ],
+      [
+       "--key=2",
+       1
+      ]
+     ]
+    }
+   },
+   "generator_use": {
+    "command": "sort",
+    "label": "gpt-4o (shipped)",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 75,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 2,
+    "runs": 115,
+    "runs_accepted": 86,
+    "distinct_lines": 47,
+    "distinct_accepted": 40,
+    "distinct_real_work": 38,
+    "sample_rejected": [
+     [
+      "sort --files0-from abspath_1",
+      [
+       "sort: cannot read: '''c'$'\\n''a'$'\\n''r'$'\\n''u'$'\\n''c'$'\\n''a'$'\\n\\n''Hi'$'\\n''Hello'$'\\n\\n''The quick brown fox jumped over the lazy dog.'$'\\n''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'$'\\n''Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'$'\\n\\n''Here'\\''s some punctuation characters like \" or ; or |. How about { or ]!'$'\\n''Here'\\''s even more such as %, ^ and @. Maybe | and ; one more time'$'\\n''b'$'\\n''r'$'\\n''o'$'\\n''w'$'\\n''n'$'\\n\\n''Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '$'\\n''Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'$'\\n''Sentence without the first letter '$'\\n''foo'$'\\n''barbaz'$'\\n''There'\\''s some punctuation characters like \" or '\\'' or |. How about } and [?'$'\\n''There'\\''s even more such as %, ^ and @. Maybe \" and '\\'' one more time'$'\\n': File name too long"
+      ]
+     ],
+     [
+      "sort --files0-from relpath_1",
+      [
+       "sort: cannot read: '''c'$'\\n''a'$'\\n''r'$'\\n''u'$'\\n''c'$'\\n''a'$'\\n\\n''Hi'$'\\n''Hello'$'\\n\\n''The quick brown fox jumped over the lazy dog.'$'\\n''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'$'\\n''Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'$'\\n\\n''Here'\\''s some punctuation characters like \" or ; or |. How about { or ]!'$'\\n''Here'\\''s even more such as %, ^ and @. Maybe | and ; one more time'$'\\n''b'$'\\n''r'$'\\n''o'$'\\n''w'$'\\n''n'$'\\n\\n''Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '$'\\n''Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'$'\\n''Sentence without the first letter '$'\\n''foo'$'\\n''barbaz'$'\\n''There'\\''s some punctuation characters like \" or '\\'' or |. How about } and [?'$'\\n''There'\\''s even more such as %, ^ and @. Maybe \" and '\\'' one more time'$'\\n': File name too long"
+      ]
+     ],
+     [
+      "sort --parallel -1",
+      [
+       "sort: invalid --parallel argument '-1'"
+      ]
+     ],
+     [
+      "sort --parallel 0",
+      [
+       "sort: number in parallel must be nonzero"
+      ]
+     ],
+     [
+      "sort -C",
+      []
+     ],
+     [
+      "sort -c",
+      [
+       "sort: -:2: disorder: a"
+      ]
+     ],
+     [
+      "sort -t '\n\t'",
+      [
+       "sort: multi-character tab '\\n\\t'"
+      ]
+     ]
+    ]
+   },
+   "answer_key": {
+    "v1-specs": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 28,
+      "reference_flags": 31,
+      "matched": 28,
+      "missing": 3,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 27,
+      "takes_value": 28,
+      "kind": 27,
+      "arity": 28,
+      "fully_agreeing": 26
+     },
+     "precision": 1.0,
+     "recall": 0.9032258064516129,
+     "f1": 0.9491525423728813,
+     "exact_argument_rate": 0.8387096774193549,
+     "missing_surfaces": [
+      [
+       "--batch-size"
+      ],
+      [
+       "--compress-program"
+      ],
+      [
+       "--key",
+       "-k"
+      ]
+     ],
+     "spurious_surfaces": [],
+     "cmp_specs": {
+      "diff_count": 3,
+      "exact": false,
+      "error": null
+     }
+    },
+    "ground-truth": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 28,
+      "reference_flags": 31,
+      "matched": 28,
+      "missing": 3,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 26,
+      "takes_value": 28,
+      "kind": null,
+      "arity": null,
+      "fully_agreeing": 26
+     },
+     "precision": 1.0,
+     "recall": 0.9032258064516129,
+     "f1": 0.9491525423728813,
+     "exact_argument_rate": 0.8387096774193549,
+     "missing_surfaces": [
+      [
+       "--batch-size"
+      ],
+      [
+       "--compress-program"
+      ],
+      [
+       "--key",
+       "-k"
+      ]
+     ],
+     "spurious_surfaces": []
+    }
+   },
+   "performance": {
+    "note": "shipped with v1; when, with which settings and at what cost it was made is not recorded"
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      48,
+      53
+     ],
+     "b real": [
+      49,
+      49
+     ],
+     "c value": [
+      49,
+      49
+     ],
+     "d kind": [
+      6,
+      8
+     ],
+     "e equals": [
+      1,
+      1
+     ],
+     "f repeat": [
+      0,
+      0
+     ],
+     "g files": [
+      3,
+      4
+     ],
+     "h rules": [
+      1,
+      40
+     ]
+    },
+    "right": 157,
+    "total": 204,
+    "wrong": {
+     "a listed": [
+      "--batch-size",
+      "--compress-program",
+      "--key",
+      "-k",
+      "-y"
+     ],
+     "b real": [],
+     "c value": [],
+     "d kind": [
+      "--parallel",
+      "-t"
+     ],
+     "e equals": [],
+     "f repeat": [],
+     "g files": [
+      [
+       "'-' is standard input",
+       "file: no",
+       "program: yes"
+      ]
+     ],
+     "h rules": [
+      [
+       "--debug",
+       "-C",
+       "program refuses, file allows: sort: options '-C --debug' are incompatible"
+      ],
+      [
+       "--debug",
+       "-c",
+       "program refuses, file allows: sort: options '-c --debug' are incompatible"
+      ],
+      [
+       "--debug",
+       "-o",
+       "program refuses, file allows: sort: options '-o --debug' are incompatible"
+      ],
+      [
+       "--sort",
+       "-M",
+       "program refuses, file allows: sort: options '-gM' are incompatible"
+      ],
+      [
+       "--sort",
+       "-R",
+       "program refuses, file allows: sort: options '-gR' are incompatible"
+      ],
+      [
+       "--sort",
+       "-V",
+       "program refuses, file allows: sort: options '-gV' are incompatible"
+      ],
+      [
+       "--sort",
+       "-d",
+       "program refuses, file allows: sort: options '-dg' are incompatible"
+      ],
+      [
+       "--sort",
+       "-h",
+       "program refuses, file allows: sort: options '-gh' are incompatible"
+      ],
+      [
+       "--sort",
+       "-i",
+       "program refuses, file allows: sort: options '-gi' are incompatible"
+      ],
+      [
+       "--sort",
+       "-n",
+       "program refuses, file allows: sort: options '-gn' are incompatible"
+      ],
+      [
+       "-C",
+       "-R",
+       "program refuses, file allows: "
+      ],
+      [
+       "-C",
+       "-c",
+       "program refuses, file allows: sort: options '-cC' are incompatible"
+      ],
+      [
+       "-C",
+       "-o",
+       "program refuses, file allows: sort: options '-Co' are incompatible"
+      ],
+      [
+       "-C",
+       "-r",
+       "program refuses, file allows: "
+      ],
+      [
+       "-M",
+       "-R",
+       "program refuses, file allows: sort: options '-MR' are incompatible"
+      ],
+      [
+       "-M",
+       "-V",
+       "program refuses, file allows: sort: options '-MV' are incompatible"
+      ],
+      [
+       "-M",
+       "-d",
+       "program refuses, file allows: sort: options '-dM' are incompatible"
+      ],
+      [
+       "-M",
+       "-g",
+       "program refuses, file allows: sort: options '-gM' are incompatible"
+      ],
+      [
+       "-M",
+       "-h",
+       "program refuses, file allows: sort: options '-hM' are incompatible"
+      ],
+      [
+       "-M",
+       "-i",
+       "program refuses, file allows: sort: options '-iM' are incompatible"
+      ],
+      [
+       "-M",
+       "-n",
+       "program refuses, file allows: sort: options '-Mn' are incompatible"
+      ],
+      [
+       "-R",
+       "-c",
+       "program refuses, file allows: sort: in.txt:2: disorder: b"
+      ],
+      [
+       "-R",
+       "-g",
+       "program refuses, file allows: sort: options '-gR' are incompatible"
+      ],
+      [
+       "-R",
+       "-h",
+       "program refuses, file allows: sort: options '-hR' are incompatible"
+      ],
+      [
+       "-R",
+       "-n",
+       "program refuses, file allows: sort: options '-nR' are incompatible"
+      ],
+      [
+       "-V",
+       "-g",
+       "program refuses, file allows: sort: options '-gV' are incompatible"
+      ],
+      [
+       "-V",
+       "-h",
+       "program refuses, file allows: sort: options '-hV' are incompatible"
+      ],
+      [
+       "-V",
+       "-n",
+       "program refuses, file allows: sort: options '-nV' are incompatible"
+      ],
+      [
+       "-c",
+       "-o",
+       "program refuses, file allows: sort: options '-co' are incompatible"
+      ],
+      [
+       "-c",
+       "-r",
+       "program refuses, file allows: sort: in.txt:2: disorder: b"
+      ],
+      [
+       "-d",
+       "-g",
+       "program refuses, file allows: sort: options '-dg' are incompatible"
+      ],
+      [
+       "-d",
+       "-h",
+       "program refuses, file allows: sort: options '-dh' are incompatible"
+      ],
+      [
+       "-d",
+       "-n",
+       "program refuses, file allows: sort: options '-dn' are incompatible"
+      ],
+      [
+       "-g",
+       "-h",
+       "program refuses, file allows: sort: options '-gh' are incompatible"
+      ],
+      [
+       "-g",
+       "-i",
+       "program refuses, file allows: sort: options '-gi' are incompatible"
+      ],
+      [
+       "-g",
+       "-n",
+       "program refuses, file allows: sort: options '-gn' are incompatible"
+      ],
+      [
+       "-h",
+       "-i",
+       "program refuses, file allows: sort: options '-hi' are incompatible"
+      ],
+      [
+       "-h",
+       "-n",
+       "program refuses, file allows: sort: options '-hn' are incompatible"
+      ],
+      [
+       "-i",
+       "-n",
+       "program refuses, file allows: sort: options '-in' are incompatible"
+      ]
+     ]
+    }
+   }
+  },
+  "agent 2026-10-20_160340": {
+   "path": "/Users/tirandagan/dev/stevens/caruca_v2/naive_llm_caruca/runs/2026-10-20_160340_naive-run-sort_sort_PROMPT_v1/output/sort.py",
+   "real_binary": {
+    "spellings_in_file": 53,
+    "spellings_accepted": 53,
+    "spellings_rejected": [],
+    "value_checked": 53,
+    "value_agree": 52,
+    "value_optional_in_binary": 1,
+    "value_disagreements": [
+     [
+      "-y",
+      "file: no value",
+      "binary: required"
+     ]
+    ],
+    "real_spellings_all_sources": 53,
+    "real_spellings_in_file": 53,
+    "real_spellings_missing": [],
+    "choice_lists": [
+     {
+      "spelling": "--sort",
+      "file": [
+       "general-numeric",
+       "human-numeric",
+       "month",
+       "numeric",
+       "random",
+       "version"
+      ],
+      "binary": [
+       "general-numeric",
+       "human-numeric",
+       "month",
+       "numeric",
+       "random",
+       "version"
+      ],
+      "binary_values_in_file": 6
+     },
+     {
+      "spelling": "--check",
+      "file": [
+       "",
+       "diagnose-first",
+       "quiet",
+       "silent"
+      ],
+      "binary": [
+       "quiet",
+       "silent",
+       "diagnose-first"
+      ],
+      "binary_values_in_file": 3
+     }
+    ]
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 5011,
+     "read": 4857,
+     "read_exactly": 3178,
+     "read_with_a_word_taken_as_another_option": 0,
+     "top_unread_remainders": [
+      [
+       "-k 2,2n -k 3,3n -k 4,4n -k 5,5n -k 6,6n -k 7,7n -k 8,8n -k 9,9n",
+       53
+      ],
+      [
+       "-",
+       18
+      ],
+      [
+       "-t '|'",
+       7
+      ],
+      [
+       "-r",
+       3
+      ],
+      [
+       "- '$1'",
+       2
+      ],
+      [
+       "-t '|' -",
+       2
+      ],
+      [
+       "-t '|' '$1'",
+       2
+      ],
+      [
+       "-t ' '",
+       2
+      ],
+      [
+       "-h 'sysbench-run-*.log'",
+       2
+      ],
+      [
+       "'-T=$T'",
+       2
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 5011,
+     "read": 5010,
+     "unparseable": 0,
+     "top_unrecognised_words": [
+      [
+       "-2",
+       1
+      ]
+     ]
+    },
+    "gnu_rules": {
+     "valid_lines": 5010,
+     "read_correctly": 5010,
+     "read_wrongly": 0,
+     "not_read": 0,
+     "top_unreadable": []
+    }
+   },
+   "generator_use": {
+    "command": "sort",
+    "label": "agent 2026-10-20_160340",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 89,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 3,
+    "runs": 129,
+    "runs_accepted": 87,
+    "distinct_lines": 56,
+    "distinct_accepted": 35,
+    "distinct_real_work": 33,
+    "sample_rejected": [
+     [
+      "sort --check=",
+      [
+       "sort: ambiguous argument '' for '--check'"
+      ]
+     ],
+     [
+      "sort --check=diagnose-first",
+      [
+       "sort: -:2: disorder: a"
+      ]
+     ],
+     [
+      "sort --check=quiet",
+      []
+     ],
+     [
+      "sort --check=silent",
+      []
+     ],
+     [
+      "sort --files0-from=abspath_1",
+      [
+       "sort: cannot read: '''c'$'\\n''a'$'\\n''r'$'\\n''u'$'\\n''c'$'\\n''a'$'\\n\\n''Hi'$'\\n''Hello'$'\\n\\n''The quick brown fox jumped over the lazy dog.'$'\\n''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'$'\\n''Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'$'\\n\\n''Here'\\''s some punctuation characters like \" or ; or |. How about { or ]!'$'\\n''Here'\\''s even more such as %, ^ and @. Maybe | and ; one more time'$'\\n''b'$'\\n''r'$'\\n''o'$'\\n''w'$'\\n''n'$'\\n\\n''Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '$'\\n''Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'$'\\n''Sentence without the first letter '$'\\n''foo'$'\\n''barbaz'$'\\n''There'\\''s some punctuation characters like \" or '\\'' or |. How about } and [?'$'\\n''There'\\''s even more such as %, ^ and @. Maybe \" and '\\'' one more time'$'\\n': File name too long"
+      ]
+     ],
+     [
+      "sort --files0-from=relpath_1",
+      [
+       "sort: cannot read: '''c'$'\\n''a'$'\\n''r'$'\\n''u'$'\\n''c'$'\\n''a'$'\\n\\n''Hi'$'\\n''Hello'$'\\n\\n''The quick brown fox jumped over the lazy dog.'$'\\n''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'$'\\n''Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'$'\\n\\n''Here'\\''s some punctuation characters like \" or ; or |. How about { or ]!'$'\\n''Here'\\''s even more such as %, ^ and @. Maybe | and ; one more time'$'\\n''b'$'\\n''r'$'\\n''o'$'\\n''w'$'\\n''n'$'\\n\\n''Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. '$'\\n''Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'$'\\n''Sentence without the first letter '$'\\n''foo'$'\\n''barbaz'$'\\n''There'\\''s some punctuation characters like \" or '\\'' or |. How about } and [?'$'\\n''There'\\''s even more such as %, ^ and @. Maybe \" and '\\'' one more time'$'\\n': File name too long"
+      ]
+     ],
+     [
+      "sort -C",
+      []
+     ],
+     [
+      "sort -S=1b",
+      [
+       "sort: invalid -S argument '=1b'"
+      ]
+     ],
+     [
+      "sort -S=1g",
+      [
+       "sort: invalid -S argument '=1g'"
+      ]
+     ],
+     [
+      "sort -S=1k",
+      [
+       "sort: invalid -S argument '=1k'"
+      ]
+     ],
+     [
+      "sort -S=1m",
+      [
+       "sort: invalid -S argument '=1m'"
+      ]
+     ],
+     [
+      "sort -S=1t",
+      [
+       "sort: invalid -S argument '=1t'"
+      ]
+     ],
+     [
+      "sort -c",
+      [
+       "sort: -:2: disorder: a"
+      ]
+     ],
+     [
+      "sort -k=string",
+      [
+       "sort: invalid number at field start: invalid count at start of '=string'"
+      ]
+     ],
+     [
+      "sort -o=abspath_1",
+      [
+       "sort: open failed: '=/tmp/toplevel_6pmmaqld/sandbox_fh87otqq/abspath_1': No such file or directory"
+      ]
+     ]
+    ]
+   },
+   "answer_key": {
+    "v1-specs": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 33,
+      "reference_flags": 31,
+      "matched": 31,
+      "missing": 0,
+      "spurious": 2
+     },
+     "agreement": {
+      "surfaces_exact": 29,
+      "takes_value": 31,
+      "kind": 30,
+      "arity": 29,
+      "fully_agreeing": 26
+     },
+     "precision": 0.9393939393939394,
+     "recall": 1.0,
+     "f1": 0.96875,
+     "exact_argument_rate": 0.8387096774193549,
+     "missing_surfaces": [],
+     "spurious_surfaces": [
+      [
+       "--check"
+      ],
+      [
+       "-y"
+      ]
+     ],
+     "cmp_specs": {
+      "diff_count": 4,
+      "exact": false,
+      "error": null
+     }
+    },
+    "ground-truth": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 33,
+      "reference_flags": 31,
+      "matched": 31,
+      "missing": 0,
+      "spurious": 2
+     },
+     "agreement": {
+      "surfaces_exact": 29,
+      "takes_value": 31,
+      "kind": null,
+      "arity": null,
+      "fully_agreeing": 29
+     },
+     "precision": 0.9393939393939394,
+     "recall": 1.0,
+     "f1": 0.96875,
+     "exact_argument_rate": 0.9354838709677419,
+     "missing_surfaces": [],
+     "spurious_surfaces": [
+      [
+       "--check"
+      ],
+      [
+       "-y"
+      ]
+     ]
+    }
+   },
+   "performance": {
+    "run": "2026-10-20_160340_naive-run-sort_sort_PROMPT_v1",
+    "seconds": 304,
+    "cost_usd_list_price": 2.46,
+    "turns": 24,
+    "tool_calls": 23,
+    "output_tokens": 23977,
+    "thinking_tokens": 6381
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      53,
+      53
+     ],
+     "b real": [
+      53,
+      53
+     ],
+     "c value": [
+      52,
+      53
+     ],
+     "d kind": [
+      10,
+      12
+     ],
+     "e equals": [
+      6,
+      12
+     ],
+     "f repeat": [
+      2,
+      2
+     ],
+     "g files": [
+      4,
+      4
+     ],
+     "h rules": [
+      1,
+      41
+     ]
+    },
+    "right": 181,
+    "total": 230,
+    "wrong": {
+     "a listed": [],
+     "b real": [],
+     "c value": [
+      [
+       "-y",
+       "file: no value",
+       "binary: required"
+      ]
+     ],
+     "d kind": [
+      "--batch-size",
+      "-k"
+     ],
+     "e equals": [
+      "--batch-size",
+      "--check",
+      "-S",
+      "-k",
+      "-o",
+      "-t"
+     ],
+     "f repeat": [],
+     "g files": [],
+     "h rules": [
+      [
+       "--debug",
+       "-C",
+       "program refuses, file allows: sort: options '-C --debug' are incompatible"
+      ],
+      [
+       "--debug",
+       "-c",
+       "program refuses, file allows: sort: options '-c --debug' are incompatible"
+      ],
+      [
+       "--debug",
+       "-o",
+       "program refuses, file allows: sort: options '-o --debug' are incompatible"
+      ],
+      [
+       "--files0-from",
+       "-y",
+       "program refuses, file allows: sort: option requires an argument -- 'y'\nTry 'sort --help' for more information."
+      ],
+      [
+       "--sort",
+       "-M",
+       "program refuses, file allows: sort: options '-gM' are incompatible"
+      ],
+      [
+       "--sort",
+       "-R",
+       "program refuses, file allows: sort: options '-gR' are incompatible"
+      ],
+      [
+       "--sort",
+       "-V",
+       "program refuses, file allows: sort: options '-gV' are incompatible"
+      ],
+      [
+       "--sort",
+       "-d",
+       "program refuses, file allows: sort: options '-dg' are incompatible"
+      ],
+      [
+       "--sort",
+       "-h",
+       "program refuses, file allows: sort: options '-gh' are incompatible"
+      ],
+      [
+       "--sort",
+       "-i",
+       "program refuses, file allows: sort: options '-gi' are incompatible"
+      ],
+      [
+       "--sort",
+       "-n",
+       "program refuses, file allows: sort: options '-gn' are incompatible"
+      ],
+      [
+       "-C",
+       "-R",
+       "program refuses, file allows: "
+      ],
+      [
+       "-C",
+       "-c",
+       "program refuses, file allows: sort: options '-cC' are incompatible"
+      ],
+      [
+       "-C",
+       "-o",
+       "program refuses, file allows: sort: options '-Co' are incompatible"
+      ],
+      [
+       "-C",
+       "-r",
+       "program refuses, file allows: "
+      ],
+      [
+       "-M",
+       "-R",
+       "program refuses, file allows: sort: options '-MR' are incompatible"
+      ],
+      [
+       "-M",
+       "-V",
+       "program refuses, file allows: sort: options '-MV' are incompatible"
+      ],
+      [
+       "-M",
+       "-d",
+       "program refuses, file allows: sort: options '-dM' are incompatible"
+      ],
+      [
+       "-M",
+       "-g",
+       "program refuses, file allows: sort: options '-gM' are incompatible"
+      ],
+      [
+       "-M",
+       "-h",
+       "program refuses, file allows: sort: options '-hM' are incompatible"
+      ],
+      [
+       "-M",
+       "-i",
+       "program refuses, file allows: sort: options '-iM' are incompatible"
+      ],
+      [
+       "-M",
+       "-n",
+       "program refuses, file allows: sort: options '-Mn' are incompatible"
+      ],
+      [
+       "-R",
+       "-c",
+       "program refuses, file allows: sort: in.txt:2: disorder: b"
+      ],
+      [
+       "-R",
+       "-g",
+       "program refuses, file allows: sort: options '-gR' are incompatible"
+      ],
+      [
+       "-R",
+       "-h",
+       "program refuses, file allows: sort: options '-hR' are incompatible"
+      ],
+      [
+       "-R",
+       "-n",
+       "program refuses, file allows: sort: options '-nR' are incompatible"
+      ],
+      [
+       "-V",
+       "-g",
+       "program refuses, file allows: sort: options '-gV' are incompatible"
+      ],
+      [
+       "-V",
+       "-h",
+       "program refuses, file allows: sort: options '-hV' are incompatible"
+      ],
+      [
+       "-V",
+       "-n",
+       "program refuses, file allows: sort: options '-nV' are incompatible"
+      ],
+      [
+       "-c",
+       "-o",
+       "program refuses, file allows: sort: options '-co' are incompatible"
+      ],
+      [
+       "-c",
+       "-r",
+       "program refuses, file allows: sort: in.txt:2: disorder: b"
+      ],
+      [
+       "-d",
+       "-g",
+       "program refuses, file allows: sort: options '-dg' are incompatible"
+      ],
+      [
+       "-d",
+       "-h",
+       "program refuses, file allows: sort: options '-dh' are incompatible"
+      ],
+      [
+       "-d",
+       "-n",
+       "program refuses, file allows: sort: options '-dn' are incompatible"
+      ],
+      [
+       "-g",
+       "-h",
+       "program refuses, file allows: sort: options '-gh' are incompatible"
+      ],
+      [
+       "-g",
+       "-i",
+       "program refuses, file allows: sort: options '-gi' are incompatible"
+      ],
+      [
+       "-g",
+       "-n",
+       "program refuses, file allows: sort: options '-gn' are incompatible"
+      ],
+      [
+       "-h",
+       "-i",
+       "program refuses, file allows: sort: options '-hi' are incompatible"
+      ],
+      [
+       "-h",
+       "-n",
+       "program refuses, file allows: sort: options '-hn' are incompatible"
+      ],
+      [
+       "-i",
+       "-n",
+       "program refuses, file allows: sort: options '-in' are incompatible"
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "facts_runs": {
+  "usage": {
+   "-b": [
+    "-b"
+   ],
+   "-d": [
+    "-d"
+   ],
+   "-f": [
+    "-f"
+   ],
+   "-g": [
+    "-g"
+   ],
+   "-i": [
+    "-i"
+   ],
+   "-M": [
+    "-M"
+   ],
+   "-h": [
+    "-h"
+   ],
+   "-n": [
+    "-n"
+   ],
+   "-R": [
+    "-R"
+   ],
+   "--random-source": [
+    "--random-source",
+    "relpath_1"
+   ],
+   "-r": [
+    "-r"
+   ],
+   "-V": [
+    "-V"
+   ],
+   "--sort": [
+    "--sort",
+    "general-numeric"
+   ],
+   "-c": [
+    "-c"
+   ],
+   "-C": [
+    "-C"
+   ],
+   "--compress-program": [
+    "--compress-program",
+    "ls"
+   ],
+   "--debug": [
+    "--debug"
+   ],
+   "--files0-from": [
+    "--files0-from",
+    "relpath_1"
+   ],
+   "-k": [
+    "-k",
+    "1"
+   ],
+   "-m": [
+    "-m"
+   ],
+   "-o": [
+    "-o",
+    "relpath_1"
+   ],
+   "-s": [
+    "-s"
+   ],
+   "-S": [
+    "-S",
+    "0"
+   ],
+   "-t": [
+    "-t",
+    ","
+   ],
+   "-T": [
+    "-T",
+    "relpath_1"
+   ],
+   "--parallel": [
+    "--parallel",
+    "1"
+   ],
+   "-u": [
+    "-u"
+   ],
+   "-z": [
+    "-z"
+   ],
+   "-y": [
+    "-y"
+   ]
+  },
+  "runs": 522
+ },
+ "scoring_seconds": 13,
+ "probe": {
+  "command": "sort",
+  "binary": "/usr/bin/sort",
+  "version": "sort (GNU coreutils) 9.4",
+  "spellings": {
+   "--batch-size": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--batch-size"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--batch-size' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--batch-size=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: invalid --batch-size argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--buffer-size": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--buffer-size"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--buffer-size' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--buffer-size=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: invalid --buffer-size argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--check": {
+    "accepted": true,
+    "value": "optional",
+    "valid_values": [
+     "quiet",
+     "silent",
+     "diagnose-first"
+    ],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--check"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--check=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "sort: invalid argument 'zzinvalid' for '--check'\nValid arguments are:\n  - 'quiet', 'silent'\n  - 'diagnose-first'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--check=quiet": {
+    "accepted": true,
+    "value": "optional",
+    "valid_values": [
+     "quiet",
+     "silent",
+     "diagnose-first"
+    ],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--check=quiet"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--check=quiet=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "sort: invalid argument 'quiet=zzinvalid' for '--check'\nValid arguments are:\n  - 'quiet', 'silent'\n  - 'diagnose-first'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files"
+    ]
+   },
+   "--check=silent": {
+    "accepted": true,
+    "value": "optional",
+    "valid_values": [
+     "quiet",
+     "silent",
+     "diagnose-first"
+    ],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--check=silent"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--check=silent=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "sort: invalid argument 'silent=zzinvalid' for '--check'\nValid arguments are:\n  - 'quiet', 'silent'\n  - 'diagnose-first'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files"
+    ]
+   },
+   "--compress-program": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--compress-program"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--compress-program' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--compress-program=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--debug": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--debug"
+      ],
+      "rc": 0,
+      "stderr": "sort: text ordering performed using simple byte comparison\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--debug=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--debug' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--dictionary-order": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--dictionary-order"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--dictionary-order=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--dictionary-order' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--field-separator": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--field-separator"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--field-separator' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--field-separator=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: multi-character tab 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--files0-from": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--files0-from"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--files0-from' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--files0-from=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: open failed: zzinvalid: No such file or directory\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--general-numeric-sort": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--general-numeric-sort"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--general-numeric-sort=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--general-numeric-sort' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--help": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--help"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--help=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--help' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--human-numeric-sort": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--human-numeric-sort"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--human-numeric-sort=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--human-numeric-sort' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--ignore-case": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--ignore-case"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--ignore-case=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--ignore-case' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--ignore-leading-blanks": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--ignore-leading-blanks"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--ignore-leading-blanks=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--ignore-leading-blanks' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--ignore-nonprinting": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--ignore-nonprinting"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--ignore-nonprinting=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--ignore-nonprinting' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--key": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--key"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--key' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--key=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: invalid number at field start: invalid count at start of 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--merge": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--merge"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--merge=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--merge' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--month-sort": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--month-sort"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--month-sort=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--month-sort' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--numeric-sort": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--numeric-sort"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--numeric-sort=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--numeric-sort' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--output": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--output"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--output' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--output=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--parallel": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--parallel"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--parallel' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--parallel=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: invalid --parallel argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--random-sort": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--random-sort"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--random-sort=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--random-sort' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--random-source": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--random-source"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--random-source' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--random-source=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--reverse": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--reverse"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--reverse=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--reverse' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--sort": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [
+     "general-numeric",
+     "human-numeric",
+     "month",
+     "numeric",
+     "random",
+     "version"
+    ],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--sort"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--sort' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--sort=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "sort: invalid argument 'zzinvalid' for '--sort'\nValid arguments are:\n  - 'general-numeric'\n  - 'human-numeric'\n  - 'month'\n  - 'numeric'\n  - 'random'\n  - 'version'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--stable": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--stable"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--stable=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--stable' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--temporary-directory": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--temporary-directory"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--temporary-directory' requires an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--temporary-directory=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--unique": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--unique"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--unique=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--unique' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--version": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--version"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--version=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--version' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--version-sort": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--version-sort"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--version-sort=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--version-sort' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--zero-terminated": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "--zero-terminated"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "sort",
+       "--zero-terminated=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "sort: option '--zero-terminated' doesn't allow an argument\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-C": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-C"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-M": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-M"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-R": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-R"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-S": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-S"
+      ],
+      "rc": 2,
+      "stderr": "sort: option requires an argument -- 'S'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-T": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-T"
+      ],
+      "rc": 2,
+      "stderr": "sort: option requires an argument -- 'T'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-V": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-V"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-b": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-b"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-c": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-c"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-d": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-d"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-f": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-f"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-g": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-g"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-h": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-h"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-i": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-i"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-k": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-k"
+      ],
+      "rc": 2,
+      "stderr": "sort: option requires an argument -- 'k'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-m": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-m"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-n": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-n"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-o": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-o"
+      ],
+      "rc": 2,
+      "stderr": "sort: option requires an argument -- 'o'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-r": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-r"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-s": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-s"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-t": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-t"
+      ],
+      "rc": 2,
+      "stderr": "sort: option requires an argument -- 't'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-u": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-u"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-y": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-y"
+      ],
+      "rc": 2,
+      "stderr": "sort: option requires an argument -- 'y'\nTry 'sort --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files"
+    ]
+   },
+   "-z": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "sort",
+       "-z"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   }
+  }
+ }
+}

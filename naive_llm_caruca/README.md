@@ -397,6 +397,18 @@ model output 85%), the losses again from `=` after short options (`-t=:`, `-S=1k
 annotation calls all 6 of its cases `stateless`, which is false for `sort` in general; why was not
 established.
 
+**Observed, run 10 (dirname, task 018 pilot).** *2026-10-26 19:14, `dirname` (GNU coreutils 9.4, package
+9.4-3ubuntu6.2), watch mode launched unattended (`echo y | script …`), clone `naive-run-dirname`, run 1 in
+that clone, `claude-fable-5-1` at medium effort, web tools and MCP servers off. Same setup as runs 7 to 9.
+Collected to `runs/2026-10-26_191443_naive-run-dirname_dirname_PROMPT_v1/`. Not analysed; scored by task
+018 (`ai_docs/tasks/018_naive_vs_caruca_syntax_scoring.md`).* 57 seconds, 6 turns, 5 tool calls (all
+Bash); $0.88 at list price (billed to the subscription); 4,768 output tokens of which 367 thinking. No URL
+in any command. It read the formats, the `uniq`, `tee` and `rm` samples and `grep`'s PaSh classes, the
+manual and `--version` (calls 1 to 3), ran `dirname` in `/tmp` on a dozen operand forms (call 3), wrote all
+four files in one call (call 4), and checked them against stand-in modules it wrote (call 5). Output: a
+syntax file with `-z`/`--zero`, `--help` and `--version`. The next pilot clone, for `dd` a minute later,
+stopped before the session started: "OAuth session expired and could not be refreshed".
+
 ### PROMPT_v2 — execution is the standard
 
 **What it adds.** One section with three points, placed between the samples and the closing scope

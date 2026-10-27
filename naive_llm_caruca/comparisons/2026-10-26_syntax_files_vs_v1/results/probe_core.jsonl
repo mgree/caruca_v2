@@ -1,0 +1,279 @@
+{"cmd": "rm", "g": "g_ref", "opt": "-f", "type": "Flag", "form": "-f", "argv": ["rm", "-f", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "-i", "type": "Flag", "form": "-i", "argv": ["rm", "-i", "target"], "exit": 0, "stderr": "rm: remove regular file 'target'?"}
+{"cmd": "rm", "g": "g_ref", "opt": "-I", "type": "Flag", "form": "-I", "argv": ["rm", "-I", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "--interactive", "type": "Selection", "form": "--interactive=never", "argv": ["rm", "--interactive=never", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "--interactive", "type": "Selection", "form": "--interactive=once", "argv": ["rm", "--interactive=once", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "--interactive", "type": "Selection", "form": "--interactive=always", "argv": ["rm", "--interactive=always", "target"], "exit": 0, "stderr": "rm: remove regular file 'target'?"}
+{"cmd": "rm", "g": "g_ref", "opt": "--one-file-system", "type": "Flag", "form": "--one-file-system", "argv": ["rm", "--one-file-system", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "--no-preserve-root", "type": "Flag", "form": "--no-preserve-root", "argv": ["rm", "--no-preserve-root", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "--preserve-root", "type": "Selection", "form": "--preserve-root=", "argv": ["rm", "--preserve-root=", "target"], "exit": 1, "stderr": "rm: unrecognized --preserve-root argument: ''"}
+{"cmd": "rm", "g": "g_ref", "opt": "--preserve-root", "type": "Selection", "form": "--preserve-root=all", "argv": ["rm", "--preserve-root=all", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "-r", "type": "Flag", "form": "-r", "argv": ["rm", "-r", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "-d", "type": "Flag", "form": "-d", "argv": ["rm", "-d", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "-v", "type": "Flag", "form": "-v", "argv": ["rm", "-v", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "--help", "type": "Flag", "form": "--help", "argv": ["rm", "--help", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_ref", "opt": "--version", "type": "Flag", "form": "--version", "argv": ["rm", "--version", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "-f", "type": "Flag", "form": "-f", "argv": ["rm", "-f", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "-i", "type": "Flag", "form": "-i", "argv": ["rm", "-i", "target"], "exit": 0, "stderr": "rm: remove regular file 'target'?"}
+{"cmd": "rm", "g": "g_model", "opt": "-I", "type": "Flag", "form": "-I", "argv": ["rm", "-I", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "--interactive", "type": "Selection", "form": "--interactive=never", "argv": ["rm", "--interactive=never", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "--interactive", "type": "Selection", "form": "--interactive=once", "argv": ["rm", "--interactive=once", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "--interactive", "type": "Selection", "form": "--interactive=always", "argv": ["rm", "--interactive=always", "target"], "exit": 0, "stderr": "rm: remove regular file 'target'?"}
+{"cmd": "rm", "g": "g_model", "opt": "--one-file-system", "type": "Flag", "form": "--one-file-system", "argv": ["rm", "--one-file-system", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "--no-preserve-root", "type": "Flag", "form": "--no-preserve-root", "argv": ["rm", "--no-preserve-root", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "--preserve-root", "type": "Selection", "form": "--preserve-root=", "argv": ["rm", "--preserve-root=", "target"], "exit": 1, "stderr": "rm: unrecognized --preserve-root argument: ''"}
+{"cmd": "rm", "g": "g_model", "opt": "--preserve-root", "type": "Selection", "form": "--preserve-root=all", "argv": ["rm", "--preserve-root=all", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "-r", "type": "Flag", "form": "-r", "argv": ["rm", "-r", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "-d", "type": "Flag", "form": "-d", "argv": ["rm", "-d", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "-v", "type": "Flag", "form": "-v", "argv": ["rm", "-v", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "--help", "type": "Flag", "form": "--help", "argv": ["rm", "--help", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_model", "opt": "--version", "type": "Flag", "form": "--version", "argv": ["rm", "--version", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "-f", "type": "Flag", "form": "-f", "argv": ["rm", "-f", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "-i", "type": "Flag", "form": "-i", "argv": ["rm", "-i", "target"], "exit": 0, "stderr": "rm: remove regular file 'target'?"}
+{"cmd": "rm", "g": "g_agent", "opt": "-I", "type": "Flag", "form": "-I", "argv": ["rm", "-I", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "--interactive", "type": "Selection", "form": "--interactive=never", "argv": ["rm", "--interactive=never", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "--interactive", "type": "Selection", "form": "--interactive=no", "argv": ["rm", "--interactive=no", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "--interactive", "type": "Selection", "form": "--interactive=none", "argv": ["rm", "--interactive=none", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "--interactive", "type": "Selection", "form": "--interactive=once", "argv": ["rm", "--interactive=once", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "--interactive", "type": "Selection", "form": "--interactive=always", "argv": ["rm", "--interactive=always", "target"], "exit": 0, "stderr": "rm: remove regular file 'target'?"}
+{"cmd": "rm", "g": "g_agent", "opt": "--interactive", "type": "Selection", "form": "--interactive=yes", "argv": ["rm", "--interactive=yes", "target"], "exit": 0, "stderr": "rm: remove regular file 'target'?"}
+{"cmd": "rm", "g": "g_agent", "opt": "--one-file-system", "type": "Flag", "form": "--one-file-system", "argv": ["rm", "--one-file-system", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "--no-preserve-root", "type": "Flag", "form": "--no-preserve-root", "argv": ["rm", "--no-preserve-root", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "--preserve-root", "type": "Selection", "form": "--preserve-root=", "argv": ["rm", "--preserve-root=", "target"], "exit": 1, "stderr": "rm: unrecognized --preserve-root argument: ''"}
+{"cmd": "rm", "g": "g_agent", "opt": "--preserve-root", "type": "Selection", "form": "--preserve-root=all", "argv": ["rm", "--preserve-root=all", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "-r", "type": "Flag", "form": "-r", "argv": ["rm", "-r", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "-d", "type": "Flag", "form": "-d", "argv": ["rm", "-d", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "-v", "type": "Flag", "form": "-v", "argv": ["rm", "-v", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "--help", "type": "Flag", "form": "--help", "argv": ["rm", "--help", "target"], "exit": 0, "stderr": ""}
+{"cmd": "rm", "g": "g_agent", "opt": "--version", "type": "Flag", "form": "--version", "argv": ["rm", "--version", "target"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-b", "type": "meta", "form": "-b 1", "argv": ["cut", "-b", "1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-b", "type": "meta", "form": "-b 1-", "argv": ["cut", "-b", "1-", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-b", "type": "meta", "form": "-b 1-2", "argv": ["cut", "-b", "1-2", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-b", "type": "meta", "form": "-b -2", "argv": ["cut", "-b", "-2", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-b", "type": "meta", "form": "-b 1,3", "argv": ["cut", "-b", "1,3", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-c", "type": "meta", "form": "-c 1", "argv": ["cut", "-c", "1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-c", "type": "meta", "form": "-c 1-", "argv": ["cut", "-c", "1-", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-c", "type": "meta", "form": "-c 1-2", "argv": ["cut", "-c", "1-2", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-c", "type": "meta", "form": "-c -2", "argv": ["cut", "-c", "-2", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-c", "type": "meta", "form": "-c 1,3", "argv": ["cut", "-c", "1,3", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-d", "type": "meta", "form": "-d ,", "argv": ["cut", "-f", "1", "-d", ",", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-d", "type": "meta", "form": "-d '\n\t'", "argv": ["cut", "-f", "1", "-d", "\n\t", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_ref", "opt": "-f", "type": "meta", "form": "-f 1", "argv": ["cut", "-f", "1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-f", "type": "meta", "form": "-f 1-", "argv": ["cut", "-f", "1-", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-f", "type": "meta", "form": "-f 1-2", "argv": ["cut", "-f", "1-2", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-f", "type": "meta", "form": "-f -2", "argv": ["cut", "-f", "-2", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-f", "type": "meta", "form": "-f 1,3", "argv": ["cut", "-f", "1,3", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-n", "type": "Flag", "form": "-n", "argv": ["cut", "-f", "1", "-n", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-w", "type": "Flag", "form": "-w", "argv": ["cut", "-f", "1", "-w", "in.txt"], "exit": 1, "stderr": "cut: invalid option -- 'w'\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_ref", "opt": "--complement", "type": "Flag", "form": "--complement", "argv": ["cut", "-f", "1", "--complement", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-s", "type": "Flag", "form": "-s", "argv": ["cut", "-f", "1", "-s", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "--output-delimiter", "type": "meta", "form": "--output-delimiter ,", "argv": ["cut", "-f", "1", "--output-delimiter", ",", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "--output-delimiter", "type": "meta", "form": "--output-delimiter '\n\t'", "argv": ["cut", "-f", "1", "--output-delimiter", "\n\t", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "-z", "type": "Flag", "form": "-z", "argv": ["cut", "-f", "1", "-z", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "--help", "type": "Flag", "form": "--help", "argv": ["cut", "-f", "1", "--help", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_ref", "opt": "--version", "type": "Flag", "form": "--version", "argv": ["cut", "-f", "1", "--version", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_model", "opt": "-b", "type": "meta", "form": "-b=1", "argv": ["cut", "-b=1", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-b", "type": "meta", "form": "-b=1-", "argv": ["cut", "-b=1-", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1-\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-b", "type": "meta", "form": "-b=1-2", "argv": ["cut", "-b=1-2", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-b", "type": "meta", "form": "-b=-2", "argv": ["cut", "-b=-2", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-b", "type": "meta", "form": "-b=1,3", "argv": ["cut", "-b=1,3", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1,3\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-c", "type": "meta", "form": "-c=1", "argv": ["cut", "-c=1", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-c", "type": "meta", "form": "-c=1-", "argv": ["cut", "-c=1-", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1-\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-c", "type": "meta", "form": "-c=1-2", "argv": ["cut", "-c=1-2", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-c", "type": "meta", "form": "-c=-2", "argv": ["cut", "-c=-2", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-c", "type": "meta", "form": "-c=1,3", "argv": ["cut", "-c=1,3", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1,3\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-d", "type": "meta", "form": "-d=a", "argv": ["cut", "-f", "1", "-d=a", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-d", "type": "meta", "form": "-d=b", "argv": ["cut", "-f", "1", "-d=b", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-d", "type": "meta", "form": "-d=c", "argv": ["cut", "-f", "1", "-d=c", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-d", "type": "meta", "form": "-d=d", "argv": ["cut", "-f", "1", "-d=d", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-d", "type": "meta", "form": "-d=e", "argv": ["cut", "-f", "1", "-d=e", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-f", "type": "meta", "form": "-f=1", "argv": ["cut", "-f=1", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=1\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-f", "type": "meta", "form": "-f=1-", "argv": ["cut", "-f=1-", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=1-\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-f", "type": "meta", "form": "-f=1-2", "argv": ["cut", "-f=1-2", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=1-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-f", "type": "meta", "form": "-f=-2", "argv": ["cut", "-f=-2", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-f", "type": "meta", "form": "-f=1,3", "argv": ["cut", "-f=1,3", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=1,3\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_model", "opt": "-n", "type": "Flag", "form": "-n", "argv": ["cut", "-f", "1", "-n", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_model", "opt": "--complement", "type": "Flag", "form": "--complement", "argv": ["cut", "-f", "1", "--complement", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_model", "opt": "-s", "type": "Flag", "form": "-s", "argv": ["cut", "-f", "1", "-s", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_model", "opt": "--output-delimiter", "type": "String", "form": "--output-delimiter=string", "argv": ["cut", "-f", "1", "--output-delimiter=string", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_model", "opt": "-z", "type": "Flag", "form": "-z", "argv": ["cut", "-f", "1", "-z", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_model", "opt": "--help", "type": "Flag", "form": "--help", "argv": ["cut", "-f", "1", "--help", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_model", "opt": "--version", "type": "Flag", "form": "--version", "argv": ["cut", "-f", "1", "--version", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_agent", "opt": "-b", "type": "meta", "form": "-b=1", "argv": ["cut", "-b=1", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-b", "type": "meta", "form": "-b=1-", "argv": ["cut", "-b=1-", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1-\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-b", "type": "meta", "form": "-b=1-2", "argv": ["cut", "-b=1-2", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-b", "type": "meta", "form": "-b=-2", "argv": ["cut", "-b=-2", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-b", "type": "meta", "form": "-b=1,3", "argv": ["cut", "-b=1,3", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1,3\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-d", "type": "meta", "form": "-d=a", "argv": ["cut", "-f", "1", "-d=a", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-d", "type": "meta", "form": "-d=b", "argv": ["cut", "-f", "1", "-d=b", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-d", "type": "meta", "form": "-d=c", "argv": ["cut", "-f", "1", "-d=c", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-d", "type": "meta", "form": "-d=d", "argv": ["cut", "-f", "1", "-d=d", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-d", "type": "meta", "form": "-d=e", "argv": ["cut", "-f", "1", "-d=e", "in.txt"], "exit": 1, "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-n", "type": "Flag", "form": "-n", "argv": ["cut", "-f", "1", "-n", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_agent", "opt": "--complement", "type": "Flag", "form": "--complement", "argv": ["cut", "-f", "1", "--complement", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_agent", "opt": "-s", "type": "Flag", "form": "-s", "argv": ["cut", "-f", "1", "-s", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_agent", "opt": "--output-delimiter", "type": "meta", "form": "--output-delimiter=,", "argv": ["cut", "-f", "1", "--output-delimiter=,", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_agent", "opt": "--output-delimiter", "type": "meta", "form": "--output-delimiter='\n\t'", "argv": ["cut", "-f", "1", "--output-delimiter=\n\t", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_agent", "opt": "-z", "type": "Flag", "form": "-z", "argv": ["cut", "-f", "1", "-z", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_agent", "opt": "--help", "type": "Flag", "form": "--help", "argv": ["cut", "-f", "1", "--help", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_agent", "opt": "--version", "type": "Flag", "form": "--version", "argv": ["cut", "-f", "1", "--version", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "cut", "g": "g_agent", "opt": "-c", "type": "meta", "form": "-c=1", "argv": ["cut", "-c=1", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-c", "type": "meta", "form": "-c=1-", "argv": ["cut", "-c=1-", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1-\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-c", "type": "meta", "form": "-c=1-2", "argv": ["cut", "-c=1-2", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-c", "type": "meta", "form": "-c=-2", "argv": ["cut", "-c=-2", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-c", "type": "meta", "form": "-c=1,3", "argv": ["cut", "-c=1,3", "in.txt"], "exit": 1, "stderr": "cut: invalid byte/character position \u2018=1,3\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-f", "type": "meta", "form": "-f=1", "argv": ["cut", "-f=1", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=1\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-f", "type": "meta", "form": "-f=1-", "argv": ["cut", "-f=1-", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=1-\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-f", "type": "meta", "form": "-f=1-2", "argv": ["cut", "-f=1-2", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=1-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-f", "type": "meta", "form": "-f=-2", "argv": ["cut", "-f=-2", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=-2\u2019\nTry 'cut --help' for more information."}
+{"cmd": "cut", "g": "g_agent", "opt": "-f", "type": "meta", "form": "-f=1,3", "argv": ["cut", "-f=1,3", "in.txt"], "exit": 1, "stderr": "cut: invalid field value \u2018=1,3\u2019\nTry 'cut --help' for more information."}
+{"cmd": "sort", "g": "g_ref", "opt": "-b", "type": "Flag", "form": "-b", "argv": ["sort", "-b", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-d", "type": "Flag", "form": "-d", "argv": ["sort", "-d", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-f", "type": "Flag", "form": "-f", "argv": ["sort", "-f", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-g", "type": "Flag", "form": "-g", "argv": ["sort", "-g", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-i", "type": "Flag", "form": "-i", "argv": ["sort", "-i", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-M", "type": "Flag", "form": "-M", "argv": ["sort", "-M", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-h", "type": "Flag", "form": "-h", "argv": ["sort", "-h", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-n", "type": "Flag", "form": "-n", "argv": ["sort", "-n", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-R", "type": "Flag", "form": "-R", "argv": ["sort", "-R", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--random-source", "type": "Path", "form": "--random-source relpath_1", "argv": ["sort", "--random-source", "relpath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--random-source", "type": "Path", "form": "--random-source abspath_1", "argv": ["sort", "--random-source", "/tmp/probe_e4_bgr_v/abspath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-r", "type": "Flag", "form": "-r", "argv": ["sort", "-r", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-V", "type": "Flag", "form": "-V", "argv": ["sort", "-V", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--sort", "type": "Selection", "form": "--sort=general-numeric", "argv": ["sort", "--sort=general-numeric", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--sort", "type": "Selection", "form": "--sort=human-numeric", "argv": ["sort", "--sort=human-numeric", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--sort", "type": "Selection", "form": "--sort=month", "argv": ["sort", "--sort=month", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--sort", "type": "Selection", "form": "--sort=numeric", "argv": ["sort", "--sort=numeric", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--sort", "type": "Selection", "form": "--sort=random", "argv": ["sort", "--sort=random", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--sort", "type": "Selection", "form": "--sort=version", "argv": ["sort", "--sort=version", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--batch-size", "type": "Integer", "form": "--batch-size=-1", "argv": ["sort", "--batch-size=-1", "in.txt"], "exit": 2, "stderr": "sort: invalid --batch-size argument '-1'"}
+{"cmd": "sort", "g": "g_ref", "opt": "--batch-size", "type": "Integer", "form": "--batch-size=0", "argv": ["sort", "--batch-size=0", "in.txt"], "exit": 2, "stderr": "sort: invalid --batch-size argument \u20180\u2019\nsort: minimum --batch-size argument is \u20182\u2019"}
+{"cmd": "sort", "g": "g_ref", "opt": "--batch-size", "type": "Integer", "form": "--batch-size=1", "argv": ["sort", "--batch-size=1", "in.txt"], "exit": 2, "stderr": "sort: invalid --batch-size argument \u20181\u2019\nsort: minimum --batch-size argument is \u20182\u2019"}
+{"cmd": "sort", "g": "g_ref", "opt": "-c", "type": "Flag", "form": "-c", "argv": ["sort", "-c", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-C", "type": "Flag", "form": "-C", "argv": ["sort", "-C", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--compress-program", "type": "meta", "form": "--compress-program ls", "argv": ["sort", "--compress-program", "ls", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--compress-program", "type": "meta", "form": "--compress-program pwd", "argv": ["sort", "--compress-program", "pwd", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--debug", "type": "Flag", "form": "--debug", "argv": ["sort", "--debug", "in.txt"], "exit": 0, "stderr": "sort: text ordering performed using \u2018C.UTF-8\u2019 sorting rules"}
+{"cmd": "sort", "g": "g_ref", "opt": "--files0-from", "type": "Path", "form": "--files0-from relpath_1", "argv": ["sort", "--files0-from", "relpath_1"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--files0-from", "type": "Path", "form": "--files0-from abspath_1", "argv": ["sort", "--files0-from", "/tmp/probe_3u4aavos/abspath_1"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-k", "type": "String", "form": "-k 1", "argv": ["sort", "-k", "1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-k", "type": "String", "form": "-k 1.2", "argv": ["sort", "-k", "1.2", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-k", "type": "String", "form": "-k 1.2n", "argv": ["sort", "-k", "1.2n", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-k", "type": "String", "form": "-k 1.2nr", "argv": ["sort", "-k", "1.2nr", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-k", "type": "String", "form": "-k 1n", "argv": ["sort", "-k", "1n", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-k", "type": "String", "form": "-k 1nr", "argv": ["sort", "-k", "1nr", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-m", "type": "Flag", "form": "-m", "argv": ["sort", "-m", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-o", "type": "Path", "form": "-o relpath_1", "argv": ["sort", "-o", "relpath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-o", "type": "Path", "form": "-o abspath_1", "argv": ["sort", "-o", "/tmp/probe_t70ral26/abspath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-s", "type": "Flag", "form": "-s", "argv": ["sort", "-s", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-S", "type": "Integer", "form": "-S=-1", "argv": ["sort", "-S=-1", "in.txt"], "exit": 2, "stderr": "sort: invalid -S argument '=-1'"}
+{"cmd": "sort", "g": "g_ref", "opt": "-S", "type": "Integer", "form": "-S=0", "argv": ["sort", "-S=0", "in.txt"], "exit": 2, "stderr": "sort: invalid -S argument '=0'"}
+{"cmd": "sort", "g": "g_ref", "opt": "-S", "type": "Integer", "form": "-S=1", "argv": ["sort", "-S=1", "in.txt"], "exit": 2, "stderr": "sort: invalid -S argument '=1'"}
+{"cmd": "sort", "g": "g_ref", "opt": "-t", "type": "meta", "form": "-t ,", "argv": ["sort", "-t", ",", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-t", "type": "meta", "form": "-t '\n\t'", "argv": ["sort", "-t", "\n\t", "in.txt"], "exit": 2, "stderr": "sort: multi-character tab \u2018\\n\\t\u2019"}
+{"cmd": "sort", "g": "g_ref", "opt": "-T", "type": "Path", "form": "-T relpath_1", "argv": ["sort", "-T", "relpath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-T", "type": "Path", "form": "-T abspath_1", "argv": ["sort", "-T", "/tmp/probe_umtzg53h/abspath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--parallel", "type": "Integer", "form": "--parallel=-1", "argv": ["sort", "--parallel=-1", "in.txt"], "exit": 2, "stderr": "sort: invalid --parallel argument '-1'"}
+{"cmd": "sort", "g": "g_ref", "opt": "--parallel", "type": "Integer", "form": "--parallel=0", "argv": ["sort", "--parallel=0", "in.txt"], "exit": 2, "stderr": "sort: number in parallel must be nonzero"}
+{"cmd": "sort", "g": "g_ref", "opt": "--parallel", "type": "Integer", "form": "--parallel=1", "argv": ["sort", "--parallel=1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-u", "type": "Flag", "form": "-u", "argv": ["sort", "-u", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "-z", "type": "Flag", "form": "-z", "argv": ["sort", "-z", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--help", "type": "Flag", "form": "--help", "argv": ["sort", "--help", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_ref", "opt": "--version", "type": "Flag", "form": "--version", "argv": ["sort", "--version", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-b", "type": "Flag", "form": "-b", "argv": ["sort", "-b", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-d", "type": "Flag", "form": "-d", "argv": ["sort", "-d", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-f", "type": "Flag", "form": "-f", "argv": ["sort", "-f", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-g", "type": "Flag", "form": "-g", "argv": ["sort", "-g", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-i", "type": "Flag", "form": "-i", "argv": ["sort", "-i", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-M", "type": "Flag", "form": "-M", "argv": ["sort", "-M", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-h", "type": "Flag", "form": "-h", "argv": ["sort", "-h", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-n", "type": "Flag", "form": "-n", "argv": ["sort", "-n", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-R", "type": "Flag", "form": "-R", "argv": ["sort", "-R", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-r", "type": "Flag", "form": "-r", "argv": ["sort", "-r", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--sort", "type": "Selection", "form": "--sort=general-numeric", "argv": ["sort", "--sort=general-numeric", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--sort", "type": "Selection", "form": "--sort=human-numeric", "argv": ["sort", "--sort=human-numeric", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--sort", "type": "Selection", "form": "--sort=month", "argv": ["sort", "--sort=month", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--sort", "type": "Selection", "form": "--sort=numeric", "argv": ["sort", "--sort=numeric", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--sort", "type": "Selection", "form": "--sort=random", "argv": ["sort", "--sort=random", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--sort", "type": "Selection", "form": "--sort=version", "argv": ["sort", "--sort=version", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-V", "type": "Flag", "form": "-V", "argv": ["sort", "-V", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-c", "type": "Flag", "form": "-c", "argv": ["sort", "-c", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-C", "type": "Flag", "form": "-C", "argv": ["sort", "-C", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--debug", "type": "Flag", "form": "--debug", "argv": ["sort", "--debug", "in.txt"], "exit": 0, "stderr": "sort: text ordering performed using \u2018C.UTF-8\u2019 sorting rules"}
+{"cmd": "sort", "g": "g_model", "opt": "--random-source", "type": "Path", "form": "--random-source relpath_1", "argv": ["sort", "--random-source", "relpath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--random-source", "type": "Path", "form": "--random-source abspath_1", "argv": ["sort", "--random-source", "/tmp/probe_g7wq2wdc/abspath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-m", "type": "Flag", "form": "-m", "argv": ["sort", "-m", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-o", "type": "Path", "form": "-o relpath_1", "argv": ["sort", "-o", "relpath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-o", "type": "Path", "form": "-o abspath_1", "argv": ["sort", "-o", "/tmp/probe_chc2iksz/abspath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-s", "type": "Flag", "form": "-s", "argv": ["sort", "-s", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-S", "type": "meta", "form": "-S 1b", "argv": ["sort", "-S", "1b", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-S", "type": "meta", "form": "-S 1k", "argv": ["sort", "-S", "1k", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-S", "type": "meta", "form": "-S 1m", "argv": ["sort", "-S", "1m", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-S", "type": "meta", "form": "-S 1g", "argv": ["sort", "-S", "1g", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-S", "type": "meta", "form": "-S 1t", "argv": ["sort", "-S", "1t", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-t", "type": "meta", "form": "-t ,", "argv": ["sort", "-t", ",", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-t", "type": "meta", "form": "-t '\n\t'", "argv": ["sort", "-t", "\n\t", "in.txt"], "exit": 2, "stderr": "sort: multi-character tab \u2018\\n\\t\u2019"}
+{"cmd": "sort", "g": "g_model", "opt": "-T", "type": "Path", "form": "-T relpath_1", "argv": ["sort", "-T", "relpath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-T", "type": "Path", "form": "-T abspath_1", "argv": ["sort", "-T", "/tmp/probe_vtstn4qa/abspath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--parallel", "type": "Integer", "form": "--parallel -1", "argv": ["sort", "--parallel", "-1", "in.txt"], "exit": 2, "stderr": "sort: invalid --parallel argument '-1'"}
+{"cmd": "sort", "g": "g_model", "opt": "--parallel", "type": "Integer", "form": "--parallel 0", "argv": ["sort", "--parallel", "0", "in.txt"], "exit": 2, "stderr": "sort: number in parallel must be nonzero"}
+{"cmd": "sort", "g": "g_model", "opt": "--parallel", "type": "Integer", "form": "--parallel 1", "argv": ["sort", "--parallel", "1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-u", "type": "Flag", "form": "-u", "argv": ["sort", "-u", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "-z", "type": "Flag", "form": "-z", "argv": ["sort", "-z", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--help", "type": "Flag", "form": "--help", "argv": ["sort", "--help", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--version", "type": "Flag", "form": "--version", "argv": ["sort", "--version", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--files0-from", "type": "Path", "form": "--files0-from relpath_1", "argv": ["sort", "--files0-from", "relpath_1"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_model", "opt": "--files0-from", "type": "Path", "form": "--files0-from abspath_1", "argv": ["sort", "--files0-from", "/tmp/probe_2hes8x6g/abspath_1"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-b", "type": "Flag", "form": "-b", "argv": ["sort", "-b", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-d", "type": "Flag", "form": "-d", "argv": ["sort", "-d", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-f", "type": "Flag", "form": "-f", "argv": ["sort", "-f", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-g", "type": "Flag", "form": "-g", "argv": ["sort", "-g", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-i", "type": "Flag", "form": "-i", "argv": ["sort", "-i", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-M", "type": "Flag", "form": "-M", "argv": ["sort", "-M", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-h", "type": "Flag", "form": "-h", "argv": ["sort", "-h", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-n", "type": "Flag", "form": "-n", "argv": ["sort", "-n", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-R", "type": "Flag", "form": "-R", "argv": ["sort", "-R", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--random-source", "type": "Path", "form": "--random-source=relpath_1", "argv": ["sort", "--random-source=relpath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--random-source", "type": "Path", "form": "--random-source=abspath_1", "argv": ["sort", "--random-source=/tmp/probe_sthamz3u/abspath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-r", "type": "Flag", "form": "-r", "argv": ["sort", "-r", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--sort", "type": "Selection", "form": "--sort=general-numeric", "argv": ["sort", "--sort=general-numeric", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--sort", "type": "Selection", "form": "--sort=human-numeric", "argv": ["sort", "--sort=human-numeric", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--sort", "type": "Selection", "form": "--sort=month", "argv": ["sort", "--sort=month", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--sort", "type": "Selection", "form": "--sort=numeric", "argv": ["sort", "--sort=numeric", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--sort", "type": "Selection", "form": "--sort=random", "argv": ["sort", "--sort=random", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--sort", "type": "Selection", "form": "--sort=version", "argv": ["sort", "--sort=version", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-V", "type": "Flag", "form": "-V", "argv": ["sort", "-V", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-c", "type": "Flag", "form": "-c", "argv": ["sort", "-c", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-C", "type": "Flag", "form": "-C", "argv": ["sort", "-C", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--check", "type": "Selection", "form": "--check=", "argv": ["sort", "--check=", "in.txt"], "exit": 1, "stderr": "sort: ambiguous argument \u2018\u2019 for \u2018--check\u2019\nValid arguments are:\n  - \u2018quiet\u2019, \u2018silent\u2019\n  - \u2018diagnose-first\u2019\nTry 'sort --help' for more information."}
+{"cmd": "sort", "g": "g_agent", "opt": "--check", "type": "Selection", "form": "--check=diagnose-first", "argv": ["sort", "--check=diagnose-first", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--check", "type": "Selection", "form": "--check=quiet", "argv": ["sort", "--check=quiet", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--check", "type": "Selection", "form": "--check=silent", "argv": ["sort", "--check=silent", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--compress-program", "type": "meta", "form": "--compress-program=ls", "argv": ["sort", "--compress-program=ls", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--compress-program", "type": "meta", "form": "--compress-program=pwd", "argv": ["sort", "--compress-program=pwd", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--debug", "type": "Flag", "form": "--debug", "argv": ["sort", "--debug", "in.txt"], "exit": 0, "stderr": "sort: text ordering performed using \u2018C.UTF-8\u2019 sorting rules"}
+{"cmd": "sort", "g": "g_agent", "opt": "--files0-from", "type": "Path", "form": "--files0-from=relpath_1", "argv": ["sort", "--files0-from=relpath_1"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--files0-from", "type": "Path", "form": "--files0-from=abspath_1", "argv": ["sort", "--files0-from=/tmp/probe_a778kt67/abspath_1"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-k", "type": "String", "form": "-k=string", "argv": ["sort", "-k=string", "in.txt"], "exit": 2, "stderr": "sort: invalid number at field start: invalid count at start of \u2018=string\u2019"}
+{"cmd": "sort", "g": "g_agent", "opt": "-m", "type": "Flag", "form": "-m", "argv": ["sort", "-m", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-o", "type": "Path", "form": "-o=relpath_1", "argv": ["sort", "-o=relpath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-o", "type": "Path", "form": "-o=abspath_1", "argv": ["sort", "-o=/tmp/probe_c66bp0yk/abspath_1", "in.txt"], "exit": 2, "stderr": "sort: open failed: '=/tmp/probe_c66bp0yk/abspath_1': No such file or directory"}
+{"cmd": "sort", "g": "g_agent", "opt": "-s", "type": "Flag", "form": "-s", "argv": ["sort", "-s", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-S", "type": "meta", "form": "-S=1b", "argv": ["sort", "-S=1b", "in.txt"], "exit": 2, "stderr": "sort: invalid -S argument '=1b'"}
+{"cmd": "sort", "g": "g_agent", "opt": "-S", "type": "meta", "form": "-S=1k", "argv": ["sort", "-S=1k", "in.txt"], "exit": 2, "stderr": "sort: invalid -S argument '=1k'"}
+{"cmd": "sort", "g": "g_agent", "opt": "-S", "type": "meta", "form": "-S=1m", "argv": ["sort", "-S=1m", "in.txt"], "exit": 2, "stderr": "sort: invalid -S argument '=1m'"}
+{"cmd": "sort", "g": "g_agent", "opt": "-S", "type": "meta", "form": "-S=1g", "argv": ["sort", "-S=1g", "in.txt"], "exit": 2, "stderr": "sort: invalid -S argument '=1g'"}
+{"cmd": "sort", "g": "g_agent", "opt": "-S", "type": "meta", "form": "-S=1t", "argv": ["sort", "-S=1t", "in.txt"], "exit": 2, "stderr": "sort: invalid -S argument '=1t'"}
+{"cmd": "sort", "g": "g_agent", "opt": "-t", "type": "meta", "form": "-t=a", "argv": ["sort", "-t=a", "in.txt"], "exit": 2, "stderr": "sort: multi-character tab \u2018=a\u2019"}
+{"cmd": "sort", "g": "g_agent", "opt": "-t", "type": "meta", "form": "-t=b", "argv": ["sort", "-t=b", "in.txt"], "exit": 2, "stderr": "sort: multi-character tab \u2018=b\u2019"}
+{"cmd": "sort", "g": "g_agent", "opt": "-t", "type": "meta", "form": "-t=c", "argv": ["sort", "-t=c", "in.txt"], "exit": 2, "stderr": "sort: multi-character tab \u2018=c\u2019"}
+{"cmd": "sort", "g": "g_agent", "opt": "-t", "type": "meta", "form": "-t=d", "argv": ["sort", "-t=d", "in.txt"], "exit": 2, "stderr": "sort: multi-character tab \u2018=d\u2019"}
+{"cmd": "sort", "g": "g_agent", "opt": "-t", "type": "meta", "form": "-t=e", "argv": ["sort", "-t=e", "in.txt"], "exit": 2, "stderr": "sort: multi-character tab \u2018=e\u2019"}
+{"cmd": "sort", "g": "g_agent", "opt": "-T", "type": "Path", "form": "-T=relpath_1", "argv": ["sort", "-T=relpath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-T", "type": "Path", "form": "-T=abspath_1", "argv": ["sort", "-T=/tmp/probe_li9i1glm/abspath_1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--parallel", "type": "Integer", "form": "--parallel=1", "argv": ["sort", "--parallel=1", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-u", "type": "Flag", "form": "-u", "argv": ["sort", "-u", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-z", "type": "Flag", "form": "-z", "argv": ["sort", "-z", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "-y", "type": "Flag", "form": "-y", "argv": ["sort", "-y", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--help", "type": "Flag", "form": "--help", "argv": ["sort", "--help", "in.txt"], "exit": 0, "stderr": ""}
+{"cmd": "sort", "g": "g_agent", "opt": "--version", "type": "Flag", "form": "--version", "argv": ["sort", "--version", "in.txt"], "exit": 0, "stderr": ""}

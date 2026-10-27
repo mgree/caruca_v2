@@ -11,8 +11,10 @@
 **From:** Tiran Dagan (Stevens)
 **Re:** arXiv:2510.14279, *Caruca: Effective and Efficient Specification Mining for Opaque
 Software Components*
-**Date:** 2026-10-20 · **Version 0.4, draft** (0.2 added section 2, a command beyond the core utilities;
-0.3 added section 3, `convert`, the paper's costliest command; 0.4 adds section 4, `cut` and `sort`)
+**Date:** 2026-10-26 · **Version 0.5, draft** (0.2 added section 2, a command beyond the core utilities;
+0.3 added section 3, `convert`, the paper's costliest command; 0.4 added section 4, `cut` and `sort`;
+0.5 adds "In brief", a plain-language summary of the three main findings; corrected 2026-10-27: the
+agent overstated its testing in all six runs, not four)
 **Status:** draft for discussion, not yet reviewed by Prof. Greenberg or Prof. Eiers.
 
 Every proposal drawn from the naive-LLM experiment is collected under this heading. The experiment
@@ -32,6 +34,68 @@ argument syntax in Caruca's format, plus PaSh's annotation files, for downstream
 two formats, four finished examples, the path to the binary and the path to its manual page, and told
 to test the binary against what it produces. Nothing about how Caruca works, no method, no isolation
 advice, and no web access.
+
+---
+
+## In brief: three findings, in plain language
+
+Six runs of the agent (runs 4 to 9), one command each, point to three findings. They are case studies,
+not rates: each command ran once, and none of the agent's syntax files has been scored yet. The
+sections that follow give the evidence.
+
+![The three findings: the agent asks the command as well as the manual; many generated test command
+lines do no work; the agent is inventive but a poor judge of its own work](../diagrams/003_naive_llm_three_findings.png)
+
+**1. Ask the command, not only its manual.** Caruca's model reads only the manual, and its prompt
+tells it not to add anything the manual does not mention. The agent read the manual too, then ran the
+command to check it, and the commands told it things their manuals do not:
+
+- Given a deliberately wrong value, `rm` replied with the full list of values it accepts: six, where
+  the manual lists three.
+- `convert`'s manual lists one option the program rejects (a misspelling) and leaves out at least ten
+  that the program accepts.
+- `binwalk`'s manual describes an older version and lacks two options.
+
+Caruca's reference files, its answer key, were also written from the manuals. Where a manual is
+incomplete, the model's output and the reference can miss the same thing and still score as a match.
+`grep` accepts its search pattern in three ways; Caruca's model output and its reference each hold
+one, and the comparison reports agreement. (Sections 1, 2 and 3.)
+
+**2. Many generated test command lines do no work.** Caruca turns each syntax file into thousands of
+command lines and runs every one in its sandbox, recording each file read and written. We fed syntax
+files to Caruca's own generator and ran what came out:
+
+- At the generator's default settings, Caruca's reference file for `convert` gives 1,052 different
+  command lines. None has both an image to read and a file to write, which `convert` needs in order to
+  convert anything: `convert -resize 50% f.jpg` answers "no images defined" and writes nothing.
+- The agent's `cut` file gives 13,222 different lines, and none does real work. It writes short
+  options with `=` (`cut -d=a`), a convention it copied from Caruca's own `uniq` reference file, and
+  `cut` rejects them. Caruca's reference for `cut` gives 360 working lines out of 11,651.
+- `binwalk` looks for files hidden inside other files. Caruca fills its test folders from eight files
+  (text, JSON and one photo), and `binwalk` finds nothing hidden in any of them.
+
+One quick plain run of each line before tracing would separate the lines the command accepts from
+those it refuses. (Sections 2, 3 and 4.)
+
+**3. Inventive, but a poor judge of its own work.** Without being asked, the agent rebuilt Caruca's
+test of whether a command's work can be split: run it on pieces of a file, join the outputs, and
+compare with one run on the whole file. For `sort` it went further and wrote the step that merges
+sorted pieces back together, a step the paper places outside Caruca's scope. But:
+
+- In all six runs, its closing report claimed more testing than its logs show (for example, "Everything
+  passed" over a test that ended with one failure).
+- It tested its files against stand-ins it wrote itself. Loaded into PaSh's real code, its `sort`
+  annotation gave no answer for ordinary invocations, and PaSh hid the error.
+- For `binwalk` it ran 16 of 51 options and never mentioned that `-D` makes `binwalk` run other
+  programs.
+- It isolated little: even `rm` ran in a single scratch folder.
+
+(Sections 1, 2 and 4.)
+
+**What this suggests.** The two approaches are strong in different places. The agent was good at
+finding things out: asking the command, and writing a merge step. Caruca's design is good at checking:
+a sandbox, a record of every file accessed, and runs that repeat exactly. Each section below ends with
+suggestions that bring one to the other.
 
 ---
 
@@ -80,19 +144,26 @@ the binary's actual interface differ.
 
 ### 1.2 The runs
 
-Three runs of the agent can be re-read in full from their logs (two earlier runs' records no longer
-exist). All used the same first-version prompt, in the same virtual-machine image, with permissions
-bypassed so the agent could act freely.
+Seven runs of the agent can be re-read in full from their logs (two earlier runs' records no longer
+exist). All used the same first-version prompt, in the same base virtual-machine image, with
+permissions bypassed so the agent could act freely; runs 6 and 8 used commands installed into that
+image from Ubuntu's package archive. This section uses runs 3 to 5; the later sections use the rest,
+and each repeats its own runs' details.
 
 | Run | Command | Model | Web | Time · cost (list) | Used as evidence |
 |---|---|---|---|---|---|
 | 3 | `grep` | Claude Haiku 5.5 | open | 739 s · $0.96 | context only: it found this project's public notes on `grep` through a GitHub search |
-| 4 | `grep` | Claude Fable 5.1, medium effort | removed, and forbidden in the prompt | 322 s · $2.54 | yes |
-| 5 | `rm` | Claude Fable 5.1, medium effort | removed, and forbidden in the prompt | 60 s · $0.80 | yes |
+| 4 | `grep` | Claude Fable 5.1, medium effort | removed, and forbidden in the prompt | 322 s · $2.54 | yes, section 1 |
+| 5 | `rm` | Claude Fable 5.1, medium effort | removed, and forbidden in the prompt | 60 s · $0.80 | yes, section 1 |
+| 6 | `binwalk` | Claude Fable 5.1, medium effort | removed, and forbidden in the prompt | 193 s · $2.12 | yes, section 2 |
+| 7 | `cut` | Claude Fable 5.1, medium effort | removed, and forbidden in the prompt | 104 s · $1.25 | yes, section 4 |
+| 8 | `convert` | Claude Fable 5.1, medium effort | removed, and forbidden in the prompt | 1,291 s · $6.04 | yes, section 3 |
+| 9 | `sort` | Claude Fable 5.1, medium effort | removed, and forbidden in the prompt | 304 s · $2.46 | yes, section 4 |
 
-Both commands were among the four examples, so the agent had a finished answer in front of it: for the
-syntax, that answer is Caruca's own reference file, byte for byte. The case studies therefore report
-where the agent *departed* from the reference, and why.
+In section 1's runs both commands were among the four examples, so the agent had a finished answer in
+front of it: for the syntax, that answer is Caruca's own reference file, byte for byte. The case studies
+therefore report where the agent *departed* from the reference, and why. None of the commands in runs 6
+to 9 is an example.
 
 ### 1.3 Case study A: ask the command, not only its manual
 
@@ -198,7 +269,7 @@ Each suggestion reuses something Caruca already has.
 
 ### 1.6 What this section does not claim
 
-- **No rate.** Three analysable runs, two commands, one prompt version; each combination of model and
+- **No rate.** This section rests on three runs (3 to 5), two commands, one prompt version; each combination of model and
   command ran once. These are case studies, not frequencies.
 - **No claim the agent is more accurate than Caruca overall.** Neither run's output has been scored, the
   agent had the reference in front of it, and it made its own mistakes (end of section 1.3).

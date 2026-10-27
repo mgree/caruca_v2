@@ -1,0 +1,673 @@
+{
+ "command": "dirname",
+ "scored": "2026-10-26T19:28:15",
+ "caruca_v1_commit": "d8032407346aadc135b14c043618c8c1d4f4e0cf",
+ "probe_vm": "t018-probe",
+ "binary_version": "dirname (GNU coreutils) 9.4",
+ "files": {
+  "reference": {
+   "path": "/Users/tirandagan/dev/stevens/caruca/caruca/src/caruca/syntax_specs/dirname.py",
+   "answer_key": {
+    "v1-specs": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 3,
+      "reference_flags": 3,
+      "matched": 3,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 3,
+      "takes_value": 3,
+      "kind": 3,
+      "arity": 3,
+      "fully_agreeing": 3
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": [],
+     "cmp_specs": {
+      "diff_count": 0,
+      "exact": true,
+      "error": null
+     }
+    },
+    "ground-truth": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 3,
+      "reference_flags": 3,
+      "matched": 3,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 3,
+      "takes_value": 3,
+      "kind": null,
+      "arity": null,
+      "fully_agreeing": 3
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": []
+    }
+   },
+   "real_binary": {
+    "spellings_in_file": 4,
+    "spellings_accepted": 4,
+    "spellings_rejected": [],
+    "value_checked": 4,
+    "value_agree": 4,
+    "value_optional_in_binary": 0,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 4,
+    "real_spellings_in_file": 4,
+    "real_spellings_missing": [],
+    "choice_lists": []
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 12184,
+     "read": 11687,
+     "read_exactly": 1,
+     "read_with_a_word_taken_as_another_option": 0,
+     "top_unread_remainders": [
+      [
+       "-- '$0'",
+       194
+      ],
+      [
+       "-- '${BASH_SOURCE[0]}'",
+       141
+      ],
+      [
+       "-f '$0)'",
+       50
+      ],
+      [
+       "-f '$0))'",
+       18
+      ],
+      [
+       "-- '$(readlink -f -- ${BASH_SOURCE[0]})'",
+       5
+      ],
+      [
+       "-- '${BASH_SOURCE[0]:-$0}'",
+       5
+      ],
+      [
+       "-f '$BASH_SOURCE)'",
+       4
+      ],
+      [
+       "-s '$0)'",
+       4
+      ],
+      [
+       "'-P))'",
+       3
+      ],
+      [
+       "'--run_under=realpath)'",
+       3
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 12184,
+     "read": 12058,
+     "unparseable": 0,
+     "top_unrecognised_words": [
+      [
+       "-f",
+       90
+      ],
+      [
+       "-name",
+       8
+      ],
+      [
+       "-c",
+       4
+      ],
+      [
+       "-s",
+       4
+      ],
+      [
+       "-P))",
+       3
+      ],
+      [
+       "--run_under=realpath)",
+       3
+      ],
+      [
+       "-P)",
+       2
+      ],
+      [
+       "--run_under=realpath))",
+       2
+      ],
+      [
+       "--relative-to=$1",
+       2
+      ],
+      [
+       "-d:",
+       1
+      ]
+     ]
+    }
+   },
+   "generator_use": {
+    "command": "dirname",
+    "label": "reference",
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 12,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 1,
+    "runs": 60,
+    "runs_accepted": 60,
+    "distinct_lines": 8,
+    "distinct_accepted": 8,
+    "distinct_real_work": 4,
+    "sample_rejected": []
+   }
+  },
+  "gpt-4o (shipped)": {
+   "path": "/Users/tirandagan/dev/stevens/caruca/outputs/llm-dsl-generation/dirname.py",
+   "answer_key": {
+    "v1-specs": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 3,
+      "reference_flags": 3,
+      "matched": 3,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 3,
+      "takes_value": 3,
+      "kind": 3,
+      "arity": 3,
+      "fully_agreeing": 3
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": [],
+     "cmp_specs": {
+      "diff_count": 0,
+      "exact": true,
+      "error": null
+     }
+    },
+    "ground-truth": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 3,
+      "reference_flags": 3,
+      "matched": 3,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 3,
+      "takes_value": 3,
+      "kind": null,
+      "arity": null,
+      "fully_agreeing": 3
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": []
+    }
+   },
+   "real_binary": {
+    "spellings_in_file": 4,
+    "spellings_accepted": 4,
+    "spellings_rejected": [],
+    "value_checked": 4,
+    "value_agree": 4,
+    "value_optional_in_binary": 0,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 4,
+    "real_spellings_in_file": 4,
+    "real_spellings_missing": [],
+    "choice_lists": []
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 12184,
+     "read": 11687,
+     "read_exactly": 1,
+     "read_with_a_word_taken_as_another_option": 0,
+     "top_unread_remainders": [
+      [
+       "-- '$0'",
+       194
+      ],
+      [
+       "-- '${BASH_SOURCE[0]}'",
+       141
+      ],
+      [
+       "-f '$0)'",
+       50
+      ],
+      [
+       "-f '$0))'",
+       18
+      ],
+      [
+       "-- '$(readlink -f -- ${BASH_SOURCE[0]})'",
+       5
+      ],
+      [
+       "-- '${BASH_SOURCE[0]:-$0}'",
+       5
+      ],
+      [
+       "-f '$BASH_SOURCE)'",
+       4
+      ],
+      [
+       "-s '$0)'",
+       4
+      ],
+      [
+       "'-P))'",
+       3
+      ],
+      [
+       "'--run_under=realpath)'",
+       3
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 12184,
+     "read": 12058,
+     "unparseable": 0,
+     "top_unrecognised_words": [
+      [
+       "-f",
+       90
+      ],
+      [
+       "-name",
+       8
+      ],
+      [
+       "-c",
+       4
+      ],
+      [
+       "-s",
+       4
+      ],
+      [
+       "-P))",
+       3
+      ],
+      [
+       "--run_under=realpath)",
+       3
+      ],
+      [
+       "-P)",
+       2
+      ],
+      [
+       "--run_under=realpath))",
+       2
+      ],
+      [
+       "--relative-to=$1",
+       2
+      ],
+      [
+       "-d:",
+       1
+      ]
+     ]
+    }
+   },
+   "generator_use": {
+    "command": "dirname",
+    "label": "gpt-4o (shipped)",
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 12,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 1,
+    "runs": 60,
+    "runs_accepted": 60,
+    "distinct_lines": 8,
+    "distinct_accepted": 8,
+    "distinct_real_work": 4,
+    "sample_rejected": []
+   }
+  },
+  "agent 2026-10-26_191443": {
+   "path": "/Users/tirandagan/dev/stevens/caruca_v2/naive_llm_caruca/runs/2026-10-26_191443_naive-run-dirname_dirname_PROMPT_v1/output/dirname.py",
+   "answer_key": {
+    "v1-specs": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 3,
+      "reference_flags": 3,
+      "matched": 3,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 3,
+      "takes_value": 3,
+      "kind": 3,
+      "arity": 3,
+      "fully_agreeing": 3
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": [],
+     "cmp_specs": {
+      "diff_count": 0,
+      "exact": true,
+      "error": null
+     }
+    },
+    "ground-truth": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 3,
+      "reference_flags": 3,
+      "matched": 3,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 3,
+      "takes_value": 3,
+      "kind": null,
+      "arity": null,
+      "fully_agreeing": 3
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": []
+    }
+   },
+   "real_binary": {
+    "spellings_in_file": 4,
+    "spellings_accepted": 4,
+    "spellings_rejected": [],
+    "value_checked": 4,
+    "value_agree": 4,
+    "value_optional_in_binary": 0,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 4,
+    "real_spellings_in_file": 4,
+    "real_spellings_missing": [],
+    "choice_lists": []
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 12184,
+     "read": 11687,
+     "read_exactly": 1,
+     "read_with_a_word_taken_as_another_option": 0,
+     "top_unread_remainders": [
+      [
+       "-- '$0'",
+       194
+      ],
+      [
+       "-- '${BASH_SOURCE[0]}'",
+       141
+      ],
+      [
+       "-f '$0)'",
+       50
+      ],
+      [
+       "-f '$0))'",
+       18
+      ],
+      [
+       "-- '$(readlink -f -- ${BASH_SOURCE[0]})'",
+       5
+      ],
+      [
+       "-- '${BASH_SOURCE[0]:-$0}'",
+       5
+      ],
+      [
+       "-f '$BASH_SOURCE)'",
+       4
+      ],
+      [
+       "-s '$0)'",
+       4
+      ],
+      [
+       "'-P))'",
+       3
+      ],
+      [
+       "'--run_under=realpath)'",
+       3
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 12184,
+     "read": 12058,
+     "unparseable": 0,
+     "top_unrecognised_words": [
+      [
+       "-f",
+       90
+      ],
+      [
+       "-name",
+       8
+      ],
+      [
+       "-c",
+       4
+      ],
+      [
+       "-s",
+       4
+      ],
+      [
+       "-P))",
+       3
+      ],
+      [
+       "--run_under=realpath)",
+       3
+      ],
+      [
+       "-P)",
+       2
+      ],
+      [
+       "--run_under=realpath))",
+       2
+      ],
+      [
+       "--relative-to=$1",
+       2
+      ],
+      [
+       "-d:",
+       1
+      ]
+     ]
+    }
+   },
+   "generator_use": {
+    "command": "dirname",
+    "label": "agent 2026-10-26_191443",
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 12,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 2,
+    "runs": 60,
+    "runs_accepted": 60,
+    "distinct_lines": 8,
+    "distinct_accepted": 8,
+    "distinct_real_work": 4,
+    "sample_rejected": []
+   }
+  }
+ },
+ "probe": {
+  "command": "dirname",
+  "binary": "/usr/bin/dirname",
+  "version": "dirname (GNU coreutils) 9.4",
+  "spellings": {
+   "--help": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "dirname",
+       "--help"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "dirname",
+       "--help=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "dirname: option '--help' doesn't allow an argument\nTry 'dirname --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--version": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "dirname",
+       "--version"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "dirname",
+       "--version=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "dirname: option '--version' doesn't allow an argument\nTry 'dirname --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--zero": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "dirname",
+       "--zero"
+      ],
+      "rc": 1,
+      "stderr": "dirname: missing operand\nTry 'dirname --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "dirname",
+       "--zero=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "dirname: option '--zero' doesn't allow an argument\nTry 'dirname --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-z": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "dirname",
+       "-z"
+      ],
+      "rc": 1,
+      "stderr": "dirname: missing operand\nTry 'dirname --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   }
+  }
+ }
+}

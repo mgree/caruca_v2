@@ -1,0 +1,1546 @@
+{
+ "command": "cut",
+ "scored": "2026-10-27T12:24:08",
+ "caruca_v1_commit": "d8032407346aadc135b14c043618c8c1d4f4e0cf",
+ "probe_vm": "t018-probe",
+ "binary_version": "cut (GNU coreutils) 9.4",
+ "files": {
+  "reference": {
+   "path": "/Users/tirandagan/dev/stevens/caruca/caruca/src/caruca/syntax_specs/cut.py",
+   "real_binary": {
+    "spellings_in_file": 18,
+    "spellings_accepted": 17,
+    "spellings_rejected": [
+     "-w"
+    ],
+    "value_checked": 17,
+    "value_agree": 17,
+    "value_optional_in_binary": 0,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 17,
+    "real_spellings_in_file": 17,
+    "real_spellings_missing": [],
+    "choice_lists": []
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 5909,
+     "read": 5890,
+     "read_exactly": 9,
+     "read_with_a_word_taken_as_another_option": 5812,
+     "top_unread_remainders": [
+      [
+       "cut -f1 -d\\",
+       15
+      ],
+      [
+       "cut -f 1,2 -d \\",
+       2
+      ],
+      [
+       "cut -f 1 -d\\",
+       1
+      ],
+      [
+       "cut -f5 -d\\",
+       1
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 5909,
+     "read": 5890,
+     "unparseable": 19,
+     "top_unrecognised_words": []
+    },
+    "gnu_rules": {
+     "valid_lines": 5856,
+     "read_correctly": 5856,
+     "read_wrongly": 0,
+     "not_read": 0,
+     "top_unreadable": []
+    }
+   },
+   "generator_use": {
+    "command": "cut",
+    "label": "reference",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 41,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 1,
+    "runs": 49,
+    "runs_accepted": 17,
+    "distinct_lines": 29,
+    "distinct_accepted": 17,
+    "distinct_real_work": 15,
+    "sample_rejected": [
+     [
+      "cut",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut --complement",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut --output-delimiter '\n\t'",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut --output-delimiter ,",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut -d '\n\t'",
+      [
+       "cut: the delimiter must be a single character"
+      ]
+     ],
+     [
+      "cut -d ,",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut -n",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut -s",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut -w",
+      [
+       "cut: invalid option -- 'w'"
+      ]
+     ],
+     [
+      "cut -z",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut abspath_1",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut relpath_1",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ]
+    ]
+   },
+   "answer_key": {
+    "note": "is the answer key"
+   },
+   "performance": {
+    "note": "written and corrected by hand (the paper: 80 person-hours for the whole answer key)"
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      17,
+      17
+     ],
+     "b real": [
+      17,
+      18
+     ],
+     "c value": [
+      17,
+      17
+     ],
+     "d kind": [
+      4,
+      5
+     ],
+     "e equals": [
+      0,
+      0
+     ],
+     "f repeat": [
+      3,
+      3
+     ],
+     "g files": [
+      3,
+      4
+     ],
+     "h rules": [
+      0,
+      8
+     ]
+    },
+    "right": 61,
+    "total": 72,
+    "wrong": {
+     "a listed": [],
+     "b real": [
+      "-w"
+     ],
+     "c value": [],
+     "d kind": [
+      "-d"
+     ],
+     "e equals": [],
+     "f repeat": [],
+     "g files": [
+      [
+       "'-' is standard input",
+       "file: no",
+       "program: yes"
+      ]
+     ],
+     "h rules": [
+      [
+       "-b",
+       "-c",
+       "program refuses, file allows: cut: only one list may be specified\nTry 'cut --help' for more information."
+      ],
+      [
+       "-b",
+       "-d",
+       "program refuses, file allows: cut: an input delimiter may be specified only when operating on fields\nTry 'cut --help' fo"
+      ],
+      [
+       "-b",
+       "-f",
+       "program refuses, file allows: cut: only one list may be specified\nTry 'cut --help' for more information."
+      ],
+      [
+       "-b",
+       "-s",
+       "program refuses, file allows: cut: suppressing non-delimited lines makes sense\n\tonly when operating on fields\nTry 'cut -"
+      ],
+      [
+       "-c",
+       "-d",
+       "program refuses, file allows: cut: an input delimiter may be specified only when operating on fields\nTry 'cut --help' fo"
+      ],
+      [
+       "-c",
+       "-f",
+       "program refuses, file allows: cut: only one list may be specified\nTry 'cut --help' for more information."
+      ],
+      [
+       "-c",
+       "-s",
+       "program refuses, file allows: cut: suppressing non-delimited lines makes sense\n\tonly when operating on fields\nTry 'cut -"
+      ],
+      [
+       "no options at all",
+       "file: valid",
+       "program: invalid"
+      ]
+     ]
+    }
+   }
+  },
+  "gpt-4o (shipped)": {
+   "path": "/Users/tirandagan/dev/stevens/caruca/outputs/llm-dsl-generation/cut.py",
+   "real_binary": {
+    "spellings_in_file": 17,
+    "spellings_accepted": 17,
+    "spellings_rejected": [],
+    "value_checked": 17,
+    "value_agree": 17,
+    "value_optional_in_binary": 0,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 17,
+    "real_spellings_in_file": 17,
+    "real_spellings_missing": [],
+    "choice_lists": []
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 5909,
+     "read": 3219,
+     "read_exactly": 0,
+     "read_with_a_word_taken_as_another_option": 0,
+     "top_unread_remainders": [
+      [
+       "-f 2",
+       574
+      ],
+      [
+       "-f 1",
+       371
+      ],
+      [
+       "-f2",
+       150
+      ],
+      [
+       "-d ' '",
+       138
+      ],
+      [
+       "-f1",
+       134
+      ],
+      [
+       "-f '$i-100'",
+       99
+      ],
+      [
+       "-d= -f2",
+       99
+      ],
+      [
+       "-f 3",
+       92
+      ],
+      [
+       "-f '1-$p'",
+       78
+      ],
+      [
+       "-f 4",
+       72
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 5909,
+     "read": 5827,
+     "unparseable": 19,
+     "top_unrecognised_words": [
+      [
+       "-wf",
+       18
+      ],
+      [
+       "-w",
+       16
+      ],
+      [
+       "-1",
+       7
+      ],
+      [
+       "-2",
+       4
+      ],
+      [
+       "-13",
+       4
+      ],
+      [
+       "-3",
+       4
+      ],
+      [
+       "-27",
+       2
+      ],
+      [
+       "-${left}",
+       1
+      ],
+      [
+       "-${len}",
+       1
+      ],
+      [
+       "-${path_max}",
+       1
+      ]
+     ]
+    },
+    "gnu_rules": {
+     "valid_lines": 5856,
+     "read_correctly": 5856,
+     "read_wrongly": 0,
+     "not_read": 0,
+     "top_unreadable": []
+    }
+   },
+   "generator_use": {
+    "command": "cut",
+    "label": "gpt-4o (shipped)",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 41,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 1,
+    "runs": 49,
+    "runs_accepted": 2,
+    "distinct_lines": 30,
+    "distinct_accepted": 2,
+    "distinct_real_work": 0,
+    "sample_rejected": [
+     [
+      "cut",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut --complement",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut --output-delimiter=string",
+      [
+       "cut: you must specify a list of bytes, characters, or fields"
+      ]
+     ],
+     [
+      "cut -b=-2",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -b=1",
+      [
+       "cut: invalid byte/character position '=1'"
+      ]
+     ],
+     [
+      "cut -b=1,3",
+      [
+       "cut: invalid byte/character position '=1,3'"
+      ]
+     ],
+     [
+      "cut -b=1-",
+      [
+       "cut: invalid byte/character position '=1-'"
+      ]
+     ],
+     [
+      "cut -b=1-2",
+      [
+       "cut: invalid byte/character position '=1-2'"
+      ]
+     ],
+     [
+      "cut -c=-2",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -c=1",
+      [
+       "cut: invalid byte/character position '=1'"
+      ]
+     ],
+     [
+      "cut -c=1,3",
+      [
+       "cut: invalid byte/character position '=1,3'"
+      ]
+     ],
+     [
+      "cut -c=1-",
+      [
+       "cut: invalid byte/character position '=1-'"
+      ]
+     ],
+     [
+      "cut -c=1-2",
+      [
+       "cut: invalid byte/character position '=1-2'"
+      ]
+     ],
+     [
+      "cut -d=a",
+      [
+       "cut: the delimiter must be a single character"
+      ]
+     ],
+     [
+      "cut -d=b",
+      [
+       "cut: the delimiter must be a single character"
+      ]
+     ]
+    ]
+   },
+   "answer_key": {
+    "v1-specs": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 11,
+      "reference_flags": 12,
+      "matched": 11,
+      "missing": 1,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 11,
+      "takes_value": 11,
+      "kind": 10,
+      "arity": 11,
+      "fully_agreeing": 10
+     },
+     "precision": 1.0,
+     "recall": 0.9166666666666666,
+     "f1": 0.9565217391304348,
+     "exact_argument_rate": 0.8333333333333334,
+     "missing_surfaces": [
+      [
+       "-w"
+      ]
+     ],
+     "spurious_surfaces": [],
+     "cmp_specs": {
+      "diff_count": 3,
+      "exact": false,
+      "error": null
+     }
+    },
+    "ground-truth": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 11,
+      "reference_flags": 11,
+      "matched": 11,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 11,
+      "takes_value": 11,
+      "kind": null,
+      "arity": null,
+      "fully_agreeing": 11
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": []
+    }
+   },
+   "performance": {
+    "note": "shipped with v1; when, with which settings and at what cost it was made is not recorded"
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      17,
+      17
+     ],
+     "b real": [
+      17,
+      17
+     ],
+     "c value": [
+      17,
+      17
+     ],
+     "d kind": [
+      5,
+      5
+     ],
+     "e equals": [
+      1,
+      5
+     ],
+     "f repeat": [
+      3,
+      3
+     ],
+     "g files": [
+      3,
+      4
+     ],
+     "h rules": [
+      0,
+      8
+     ]
+    },
+    "right": 63,
+    "total": 76,
+    "wrong": {
+     "a listed": [],
+     "b real": [],
+     "c value": [],
+     "d kind": [],
+     "e equals": [
+      "-b",
+      "-c",
+      "-d",
+      "-f"
+     ],
+     "f repeat": [],
+     "g files": [
+      [
+       "'-' is standard input",
+       "file: no",
+       "program: yes"
+      ]
+     ],
+     "h rules": [
+      [
+       "-b",
+       "-c",
+       "program refuses, file allows: cut: only one list may be specified\nTry 'cut --help' for more information."
+      ],
+      [
+       "-b",
+       "-d",
+       "program refuses, file allows: cut: an input delimiter may be specified only when operating on fields\nTry 'cut --help' fo"
+      ],
+      [
+       "-b",
+       "-f",
+       "program refuses, file allows: cut: only one list may be specified\nTry 'cut --help' for more information."
+      ],
+      [
+       "-b",
+       "-s",
+       "program refuses, file allows: cut: suppressing non-delimited lines makes sense\n\tonly when operating on fields\nTry 'cut -"
+      ],
+      [
+       "-c",
+       "-d",
+       "program refuses, file allows: cut: an input delimiter may be specified only when operating on fields\nTry 'cut --help' fo"
+      ],
+      [
+       "-c",
+       "-f",
+       "program refuses, file allows: cut: only one list may be specified\nTry 'cut --help' for more information."
+      ],
+      [
+       "-c",
+       "-s",
+       "program refuses, file allows: cut: suppressing non-delimited lines makes sense\n\tonly when operating on fields\nTry 'cut -"
+      ],
+      [
+       "no options at all",
+       "file: valid",
+       "program: invalid"
+      ]
+     ]
+    }
+   }
+  },
+  "agent 2026-10-20_135253": {
+   "path": "/Users/tirandagan/dev/stevens/caruca_v2/naive_llm_caruca/runs/2026-10-20_135253_naive-run-cut_cut_PROMPT_v1/output/cut.py",
+   "real_binary": {
+    "spellings_in_file": 17,
+    "spellings_accepted": 17,
+    "spellings_rejected": [],
+    "value_checked": 17,
+    "value_agree": 17,
+    "value_optional_in_binary": 0,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 17,
+    "real_spellings_in_file": 17,
+    "real_spellings_missing": [],
+    "choice_lists": []
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 5909,
+     "read": 5044,
+     "read_exactly": 0,
+     "read_with_a_word_taken_as_another_option": 0,
+     "top_unread_remainders": [
+      [
+       "-d ' '",
+       138
+      ],
+      [
+       "-d= -f2",
+       99
+      ],
+      [
+       "-d '|'",
+       57
+      ],
+      [
+       "-d .",
+       53
+      ],
+      [
+       "-d :",
+       47
+      ],
+      [
+       "-d=",
+       30
+      ],
+      [
+       "-d= -f1",
+       29
+      ],
+      [
+       "'-d ' '${dir}/text'",
+       25
+      ],
+      [
+       "'-d '",
+       24
+      ],
+      [
+       "- -f 2",
+       23
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 5909,
+     "read": 5827,
+     "unparseable": 19,
+     "top_unrecognised_words": [
+      [
+       "-wf",
+       18
+      ],
+      [
+       "-w",
+       16
+      ],
+      [
+       "-1",
+       7
+      ],
+      [
+       "-2",
+       4
+      ],
+      [
+       "-13",
+       4
+      ],
+      [
+       "-3",
+       4
+      ],
+      [
+       "-27",
+       2
+      ],
+      [
+       "-${left}",
+       1
+      ],
+      [
+       "-${len}",
+       1
+      ],
+      [
+       "-${path_max}",
+       1
+      ]
+     ]
+    },
+    "gnu_rules": {
+     "valid_lines": 5856,
+     "read_correctly": 5856,
+     "read_wrongly": 0,
+     "not_read": 0,
+     "top_unreadable": []
+    }
+   },
+   "generator_use": {
+    "command": "cut",
+    "label": "agent 2026-10-20_135253",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 360,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 9,
+    "runs": 480,
+    "runs_accepted": 30,
+    "distinct_lines": 240,
+    "distinct_accepted": 30,
+    "distinct_real_work": 0,
+    "sample_rejected": [
+     [
+      "cut -b=-2",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -b=-2 --complement",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -b=-2 --output-delimiter='\n\t'",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -b=-2 --output-delimiter=,",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -b=-2 -d=a",
+      [
+       "cut: the delimiter must be a single character"
+      ]
+     ],
+     [
+      "cut -b=-2 -d=b",
+      [
+       "cut: the delimiter must be a single character"
+      ]
+     ],
+     [
+      "cut -b=-2 -d=c",
+      [
+       "cut: the delimiter must be a single character"
+      ]
+     ],
+     [
+      "cut -b=-2 -d=d",
+      [
+       "cut: the delimiter must be a single character"
+      ]
+     ],
+     [
+      "cut -b=-2 -d=e",
+      [
+       "cut: the delimiter must be a single character"
+      ]
+     ],
+     [
+      "cut -b=-2 -n",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -b=-2 -s",
+      [
+       "cut: suppressing non-delimited lines makes sense"
+      ]
+     ],
+     [
+      "cut -b=-2 -z",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -b=-2 abspath_1",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -b=-2 relpath_1",
+      [
+       "cut: invalid byte/character position '=-2'"
+      ]
+     ],
+     [
+      "cut -b=1",
+      [
+       "cut: invalid byte/character position '=1'"
+      ]
+     ]
+    ]
+   },
+   "answer_key": {
+    "v1-specs": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 11,
+      "reference_flags": 12,
+      "matched": 11,
+      "missing": 1,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 11,
+      "takes_value": 11,
+      "kind": 11,
+      "arity": 8,
+      "fully_agreeing": 8
+     },
+     "precision": 1.0,
+     "recall": 0.9166666666666666,
+     "f1": 0.9565217391304348,
+     "exact_argument_rate": 0.6666666666666666,
+     "missing_surfaces": [
+      [
+       "-w"
+      ]
+     ],
+     "spurious_surfaces": [],
+     "cmp_specs": {
+      "diff_count": 4,
+      "exact": false,
+      "error": null
+     }
+    },
+    "ground-truth": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 11,
+      "reference_flags": 11,
+      "matched": 11,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 11,
+      "takes_value": 11,
+      "kind": null,
+      "arity": null,
+      "fully_agreeing": 11
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": []
+    }
+   },
+   "performance": {
+    "run": "2026-10-20_135253_naive-run-cut_cut_PROMPT_v1",
+    "seconds": 104,
+    "cost_usd_list_price": 1.25,
+    "turns": 18,
+    "tool_calls": 17,
+    "output_tokens": 9117,
+    "thinking_tokens": 1464
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      17,
+      17
+     ],
+     "b real": [
+      17,
+      17
+     ],
+     "c value": [
+      17,
+      17
+     ],
+     "d kind": [
+      5,
+      5
+     ],
+     "e equals": [
+      1,
+      5
+     ],
+     "f repeat": [
+      3,
+      3
+     ],
+     "g files": [
+      4,
+      4
+     ],
+     "h rules": [
+      4,
+      8
+     ]
+    },
+    "right": 68,
+    "total": 76,
+    "wrong": {
+     "a listed": [],
+     "b real": [],
+     "c value": [],
+     "d kind": [],
+     "e equals": [
+      "-b",
+      "-c",
+      "-d",
+      "-f"
+     ],
+     "f repeat": [],
+     "g files": [],
+     "h rules": [
+      [
+       "-b",
+       "-d",
+       "program refuses, file allows: cut: an input delimiter may be specified only when operating on fields\nTry 'cut --help' fo"
+      ],
+      [
+       "-b",
+       "-s",
+       "program refuses, file allows: cut: suppressing non-delimited lines makes sense\n\tonly when operating on fields\nTry 'cut -"
+      ],
+      [
+       "-c",
+       "-d",
+       "program refuses, file allows: cut: an input delimiter may be specified only when operating on fields\nTry 'cut --help' fo"
+      ],
+      [
+       "-c",
+       "-s",
+       "program refuses, file allows: cut: suppressing non-delimited lines makes sense\n\tonly when operating on fields\nTry 'cut -"
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "facts_runs": {
+  "usage": {
+   "-b": [
+    "-b",
+    "1"
+   ],
+   "-c": [
+    "-c",
+    "1"
+   ],
+   "-d": [
+    "-d",
+    ","
+   ],
+   "-f": [
+    "-f",
+    "1"
+   ],
+   "-n": [
+    "-n"
+   ],
+   "--complement": [
+    "--complement"
+   ],
+   "-s": [
+    "-s"
+   ],
+   "--output-delimiter": [
+    "--output-delimiter",
+    ","
+   ],
+   "-z": [
+    "-z"
+   ]
+  },
+  "runs": 94
+ },
+ "scoring_seconds": 17,
+ "probe": {
+  "command": "cut",
+  "binary": "/usr/bin/cut",
+  "version": "cut (GNU coreutils) 9.4",
+  "spellings": {
+   "--bytes": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--bytes"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--bytes' requires an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--bytes=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: invalid byte/character position 'zzinvalid'\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--characters": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--characters"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--characters' requires an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--characters=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: invalid byte/character position 'zzinvalid'\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--complement": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--complement"
+      ],
+      "rc": 1,
+      "stderr": "cut: you must specify a list of bytes, characters, or fields\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--complement=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--complement' doesn't allow an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--delimiter": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--delimiter"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--delimiter' requires an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--delimiter=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: the delimiter must be a single character\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--fields": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--fields"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--fields' requires an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--fields=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: invalid field value 'zzinvalid'\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--help": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--help"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--help=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--help' doesn't allow an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--only-delimited": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--only-delimited"
+      ],
+      "rc": 1,
+      "stderr": "cut: you must specify a list of bytes, characters, or fields\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--only-delimited=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--only-delimited' doesn't allow an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--output-delimiter": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--output-delimiter"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--output-delimiter' requires an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--output-delimiter=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: you must specify a list of bytes, characters, or fields\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--version": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--version"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--version=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--version' doesn't allow an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--zero-terminated": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "--zero-terminated"
+      ],
+      "rc": 1,
+      "stderr": "cut: you must specify a list of bytes, characters, or fields\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "cut",
+       "--zero-terminated=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "cut: option '--zero-terminated' doesn't allow an argument\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-M": {
+    "accepted": false,
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "-M"
+      ],
+      "rc": 1,
+      "stderr": "cut: invalid option -- 'M'\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "help",
+     "man"
+    ]
+   },
+   "-b": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "-b"
+      ],
+      "rc": 1,
+      "stderr": "cut: option requires an argument -- 'b'\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-c": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "-c"
+      ],
+      "rc": 1,
+      "stderr": "cut: option requires an argument -- 'c'\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-d": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "-d"
+      ],
+      "rc": 1,
+      "stderr": "cut: option requires an argument -- 'd'\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-f": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "-f"
+      ],
+      "rc": 1,
+      "stderr": "cut: option requires an argument -- 'f'\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-n": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "-n"
+      ],
+      "rc": 1,
+      "stderr": "cut: you must specify a list of bytes, characters, or fields\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-s": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "-s"
+      ],
+      "rc": 1,
+      "stderr": "cut: you must specify a list of bytes, characters, or fields\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-w": {
+    "accepted": false,
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "-w"
+      ],
+      "rc": 1,
+      "stderr": "cut: invalid option -- 'w'\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files"
+    ]
+   },
+   "-z": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "cut",
+       "-z"
+      ],
+      "rc": 1,
+      "stderr": "cut: you must specify a list of bytes, characters, or fields\nTry 'cut --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   }
+  }
+ }
+}

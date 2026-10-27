@@ -1,0 +1,1471 @@
+{
+ "g_ref": {
+  "n_syntaxes": 1,
+  "positions": [
+   2
+  ],
+  "nodes": [
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-b",
+    "alias": [
+     "--ignore-leading-blanks"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-d",
+    "alias": [
+     "--dictionary-order"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-f",
+    "alias": [
+     "--ignore-case"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-g",
+    "alias": [
+     "--general-numeric-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-i",
+    "alias": [
+     "--ignore-nonprinting"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-M",
+    "alias": [
+     "--month-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-h",
+    "alias": [
+     "--human-numeric-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-n",
+    "alias": [
+     "--numeric-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-R",
+    "alias": [
+     "--random-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "--random-source",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-r",
+    "alias": [
+     "--reverse"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-V",
+    "alias": [
+     "--version-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--sort",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "general-numeric",
+     "human-numeric",
+     "month",
+     "numeric",
+     "random",
+     "version"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Integer",
+    "type_synonyms": [
+     "Duration",
+     "Int",
+     "Integer",
+     "Number",
+     "Pid"
+    ],
+    "flag": "--batch-size",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "min": -1,
+    "max": 1,
+    "n_values": 3
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-c",
+    "alias": [
+     "--check"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-C",
+    "alias": [
+     "--check=quiet",
+     "--check=silent"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Command",
+    "type_synonyms": [
+     "Command"
+    ],
+    "flag": "--compress-program",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "choices": [
+     "ls",
+     "pwd"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--debug",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "--files0-from",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "String",
+    "type_synonyms": [
+     "Format",
+     "Other",
+     "String",
+     "User"
+    ],
+    "flag": "-k",
+    "alias": [
+     "--key"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "choices": [
+     "1",
+     "1.2",
+     "1.2n",
+     "1.2nr",
+     "1n",
+     "1nr"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-m",
+    "alias": [
+     "--merge"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "-o",
+    "alias": [
+     "--output"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-s",
+    "alias": [
+     "--stable"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Integer",
+    "type_synonyms": [
+     "Duration",
+     "Int",
+     "Integer",
+     "Number",
+     "Pid"
+    ],
+    "flag": "-S",
+    "alias": [
+     "--buffer-size"
+    ],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "min": -1,
+    "max": 1,
+    "n_values": 3
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Delimiter",
+    "type_synonyms": [
+     "Delimiter",
+     "Separator"
+    ],
+    "flag": "-t",
+    "alias": [
+     "--field-separator"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "choices": [
+     ",",
+     "\n\t"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "-T",
+    "alias": [
+     "--temporary-directory"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Integer",
+    "type_synonyms": [
+     "Duration",
+     "Int",
+     "Integer",
+     "Number",
+     "Pid"
+    ],
+    "flag": "--parallel",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "min": -1,
+    "max": 1,
+    "n_values": 3
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-u",
+    "alias": [
+     "--unique"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-z",
+    "alias": [
+     "--zero-terminated"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--help",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--version",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 1,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": null,
+    "alias": [],
+    "equals": false,
+    "arity": "ZERO_OR_MORE",
+    "dash_as_stdin": false
+   }
+  ]
+ },
+ "g_model": {
+  "n_syntaxes": 1,
+  "positions": [
+   2
+  ],
+  "nodes": [
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-b",
+    "alias": [
+     "--ignore-leading-blanks"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-d",
+    "alias": [
+     "--dictionary-order"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-f",
+    "alias": [
+     "--ignore-case"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-g",
+    "alias": [
+     "--general-numeric-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-i",
+    "alias": [
+     "--ignore-nonprinting"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-M",
+    "alias": [
+     "--month-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-h",
+    "alias": [
+     "--human-numeric-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-n",
+    "alias": [
+     "--numeric-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-R",
+    "alias": [
+     "--random-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-r",
+    "alias": [
+     "--reverse"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--sort",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "general-numeric",
+     "human-numeric",
+     "month",
+     "numeric",
+     "random",
+     "version"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-V",
+    "alias": [
+     "--version-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-c",
+    "alias": [
+     "--check"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-C",
+    "alias": [
+     "--check=quiet"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--debug",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "--random-source",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-m",
+    "alias": [
+     "--merge"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "-o",
+    "alias": [
+     "--output"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-s",
+    "alias": [
+     "--stable"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Size",
+    "type_synonyms": [
+     "Size"
+    ],
+    "flag": "-S",
+    "alias": [
+     "--buffer-size"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "choices": [
+     "1b",
+     "1k",
+     "1m",
+     "1g",
+     "1t"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Delimiter",
+    "type_synonyms": [
+     "Delimiter",
+     "Separator"
+    ],
+    "flag": "-t",
+    "alias": [
+     "--field-separator"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "choices": [
+     ",",
+     "\n\t"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "-T",
+    "alias": [
+     "--temporary-directory"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Integer",
+    "type_synonyms": [
+     "Duration",
+     "Int",
+     "Integer",
+     "Number",
+     "Pid"
+    ],
+    "flag": "--parallel",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "min": -1,
+    "max": 1,
+    "n_values": 3
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-u",
+    "alias": [
+     "--unique"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-z",
+    "alias": [
+     "--zero-terminated"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--help",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--version",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "--files0-from",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 1,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": null,
+    "alias": [],
+    "equals": false,
+    "arity": "ZERO_OR_MORE",
+    "dash_as_stdin": false
+   }
+  ]
+ },
+ "g_agent": {
+  "n_syntaxes": 1,
+  "positions": [
+   2
+  ],
+  "nodes": [
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-b",
+    "alias": [
+     "--ignore-leading-blanks"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-d",
+    "alias": [
+     "--dictionary-order"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-f",
+    "alias": [
+     "--ignore-case"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-g",
+    "alias": [
+     "--general-numeric-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-i",
+    "alias": [
+     "--ignore-nonprinting"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-M",
+    "alias": [
+     "--month-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-h",
+    "alias": [
+     "--human-numeric-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-n",
+    "alias": [
+     "--numeric-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-R",
+    "alias": [
+     "--random-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "--random-source",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-r",
+    "alias": [
+     "--reverse"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--sort",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "general-numeric",
+     "human-numeric",
+     "month",
+     "numeric",
+     "random",
+     "version"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-V",
+    "alias": [
+     "--version-sort"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Integer",
+    "type_synonyms": [
+     "Duration",
+     "Int",
+     "Integer",
+     "Number",
+     "Pid"
+    ],
+    "flag": "--batch-size",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "min": 2,
+    "max": 1,
+    "n_values": 0
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-c",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-C",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Selection",
+    "type_synonyms": [
+     "Selection"
+    ],
+    "flag": "--check",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "",
+     "diagnose-first",
+     "quiet",
+     "silent"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Command",
+    "type_synonyms": [
+     "Command"
+    ],
+    "flag": "--compress-program",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "ls",
+     "pwd"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--debug",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "--files0-from",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": true
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "String",
+    "type_synonyms": [
+     "Format",
+     "Other",
+     "String",
+     "User"
+    ],
+    "flag": "-k",
+    "alias": [
+     "--key"
+    ],
+    "equals": true,
+    "arity": "ZERO_OR_MORE",
+    "choices": [
+     "string"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-m",
+    "alias": [
+     "--merge"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "-o",
+    "alias": [
+     "--output"
+    ],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-s",
+    "alias": [
+     "--stable"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Size",
+    "type_synonyms": [
+     "Size"
+    ],
+    "flag": "-S",
+    "alias": [
+     "--buffer-size"
+    ],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "1b",
+     "1k",
+     "1m",
+     "1g",
+     "1t"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Char",
+    "type_synonyms": [
+     "Char"
+    ],
+    "flag": "-t",
+    "alias": [
+     "--field-separator"
+    ],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "choices": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e"
+    ]
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": "-T",
+    "alias": [
+     "--temporary-directory"
+    ],
+    "equals": true,
+    "arity": "ZERO_OR_MORE",
+    "dash_as_stdin": false
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Integer",
+    "type_synonyms": [
+     "Duration",
+     "Int",
+     "Integer",
+     "Number",
+     "Pid"
+    ],
+    "flag": "--parallel",
+    "alias": [],
+    "equals": true,
+    "arity": "OPTIONAL",
+    "min": 1,
+    "max": 1,
+    "n_values": 1
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-u",
+    "alias": [
+     "--unique"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-z",
+    "alias": [
+     "--zero-terminated"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-y",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--help",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "--version",
+    "alias": [],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 1,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": null,
+    "alias": [],
+    "equals": false,
+    "arity": "ZERO_OR_MORE",
+    "dash_as_stdin": true
+   }
+  ]
+ },
+ "g_pash": {
+  "n_syntaxes": 1,
+  "positions": [
+   2
+  ],
+  "nodes": [
+   {
+    "syntax": 0,
+    "position": 0,
+    "type": "Flag",
+    "type_synonyms": [
+     "Flag"
+    ],
+    "flag": "-m",
+    "alias": [
+     "--merge"
+    ],
+    "equals": false,
+    "arity": "OPTIONAL"
+   },
+   {
+    "syntax": 0,
+    "position": 1,
+    "type": "Path",
+    "type_synonyms": [
+     "Path"
+    ],
+    "flag": null,
+    "alias": [],
+    "equals": false,
+    "arity": "ZERO_OR_MORE",
+    "dash_as_stdin": false
+   }
+  ]
+ }
+}

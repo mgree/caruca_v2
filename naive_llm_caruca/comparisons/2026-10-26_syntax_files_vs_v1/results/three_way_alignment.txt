@@ -1,0 +1,548 @@
+## rm: 12 option groups
+  present in reference+v1 model+agent: 12
+
+  attribute disagreements among options present in all three:
+    type: 0
+    equals: 0
+    alias: 0
+    arity: 0
+    choices: 1
+    dash_as_stdin: 0
+    min: 0
+    max: 0
+
+| spellings | reference | v1 model | agent |
+|---|---|---|---|
+| -f --force | Flag -f alias=--force | Flag -f alias=--force | Flag -f alias=--force |
+| -i | Flag -i | Flag -i | Flag -i |
+| -I | Flag -I | Flag -I | Flag -I |
+| --interactive | Selection --interactive = choices=never|once|always | Selection --interactive = choices=never|once|always | Selection --interactive = choices=never|no|none|once|always|yes |
+| --one-file-system | Flag --one-file-system | Flag --one-file-system | Flag --one-file-system |
+| --no-preserve-root | Flag --no-preserve-root | Flag --no-preserve-root | Flag --no-preserve-root |
+| --preserve-root | Selection --preserve-root = choices=|all | Selection --preserve-root = choices=|all | Selection --preserve-root = choices=|all |
+| -R -r --recursive | Flag -r alias=-R,--recursive | Flag -r alias=-R,--recursive | Flag -r alias=-R,--recursive |
+| -d --dir | Flag -d alias=--dir | Flag -d alias=--dir | Flag -d alias=--dir |
+| -v --verbose | Flag -v alias=--verbose | Flag -v alias=--verbose | Flag -v alias=--verbose |
+| --help | Flag --help | Flag --help | Flag --help |
+| --version | Flag --version | Flag --version | Flag --version |
+
+operands:
+  reference ['Path AT_LEAST_ONE (syntax 0)']
+  v1 model ['Path AT_LEAST_ONE (syntax 0)']
+  agent ['Path ZERO_OR_MORE (syntax 0)']
+
+## cut: 12 option groups
+  present in reference+v1 model+agent: 11
+  present in reference: 1
+      -w
+
+  attribute disagreements among options present in all three:
+    type: 2
+    equals: 5
+    alias: 0
+    arity: 3
+    choices: 2
+    dash_as_stdin: 0
+    min: 0
+    max: 0
+
+| spellings | reference | v1 model | agent |
+|---|---|---|---|
+| -b --bytes | Range -b alias=--bytes | Range -b alias=--bytes = | Range -b alias=--bytes = EXACTLY_ONE |
+| -c --characters | Range -c alias=--characters | Range -c alias=--characters = | Range -c alias=--characters = EXACTLY_ONE |
+| -d --delimiter | Delimiter -d alias=--delimiter | Char -d alias=--delimiter = | Char -d alias=--delimiter = |
+| -f --fields | Range -f alias=--fields | Range -f alias=--fields = | Range -f alias=--fields = EXACTLY_ONE |
+| -n | Flag -n | Flag -n | Flag -n |
+| -w | Flag -w | — | — |
+| --complement | Flag --complement | Flag --complement | Flag --complement |
+| -s --only-delimited | Flag -s alias=--only-delimited | Flag -s alias=--only-delimited | Flag -s alias=--only-delimited |
+| --output-delimiter | Delimiter --output-delimiter | String --output-delimiter = | Delimiter --output-delimiter = |
+| -z --zero-terminated | Flag -z alias=--zero-terminated | Flag -z alias=--zero-terminated | Flag -z alias=--zero-terminated |
+| --help | Flag --help | Flag --help | Flag --help |
+| --version | Flag --version | Flag --version | Flag --version |
+
+operands:
+  reference ['Path ZERO_OR_MORE (syntax 0)']
+  v1 model ['Path ZERO_OR_MORE (syntax 0)']
+  agent ['Path ZERO_OR_MORE dash (syntax 0)', 'Path ZERO_OR_MORE dash (syntax 1)', 'Path ZERO_OR_MORE dash (syntax 2)']
+
+## sort: 32 option groups
+  present in reference+v1 model+agent: 28
+  present in reference+agent: 3
+      --batch-size --compress-program -k
+  present in agent: 1
+      -y
+
+  attribute disagreements among options present in all three:
+    type: 2
+    equals: 7
+    alias: 2
+    arity: 1
+    choices: 2
+    dash_as_stdin: 1
+    min: 2
+    max: 1
+
+| spellings | reference | v1 model | agent |
+|---|---|---|---|
+| -b --ignore-leading-blanks | Flag -b alias=--ignore-leading-blanks | Flag -b alias=--ignore-leading-blanks | Flag -b alias=--ignore-leading-blanks |
+| -d --dictionary-order | Flag -d alias=--dictionary-order | Flag -d alias=--dictionary-order | Flag -d alias=--dictionary-order |
+| -f --ignore-case | Flag -f alias=--ignore-case | Flag -f alias=--ignore-case | Flag -f alias=--ignore-case |
+| -g --general-numeric-sort | Flag -g alias=--general-numeric-sort | Flag -g alias=--general-numeric-sort | Flag -g alias=--general-numeric-sort |
+| -i --ignore-nonprinting | Flag -i alias=--ignore-nonprinting | Flag -i alias=--ignore-nonprinting | Flag -i alias=--ignore-nonprinting |
+| -M --month-sort | Flag -M alias=--month-sort | Flag -M alias=--month-sort | Flag -M alias=--month-sort |
+| -h --human-numeric-sort | Flag -h alias=--human-numeric-sort | Flag -h alias=--human-numeric-sort | Flag -h alias=--human-numeric-sort |
+| -n --numeric-sort | Flag -n alias=--numeric-sort | Flag -n alias=--numeric-sort | Flag -n alias=--numeric-sort |
+| -R --random-sort | Flag -R alias=--random-sort | Flag -R alias=--random-sort | Flag -R alias=--random-sort |
+| --random-source | Path --random-source | Path --random-source | Path --random-source = |
+| -r --reverse | Flag -r alias=--reverse | Flag -r alias=--reverse | Flag -r alias=--reverse |
+| -V --version-sort | Flag -V alias=--version-sort | Flag -V alias=--version-sort | Flag -V alias=--version-sort |
+| --sort | Selection --sort = choices=general-numeric|human-numeric|month|numeric|random|version | Selection --sort = choices=general-numeric|human-numeric|month|numeric|random|version | Selection --sort = choices=general-numeric|human-numeric|month|numeric|random|version |
+| --batch-size | Integer --batch-size = | — | Integer --batch-size = min=2,max=1(n=0) |
+| -c --check | Flag -c alias=--check | Flag -c alias=--check | Flag -c<br>Selection --check = choices=|diagnose-first|quiet|silent |
+| -C --check=quiet --check=silent | Flag -C alias=--check=quiet,--check=silent | Flag -C alias=--check=quiet | Flag -C |
+| --compress-program | Command --compress-program | — | Command --compress-program = |
+| --debug | Flag --debug | Flag --debug | Flag --debug |
+| --files0-from | Path --files0-from | Path --files0-from | Path --files0-from = dash |
+| -k --key | String -k alias=--key choices=1|1.2|1.2n|1.2nr|1n|1nr | — | String -k alias=--key = ZERO_OR_MORE |
+| -m --merge | Flag -m alias=--merge | Flag -m alias=--merge | Flag -m alias=--merge |
+| -o --output | Path -o alias=--output | Path -o alias=--output | Path -o alias=--output = |
+| -s --stable | Flag -s alias=--stable | Flag -s alias=--stable | Flag -s alias=--stable |
+| -S --buffer-size | Integer -S alias=--buffer-size = | Size -S alias=--buffer-size | Size -S alias=--buffer-size = |
+| -t --field-separator | Delimiter -t alias=--field-separator | Delimiter -t alias=--field-separator | Char -t alias=--field-separator = |
+| -T --temporary-directory | Path -T alias=--temporary-directory | Path -T alias=--temporary-directory | Path -T alias=--temporary-directory = ZERO_OR_MORE |
+| --parallel | Integer --parallel = | Integer --parallel | Integer --parallel = min=1,max=1(n=1) |
+| -u --unique | Flag -u alias=--unique | Flag -u alias=--unique | Flag -u alias=--unique |
+| -z --zero-terminated | Flag -z alias=--zero-terminated | Flag -z alias=--zero-terminated | Flag -z alias=--zero-terminated |
+| --help | Flag --help | Flag --help | Flag --help |
+| --version | Flag --version | Flag --version | Flag --version |
+| -y | — | — | Flag -y |
+
+operands:
+  reference ['Path ZERO_OR_MORE (syntax 0)']
+  v1 model ['Path ZERO_OR_MORE (syntax 0)']
+  agent ['Path ZERO_OR_MORE dash (syntax 0)']
+
+## convert: 262 option groups
+  present in reference+v1 model+agent: 247
+  present in agent: 14
+      average cache concurrent connected-components duration gaussian kuwahara linewidth local-contrast maximum minimum noop recolor rotational-blur
+  present in reference+v1 model: 1
+      connected-component
+
+  attribute disagreements among options present in all three:
+    type: 108
+    equals: 0
+    alias: 87
+    arity: 0
+    choices: 130
+    dash_as_stdin: 0
+    min: 36
+    max: 36
+
+### type
+  attenuate: reference=String | v1 model=Integer | agent=String
+  bias: reference=String | v1 model=Integer | agent=String
+  delay: reference=Integer | v1 model=Integer | agent=String
+  density: reference=Geometry | v1 model=String | agent=Geometry
+  display: reference=Hostname | v1 model=String | agent=String
+  encoding: reference=Selection | v1 model=Selection | agent=String
+  features: reference=String | v1 model=Integer | agent=Integer
+  fuzz: reference=String | v1 model=Integer | agent=String
+  interline-spacing: reference=Integer | v1 model=Integer | agent=String
+  interword-spacing: reference=Integer | v1 model=Integer | agent=String
+  kerning: reference=Integer | v1 model=Integer | agent=String
+  limit: reference=String | v1 model=String | agent=Selection
+  page: reference=Geometry | v1 model=String | agent=Geometry
+  pointsize: reference=Integer | v1 model=Integer | agent=String
+  repage: reference=Geometry | v1 model=String | agent=Geometry
+  sampling-factor: reference=Geometry | v1 model=String | agent=Geometry
+  size: reference=Geometry | v1 model=String | agent=Geometry
+  statistic: reference=Geometry | v1 model=String | agent=Selection
+  strokewidth: reference=Integer | v1 model=Integer | agent=String
+  support: reference=String | v1 model=Integer | agent=String
+  tile-offset: reference=Geometry | v1 model=String | agent=Geometry
+  view: reference=Flag | v1 model=Flag | agent=String
+  adaptive-blur: reference=Geometry | v1 model=String | agent=Geometry
+  adaptive-resize: reference=Geometry | v1 model=String | agent=Geometry
+  adaptive-sharpen: reference=Geometry | v1 model=String | agent=Geometry
+  annotate: reference=String | v1 model=String | agent=Geometry
+  black-threshold: reference=String | v1 model=Integer | agent=String
+  blue-shift: reference=String | v1 model=Integer | agent=String
+  blur: reference=Geometry | v1 model=String | agent=Geometry
+  border: reference=Geometry | v1 model=String | agent=Geometry
+  brightness-contrast: reference=Geometry | v1 model=String | agent=Geometry
+  canny: reference=Geometry | v1 model=String | agent=Geometry
+  charcoal: reference=String | v1 model=Integer | agent=String
+  chop: reference=Geometry | v1 model=String | agent=Geometry
+  colorize: reference=String | v1 model=Integer | agent=String
+  contrast-stretch: reference=Geometry | v1 model=String | agent=Geometry
+  deskew: reference=String | v1 model=Integer | agent=String
+  distort: reference=String | v1 model=String | agent=Selection
+  edge: reference=String | v1 model=Integer | agent=String
+  emboss: reference=String | v1 model=Integer | agent=String
+  evaluate: reference=String | v1 model=String | agent=Selection
+  extent: reference=Geometry | v1 model=String | agent=Geometry
+  extract: reference=Geometry | v1 model=String | agent=Geometry
+  floodfill: reference=Geometry | v1 model=String | agent=Geometry
+  frame: reference=Geometry | v1 model=String | agent=Geometry
+  function: reference=String | v1 model=String | agent=Selection
+  gamma: reference=String | v1 model=Integer | agent=String
+  gaussian-blur: reference=Geometry | v1 model=String | agent=Geometry
+  geometry: reference=Geometry | v1 model=String | agent=Geometry
+  hough-lines: reference=Geometry | v1 model=String | agent=Geometry
+  implode: reference=String | v1 model=Integer | agent=String
+  interpolative-resize: reference=Geometry | v1 model=String | agent=Geometry
+  lat: reference=Geometry | v1 model=String | agent=Geometry
+  layers: reference=String | v1 model=String | agent=Selection
+  level: reference=String | v1 model=Integer | agent=String
+  linear-stretch: reference=Geometry | v1 model=String | agent=Geometry
+  liquid-rescale: reference=Geometry | v1 model=String | agent=Geometry
+  mean-shift: reference=Geometry | v1 model=String | agent=Geometry
+  median: reference=Geometry | v1 model=String | agent=Geometry
+  mode: reference=Geometry | v1 model=String | agent=Geometry
+  morphology: reference=String | v1 model=String | agent=Selection
+  motion-blur: reference=Geometry | v1 model=String | agent=Geometry
+  noise: reference=Geometry | v1 model=String | agent=Geometry
+  paint: reference=String | v1 model=Integer | agent=String
+  perceptible: reference=String | v1 model=Integer | agent=String
+  polaroid: reference=String | v1 model=Integer | agent=String
+  radial-blur: reference=String | v1 model=Integer | agent=String
+  raise: reference=String | v1 model=Integer | agent=Geometry
+  region: reference=Geometry | v1 model=String | agent=Geometry
+  resample: reference=Geometry | v1 model=String | agent=Geometry
+  resize: reference=Geometry | v1 model=String | agent=Geometry
+  roll: reference=Geometry | v1 model=String | agent=Geometry
+  rotate: reference=String | v1 model=Integer | agent=String
+  sample: reference=Geometry | v1 model=String | agent=Geometry
+  scale: reference=Geometry | v1 model=String | agent=Geometry
+  selective-blur: reference=Geometry | v1 model=String | agent=Geometry
+  sepia-tone: reference=String | v1 model=Integer | agent=String
+  shade: reference=String | v1 model=Integer | agent=String
+  shadow: reference=Geometry | v1 model=String | agent=Geometry
+  sharpen: reference=Geometry | v1 model=String | agent=Geometry
+  shave: reference=Geometry | v1 model=String | agent=Geometry
+  shear: reference=Geometry | v1 model=String | agent=Geometry
+  sigmoidal-contrast: reference=Geometry | v1 model=String | agent=Geometry
+  sketch: reference=Geometry | v1 model=String | agent=Geometry
+  solarize: reference=String | v1 model=Integer | agent=String
+  sparse-color: reference=String | v1 model=String | agent=Selection
+  splice: reference=Geometry | v1 model=String | agent=Geometry
+  spread: reference=String | v1 model=Integer | agent=String
+  swirl: reference=String | v1 model=Integer | agent=String
+  threshold: reference=String | v1 model=Integer | agent=String
+  thumbnail: reference=Geometry | v1 model=String | agent=Geometry
+  tint: reference=String | v1 model=Integer | agent=String
+  unsharp: reference=Geometry | v1 model=String | agent=Geometry
+  vignette: reference=Geometry | v1 model=String | agent=Geometry
+  wave: reference=Geometry | v1 model=String | agent=Geometry
+  wavelet-denoise: reference=String | v1 model=Integer | agent=String
+  white-threshold: reference=String | v1 model=Integer | agent=String
+  complex: reference=String | v1 model=String | agent=Selection
+  copy: reference=String | v1 model=String | agent=Geometry
+  crop: reference=Geometry | v1 model=String | agent=Geometry
+  evaluate-sequence: reference=String | v1 model=String | agent=Selection
+  fx: reference=String | v1 model=String | agent=Expression
+  smush: reference=Geometry | v1 model=String | agent=Geometry
+  clone: reference=String | v1 model=String | agent=Range
+  delete: reference=String | v1 model=String | agent=Range
+  swap: reference=String | v1 model=String | agent=Range
+  debug: reference=String | v1 model=String | agent=Selection
+  list: reference=String | v1 model=String | agent=Selection
+
+### alias
+  adjoin: reference=[] | v1 model=[] | agent=['adjoin']
+  antialias: reference=[] | v1 model=[] | agent=['antialias']
+  black-point-compensation: reference=[] | v1 model=[] | agent=['black-point-compensation']
+  clip: reference=[] | v1 model=[] | agent=['clip']
+  clip-path: reference=[] | v1 model=[] | agent=['clip-path']
+  define: reference=[] | v1 model=[] | agent=['define']
+  flatten: reference=[] | v1 model=[] | agent=['flatten']
+  matte: reference=[] | v1 model=[] | agent=['matte']
+  moments: reference=[] | v1 model=[] | agent=['moments']
+  monitor: reference=[] | v1 model=[] | agent=['monitor']
+  ping: reference=[] | v1 model=[] | agent=['ping']
+  quiet: reference=[] | v1 model=[] | agent=['quiet']
+  regard-warnings: reference=[] | v1 model=[] | agent=['regard-warnings']
+  respect-parentheses: reference=[] | v1 model=[] | agent=['respect-parentheses']
+  support: reference=[] | v1 model=[] | agent=['support']
+  synchronize: reference=[] | v1 model=[] | agent=['synchronize']
+  taint: reference=[] | v1 model=[] | agent=['taint']
+  verbose: reference=[] | v1 model=[] | agent=['verbose']
+  adaptive-blur: reference=[] | v1 model=[] | agent=['adaptive-blur']
+  adaptive-resize: reference=[] | v1 model=[] | agent=['adaptive-resize']
+  adaptive-sharpen: reference=[] | v1 model=[] | agent=['adaptive-sharpen']
+  auto-gamma: reference=[] | v1 model=[] | agent=['auto-gamma']
+  auto-level: reference=[] | v1 model=[] | agent=['auto-level']
+  auto-orient: reference=[] | v1 model=[] | agent=['auto-orient']
+  brightness-contrast: reference=[] | v1 model=[] | agent=['brightness-contrast']
+  clamp: reference=[] | v1 model=[] | agent=['clamp']
+  contrast: reference=[] | v1 model=[] | agent=['contrast']
+  contrast-stretch: reference=[] | v1 model=[] | agent=['contrast-stretch']
+  despeckle: reference=[] | v1 model=[] | agent=['despeckle']
+  distort: reference=[] | v1 model=[] | agent=['distort']
+  enhance: reference=[] | v1 model=[] | agent=['enhance']
+  equalize: reference=[] | v1 model=[] | agent=['equalize']
+  fft: reference=[] | v1 model=[] | agent=['fft']
+  flip: reference=[] | v1 model=[] | agent=['flip']
+  flop: reference=[] | v1 model=[] | agent=['flop']
+  gamma: reference=[] | v1 model=[] | agent=['gamma']
+  gaussian-blur: reference=[] | v1 model=[] | agent=['gaussian-blur']
+  identify: reference=[] | v1 model=[] | agent=['identify']
+  ift: reference=[] | v1 model=[] | agent=['ift']
+  interpolative-resize: reference=[] | v1 model=[] | agent=['interpolative-resize']
+  level: reference=[] | v1 model=[] | agent=['level']
+  level-colors: reference=[] | v1 model=[] | agent=['level-colors']
+  linear-stretch: reference=[] | v1 model=[] | agent=['linear-stretch']
+  liquid-rescale: reference=[] | v1 model=[] | agent=['liquid-rescale']
+  magnify: reference=[] | v1 model=[] | agent=['magnify']
+  monochrome: reference=[] | v1 model=[] | agent=['monochrome']
+  morphology: reference=[] | v1 model=[] | agent=['morphology']
+  negate: reference=[] | v1 model=[] | agent=['negate']
+  normalize: reference=[] | v1 model=[] | agent=['normalize']
+  opaque: reference=[] | v1 model=[] | agent=['opaque']
+  radial-blur: reference=[] | v1 model=[] | agent=['radial-blur']
+  raise: reference=[] | v1 model=[] | agent=['raise']
+  render: reference=[] | v1 model=[] | agent=['render']
+  rotate: reference=[] | v1 model=[] | agent=['rotate']
+  selective-blur: reference=[] | v1 model=[] | agent=['selective-blur']
+  shade: reference=[] | v1 model=[] | agent=['shade']
+  sharpen: reference=[] | v1 model=[] | agent=['sharpen']
+  shear: reference=[] | v1 model=[] | agent=['shear']
+  sigmoidal-contrast: reference=[] | v1 model=[] | agent=['sigmoidal-contrast']
+  sparse-color: reference=[] | v1 model=[] | agent=['sparse-color']
+  strip: reference=[] | v1 model=[] | agent=['strip']
+  transform: reference=[] | v1 model=[] | agent=['transform']
+  transparent: reference=[] | v1 model=[] | agent=['transparent']
+  transpose: reference=[] | v1 model=[] | agent=['transpose']
+  transverse: reference=[] | v1 model=[] | agent=['transverse']
+  trim: reference=[] | v1 model=[] | agent=['trim']
+  unique-colors: reference=[] | v1 model=[] | agent=['unique-colors']
+  wave: reference=[] | v1 model=[] | agent=['wave']
+  wavelet-denoise: reference=[] | v1 model=[] | agent=['wavelet-denoise']
+  append: reference=[] | v1 model=[] | agent=['append']
+  clut: reference=[] | v1 model=[] | agent=['clut']
+  coalesce: reference=[] | v1 model=[] | agent=['coalesce']
+  combine: reference=[] | v1 model=[] | agent=['combine']
+  compare: reference=[] | v1 model=[] | agent=['compare']
+  composite: reference=[] | v1 model=[] | agent=['composite']
+  deconstruct: reference=[] | v1 model=[] | agent=['deconstruct']
+  hald-clut: reference=[] | v1 model=[] | agent=['hald-clut']
+  mosaic: reference=[] | v1 model=[] | agent=['mosaic']
+  separate: reference=[] | v1 model=[] | agent=['separate']
+  smush: reference=[] | v1 model=[] | agent=['smush']
+  write: reference=[] | v1 model=[] | agent=['write']
+  delete: reference=[] | v1 model=[] | agent=['delete']
+  reverse: reference=[] | v1 model=[] | agent=['reverse']
+  distribute-cache: reference=[] | v1 model=[] | agent=['distribute-cache']
+  help: reference=[] | v1 model=[] | agent=['help']
+  list: reference=[] | v1 model=[] | agent=['list']
+  version: reference=[] | v1 model=[] | agent=['version']
+
+### choices
+  alpha: reference=['activate', 'deactivate', 'reset', 'set'] | v1 model=['activate', 'deactivate', 'reset', 'set'] | agent=['Activate', 'Associate', 'Background', 'Copy', 'Deactivate', 'Disassociate', 'Extract', 'Flatten', 'Off', 'On', 'Opaque', 'Remove', 'Set', 'Shape', 'Transparent']
+  attenuate: reference=['string'] | v1 model=None | agent=['string']
+  bias: reference=['string'] | v1 model=None | agent=['string']
+  channel: reference=['alpha', 'black', 'blue', 'cyan', 'green', 'magenta', 'red', 'yellow'] | v1 model=['alpha', 'black', 'blue', 'cyan', 'green', 'magenta', 'red', 'yellow'] | agent=['0', '1', '2', '3', '4', '5', 'A', 'All', 'Alpha', 'AutoThreshold', 'B', 'Black', 'Blue', 'C', 'Chroma', 'Cyan', 'Default', 'G', 'Gray', 'Green', 'H', 'Hue', 'Index', 'K', 'L', 'Lightness', 'Luminance', 'M', 'Magenta', 'Matte', 'O', 'Opacity', 'R', 'Red', 'S', 'Saturation', 'Sync', 'Y', 'Yellow']
+  colorspace: reference=['CMYK', 'GRAY', 'RGB', 'sRGB'] | v1 model=['CMYK', 'GRAY', 'RGB', 'Transparent', 'sRGB'] | agent=['CIELab', 'CMY', 'CMYK', 'Gray', 'HCL', 'HCLp', 'HSB', 'HSI', 'HSL', 'HSV', 'HWB', 'LCH', 'LCHab', 'LCHuv', 'LMS', 'Lab', 'LinearGray', 'Log', 'Luv', 'OHTA', 'RGB', 'Rec601Luma', 'Rec601YCbCr', 'Rec709Luma', 'Rec709YCbCr', 'Transparent', 'XYZ', 'YCC', 'YCbCr', 'YDbDr', 'YIQ', 'YPbPr', 'YUV', 'sRGB', 'scRGB', 'xyY']
+  compose: reference=['Add', 'Atop', 'Difference', 'In', 'Minus', 'Out', 'Over', 'Plus', 'Subtract', 'Xor'] | v1 model=['Add', 'Atop', 'Bumpmap', 'Copy', 'CopyBlue', 'CopyGreen', 'CopyOpacity', 'CopyRed', 'Difference', 'In', 'Minus', 'Multiply', 'Out', 'Over', 'Plus', 'Subtract', 'Xor'] | agent=['Atop', 'Blend', 'Blur', 'Bumpmap', 'ChangeMask', 'Clear', 'ColorBurn', 'ColorDodge', 'Colorize', 'Copy', 'CopyBlack', 'CopyBlue', 'CopyCyan', 'CopyGreen', 'CopyMagenta', 'CopyOpacity', 'CopyRed', 'CopyYellow', 'Darken', 'DarkenIntensity', 'Difference', 'Displace', 'Dissolve', 'Distort', 'DivideDst', 'DivideSrc', 'Dst', 'DstAtop', 'DstIn', 'DstOut', 'DstOver', 'Exclusion', 'HardLight', 'HardMix', 'Hue', 'In', 'Lighten', 'LightenIntensity', 'LinearBurn', 'LinearDodge', 'LinearLight', 'Luminize', 'Mathematics', 'MinusDst', 'MinusSrc', 'Modulate', 'ModulusAdd', 'ModulusSubtract', 'Multiply', 'None', 'Out', 'Over', 'Overlay', 'PegtopLight', 'PinLight', 'Plus', 'Replace', 'Saturate', 'Screen', 'SoftLight', 'Src', 'SrcAtop', 'SrcIn', 'SrcOut', 'SrcOver', 'Stereo', 'VividLight', 'Xor']
+  compress: reference=['BZip', 'Fax', 'Group4', 'JPEG', 'LZW', 'Lossless', 'None', 'RLE', 'Zip'] | v1 model=['BZip', 'Fax', 'Group4', 'JPEG', 'LZW', 'Lossless', 'None', 'RLE', 'Zip'] | agent=['B44', 'B44A', 'BZip', 'DXT1', 'DXT3', 'DXT5', 'Fax', 'Group4', 'JBIG1', 'JBIG2', 'JPEG', 'JPEG2000', 'LZMA', 'LZW', 'Lossless', 'LosslessJPEG', 'None', 'Piz', 'Pxr24', 'RLE', 'RunlengthEncoded', 'WebP', 'Zip', 'ZipS', 'Zstd']
+  delay: reference=None | v1 model=None | agent=['string']
+  density: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  direction: reference=['left-to-right', 'right-to-left'] | v1 model=['left-to-right', 'right-to-left'] | agent=['LTR', 'RTL', 'TTB', 'left-to-right', 'right-to-left', 'to-to-bottom']
+  display: reference=['localhost'] | v1 model=['string'] | agent=['string']
+  dispose: reference=['Background', 'None', 'Previous', 'Undefined'] | v1 model=['Background', 'None', 'Previous', 'Undefined'] | agent=['0', '1', '2', '3', 'Background', 'None', 'Previous', 'Undefined']
+  encoding: reference=['ASCII', 'ISO-8859-1', 'UTF-8'] | v1 model=['ISO-8859-1', 'None', 'UTF-16', 'UTF-8'] | agent=['string']
+  features: reference=['string'] | v1 model=None | agent=None
+  filter: reference=['Bessel', 'Blackman', 'Box', 'Catrom', 'Cubic', 'Gaussian', 'Hamming', 'Hanning', 'Hermite', 'Lanczos', 'Mitchell', 'Other', 'Quadratic', 'Sinc', 'Triangle'] | v1 model=['Bessel', 'Blackman', 'Box', 'Catrom', 'Cubic', 'Gaussian', 'Hamming', 'Hanning', 'Hermite', 'Lanczos', 'Mitchell', 'Point', 'Quadratic', 'Sinc', 'Triangle'] | agent=['Bartlett', 'Blackman', 'Bohman', 'Box', 'Catrom', 'Cosine', 'Cubic', 'Gaussian', 'Hamming', 'Hann', 'Hermite', 'Jinc', 'Kaiser', 'Lagrange', 'Lanczos', 'Lanczos2', 'Lanczos2Sharp', 'LanczosRadius', 'LanczosSharp', 'Mitchell', 'Parzen', 'Point', 'Quadratic', 'Robidoux', 'RobidouxSharp', 'Sinc', 'SincFast', 'Spline', 'Triangle', 'Welch']
+  fuzz: reference=['string'] | v1 model=None | agent=['string']
+  gravity: reference=['Center', 'East', 'North', 'NorthEast', 'NorthWest', 'South', 'SouthEast', 'SouthWest', 'West'] | v1 model=['Center', 'East', 'North', 'NorthEast', 'NorthWest', 'South', 'SouthEast', 'SouthWest', 'West'] | agent=['Center', 'East', 'Forget', 'None', 'North', 'NorthEast', 'NorthWest', 'South', 'SouthEast', 'SouthWest', 'West']
+  intensity: reference=['Average', 'Brightness', 'Lightness', 'Rec601Luma', 'Rec601Luminance', 'Rec709Luma', 'Rec709Luminance'] | v1 model=['Average', 'Brightness', 'Lightness', 'Rec601Luma', 'Rec601Luminance', 'Rec709Luma', 'Rec709Luminance'] | agent=['Average', 'Brightness', 'Lightness', 'MS', 'Mean', 'RMS', 'Rec601Luma', 'Rec601Luminance', 'Rec709Luma', 'Rec709Luminance']
+  interlace: reference=['Line', 'None', 'Partition', 'Plane'] | v1 model=['Line', 'None', 'Partition', 'Plane'] | agent=['GIF', 'JPEG', 'Line', 'None', 'PNG', 'Partition', 'Plane']
+  interline-spacing: reference=None | v1 model=None | agent=['string']
+  interpolate: reference=['Average', 'Bicubic', 'Bilinear', 'NearestNeighbor'] | v1 model=['Average', 'Bicubic', 'Bilinear', 'Filter', 'Integer', 'Mesh', 'NearestNeighbor', 'Spline'] | agent=['Average', 'Average16', 'Average4', 'Average9', 'Background', 'Bilinear', 'Blend', 'Catrom', 'Integer', 'Mesh', 'Nearest', 'Spline']
+  interword-spacing: reference=None | v1 model=None | agent=['string']
+  kerning: reference=None | v1 model=None | agent=['string']
+  limit: reference=['string'] | v1 model=['string'] | agent=['area', 'disk', 'file', 'height', 'listlength', 'map', 'memory', 'thread', 'throttle', 'time', 'width']
+  metric: reference=['AE', 'Fuzz', 'MAE', 'MSE', 'PAE', 'PSNR', 'RMSE'] | v1 model=['AE', 'FUZZ', 'MAE', 'MEPP', 'MSE', 'NCC', 'PAE', 'PSNR', 'RMSE'] | agent=['AE', 'Fuzz', 'MAE', 'MEPP', 'MSE', 'NCC', 'PAE', 'PHASH', 'PSNR', 'RMSE']
+  page: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  pointsize: reference=None | v1 model=None | agent=['string']
+  preview: reference=['AddNoise', 'Blur', 'Brightness', 'CharcoalDraw', 'Despeckle', 'Dull', 'EdgeDetect', 'Gamma', 'Grayscale', 'Hue', 'Implode', 'JPEG', 'OilPaint', 'Quantize', 'Raise', 'ReduceNoise', 'Roll', 'Rotate', 'Saturation', 'Segment', 'Shade', 'Sharpen', 'Shear', 'Solarize', 'Spiff', 'Spread', 'Swirl', 'Threshold', 'Wave'] | v1 model=['AddNoise', 'Blur', 'Brightness', 'CharcoalDraw', 'Despeckle', 'Dull', 'EdgeDetect', 'Gamma', 'Grayscale', 'Hue', 'Implode', 'JPEG', 'OilPaint', 'Quantize', 'Raise', 'ReduceNoise', 'Roll', 'Rotate', 'Saturation', 'Segment', 'Shade', 'Sharpen', 'Shear', 'Solarize', 'Spiff', 'Spread', 'Swirl', 'Threshold', 'Wave'] | agent=['AddNoise', 'Blur', 'Brightness', 'Charcoal', 'Despeckle', 'Dull', 'EdgeDetect', 'Gamma', 'Grayscale', 'Hue', 'Implode', 'JPEG', 'OilPaint', 'Quantize', 'Raise', 'ReduceNoise', 'Roll', 'Rotate', 'Saturation', 'Segment', 'Shade', 'Sharpen', 'Shear', 'Solarize', 'Spiff', 'Spread', 'Swirl', 'Threshold', 'Wave']
+  repage: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  sampling-factor: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  size: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  statistic: reference=['100x100', '50%'] | v1 model=['string'] | agent=['Gradient', 'Maximum', 'Mean', 'Median', 'Minimum', 'Mode', 'Nonpeak', 'RMS', 'RootMeanSquare', 'StandardDeviation']
+  stretch: reference=['Condensed', 'Expanded', 'ExtraCondensed', 'ExtraExpanded', 'Normal', 'SemiCondensed', 'SemiExpanded', 'UltraCondensed', 'UltraExpanded'] | v1 model=['Condensed', 'Expanded', 'ExtraCondensed', 'ExtraExpanded', 'Normal', 'SemiCondensed', 'SemiExpanded', 'UltraCondensed', 'UltraExpanded'] | agent=['Any', 'Condensed', 'Expanded', 'ExtraCondensed', 'ExtraExpanded', 'Normal', 'SemiCondensed', 'SemiExpanded', 'UltraCondensed', 'UltraExpanded']
+  strokewidth: reference=None | v1 model=None | agent=['string']
+  style: reference=['Italic', 'Normal', 'Oblique'] | v1 model=['Italic', 'Normal', 'Oblique'] | agent=['Any', 'Italic', 'Normal', 'Oblique']
+  support: reference=['string'] | v1 model=None | agent=['string']
+  tile-offset: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  units: reference=['PixelsPerCentimeter', 'PixelsPerInch', 'Undefined'] | v1 model=['PixelsPerCentimeter', 'PixelsPerInch', 'Undefined'] | agent=['1', '2', '3', 'PixelsPerCentimeter', 'PixelsPerInch']
+  view: reference=None | v1 model=None | agent=['string']
+  virtual-pixel: reference=['Background', 'Edge', 'Mirror', 'Tile', 'Undefined'] | v1 model=['Background', 'Black', 'CheckerTile', 'Dither', 'Edge', 'Gray', 'HorizontalTile', 'HorizontalTileEdge', 'Mirror', 'Random', 'Tile', 'Transparent', 'VerticalTile', 'VerticalTileEdge', 'White'] | agent=['Background', 'Black', 'CheckerTile', 'Dither', 'Edge', 'Gray', 'HorizontalTile', 'HorizontalTileEdge', 'Mirror', 'None', 'Random', 'Tile', 'Transparent', 'VerticalTile', 'VerticalTileEdge', 'White']
+  weight: reference=['Any', 'Bold', 'Bolder', 'Lighter', 'Normal'] | v1 model=['100', '200', '300', '400', '500', '600', '700', '800', '900', 'Any', 'Bold', 'Bolder', 'Lighter', 'Normal'] | agent=['Black', 'Bold', 'DemiBold', 'ExtraBold', 'ExtraLight', 'Heavy', 'Medium', 'Normal', 'Regular', 'SemiBold', 'Thin', 'UltraBold', 'UltraLight']
+  adaptive-blur: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  adaptive-resize: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  adaptive-sharpen: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  annotate: reference=['string'] | v1 model=['string'] | agent=['100x100', '50%']
+  black-threshold: reference=['string'] | v1 model=None | agent=['string']
+  blue-shift: reference=['string'] | v1 model=None | agent=['string']
+  blur: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  border: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  brightness-contrast: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  canny: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  charcoal: reference=['string'] | v1 model=None | agent=['string']
+  chop: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  colorize: reference=['string'] | v1 model=None | agent=['string']
+  contrast-stretch: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  deskew: reference=['string'] | v1 model=None | agent=['string']
+  distort: reference=['string'] | v1 model=['string'] | agent=['Affine', 'AffineProjection', 'Arc', 'Barrel', 'BarrelInverse', 'BilinearForward', 'BilinearReverse', 'DePolar', 'Perspective', 'PerspectiveProjection', 'Polar', 'Polynomial', 'Resize', 'SRT', 'ScaleRotateTranslate', 'Shepards']
+  edge: reference=['string'] | v1 model=None | agent=['string']
+  emboss: reference=['string'] | v1 model=None | agent=['string']
+  evaluate: reference=['string'] | v1 model=['string'] | agent=['Abs', 'Add', 'AddModulus', 'And', 'Cos', 'Cosine', 'Divide', 'Exp', 'Exponential', 'GaussianNoise', 'ImpulseNoise', 'InverseLog', 'LaplacianNoise', 'LeftShift', 'Log', 'Max', 'Mean', 'Median', 'Min', 'MultiplicativeNoise', 'Multiply', 'Or', 'PoissonNoise', 'Pow', 'RMS', 'RightShift', 'RootMeanSquare', 'Set', 'Sin', 'Sine', 'Subtract', 'Sum', 'Threshold', 'ThresholdBlack', 'ThresholdWhite', 'UniformNoise', 'Xor']
+  extent: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  extract: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  floodfill: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  frame: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  function: reference=['string'] | v1 model=['string'] | agent=['ArcSin', 'ArcTan', 'Polynomial', 'Sinusoid']
+  gamma: reference=['string'] | v1 model=None | agent=['string']
+  gaussian-blur: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  geometry: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  grayscale: reference=['Rec601Luma', 'Rec601Luminance', 'Rec709Luma', 'Rec709Luminance'] | v1 model=['Rec601Luma', 'Rec601Luminance', 'Rec709Luma', 'Rec709Luminance'] | agent=['Average', 'Brightness', 'Lightness', 'MS', 'Mean', 'RMS', 'Rec601Luma', 'Rec601Luminance', 'Rec709Luma', 'Rec709Luminance']
+  hough-lines: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  implode: reference=['string'] | v1 model=None | agent=['string']
+  interpolative-resize: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  lat: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  layers: reference=['string'] | v1 model=['string'] | agent=['Coalesce', 'CompareAny', 'CompareClear', 'CompareOverlay', 'Composite', 'Dispose', 'Flatten', 'Merge', 'Mosaic', 'Optimize', 'OptimizeFrame', 'OptimizePlus', 'OptimizeTransparency', 'RemoveDups', 'RemoveZero', 'TrimBounds']
+  level: reference=['string'] | v1 model=None | agent=['string']
+  linear-stretch: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  liquid-rescale: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  mean-shift: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  median: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  mode: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  morphology: reference=['string'] | v1 model=['string'] | agent=['BottomHat', 'Close', 'CloseI', 'CloseIntensity', 'Convolve', 'Correlate', 'Dilate', 'DilateI', 'DilateIntensity', 'Distance', 'Edge', 'EdgeIn', 'EdgeOut', 'Erode', 'ErodeI', 'ErodeIntensity', 'HitAndMiss', 'HitNMiss', 'Hmt', 'IterativeDistance', 'Open', 'OpenI', 'OpenIntensity', 'Smooth', 'Thicken', 'Thinning', 'TopHat']
+  motion-blur: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  noise: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  paint: reference=['string'] | v1 model=None | agent=['string']
+  perceptible: reference=['string'] | v1 model=None | agent=['string']
+  polaroid: reference=['string'] | v1 model=None | agent=['string']
+  quantize: reference=['CMYK', 'GRAY', 'HSB', 'HSL', 'HWB', 'LAB', 'OHTA', 'RGB', 'Rec601YCbCr', 'Rec709YCbCr', 'Transparent', 'XYZ', 'YCC', 'YCbCr', 'YIQ', 'YPbPr', 'YUV', 'sRGB'] | v1 model=['CMYK', 'GRAY', 'HCL', 'HCLp', 'HSB', 'HSL', 'HWB', 'LCHab', 'LCHuv', 'LMS', 'Lab', 'Log', 'Luv', 'OHTA', 'RGB', 'Transparent', 'XYZ', 'YCC', 'YCbCr', 'YDbDr', 'YIQ', 'YPbPr', 'YUV', 'sRGB'] | agent=['CIELab', 'CMY', 'CMYK', 'Gray', 'HCL', 'HCLp', 'HSB', 'HSI', 'HSL', 'HSV', 'HWB', 'LCH', 'LCHab', 'LCHuv', 'LMS', 'Lab', 'LinearGray', 'Log', 'Luv', 'OHTA', 'RGB', 'Rec601Luma', 'Rec601YCbCr', 'Rec709Luma', 'Rec709YCbCr', 'Transparent', 'XYZ', 'YCC', 'YCbCr', 'YDbDr', 'YIQ', 'YPbPr', 'YUV', 'sRGB', 'scRGB', 'xyY']
+  radial-blur: reference=['string'] | v1 model=None | agent=['string']
+  raise: reference=['string'] | v1 model=None | agent=['100x100', '50%']
+  region: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  resample: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  resize: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  roll: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  rotate: reference=['string'] | v1 model=None | agent=['string']
+  sample: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  scale: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  selective-blur: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  sepia-tone: reference=['string'] | v1 model=None | agent=['string']
+  shade: reference=['string'] | v1 model=None | agent=['string']
+  shadow: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  sharpen: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  shave: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  shear: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  sigmoidal-contrast: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  sketch: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  solarize: reference=['string'] | v1 model=None | agent=['string']
+  sparse-color: reference=['string'] | v1 model=['string'] | agent=['Barycentric', 'Bilinear', 'Inverse', 'Manhattan', 'Shepards', 'Voronoi']
+  splice: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  spread: reference=['string'] | v1 model=None | agent=['string']
+  swirl: reference=['string'] | v1 model=None | agent=['string']
+  threshold: reference=['string'] | v1 model=None | agent=['string']
+  thumbnail: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  tint: reference=['string'] | v1 model=None | agent=['string']
+  type: reference=['Bilevel', 'ColorSeparation', 'ColorSeparationAlpha', 'Grayscale', 'GrayscaleAlpha', 'Optimize', 'Palette', 'PaletteAlpha', 'TrueColor', 'TrueColorAlpha'] | v1 model=['Bilevel', 'ColorSeparation', 'ColorSeparationAlpha', 'Grayscale', 'GrayscaleAlpha', 'Optimize', 'Palette', 'PaletteAlpha', 'TrueColor', 'TrueColorAlpha'] | agent=['Bilevel', 'ColorSeparation', 'ColorSeparationAlpha', 'ColorSeparationMatte', 'Grayscale', 'GrayscaleAlpha', 'GrayscaleMatte', 'Optimize', 'Palette', 'PaletteAlpha', 'PaletteBilevelAlpha', 'PaletteBilevelMatte', 'PaletteMatte', 'TrueColor', 'TrueColorAlpha', 'TrueColorMatte']
+  unsharp: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  vignette: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  wave: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  wavelet-denoise: reference=['string'] | v1 model=None | agent=['string']
+  white-threshold: reference=['string'] | v1 model=None | agent=['string']
+  complex: reference=['string'] | v1 model=['string'] | agent=['Add', 'Conjugate', 'Divide', 'MagnitudePhase', 'Multiply', 'RealImaginary', 'Subtract']
+  copy: reference=['string'] | v1 model=['string'] | agent=['100x100', '50%']
+  crop: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  evaluate-sequence: reference=['string'] | v1 model=['string'] | agent=['Abs', 'Add', 'AddModulus', 'And', 'Cos', 'Cosine', 'Divide', 'Exp', 'Exponential', 'GaussianNoise', 'ImpulseNoise', 'InverseLog', 'LaplacianNoise', 'LeftShift', 'Log', 'Max', 'Mean', 'Median', 'Min', 'MultiplicativeNoise', 'Multiply', 'Or', 'PoissonNoise', 'Pow', 'RMS', 'RightShift', 'RootMeanSquare', 'Set', 'Sin', 'Sine', 'Subtract', 'Sum', 'Threshold', 'ThresholdBlack', 'ThresholdWhite', 'UniformNoise', 'Xor']
+  fx: reference=['string'] | v1 model=['string'] | agent=['1+1', '2-1', '3*3', '4/2']
+  smush: reference=['100x100', '50%'] | v1 model=['string'] | agent=['100x100', '50%']
+  clone: reference=['string'] | v1 model=['string'] | agent=['-2', '1', '1,3', '1-', '1-2']
+  delete: reference=['string'] | v1 model=['string'] | agent=['-2', '1', '1,3', '1-', '1-2']
+  swap: reference=['string'] | v1 model=['string'] | agent=['-2', '1', '1,3', '1-', '1-2']
+  debug: reference=['string'] | v1 model=['string'] | agent=['Accelerate', 'All', 'Annotate', 'Blob', 'Cache', 'Coder', 'Configure', 'Deprecate', 'Draw', 'Exception', 'Locale', 'Module', 'None', 'Policy', 'Resource', 'Trace', 'Transform', 'User', 'Wand', 'X11']
+  list: reference=['string'] | v1 model=['string'] | agent=['Align', 'Alpha', 'Boolean', 'Cache', 'Channel', 'Class', 'ClipPath', 'Coder', 'Color', 'Colorspace', 'Command', 'Complex', 'Compliance', 'Compose', 'Compress', 'Configure', 'DataType', 'Debug', 'Decoration', 'Delegate', 'Direction', 'Dispose', 'Distort', 'Dither', 'Endian', 'Evaluate', 'FillRule', 'Filter', 'Font', 'Format', 'Function', 'Gradient', 'Gravity', 'Intensity', 'Intent', 'Interlace', 'Interpolate', 'Kernel', 'Layers', 'LineCap', 'LineJoin', 'List', 'Locale', 'Log', 'LogEvent', 'Magic', 'Method', 'Metric', 'Mime', 'Mode', 'Module', 'Morphology', 'Noise', 'Orientation', 'Pagesize', 'PixelIntensity', 'Policy', 'PolicyDomain', 'PolicyRights', 'Preview', 'Primitive', 'QuantumFormat', 'Resource', 'SparseColor', 'Statistic', 'Storage', 'Stretch', 'Style', 'Threshold', 'Type', 'Units', 'Validate', 'VirtualPixel', 'Weight']
+
+### min
+  attenuate: reference=None | v1 model=-1 | agent=None
+  bias: reference=None | v1 model=-1 | agent=None
+  delay: reference=-1 | v1 model=-1 | agent=None
+  features: reference=None | v1 model=-1 | agent=-1
+  fuzz: reference=None | v1 model=-1 | agent=None
+  interline-spacing: reference=-1 | v1 model=-1 | agent=None
+  interword-spacing: reference=-1 | v1 model=-1 | agent=None
+  kerning: reference=-1 | v1 model=-1 | agent=None
+  pointsize: reference=-1 | v1 model=-1 | agent=None
+  strokewidth: reference=-1 | v1 model=-1 | agent=None
+  support: reference=None | v1 model=-1 | agent=None
+  black-threshold: reference=None | v1 model=-1 | agent=None
+  blue-shift: reference=None | v1 model=-1 | agent=None
+  charcoal: reference=None | v1 model=-1 | agent=None
+  colorize: reference=None | v1 model=-1 | agent=None
+  deskew: reference=None | v1 model=-1 | agent=None
+  edge: reference=None | v1 model=-1 | agent=None
+  emboss: reference=None | v1 model=-1 | agent=None
+  gamma: reference=None | v1 model=-1 | agent=None
+  implode: reference=None | v1 model=-1 | agent=None
+  level: reference=None | v1 model=-1 | agent=None
+  paint: reference=None | v1 model=-1 | agent=None
+  perceptible: reference=None | v1 model=-1 | agent=None
+  polaroid: reference=None | v1 model=-1 | agent=None
+  radial-blur: reference=None | v1 model=-1 | agent=None
+  raise: reference=None | v1 model=-1 | agent=None
+  rotate: reference=None | v1 model=-1 | agent=None
+  sepia-tone: reference=None | v1 model=-1 | agent=None
+  shade: reference=None | v1 model=-1 | agent=None
+  solarize: reference=None | v1 model=-1 | agent=None
+  spread: reference=None | v1 model=-1 | agent=None
+  swirl: reference=None | v1 model=-1 | agent=None
+  threshold: reference=None | v1 model=-1 | agent=None
+  tint: reference=None | v1 model=-1 | agent=None
+  wavelet-denoise: reference=None | v1 model=-1 | agent=None
+  white-threshold: reference=None | v1 model=-1 | agent=None
+
+### max
+  attenuate: reference=None | v1 model=1 | agent=None
+  bias: reference=None | v1 model=1 | agent=None
+  delay: reference=1 | v1 model=1 | agent=None
+  features: reference=None | v1 model=1 | agent=1
+  fuzz: reference=None | v1 model=1 | agent=None
+  interline-spacing: reference=1 | v1 model=1 | agent=None
+  interword-spacing: reference=1 | v1 model=1 | agent=None
+  kerning: reference=1 | v1 model=1 | agent=None
+  pointsize: reference=1 | v1 model=1 | agent=None
+  strokewidth: reference=1 | v1 model=1 | agent=None
+  support: reference=None | v1 model=1 | agent=None
+  black-threshold: reference=None | v1 model=1 | agent=None
+  blue-shift: reference=None | v1 model=1 | agent=None
+  charcoal: reference=None | v1 model=1 | agent=None
+  colorize: reference=None | v1 model=1 | agent=None
+  deskew: reference=None | v1 model=1 | agent=None
+  edge: reference=None | v1 model=1 | agent=None
+  emboss: reference=None | v1 model=1 | agent=None
+  gamma: reference=None | v1 model=1 | agent=None
+  implode: reference=None | v1 model=1 | agent=None
+  level: reference=None | v1 model=1 | agent=None
+  paint: reference=None | v1 model=1 | agent=None
+  perceptible: reference=None | v1 model=1 | agent=None
+  polaroid: reference=None | v1 model=1 | agent=None
+  radial-blur: reference=None | v1 model=1 | agent=None
+  raise: reference=None | v1 model=1 | agent=None
+  rotate: reference=None | v1 model=1 | agent=None
+  sepia-tone: reference=None | v1 model=1 | agent=None
+  shade: reference=None | v1 model=1 | agent=None
+  solarize: reference=None | v1 model=1 | agent=None
+  spread: reference=None | v1 model=1 | agent=None
+  swirl: reference=None | v1 model=1 | agent=None
+  threshold: reference=None | v1 model=1 | agent=None
+  tint: reference=None | v1 model=1 | agent=None
+  wavelet-denoise: reference=None | v1 model=1 | agent=None
+  white-threshold: reference=None | v1 model=1 | agent=None

@@ -55,3 +55,34 @@ running it on the Mac (v1 `.venv`, Python 3.12.9). Related: [[project-naive-clau
   distinct) at 2. Same method on v1's grep: 121 (74 distinct) at 1. `caruca generate --number`'s formula
   ignores value counts (gives 51 for binwalk at 1), so it undercounts. Wrap the loop with `python -u` or
   print per stage: output buffering hid progress for minutes.
+- **`caruca oracle` cannot take an outside grammar** (read in v1 `cli/__init__.py`, 2026-10-26): only
+  `trace` and `generate` get the `--path` option (`generate_mixin`); `oracle_subparser` is built with no
+  parents. Scoring an agent's grammar on the real-world invocation corpus therefore needs a small wrapper
+  that imports the grammar and calls the oracle's matching code. Not yet written.
+- **`caruca trace` ignores `--path`, and `--length-only` ignores `--max-count`** (read in v1
+  `cli/trace.py` lines 9–15 and 18–28, 2026-10-26; observed: three different `cut` grammars all gave
+  3,483,648 with `--path p --max-count 1 --length-only`, the size of the default set). To trace an outside
+  grammar, call v1 directly from a scratch folder in the `caruca` VM (the tracer writes `tracer.log` into
+  the current folder): `string_invocations(cmd, "<pkg>", None, 1, False, max_count)` then
+  `Tracer(10, "simple", "simple", "").run(invocations)`. It returns one `CommandInvocationTraceSet` per
+  generated line: `.true_str` is the line, `.configs[i].return_code` / `.stderr` one per test environment.
+  Done in `naive_llm_caruca/scoring/trace_usefulness.py` (task 018): the agent's `cut` grammar at
+  max_count 1 gave 360 invocations, 240 distinct lines, 480 runs in ~9 s.
+
+**Added 2026-10-26** (naive-LLM syntax-file comparison, `ai_docs/analysis/naive_llm_syntax_files_vs_v1.md`):
+- `Integer(min=2)` with no `max` gives `range(2, 2)` = **no values**: v1's generator never writes the
+  option (the agent's `sort --batch-size`). `min=1` alone gives only `1`.
+- A `Selection` with choice `""` and `flag_followed_by_equals=True` is written `--opt=` (mixin.py drops the
+  empty value but keeps `=`): `rm --preserve-root=` and `sort --check=` are both rejected by coreutils 9.4.
+  All three `rm` grammars (reference, model output, agent) have it.
+- An optional operand (`ZERO_OR_MORE`) competes with options for the `--max-count` budget. The agent's
+  `rm` (operand made optional because `rm -f` needs none) yields lines with no file in 19 of 21 distinct
+  lines at max-count 1 and 2,466 of 3,978 at 4; reference/model (`AT_LEAST_ONE`) never do. `--max-count`
+  default is 4 (`cli/__init__.py` line 54).
+- Sample values per kind decide generator validity: `Delimiter` = `,` and a two-character newline+tab
+  (rejected by `cut -d`, `sort -t`); `String` = the word `string` (rejected by most `convert` numeric /
+  geometry options); `Geometry` = `50%`, `100x100`.
+- **v1's `Arity` enum has aliases** (read in v1 `ir/environment.py` lines 24–31, 2026-10-27):
+  `ONE_OR_MORE` is an alias of `AT_LEAST_ONE` and `ZERO_OR_ONE` of `OPTIONAL` (same values), so a loaded
+  node's `.arity.name` is always `AT_LEAST_ONE` / `OPTIONAL`; there is also `EXACTLY_TWO`. Code that
+  checks for `ONE_OR_MORE` by name never matches (task 018's first pass made exactly that mistake).

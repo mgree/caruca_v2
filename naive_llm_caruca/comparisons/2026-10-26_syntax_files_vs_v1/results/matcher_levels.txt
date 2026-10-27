@@ -1,0 +1,39 @@
+== rm
+level                                                    g_ref   g_model   g_agent
+corpus lines                                             24260     24260     24260
+no_assumption (script, typo keeps ShortFlagSplat)            2         2         2
+no_assumption (corrected)                                    2         2         2
+flag_match                                                   2         2         2
+path_match                                               21543     21543     21543
+int_match                                                21543     21543     21543
+string_match                                             21543     21543     21543
+all (full match, any strategy)                           24094     24094     24094
+    g_ref strategies in full matches: {'PathAgnosticism': 24092, 'Exact': 18158, 'ShortFlagSplat': 8882, 'ArityStrategy': 2551, 'AliasStrategy': 280}
+    g_model strategies in full matches: {'PathAgnosticism': 24092, 'Exact': 18158, 'ShortFlagSplat': 8882, 'ArityStrategy': 2551, 'AliasStrategy': 280}
+    g_agent strategies in full matches: {'PathAgnosticism': 24092, 'Exact': 18158, 'ShortFlagSplat': 8882, 'ArityStrategy': 2551, 'AliasStrategy': 280}
+== sort
+level                                                    g_ref   g_model   g_agent
+corpus lines                                              5011      5011      5011
+no_assumption (script, typo keeps ShortFlagSplat)         2360      2668      3650
+no_assumption (corrected)                                 2360      2547      3202
+flag_match                                                2360      2668      3950
+path_match                                                2360      2668      4803
+int_match                                                 2360      2668      4803
+string_match                                              5011      5011      4804
+all (full match, any strategy)                            5011      5011      4857
+    g_ref strategies in full matches: {'StringAgnosticism': 2651, 'PathAgnosticism': 800, 'Exact': 410, 'ShortFlagSplat': 131, 'AliasStrategy': 16}
+    g_model strategies in full matches: {'StringAgnosticism': 2343, 'PathAgnosticism': 804, 'Exact': 708, 'ShortFlagSplat': 291, 'AliasStrategy': 22}
+    g_agent strategies in full matches: {'Exact': 2505, 'PathAgnosticism': 906, 'DefaultArg': 735, 'ShortFlagSplat': 532, 'ArityStrategy': 53, 'AliasStrategy': 28, 'StringAgnosticism': 1}
+== cut
+level                                                    g_ref   g_model   g_agent
+corpus lines                                              5909      5909      5909
+no_assumption (script, typo keeps ShortFlagSplat)           78         0         0
+no_assumption (corrected)                                    9         0         0
+flag_match                                                  78      2386      2386
+path_match                                                  78      3161      4957
+int_match                                                   78      3161      4957
+string_match                                              5890      3161      4957
+all (full match, any strategy)                            5890      3219      5044
+    g_ref strategies in full matches: {'StringAgnosticism': 5812, 'Exact': 276, 'ShortFlagSplat': 175}
+    g_model strategies in full matches: {'DefaultArg': 3218, 'Exact': 3217, 'PathAgnosticism': 833, 'ArityStrategy': 58, 'StringAgnosticism': 2, 'AliasStrategy': 1, 'ShortFlagSplat': 1}
+    g_agent strategies in full matches: {'DefaultArg': 5043, 'Exact': 5042, 'PathAgnosticism': 2658, 'ArityStrategy': 87, 'ShortFlagSplat': 6, 'AliasStrategy': 1}

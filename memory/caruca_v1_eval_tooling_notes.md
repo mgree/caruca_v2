@@ -58,3 +58,17 @@ task 012 builds both. ShellCheck (full 2.2K-test rerun) and Shseer claims above 
 
 **How to apply:** whenever implementing or citing the Evaluation Harness's correctness numbers, check
 which of these three a given number actually is before presenting it as paper-comparable.
+
+**4. `cmp_specs.py` compares almost no attributes (verified 2026-10-26 by experiment, v1 `d80324073`).**
+In the current version (since the 2024-11-10 rewrite, commit `50ebb0e77`) the per-attribute loop hits
+`if not has_difference: continue` (line 119) before the `!=` comparison (line 121), and only the
+`choices` check can set the flag. So it counts only: options missing/extra (matched by exact `flag`), a
+`choices` list with different contents, and an attribute present in the reference but absent in the
+generated node (in practice: reference `Path` vs generated non-`Path`, via `dash_as_stdin`). Planted
+single changes in copies of the reference (`naive_llm_caruca/comparisons/2026-10-26_syntax_files_vs_v1/
+results/scorer_blind_spots/`): arity, alias removed, `=` flipped, Integer→Size, `min=` added,
+Integer→Path, Flag→Path all scored **0 differences**; Path→String scored 1. It also `zip`s the two
+files' layouts, so a multi-layout file is scored on its first layout only. The October 2024 versions
+compared every attribute but paired by position and compared the random `identifier`, so they were
+unreliable too. v1's reference and model `convert.py` list `-clip`, `-clip-mask`, `-clip-path`,
+`-flatten` twice; the scorer reports the second copies as "missing" from any file listing them once.

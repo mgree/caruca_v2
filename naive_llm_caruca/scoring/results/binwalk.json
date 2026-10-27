@@ -1,0 +1,2915 @@
+{
+ "command": "binwalk",
+ "scored": "2026-10-27T12:25:08",
+ "caruca_v1_commit": "d8032407346aadc135b14c043618c8c1d4f4e0cf",
+ "probe_vm": "t018-probe",
+ "binary_version": "Binwalk v2.3.3",
+ "files": {
+  "agent 2026-10-20_133813": {
+   "path": "/Users/tirandagan/dev/stevens/caruca_v2/naive_llm_caruca/runs/2026-10-20_133813_naive-run-binwalk_binwalk_PROMPT_v1/output/binwalk.py",
+   "real_binary": {
+    "spellings_in_file": 102,
+    "spellings_accepted": 102,
+    "spellings_rejected": [],
+    "value_checked": 102,
+    "value_agree": 102,
+    "value_optional_in_binary": 0,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 102,
+    "real_spellings_in_file": 102,
+    "real_spellings_missing": [],
+    "choice_lists": []
+   },
+   "real_world_reach": {
+    "note": "no lines in the corpus"
+   },
+   "generator_use": {
+    "command": "binwalk",
+    "label": "agent 2026-10-20_133813",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 65659,
+    "limit": 4000,
+    "traced": false,
+    "with_skip": {
+     "command": "binwalk",
+     "label": "agent 2026-10-20_133813",
+     "skip": "-s",
+     "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10, skipping -s",
+     "coreutils": "9.4-3ubuntu6.3",
+     "invocations": 122,
+     "limit": 4000,
+     "traced": true,
+     "seconds": 26,
+     "runs": 154,
+     "runs_accepted": 154,
+     "distinct_lines": 72,
+     "distinct_accepted": 72,
+     "distinct_real_work": 72,
+     "sample_rejected": []
+    }
+   },
+   "answer_key": {
+    "v1-specs": {
+     "error": "SetupError: v1's committed spec for 'binwalk' could not be interpreted: FileNotFoundError: [Errno 2] No such file or directory: '/Users/tirandagan/dev/stevens/caruca/caruca/src/caruca/syntax_specs/binwalk.py'"
+    },
+    "ground-truth": {
+     "error": "SetupError: no ground-truth flag inventory for 'binwalk' (looked for /Users/tirandagan/dev/stevens/caruca/caruca/src/caruca/doc_sources/ground-truth/binwalk.json). The ground truth covers 108 of the 120 commands; use --reference v1-specs for the rest."
+    }
+   },
+   "performance": {
+    "run": "2026-10-20_133813_naive-run-binwalk_binwalk_PROMPT_v1",
+    "seconds": 193,
+    "cost_usd_list_price": 2.12,
+    "turns": 19,
+    "tool_calls": 18,
+    "output_tokens": 15769,
+    "thinking_tokens": 3120
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      102,
+      102
+     ],
+     "b real": [
+      102,
+      102
+     ],
+     "c value": [
+      102,
+      102
+     ],
+     "d kind": [
+      11,
+      21
+     ],
+     "e equals": [
+      0,
+      0
+     ],
+     "f repeat": [
+      5,
+      5
+     ],
+     "g files": [
+      3,
+      4
+     ],
+     "h rules": [
+      1,
+      1
+     ]
+    },
+    "right": 326,
+    "total": 337,
+    "wrong": {
+     "a listed": [],
+     "b real": [],
+     "c value": [],
+     "d kind": [
+      "-H",
+      "-K",
+      "-L",
+      "-O",
+      "-d",
+      "-g",
+      "-j",
+      "-l",
+      "-n",
+      "-o"
+     ],
+     "e equals": [],
+     "f repeat": [],
+     "g files": [
+      [
+       "0 files",
+       "file: yes",
+       "program: no"
+      ]
+     ],
+     "h rules": []
+    }
+   }
+  }
+ },
+ "facts_runs": {
+  "usage": {
+   "-B": [
+    "-B"
+   ],
+   "-R": [
+    "-R",
+    "string"
+   ],
+   "-A": [
+    "-A"
+   ],
+   "-m": [
+    "-m",
+    "relpath_1"
+   ],
+   "-b": [
+    "-b"
+   ],
+   "-I": [
+    "-I"
+   ],
+   "-x": [
+    "-x",
+    "a"
+   ],
+   "-y": [
+    "-y",
+    "a"
+   ],
+   "-e": [
+    "-e"
+   ],
+   "-D": [
+    "-D",
+    "string"
+   ],
+   "-M": [
+    "-M"
+   ],
+   "-d": [
+    "-d",
+    "0"
+   ],
+   "-C": [
+    "-C",
+    "relpath_1"
+   ],
+   "-j": [
+    "-j",
+    "0"
+   ],
+   "-n": [
+    "-n",
+    "0"
+   ],
+   "-0": [
+    "-0",
+    "string"
+   ],
+   "-1": [
+    "-1"
+   ],
+   "-r": [
+    "-r"
+   ],
+   "-z": [
+    "-z"
+   ],
+   "-V": [
+    "-V"
+   ],
+   "-E": [
+    "-E"
+   ],
+   "-F": [
+    "-F"
+   ],
+   "-J": [
+    "-J"
+   ],
+   "-Q": [
+    "-Q"
+   ],
+   "-N": [
+    "-N"
+   ],
+   "-W": [
+    "-W"
+   ],
+   "-G": [
+    "-G"
+   ],
+   "-i": [
+    "-i"
+   ],
+   "-U": [
+    "-U"
+   ],
+   "-u": [
+    "-u"
+   ],
+   "-w": [
+    "-w"
+   ],
+   "-X": [
+    "-X"
+   ],
+   "-Z": [
+    "-Z"
+   ],
+   "-P": [
+    "-P"
+   ],
+   "-S": [
+    "-S"
+   ],
+   "-l": [
+    "-l",
+    "0"
+   ],
+   "-o": [
+    "-o",
+    "0"
+   ],
+   "-O": [
+    "-O",
+    "0"
+   ],
+   "-K": [
+    "-K",
+    "0"
+   ],
+   "-g": [
+    "-g",
+    "0"
+   ],
+   "-f": [
+    "-f",
+    "relpath_1"
+   ],
+   "-c": [
+    "-c"
+   ],
+   "-t": [
+    "-t"
+   ],
+   "-q": [
+    "-q"
+   ],
+   "-v": [
+    "-v"
+   ],
+   "-h": [
+    "-h"
+   ],
+   "-a": [
+    "-a",
+    "a"
+   ],
+   "-p": [
+    "-p",
+    "a"
+   ],
+   "-s": [
+    "-s",
+    "0"
+   ]
+  },
+  "runs": 1273
+ },
+ "scoring_seconds": 191,
+ "probe": {
+  "command": "binwalk",
+  "binary": "/usr/bin/binwalk",
+  "version": "General Error: Cannot open file --version (CWD: /home/tirandagan.guest) : [Errno 2] No such file or directory: '--version'",
+  "spellings": {
+   "--base": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--base"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -O/--base: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--base=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--block": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--block"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -K/--block: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--block=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--blue": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--blue"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--blue=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -U/--blue: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--carve": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--carve"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--carve=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -z/--carve: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--count": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--count"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -n/--count: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--count=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--csv": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--csv"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--csv=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -c/--csv: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--dd": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--dd"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -D/--dd: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--dd=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--deflate": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--deflate"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--deflate=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -X/--deflate: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--depth": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--depth"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -d/--depth: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--depth=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--directory": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--directory"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -C/--directory: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--directory=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--dumb": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--dumb"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--dumb=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -b/--dumb: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--entropy": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--entropy"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--entropy=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -E/--entropy: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--exclude": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--exclude"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -x/--exclude: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--exclude=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--extract": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--extract"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--extract=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -e/--extract: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--fast": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--fast"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--fast=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -F/--fast: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--fexclude": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--fexclude"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -p/--fexclude: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--fexclude=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--finclude": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--finclude"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -a/--finclude: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--finclude=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--green": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--green"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--green=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -G/--green: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--help": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--help"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--help=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -h/--help: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--hexdump": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--hexdump"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--hexdump=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -W/--hexdump: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--high": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--high"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -H/--high: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--high=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--include": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--include"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -y/--include: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--include=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--invalid": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--invalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--invalid=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -I/--invalid: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--length": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--length"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -l/--length: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--length=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--log": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--log"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -f/--log: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--log=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--low": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--low"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -L/--low: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--low=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--lzma": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--lzma"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--lzma=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -Z/--lzma: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--magic": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--magic"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -m/--magic: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--magic=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--matryoshka": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--matryoshka"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--matryoshka=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -M/--matryoshka: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--nlegend": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--nlegend"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--nlegend=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -Q/--nlegend: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--nplot": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--nplot"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--nplot=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -N/--nplot: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--offset": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--offset"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -o/--offset: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--offset=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--opcodes": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--opcodes"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--opcodes=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -A/--opcodes: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--partial": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--partial"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--partial=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -P/--partial: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--preserve-symlinks": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--preserve-symlinks"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--preserve-symlinks=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -1/--preserve-symlinks: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help"
+    ]
+   },
+   "--quiet": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--quiet"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--quiet=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -q/--quiet: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--raw": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--raw"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -R/--raw: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--raw=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--red": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--red"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--red=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -i/--red: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--rm": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--rm"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--rm=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -r/--rm: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--run-as": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--run-as"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -0/--run-as: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--run-as=zzinvalid"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help"
+    ]
+   },
+   "--save": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--save"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--save=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -J/--save: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--signature": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--signature"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--signature=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -B/--signature: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--similar": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--similar"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--similar=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -u/--similar: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--size": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--size"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -j/--size: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--size=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--status": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--status"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -s/--status: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--status=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--stop": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--stop"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--stop=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -S/--stop: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--subdirs": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--subdirs"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--subdirs=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -V/--subdirs: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--swap": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--swap"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -g/--swap: expected one argument\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--swap=zzinvalid"
+      ],
+      "rc": 3,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--term": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--term"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--term=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -t/--term: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--terse": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--terse"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--terse=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -w/--terse: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--verbose": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "--verbose"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "binwalk",
+       "--verbose=zzinvalid"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -v/--verbose: ignored explicit argument 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-0": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-0"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -0/--run-as: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help"
+    ]
+   },
+   "-1": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-1"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help"
+    ]
+   },
+   "-A": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-A"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-B": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-B"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-C": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-C"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -C/--directory: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-D": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-D"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -D/--dd: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-E": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-E"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-F": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-F"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-G": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-G"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-H": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-H"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -H/--high: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-I": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-I"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-J": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-J"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-K": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-K"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -K/--block: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-L": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-L"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -L/--low: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-M": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-M"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-N": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-N"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-O": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-O"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -O/--base: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-P": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-P"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-Q": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-Q"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-R": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-R"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -R/--raw: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-S": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-S"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-U": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-U"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-V": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-V"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-W": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-W"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-X": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-X"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-Z": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-Z"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-a": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-a"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -a/--finclude: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-b": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-b"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-c": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-c"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-d": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-d"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -d/--depth: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-e": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-e"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-f": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-f"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -f/--log: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-g": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-g"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -g/--swap: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-h": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-h"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-i": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-i"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-j": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-j"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -j/--size: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-l": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-l"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -l/--length: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-m": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-m"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -m/--magic: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-n": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-n"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -n/--count: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-o": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-o"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -o/--offset: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-p": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-p"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -p/--fexclude: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-q": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-q"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-r": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-r"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-s": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-s"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -s/--status: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-t": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-t"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-u": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-u"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-v": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-v"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-w": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-w"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-x": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-x"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -x/--exclude: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-y": {
+    "accepted": true,
+    "value": "required",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-y"
+      ],
+      "rc": 2,
+      "stderr": "usage: binwalk [-e] [-D DD] [-M] [-d DEPTH] [-C DIRECTORY] [-j SIZE]\n               [-n COUNT] [-0 RUN-AS] [-1] [-r] [-z] [-V] [-l LENGTH]\n               [-o OFFSET] [-O BASE] [-K BLOCK] [-g SWAP] [-f LOG] [-c] [-t]\n               [-q] [-v] [-h] [-a FINCLUDE] [-p FEXCLUDE] [-s STATUS]\n               [--string] [-W] [-G] [-i] [-U] [-u] [-w] [-X] [-Z] [-P] [-S]\n               [-B] [-R RAW] [-A] [-m MAGIC] [-b] [-I] [-x EXCLUDE]\n               [-y INCLUDE] [-E] [-F] [-J] [-Q] [-N] [-H HIGH] [-L LOW]\nbinwalk: error: argument -y/--include: expected one argument\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-z": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "binwalk",
+       "-z"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   }
+  }
+ },
+ "binary_version_as_recorded": "General Error: Cannot open file --version (CWD: /home/tirandagan.guest) : [Errno 2] No such file or directory: '--version'",
+ "binary_version_note": "corrected 2026-10-27 after the run: the probe's version reader took binwalk's error message for --version; value read from `binwalk --help` in the same VM"
+}

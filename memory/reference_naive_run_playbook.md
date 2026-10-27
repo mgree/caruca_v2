@@ -24,6 +24,12 @@ exactly. Operator docs: `naive_llm_caruca/README.md` (authoritative for the VM s
   clone printed it and still failed with "OAuth session expired" seconds later. If that happens, Tiran must
   `limactl start naive-golden && limactl shell naive-golden`, run `claude`, `/login`, exit, stop the image
   (only he can: needs a browser). After his re-login, the next two clones (runs 4 and 5) worked.
+- **It recurs (2026-10-26):** run 10's clone (`dirname`) ran fine; the next clone (`dd`), made a minute later
+  from the same golden image, failed at the model trial call with "OAuth session expired and could not be
+  refreshed" (`naive-run` exit 4). Cause not established. Batch scripts must stop on exit 4, not move on.
+  `claude setup-token` ("Set up a long-lived authentication token (requires Claude subscription)", in
+  `claude --help`, 2.1.293 on the Mac) is a candidate fix for long batches; untried, and Tiran's call
+  because it creates a credential.
 
 ## 2. The run
 
@@ -142,3 +148,9 @@ fails).
 Anything for the paper goes in `ai_docs/analysis/white_paper_addendum_naive_llm.md` under the "Naive LLM"
 heading, re-verified at primary sources, never citing the earlier rebuild's findings, then converted to PDF
 the same way. Index line in `ai_docs/analysis/README.md` under "## Naive LLM".
+
+## Task 018 scoring VMs (2026-10-27)
+
+`t018-probe` is a long-lived clone of `naive-golden` used only to run the scoring probes (the same binaries
+the agent saw; no Claude session runs in it). Scoring also needs the `caruca` VM. Both are stopped between
+sessions; `score_t018.py` needs both running (`limactl start t018-probe caruca`).

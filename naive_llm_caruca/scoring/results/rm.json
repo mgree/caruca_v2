@@ -1,0 +1,1371 @@
+{
+ "command": "rm",
+ "scored": "2026-10-27T12:24:39",
+ "caruca_v1_commit": "d8032407346aadc135b14c043618c8c1d4f4e0cf",
+ "probe_vm": "t018-probe",
+ "binary_version": "rm (GNU coreutils) 9.4",
+ "files": {
+  "reference": {
+   "path": "/Users/tirandagan/dev/stevens/caruca/caruca/src/caruca/syntax_specs/rm.py",
+   "real_binary": {
+    "spellings_in_file": 17,
+    "spellings_accepted": 17,
+    "spellings_rejected": [],
+    "value_checked": 17,
+    "value_agree": 17,
+    "value_optional_in_binary": 2,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 17,
+    "real_spellings_in_file": 17,
+    "real_spellings_missing": [],
+    "choice_lists": [
+     {
+      "spelling": "--interactive",
+      "file": [
+       "never",
+       "once",
+       "always"
+      ],
+      "binary": [
+       "never",
+       "no",
+       "none",
+       "once",
+       "always",
+       "yes"
+      ],
+      "binary_values_in_file": 3
+     }
+    ]
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 24260,
+     "read": 24094,
+     "read_exactly": 2,
+     "read_with_a_word_taken_as_another_option": 0,
+     "top_unread_remainders": [
+      [
+       "-rf",
+       13
+      ],
+      [
+       "-- '$t'",
+       8
+      ],
+      [
+       "-- '$1'",
+       5
+      ],
+      [
+       "-- '${tmpdir}'",
+       5
+      ],
+      [
+       "-name 'statics_data)'",
+       5
+      ],
+      [
+       "-name '*.pb.go' '|' grep -v 'grpc_testing_not_regenerate)'",
+       4
+      ],
+      [
+       "-- '$TMPDIR'",
+       4
+      ],
+      [
+       "-v '.nb)'",
+       4
+      ],
+      [
+       "-n '$(</tmp/selectedsetup)p' '/tmp/combine)/settings.json'",
+       4
+      ],
+      [
+       "-- '$DART_SDK_ZIP'",
+       3
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 24260,
+     "read": 24195,
+     "unparseable": 0,
+     "top_unrecognised_words": [
+      [
+       "-n",
+       33
+      ],
+      [
+       "-name",
+       12
+      ],
+      [
+       "-xrf",
+       7
+      ],
+      [
+       "-iname",
+       4
+      ],
+      [
+       "-type",
+       3
+      ],
+      [
+       "-xr",
+       2
+      ],
+      [
+       "-r)/extra/${MOD}.ko",
+       1
+      ],
+      [
+       "-Force",
+       1
+      ],
+      [
+       "-maxdepth",
+       1
+      ],
+      [
+       "-e",
+       1
+      ]
+     ]
+    },
+    "gnu_rules": {
+     "valid_lines": 24195,
+     "read_correctly": 24195,
+     "read_wrongly": 0,
+     "not_read": 0,
+     "top_unreadable": []
+    }
+   },
+   "generator_use": {
+    "command": "rm",
+    "label": "reference",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 54,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 5,
+    "runs": 270,
+    "runs_accepted": 78,
+    "distinct_lines": 32,
+    "distinct_accepted": 30,
+    "distinct_real_work": 26,
+    "sample_rejected": [
+     [
+      "rm --preserve-root= abspath_1",
+      [
+       "rm: unrecognized --preserve-root argument: ''"
+      ]
+     ],
+     [
+      "rm --preserve-root= relpath_1",
+      [
+       "rm: unrecognized --preserve-root argument: ''"
+      ]
+     ]
+    ]
+   },
+   "answer_key": {
+    "note": "is the answer key"
+   },
+   "performance": {
+    "note": "written and corrected by hand (the paper: 80 person-hours for the whole answer key)"
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      17,
+      17
+     ],
+     "b real": [
+      17,
+      17
+     ],
+     "c value": [
+      17,
+      17
+     ],
+     "d kind": [
+      2,
+      2
+     ],
+     "e equals": [
+      1,
+      2
+     ],
+     "f repeat": [
+      0,
+      0
+     ],
+     "g files": [
+      4,
+      4
+     ],
+     "h rules": [
+      1,
+      1
+     ]
+    },
+    "right": 59,
+    "total": 60,
+    "wrong": {
+     "a listed": [],
+     "b real": [],
+     "c value": [],
+     "d kind": [],
+     "e equals": [
+      "--preserve-root"
+     ],
+     "f repeat": [],
+     "g files": [],
+     "h rules": []
+    }
+   }
+  },
+  "gpt-4o (shipped)": {
+   "path": "/Users/tirandagan/dev/stevens/caruca/outputs/llm-dsl-generation/rm.py",
+   "real_binary": {
+    "spellings_in_file": 17,
+    "spellings_accepted": 17,
+    "spellings_rejected": [],
+    "value_checked": 17,
+    "value_agree": 17,
+    "value_optional_in_binary": 2,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 17,
+    "real_spellings_in_file": 17,
+    "real_spellings_missing": [],
+    "choice_lists": [
+     {
+      "spelling": "--interactive",
+      "file": [
+       "never",
+       "once",
+       "always"
+      ],
+      "binary": [
+       "never",
+       "no",
+       "none",
+       "once",
+       "always",
+       "yes"
+      ],
+      "binary_values_in_file": 3
+     }
+    ]
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 24260,
+     "read": 24094,
+     "read_exactly": 2,
+     "read_with_a_word_taken_as_another_option": 0,
+     "top_unread_remainders": [
+      [
+       "-rf",
+       13
+      ],
+      [
+       "-- '$t'",
+       8
+      ],
+      [
+       "-- '$1'",
+       5
+      ],
+      [
+       "-- '${tmpdir}'",
+       5
+      ],
+      [
+       "-name 'statics_data)'",
+       5
+      ],
+      [
+       "-name '*.pb.go' '|' grep -v 'grpc_testing_not_regenerate)'",
+       4
+      ],
+      [
+       "-- '$TMPDIR'",
+       4
+      ],
+      [
+       "-v '.nb)'",
+       4
+      ],
+      [
+       "-n '$(</tmp/selectedsetup)p' '/tmp/combine)/settings.json'",
+       4
+      ],
+      [
+       "-- '$DART_SDK_ZIP'",
+       3
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 24260,
+     "read": 24195,
+     "unparseable": 0,
+     "top_unrecognised_words": [
+      [
+       "-n",
+       33
+      ],
+      [
+       "-name",
+       12
+      ],
+      [
+       "-xrf",
+       7
+      ],
+      [
+       "-iname",
+       4
+      ],
+      [
+       "-type",
+       3
+      ],
+      [
+       "-xr",
+       2
+      ],
+      [
+       "-r)/extra/${MOD}.ko",
+       1
+      ],
+      [
+       "-Force",
+       1
+      ],
+      [
+       "-maxdepth",
+       1
+      ],
+      [
+       "-e",
+       1
+      ]
+     ]
+    },
+    "gnu_rules": {
+     "valid_lines": 24195,
+     "read_correctly": 24195,
+     "read_wrongly": 0,
+     "not_read": 0,
+     "top_unreadable": []
+    }
+   },
+   "generator_use": {
+    "command": "rm",
+    "label": "gpt-4o (shipped)",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 54,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 6,
+    "runs": 270,
+    "runs_accepted": 78,
+    "distinct_lines": 32,
+    "distinct_accepted": 30,
+    "distinct_real_work": 26,
+    "sample_rejected": [
+     [
+      "rm --preserve-root= abspath_1",
+      [
+       "rm: unrecognized --preserve-root argument: ''"
+      ]
+     ],
+     [
+      "rm --preserve-root= relpath_1",
+      [
+       "rm: unrecognized --preserve-root argument: ''"
+      ]
+     ]
+    ]
+   },
+   "answer_key": {
+    "v1-specs": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 12,
+      "reference_flags": 12,
+      "matched": 12,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 12,
+      "takes_value": 12,
+      "kind": 12,
+      "arity": 12,
+      "fully_agreeing": 12
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": [],
+     "cmp_specs": {
+      "diff_count": 0,
+      "exact": true,
+      "error": null
+     }
+    },
+    "ground-truth": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 12,
+      "reference_flags": 12,
+      "matched": 12,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 12,
+      "takes_value": 12,
+      "kind": null,
+      "arity": null,
+      "fully_agreeing": 12
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": []
+    }
+   },
+   "performance": {
+    "note": "shipped with v1; when, with which settings and at what cost it was made is not recorded"
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      17,
+      17
+     ],
+     "b real": [
+      17,
+      17
+     ],
+     "c value": [
+      17,
+      17
+     ],
+     "d kind": [
+      2,
+      2
+     ],
+     "e equals": [
+      1,
+      2
+     ],
+     "f repeat": [
+      0,
+      0
+     ],
+     "g files": [
+      4,
+      4
+     ],
+     "h rules": [
+      1,
+      1
+     ]
+    },
+    "right": 59,
+    "total": 60,
+    "wrong": {
+     "a listed": [],
+     "b real": [],
+     "c value": [],
+     "d kind": [],
+     "e equals": [
+      "--preserve-root"
+     ],
+     "f repeat": [],
+     "g files": [],
+     "h rules": []
+    }
+   }
+  },
+  "agent 2026-10-20_121932": {
+   "path": "/Users/tirandagan/dev/stevens/caruca_v2/naive_llm_caruca/runs/2026-10-20_121932_naive-run-rm_rm_PROMPT_v1/output/rm.py",
+   "real_binary": {
+    "spellings_in_file": 17,
+    "spellings_accepted": 17,
+    "spellings_rejected": [],
+    "value_checked": 17,
+    "value_agree": 17,
+    "value_optional_in_binary": 2,
+    "value_disagreements": [],
+    "real_spellings_all_sources": 17,
+    "real_spellings_in_file": 17,
+    "real_spellings_missing": [],
+    "choice_lists": [
+     {
+      "spelling": "--interactive",
+      "file": [
+       "never",
+       "no",
+       "none",
+       "once",
+       "always",
+       "yes"
+      ],
+      "binary": [
+       "never",
+       "no",
+       "none",
+       "once",
+       "always",
+       "yes"
+      ],
+      "binary_values_in_file": 6
+     }
+    ]
+   },
+   "real_world_reach": {
+    "v1_matcher": {
+     "invocations": 24260,
+     "read": 24094,
+     "read_exactly": 2,
+     "read_with_a_word_taken_as_another_option": 0,
+     "top_unread_remainders": [
+      [
+       "-rf",
+       13
+      ],
+      [
+       "-- '$t'",
+       8
+      ],
+      [
+       "-- '$1'",
+       5
+      ],
+      [
+       "-- '${tmpdir}'",
+       5
+      ],
+      [
+       "-name 'statics_data)'",
+       5
+      ],
+      [
+       "-name '*.pb.go' '|' grep -v 'grpc_testing_not_regenerate)'",
+       4
+      ],
+      [
+       "-- '$TMPDIR'",
+       4
+      ],
+      [
+       "-v '.nb)'",
+       4
+      ],
+      [
+       "-n '$(</tmp/selectedsetup)p' '/tmp/combine)/settings.json'",
+       4
+      ],
+      [
+       "-- '$DART_SDK_ZIP'",
+       3
+      ]
+     ]
+    },
+    "strict": {
+     "invocations": 24260,
+     "read": 24195,
+     "unparseable": 0,
+     "top_unrecognised_words": [
+      [
+       "-n",
+       33
+      ],
+      [
+       "-name",
+       12
+      ],
+      [
+       "-xrf",
+       7
+      ],
+      [
+       "-iname",
+       4
+      ],
+      [
+       "-type",
+       3
+      ],
+      [
+       "-xr",
+       2
+      ],
+      [
+       "-r)/extra/${MOD}.ko",
+       1
+      ],
+      [
+       "-Force",
+       1
+      ],
+      [
+       "-maxdepth",
+       1
+      ],
+      [
+       "-e",
+       1
+      ]
+     ]
+    },
+    "gnu_rules": {
+     "valid_lines": 24195,
+     "read_correctly": 24195,
+     "read_wrongly": 0,
+     "not_read": 0,
+     "top_unreadable": []
+    }
+   },
+   "generator_use": {
+    "command": "rm",
+    "label": "agent 2026-10-20_121932",
+    "skip": null,
+    "settings": "max_count 1, max_arity 1, stdin simple, content simple, parallel 10",
+    "coreutils": "9.4-3ubuntu6.3",
+    "invocations": 33,
+    "limit": 4000,
+    "traced": true,
+    "seconds": 1,
+    "runs": 41,
+    "runs_accepted": 5,
+    "distinct_lines": 21,
+    "distinct_accepted": 5,
+    "distinct_real_work": 3,
+    "sample_rejected": [
+     [
+      "rm",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm --interactive=always",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm --interactive=never",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm --interactive=no",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm --interactive=none",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm --interactive=once",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm --interactive=yes",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm --no-preserve-root",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm --one-file-system",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm --preserve-root=",
+      [
+       "rm: unrecognized --preserve-root argument: ''"
+      ]
+     ],
+     [
+      "rm --preserve-root=all",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm -I",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm -d",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm -i",
+      [
+       "rm: missing operand"
+      ]
+     ],
+     [
+      "rm -r",
+      [
+       "rm: missing operand"
+      ]
+     ]
+    ]
+   },
+   "answer_key": {
+    "v1-specs": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 12,
+      "reference_flags": 12,
+      "matched": 12,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 12,
+      "takes_value": 12,
+      "kind": 12,
+      "arity": 12,
+      "fully_agreeing": 12
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": [],
+     "cmp_specs": {
+      "diff_count": 1,
+      "exact": false,
+      "error": null
+     }
+    },
+    "ground-truth": {
+     "scoreable": true,
+     "counts": {
+      "generated_flags": 12,
+      "reference_flags": 12,
+      "matched": 12,
+      "missing": 0,
+      "spurious": 0
+     },
+     "agreement": {
+      "surfaces_exact": 12,
+      "takes_value": 12,
+      "kind": null,
+      "arity": null,
+      "fully_agreeing": 12
+     },
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "exact_argument_rate": 1.0,
+     "missing_surfaces": [],
+     "spurious_surfaces": []
+    }
+   },
+   "performance": {
+    "run": "2026-10-20_121932_naive-run-rm_rm_PROMPT_v1",
+    "seconds": 60,
+    "cost_usd_list_price": 0.8,
+    "turns": 6,
+    "tool_calls": 5,
+    "output_tokens": 4623,
+    "thinking_tokens": 937
+   },
+   "program_checked": {
+    "types": {
+     "a listed": [
+      17,
+      17
+     ],
+     "b real": [
+      17,
+      17
+     ],
+     "c value": [
+      17,
+      17
+     ],
+     "d kind": [
+      2,
+      2
+     ],
+     "e equals": [
+      1,
+      2
+     ],
+     "f repeat": [
+      0,
+      0
+     ],
+     "g files": [
+      3,
+      4
+     ],
+     "h rules": [
+      1,
+      1
+     ]
+    },
+    "right": 58,
+    "total": 60,
+    "wrong": {
+     "a listed": [],
+     "b real": [],
+     "c value": [],
+     "d kind": [],
+     "e equals": [
+      "--preserve-root"
+     ],
+     "f repeat": [],
+     "g files": [
+      [
+       "0 files",
+       "file: yes",
+       "program: no"
+      ]
+     ],
+     "h rules": []
+    }
+   }
+  }
+ },
+ "facts_runs": {
+  "usage": {
+   "-f": [
+    "-f"
+   ],
+   "-i": [
+    "-i"
+   ],
+   "-I": [
+    "-I"
+   ],
+   "--interactive": [
+    "--interactive=never"
+   ],
+   "--one-file-system": [
+    "--one-file-system"
+   ],
+   "--no-preserve-root": [
+    "--no-preserve-root"
+   ],
+   "--preserve-root": [
+    "--preserve-root"
+   ],
+   "-r": [
+    "-r"
+   ],
+   "-d": [
+    "-d"
+   ],
+   "-v": [
+    "-v"
+   ]
+  },
+  "runs": 67
+ },
+ "scoring_seconds": 21,
+ "probe": {
+  "command": "rm",
+  "binary": "/usr/bin/rm",
+  "version": "rm (GNU coreutils) 9.4",
+  "spellings": {
+   "--dir": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--dir"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--dir=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: option '--dir' doesn't allow an argument\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--force": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--force"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--force=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: option '--force' doesn't allow an argument\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--help": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--help"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--help=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: option '--help' doesn't allow an argument\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--interactive": {
+    "accepted": true,
+    "value": "optional",
+    "valid_values": [
+     "never",
+     "no",
+     "none",
+     "once",
+     "always",
+     "yes"
+    ],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--interactive"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--interactive=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: invalid argument 'zzinvalid' for '--interactive'\nValid arguments are:\n  - 'never', 'no', 'none'\n  - 'once'\n  - 'always', 'yes'\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--no-preserve-root": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--no-preserve-root"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--no-preserve-root=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: option '--no-preserve-root' doesn't allow an argument\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--one-file-system": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--one-file-system"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--one-file-system=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: option '--one-file-system' doesn't allow an argument\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--preserve-root": {
+    "accepted": true,
+    "value": "optional",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--preserve-root"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--preserve-root=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: unrecognized --preserve-root argument: 'zzinvalid'\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--recursive": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--recursive"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--recursive=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: option '--recursive' doesn't allow an argument\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--verbose": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--verbose"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--verbose=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: option '--verbose' doesn't allow an argument\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "--version": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "--version"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     },
+     {
+      "argv": [
+       "rm",
+       "--version=zzinvalid"
+      ],
+      "rc": 1,
+      "stderr": "rm: option '--version' doesn't allow an argument\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-I": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "-I"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-R": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "-R"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-d": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "-d"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-f": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "-f"
+      ],
+      "rc": 0,
+      "stderr": "",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-i": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "-i"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-r": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "-r"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   },
+   "-v": {
+    "accepted": true,
+    "value": "none",
+    "valid_values": [],
+    "runs": [
+     {
+      "argv": [
+       "rm",
+       "-v"
+      ],
+      "rc": 1,
+      "stderr": "rm: missing operand\nTry 'rm --help' for more information.\n",
+      "timed_out": false
+     }
+    ],
+    "named_by": [
+     "syntax files",
+     "help",
+     "man"
+    ]
+   }
+  }
+ }
+}

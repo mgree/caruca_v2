@@ -25,7 +25,9 @@ Python. Verified in code, not taken from memory:
   `[-d, -f]` case (non-pure).
 - **v1 ships a converter, `caruca/save/transform.py`** (added 2024-11-23 as `890eac611`, moved
   2024-12-03 as `c3cefeea5`, unchanged since). It is JSON to *old-PaSh JSON*: it renames `pclass` to
-  `class`, merges cases with the same operands (keeping the most permissive class, via `min`) and
+  `class`, merges cases with the same operands (keeping the most **conservative** class: `min` under
+  its own ordering stateless > pure > non-pure > side-effectful, `transform.py` lines 8–25 and 53;
+  corrected 2026-10-27, this line had said "most permissive") and
   moves `default` last. It overwrites files in place. Its existence suggests the paper run targeted
   the pre-2022 JSON reader. That partly answers the open question in `pash_vm_setup.md` §1, which
   guessed at an "uncommitted conversion".
